@@ -6,9 +6,9 @@
 //  Copyright 2011 Fuerte International. All rights reserved.
 //
 
-#import "FTShare.h"
+#import "FT2Share.h"
 
-@implementation FTShare
+@implementation FT2Share
 
 @synthesize facebook;
 
@@ -23,12 +23,12 @@
     if (self) {
         // Initialization code here.
         [self setReferencedController:controller];
-        _twitterEngine = [[FTShareTwitter alloc] init];
+        _twitterEngine = [[FT2ShareTwitter alloc] init];
         
-        _facebookEngine = [[FTShareFacebook alloc] init];
+        _facebookEngine = [[FT2ShareFacebook alloc] init];
         self.facebook = nil;
         
-        _emailEngine = [[FTShareEmail alloc] init];
+        _emailEngine = [[FT2ShareEmail alloc] init];
     }
     
     return self;

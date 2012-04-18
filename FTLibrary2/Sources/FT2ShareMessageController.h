@@ -14,7 +14,7 @@ typedef enum {
 } FTShareMessageControllerType;
 
 @protocol FTShareMessageControllerDelegate;
-@interface FTShareMessageController : UIViewController <UITextViewDelegate>
+@interface FT2ShareMessageController : UIViewController <UITextViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 @property (nonatomic, unsafe_unretained) id<FTShareMessageControllerDelegate> delegate;
@@ -28,8 +28,8 @@ typedef enum {
 
 @protocol FTShareMessageControllerDelegate <NSObject>
 
-- (void)shareMessageController:(FTShareMessageController *)controller didFinishWithMessage:(NSString *)message;
-- (void)shareMessageControllerDidCancel:(FTShareMessageController *)controller;
-- (void)shareMessageController:(FTShareMessageController *)controller didDisappearWithMessage:(NSString *)message;
+- (void)shareMessageController:(FT2ShareMessageController *)controller didFinishWithMessage:(NSString *)message;
+- (void)shareMessageControllerDidCancel:(FT2ShareMessageController *)controller;
+- (void)shareMessageController:(FT2ShareMessageController *)controller didDisappearWithMessage:(NSString *)message;
 
 @end

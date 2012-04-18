@@ -17,9 +17,9 @@
 #import <MessageUI/MessageUI.h>
 
 
-#import "FTShareTwitter.h"
-#import "FTShareFacebook.h"
-#import "FTShareEmail.h"
+#import "FT2ShareTwitter.h"
+#import "FT2ShareFacebook.h"
+#import "FT2ShareEmail.h"
 
 
 enum {
@@ -30,11 +30,11 @@ enum {
 typedef NSUInteger FTShareOptions;
 
 
-@interface FTShare : NSObject <UIActionSheetDelegate> {
+@interface FT2Share : NSObject <UIActionSheetDelegate> {
     
-    FTShareTwitter *_twitterEngine;
-    FTShareFacebook *_facebookEngine;
-    FTShareEmail *_emailEngine;    
+    FT2ShareTwitter *_twitterEngine;
+    FT2ShareFacebook *_facebookEngine;
+    FT2ShareEmail *_emailEngine;    
 }
 
 @property (unsafe_unretained, nonatomic) Facebook *facebook; // needs to be public for UIApplication

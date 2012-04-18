@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "SA_OAuthTwitterEngine.h"
 #import "SA_OAuthTwitterController.h"
-#import "FTShareMessageController.h"
+#import "FT2ShareMessageController.h"
 
 #pragma mark --
 #pragma mark Data Type
@@ -34,7 +34,7 @@
 
 
 @protocol FTShareTwitterDelegate;
-@interface FTShareTwitter : NSObject <SA_OAuthTwitterControllerDelegate, SA_OAuthTwitterEngineDelegate, FTShareMessageControllerDelegate> {
+@interface FT2ShareTwitter : NSObject <SA_OAuthTwitterControllerDelegate, SA_OAuthTwitterEngineDelegate, FTShareMessageControllerDelegate> {
     SA_OAuthTwitterEngine *_twitter;
     id <FTShareTwitterDelegate> __unsafe_unretained _twitterDelegate;
     FTShareTwitterData *__unsafe_unretained _twitterParams;

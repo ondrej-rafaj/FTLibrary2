@@ -6,14 +6,14 @@
 //  Copyright (c) 2012 Lost Bytes. All rights reserved.
 //
 
-#import "FTShareMessageController.h"
+#import "FT2ShareMessageController.h"
 #import "UIColor+Tools.h"
 
 #define MAX_TWITTER_CHARS   160
 #define ALERT_TWITTER_CHARS 10
 
 
-@implementation FTShareMessageController
+@implementation FT2ShareMessageController
 
 @synthesize textView = _textView;
 @synthesize delegate = _delegate;

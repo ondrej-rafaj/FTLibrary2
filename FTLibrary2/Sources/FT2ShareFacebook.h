@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FBConnect.h"
-#import "FTShareMessageController.h"
+#import "FT2ShareMessageController.h"
 
 #pragma mark --
 #pragma mark Data Type
@@ -91,7 +91,7 @@ typedef enum {
 #pragma mark Class
 
 @protocol FTShareFacebookDelegate;
-@interface FTShareFacebook : NSObject <FBRequestDelegate, FBSessionDelegate, FBDialogDelegate, FTShareMessageControllerDelegate> {
+@interface FT2ShareFacebook : NSObject <FBRequestDelegate, FBSessionDelegate, FBDialogDelegate, FTShareMessageControllerDelegate> {
     Facebook *_facebook;
     id <FTShareFacebookDelegate> __unsafe_unretained _facebookDelegate;
     id _referencedController;

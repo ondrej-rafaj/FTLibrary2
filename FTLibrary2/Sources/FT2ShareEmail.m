@@ -6,7 +6,7 @@
 //  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
-#import "FTShareEmail.h"
+#import "FT2ShareEmail.h"
 
 #pragma mark --
 #pragma mark Data Type
@@ -49,7 +49,7 @@
 #pragma mark --
 #pragma mark Class
 
-@implementation FTShareEmail
+@implementation FT2ShareEmail
 
 @synthesize mailDelegate = _mailDelegate;
 

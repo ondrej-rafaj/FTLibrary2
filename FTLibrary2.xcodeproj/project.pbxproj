@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		932FDA4D153DD8B700E9D253 /* FTShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA43153DD8B700E9D253 /* FTShare.h */; };
-		932FDA4E153DD8B700E9D253 /* FTShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FTShare.m */; };
-		932FDA4F153DD8B700E9D253 /* FTShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FTShare.m */; };
-		932FDA50153DD8B700E9D253 /* FTShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA45153DD8B700E9D253 /* FTShareEmail.h */; };
-		932FDA51153DD8B700E9D253 /* FTShareEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA46153DD8B700E9D253 /* FTShareEmail.m */; };
-		932FDA52153DD8B700E9D253 /* FTShareEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA46153DD8B700E9D253 /* FTShareEmail.m */; };
-		932FDA53153DD8B700E9D253 /* FTShareFacebook.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA47153DD8B700E9D253 /* FTShareFacebook.h */; };
-		932FDA54153DD8B700E9D253 /* FTShareFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA48153DD8B700E9D253 /* FTShareFacebook.m */; };
-		932FDA55153DD8B700E9D253 /* FTShareFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA48153DD8B700E9D253 /* FTShareFacebook.m */; };
-		932FDA56153DD8B700E9D253 /* FTShareMessageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA49153DD8B700E9D253 /* FTShareMessageController.h */; };
-		932FDA57153DD8B700E9D253 /* FTShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4A153DD8B700E9D253 /* FTShareMessageController.m */; };
-		932FDA58153DD8B700E9D253 /* FTShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4A153DD8B700E9D253 /* FTShareMessageController.m */; };
-		932FDA59153DD8B700E9D253 /* FTShareTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA4B153DD8B700E9D253 /* FTShareTwitter.h */; };
-		932FDA5A153DD8B700E9D253 /* FTShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4C153DD8B700E9D253 /* FTShareTwitter.m */; };
-		932FDA5B153DD8B700E9D253 /* FTShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4C153DD8B700E9D253 /* FTShareTwitter.m */; };
+		932FDA4D153DD8B700E9D253 /* FT2Share.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA43153DD8B700E9D253 /* FT2Share.h */; };
+		932FDA4E153DD8B700E9D253 /* FT2Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FT2Share.m */; };
+		932FDA4F153DD8B700E9D253 /* FT2Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FT2Share.m */; };
+		932FDA50153DD8B700E9D253 /* FT2ShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */; };
+		932FDA51153DD8B700E9D253 /* FT2ShareEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA46153DD8B700E9D253 /* FT2ShareEmail.m */; };
+		932FDA52153DD8B700E9D253 /* FT2ShareEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA46153DD8B700E9D253 /* FT2ShareEmail.m */; };
+		932FDA53153DD8B700E9D253 /* FT2ShareFacebook.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA47153DD8B700E9D253 /* FT2ShareFacebook.h */; };
+		932FDA54153DD8B700E9D253 /* FT2ShareFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA48153DD8B700E9D253 /* FT2ShareFacebook.m */; };
+		932FDA55153DD8B700E9D253 /* FT2ShareFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA48153DD8B700E9D253 /* FT2ShareFacebook.m */; };
+		932FDA56153DD8B700E9D253 /* FT2ShareMessageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA49153DD8B700E9D253 /* FT2ShareMessageController.h */; };
+		932FDA57153DD8B700E9D253 /* FT2ShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4A153DD8B700E9D253 /* FT2ShareMessageController.m */; };
+		932FDA58153DD8B700E9D253 /* FT2ShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4A153DD8B700E9D253 /* FT2ShareMessageController.m */; };
+		932FDA59153DD8B700E9D253 /* FT2ShareTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA4B153DD8B700E9D253 /* FT2ShareTwitter.h */; };
+		932FDA5A153DD8B700E9D253 /* FT2ShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4C153DD8B700E9D253 /* FT2ShareTwitter.m */; };
+		932FDA5B153DD8B700E9D253 /* FT2ShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4C153DD8B700E9D253 /* FT2ShareTwitter.m */; };
 		932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */; };
 		932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDA66153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; };
@@ -232,16 +232,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		932FDA43153DD8B700E9D253 /* FTShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShare.h; path = FTLibrary2/Sources/FTShare.h; sourceTree = "<group>"; };
-		932FDA44153DD8B700E9D253 /* FTShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShare.m; path = FTLibrary2/Sources/FTShare.m; sourceTree = "<group>"; };
-		932FDA45153DD8B700E9D253 /* FTShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareEmail.h; path = FTLibrary2/Sources/FTShareEmail.h; sourceTree = "<group>"; };
-		932FDA46153DD8B700E9D253 /* FTShareEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareEmail.m; path = FTLibrary2/Sources/FTShareEmail.m; sourceTree = "<group>"; };
-		932FDA47153DD8B700E9D253 /* FTShareFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareFacebook.h; path = FTLibrary2/Sources/FTShareFacebook.h; sourceTree = "<group>"; };
-		932FDA48153DD8B700E9D253 /* FTShareFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareFacebook.m; path = FTLibrary2/Sources/FTShareFacebook.m; sourceTree = "<group>"; };
-		932FDA49153DD8B700E9D253 /* FTShareMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareMessageController.h; path = FTLibrary2/Sources/FTShareMessageController.h; sourceTree = "<group>"; };
-		932FDA4A153DD8B700E9D253 /* FTShareMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareMessageController.m; path = FTLibrary2/Sources/FTShareMessageController.m; sourceTree = "<group>"; };
-		932FDA4B153DD8B700E9D253 /* FTShareTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareTwitter.h; path = FTLibrary2/Sources/FTShareTwitter.h; sourceTree = "<group>"; };
-		932FDA4C153DD8B700E9D253 /* FTShareTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareTwitter.m; path = FTLibrary2/Sources/FTShareTwitter.m; sourceTree = "<group>"; };
+		932FDA43153DD8B700E9D253 /* FT2Share.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Share.h; path = FTLibrary2/Sources/FT2Share.h; sourceTree = "<group>"; };
+		932FDA44153DD8B700E9D253 /* FT2Share.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Share.m; path = FTLibrary2/Sources/FT2Share.m; sourceTree = "<group>"; };
+		932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareEmail.h; path = FTLibrary2/Sources/FT2ShareEmail.h; sourceTree = "<group>"; };
+		932FDA46153DD8B700E9D253 /* FT2ShareEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ShareEmail.m; path = FTLibrary2/Sources/FT2ShareEmail.m; sourceTree = "<group>"; };
+		932FDA47153DD8B700E9D253 /* FT2ShareFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareFacebook.h; path = FTLibrary2/Sources/FT2ShareFacebook.h; sourceTree = "<group>"; };
+		932FDA48153DD8B700E9D253 /* FT2ShareFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ShareFacebook.m; path = FTLibrary2/Sources/FT2ShareFacebook.m; sourceTree = "<group>"; };
+		932FDA49153DD8B700E9D253 /* FT2ShareMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareMessageController.h; path = FTLibrary2/Sources/FT2ShareMessageController.h; sourceTree = "<group>"; };
+		932FDA4A153DD8B700E9D253 /* FT2ShareMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ShareMessageController.m; path = FTLibrary2/Sources/FT2ShareMessageController.m; sourceTree = "<group>"; };
+		932FDA4B153DD8B700E9D253 /* FT2ShareTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareTwitter.h; path = FTLibrary2/Sources/FT2ShareTwitter.h; sourceTree = "<group>"; };
+		932FDA4C153DD8B700E9D253 /* FT2ShareTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ShareTwitter.m; path = FTLibrary2/Sources/FT2ShareTwitter.m; sourceTree = "<group>"; };
 		932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterController.h; sourceTree = "<group>"; };
 		932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SA_OAuthTwitterController.m; sourceTree = "<group>"; };
 		932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterEngine.h; sourceTree = "<group>"; };
@@ -439,16 +439,16 @@
 		932FDA41153DD87300E9D253 /* Share */ = {
 			isa = PBXGroup;
 			children = (
-				932FDA43153DD8B700E9D253 /* FTShare.h */,
-				932FDA44153DD8B700E9D253 /* FTShare.m */,
-				932FDA45153DD8B700E9D253 /* FTShareEmail.h */,
-				932FDA46153DD8B700E9D253 /* FTShareEmail.m */,
-				932FDA47153DD8B700E9D253 /* FTShareFacebook.h */,
-				932FDA48153DD8B700E9D253 /* FTShareFacebook.m */,
-				932FDA49153DD8B700E9D253 /* FTShareMessageController.h */,
-				932FDA4A153DD8B700E9D253 /* FTShareMessageController.m */,
-				932FDA4B153DD8B700E9D253 /* FTShareTwitter.h */,
-				932FDA4C153DD8B700E9D253 /* FTShareTwitter.m */,
+				932FDA43153DD8B700E9D253 /* FT2Share.h */,
+				932FDA44153DD8B700E9D253 /* FT2Share.m */,
+				932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */,
+				932FDA46153DD8B700E9D253 /* FT2ShareEmail.m */,
+				932FDA47153DD8B700E9D253 /* FT2ShareFacebook.h */,
+				932FDA48153DD8B700E9D253 /* FT2ShareFacebook.m */,
+				932FDA49153DD8B700E9D253 /* FT2ShareMessageController.h */,
+				932FDA4A153DD8B700E9D253 /* FT2ShareMessageController.m */,
+				932FDA4B153DD8B700E9D253 /* FT2ShareTwitter.h */,
+				932FDA4C153DD8B700E9D253 /* FT2ShareTwitter.m */,
 			);
 			name = Share;
 			sourceTree = "<group>";
@@ -826,11 +826,11 @@
 				938CB4FB153DD4BD0057A19B /* FT2ActionSheet.h in Headers */,
 				938CB4FC153DD4BD0057A19B /* FT2AlertView.h in Headers */,
 				938CB4FD153DD4BD0057A19B /* FT2CustomAnimationView.h in Headers */,
-				932FDA4D153DD8B700E9D253 /* FTShare.h in Headers */,
-				932FDA50153DD8B700E9D253 /* FTShareEmail.h in Headers */,
-				932FDA53153DD8B700E9D253 /* FTShareFacebook.h in Headers */,
-				932FDA56153DD8B700E9D253 /* FTShareMessageController.h in Headers */,
-				932FDA59153DD8B700E9D253 /* FTShareTwitter.h in Headers */,
+				932FDA4D153DD8B700E9D253 /* FT2Share.h in Headers */,
+				932FDA50153DD8B700E9D253 /* FT2ShareEmail.h in Headers */,
+				932FDA53153DD8B700E9D253 /* FT2ShareFacebook.h in Headers */,
+				932FDA56153DD8B700E9D253 /* FT2ShareMessageController.h in Headers */,
+				932FDA59153DD8B700E9D253 /* FT2ShareTwitter.h in Headers */,
 				932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */,
 				932FDA67153DD96000E9D253 /* SA_OAuthTwitterEngine.h in Headers */,
 				932FDA6D153DD9D300E9D253 /* NSString+UUID.h in Headers */,
@@ -998,11 +998,11 @@
 				938CB4F1153DD4BD0057A19B /* FT2ActionSheet.m in Sources */,
 				938CB4F3153DD4BD0057A19B /* FT2AlertView.m in Sources */,
 				938CB4F5153DD4BD0057A19B /* FT2CustomAnimationView.m in Sources */,
-				932FDA4E153DD8B700E9D253 /* FTShare.m in Sources */,
-				932FDA51153DD8B700E9D253 /* FTShareEmail.m in Sources */,
-				932FDA54153DD8B700E9D253 /* FTShareFacebook.m in Sources */,
-				932FDA57153DD8B700E9D253 /* FTShareMessageController.m in Sources */,
-				932FDA5A153DD8B700E9D253 /* FTShareTwitter.m in Sources */,
+				932FDA4E153DD8B700E9D253 /* FT2Share.m in Sources */,
+				932FDA51153DD8B700E9D253 /* FT2ShareEmail.m in Sources */,
+				932FDA54153DD8B700E9D253 /* FT2ShareFacebook.m in Sources */,
+				932FDA57153DD8B700E9D253 /* FT2ShareMessageController.m in Sources */,
+				932FDA5A153DD8B700E9D253 /* FT2ShareTwitter.m in Sources */,
 				932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */,
 				932FDA68153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */,
 				932FDA6E153DD9D300E9D253 /* NSString+UUID.m in Sources */,
@@ -1067,11 +1067,11 @@
 				938CB4F2153DD4BD0057A19B /* FT2ActionSheet.m in Sources */,
 				938CB4F4153DD4BD0057A19B /* FT2AlertView.m in Sources */,
 				938CB4F6153DD4BD0057A19B /* FT2CustomAnimationView.m in Sources */,
-				932FDA4F153DD8B700E9D253 /* FTShare.m in Sources */,
-				932FDA52153DD8B700E9D253 /* FTShareEmail.m in Sources */,
-				932FDA55153DD8B700E9D253 /* FTShareFacebook.m in Sources */,
-				932FDA58153DD8B700E9D253 /* FTShareMessageController.m in Sources */,
-				932FDA5B153DD8B700E9D253 /* FTShareTwitter.m in Sources */,
+				932FDA4F153DD8B700E9D253 /* FT2Share.m in Sources */,
+				932FDA52153DD8B700E9D253 /* FT2ShareEmail.m in Sources */,
+				932FDA55153DD8B700E9D253 /* FT2ShareFacebook.m in Sources */,
+				932FDA58153DD8B700E9D253 /* FT2ShareMessageController.m in Sources */,
+				932FDA5B153DD8B700E9D253 /* FT2ShareTwitter.m in Sources */,
 				932FDA66153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */,
 				932FDA69153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */,
 				932FDA6F153DD9D300E9D253 /* NSString+UUID.m in Sources */,

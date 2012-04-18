@@ -35,7 +35,7 @@
 #pragma mark Class
 
 @protocol FTShareEmailDelegate;
-@interface FTShareEmail : NSObject <MFMailComposeViewControllerDelegate, MFMailComposeViewControllerDelegate> {
+@interface FT2ShareEmail : NSObject <MFMailComposeViewControllerDelegate, MFMailComposeViewControllerDelegate> {
 
     id _referencedController;
 }

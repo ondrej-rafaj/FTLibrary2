@@ -6,7 +6,7 @@
 //  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
-#import "FTShareFacebook.h"
+#import "FT2ShareFacebook.h"
 
 #pragma mark --
 #pragma mark Data Type
@@ -141,7 +141,7 @@
 #pragma mark --
 #pragma mark Class
 
-@implementation FTShareFacebook
+@implementation FT2ShareFacebook
 
 @synthesize facebook = _facebook;
 @synthesize facebookDelegate = _facebookDelegate;
@@ -214,7 +214,7 @@
     
     
     if ([_params hasControllerSupport]) {
-        FTShareMessageController *messageController = [[FTShareMessageController alloc] initWithMessage:_params.message type:FTShareMessageControllerTypeFacebook andelegate:self];
+        FT2ShareMessageController *messageController = [[FT2ShareMessageController alloc] initWithMessage:_params.message type:FTShareMessageControllerTypeFacebook andelegate:self];
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:messageController];
         [_referencedController presentModalViewController:nc animated:YES];
         return;
@@ -306,11 +306,11 @@
 
 #pragma mark sharemessagcontroller delgate
 
-- (void)shareMessageController:(FTShareMessageController *)controller didFinishWithMessage:(NSString *)message {
+- (void)shareMessageController:(FT2ShareMessageController *)controller didFinishWithMessage:(NSString *)message {
 
 }
 
-- (void)shareMessageController:(FTShareMessageController *)controller didDisappearWithMessage:(NSString *)message {
+- (void)shareMessageController:(FT2ShareMessageController *)controller didDisappearWithMessage:(NSString *)message {
     if (!message || message.length == 0 || !_params) return;
     
     FTShareFacebookData *data = [[FTShareFacebookData alloc] init];
@@ -324,7 +324,7 @@
     [self shareViaFacebook:data];    
 }
 
-- (void)shareMessageControllerDidCancel:(FTShareMessageController *)controller {
+- (void)shareMessageControllerDidCancel:(FT2ShareMessageController *)controller {
     
 }
 
