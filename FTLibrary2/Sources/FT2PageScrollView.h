@@ -25,7 +25,7 @@
 - (UIImage *)pageScrollView:(FT2PageScrollView *)scrollView imageForPageAtIndex:(NSInteger)index;
 //simple reusing: the property reusedView contained a reused view of the same class of the one you returned before
 - (UIView *)pageScrollView:(FT2PageScrollView *)scrollView viewForPageAtIndex:(NSInteger)index reusedView:(UIView *)view;
-//cells queuing and reuse
+//cells queuing and reuse - table view like
 - (FT2PageView *)pageScrollView:(FT2PageScrollView *)scrollView pageViewAtIndex:(NSInteger)index;
 
 @end

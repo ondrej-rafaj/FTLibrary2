@@ -154,6 +154,13 @@
 		932FDB50153DDDF900E9D253 /* OAuthConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */; };
 		932FDB53153DDE7C00E9D253 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 932FDB51153DDE5100E9D253 /* libxml2.dylib */; };
 		9387980C153ECEBD001FE131 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 9387980B153ECEBD001FE131 /* Classes */; };
+		93879812153ED11A001FE131 /* FT2PageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9387980D153ED11A001FE131 /* FT2PageScrollView.h */; };
+		93879813153ED11A001FE131 /* FT2PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387980E153ED11A001FE131 /* FT2PageScrollView.m */; };
+		93879814153ED11A001FE131 /* FT2PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387980E153ED11A001FE131 /* FT2PageScrollView.m */; };
+		93879815153ED11A001FE131 /* FT2PageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9387980F153ED11A001FE131 /* FT2PageView.h */; };
+		93879816153ED11A001FE131 /* FT2PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93879810153ED11A001FE131 /* FT2PageView.m */; };
+		93879817153ED11A001FE131 /* FT2PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93879810153ED11A001FE131 /* FT2PageView.m */; };
+		93879818153ED11A001FE131 /* FT2ReusableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93879811153ED11A001FE131 /* FT2ReusableView.h */; };
 		938CB4A6153DD1630057A19B /* NSArray+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4A4153DD1630057A19B /* NSArray+Tools.h */; };
 		938CB4A7153DD1630057A19B /* NSArray+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4A5153DD1630057A19B /* NSArray+Tools.m */; };
 		938CB4A8153DD1630057A19B /* NSArray+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4A5153DD1630057A19B /* NSArray+Tools.m */; };
@@ -332,6 +339,11 @@
 		932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		932FDB51153DDE5100E9D253 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		9387980B153ECEBD001FE131 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Classes; path = FTLibrary2/ThirdParty/AQGridView/Classes; sourceTree = "<group>"; };
+		9387980D153ED11A001FE131 /* FT2PageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageScrollView.h; path = FTLibrary2/Sources/FT2PageScrollView.h; sourceTree = "<group>"; };
+		9387980E153ED11A001FE131 /* FT2PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageScrollView.m; path = FTLibrary2/Sources/FT2PageScrollView.m; sourceTree = "<group>"; };
+		9387980F153ED11A001FE131 /* FT2PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageView.h; path = FTLibrary2/Sources/FT2PageView.h; sourceTree = "<group>"; };
+		93879810153ED11A001FE131 /* FT2PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageView.m; path = FTLibrary2/Sources/FT2PageView.m; sourceTree = "<group>"; };
+		93879811153ED11A001FE131 /* FT2ReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ReusableView.h; path = FTLibrary2/Sources/FT2ReusableView.h; sourceTree = "<group>"; };
 		938CB4A4153DD1630057A19B /* NSArray+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Tools.h"; path = "FTLibrary2/Sources/Categories/NSArray+Tools.h"; sourceTree = "<group>"; };
 		938CB4A5153DD1630057A19B /* NSArray+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Tools.m"; path = "FTLibrary2/Sources/Categories/NSArray+Tools.m"; sourceTree = "<group>"; };
 		938CB4A9153DD2610057A19B /* CGAffineTransformAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGAffineTransformAdditions.h; path = FTLibrary2/Sources/Categories/CGAffineTransformAdditions.h; sourceTree = "<group>"; };
@@ -630,6 +642,11 @@
 		938CB502153DD54F0057A19B /* PageScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				93879811153ED11A001FE131 /* FT2ReusableView.h */,
+				9387980F153ED11A001FE131 /* FT2PageView.h */,
+				93879810153ED11A001FE131 /* FT2PageView.m */,
+				9387980D153ED11A001FE131 /* FT2PageScrollView.h */,
+				9387980E153ED11A001FE131 /* FT2PageScrollView.m */,
 			);
 			name = PageScrollView;
 			sourceTree = "<group>";
@@ -869,6 +886,9 @@
 				93C265D3153EC1A50010A059 /* FTMath.h in Headers */,
 				93C265D6153EC1DB0010A059 /* FTSystem.h in Headers */,
 				93C265DC153EC32E0010A059 /* Reachability.h in Headers */,
+				93879812153ED11A001FE131 /* FT2PageScrollView.h in Headers */,
+				93879815153ED11A001FE131 /* FT2PageView.h in Headers */,
+				93879818153ED11A001FE131 /* FT2ReusableView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,6 +1034,8 @@
 				93C265D0153EC09B0010A059 /* FTError.m in Sources */,
 				93C265D7153EC1DB0010A059 /* FTSystem.m in Sources */,
 				93C265DD153EC32E0010A059 /* Reachability.m in Sources */,
+				93879813153ED11A001FE131 /* FT2PageScrollView.m in Sources */,
+				93879816153ED11A001FE131 /* FT2PageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1081,6 +1103,8 @@
 				93C265D1153EC09B0010A059 /* FTError.m in Sources */,
 				93C265D8153EC1DB0010A059 /* FTSystem.m in Sources */,
 				93C265DE153EC32E0010A059 /* Reachability.m in Sources */,
+				93879814153ED11A001FE131 /* FT2PageScrollView.m in Sources */,
+				93879817153ED11A001FE131 /* FT2PageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
