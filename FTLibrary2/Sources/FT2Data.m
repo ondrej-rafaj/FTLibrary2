@@ -7,6 +7,7 @@
 //
 
 #import "FT2Data.h"
+#import "FT2Error.h"
 
 
 
@@ -16,7 +17,6 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
-static dispatch_queue_t _queue = NULL;
 static dispatch_queue_t _managedContextQueue = NULL;
 
 static NSString * __managedObjectModelName;

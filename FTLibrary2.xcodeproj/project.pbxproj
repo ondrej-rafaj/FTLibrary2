@@ -14,132 +14,118 @@
 		68978E58153F1ECD008EF4E8 /* FT2FileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978E56153F1ECD008EF4E8 /* FT2FileSystem.h */; };
 		68978E59153F1ECD008EF4E8 /* FT2FileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E57153F1ECD008EF4E8 /* FT2FileSystem.m */; };
 		68978E5A153F1ECD008EF4E8 /* FT2FileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E57153F1ECD008EF4E8 /* FT2FileSystem.m */; };
+		68978E5B153F2838008EF4E8 /* FTLibrary2-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = 938D5819153DC4380067CEFA /* FTLibrary2-Prefix.pch */; };
+		68978E5C153F2958008EF4E8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68978E4F153F16BD008EF4E8 /* CoreData.framework */; };
+		68978E5D153F2986008EF4E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938CB504153DD7AE0057A19B /* QuartzCore.framework */; };
+		68978E5F153F298D008EF4E8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68978E5E153F298D008EF4E8 /* CFNetwork.framework */; };
+		68978E61153F29CC008EF4E8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68978E60153F29CB008EF4E8 /* SystemConfiguration.framework */; };
+		68978E69153F2A03008EF4E8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68978E68153F2A03008EF4E8 /* SenTestingKit.framework */; };
+		68978E6A153F2A03008EF4E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D5828153DCA840067CEFA /* UIKit.framework */; };
+		68978E6B153F2A03008EF4E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D5815153DC4380067CEFA /* Foundation.framework */; };
+		68978E71153F2A03008EF4E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68978E6F153F2A03008EF4E8 /* InfoPlist.strings */; };
+		68978E74153F2A03008EF4E8 /* FTLibrary2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E73153F2A03008EF4E8 /* FTLibrary2Tests.m */; };
+		68978E7D153F2B96008EF4E8 /* FTFileSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E7C153F2B96008EF4E8 /* FTFileSystemTests.m */; };
 		932FDA4D153DD8B700E9D253 /* FT2Share.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA43153DD8B700E9D253 /* FT2Share.h */; };
 		932FDA4E153DD8B700E9D253 /* FT2Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FT2Share.m */; };
-		932FDA4F153DD8B700E9D253 /* FT2Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FT2Share.m */; };
 		932FDA50153DD8B700E9D253 /* FT2ShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */; };
 		932FDA51153DD8B700E9D253 /* FT2ShareEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA46153DD8B700E9D253 /* FT2ShareEmail.m */; };
-		932FDA52153DD8B700E9D253 /* FT2ShareEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA46153DD8B700E9D253 /* FT2ShareEmail.m */; };
 		932FDA53153DD8B700E9D253 /* FT2ShareFacebook.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA47153DD8B700E9D253 /* FT2ShareFacebook.h */; };
 		932FDA54153DD8B700E9D253 /* FT2ShareFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA48153DD8B700E9D253 /* FT2ShareFacebook.m */; };
-		932FDA55153DD8B700E9D253 /* FT2ShareFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA48153DD8B700E9D253 /* FT2ShareFacebook.m */; };
 		932FDA56153DD8B700E9D253 /* FT2ShareMessageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA49153DD8B700E9D253 /* FT2ShareMessageController.h */; };
 		932FDA57153DD8B700E9D253 /* FT2ShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4A153DD8B700E9D253 /* FT2ShareMessageController.m */; };
-		932FDA58153DD8B700E9D253 /* FT2ShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4A153DD8B700E9D253 /* FT2ShareMessageController.m */; };
 		932FDA59153DD8B700E9D253 /* FT2ShareTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA4B153DD8B700E9D253 /* FT2ShareTwitter.h */; };
 		932FDA5A153DD8B700E9D253 /* FT2ShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4C153DD8B700E9D253 /* FT2ShareTwitter.m */; };
-		932FDA5B153DD8B700E9D253 /* FT2ShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4C153DD8B700E9D253 /* FT2ShareTwitter.m */; };
 		932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */; };
 		932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDA66153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; };
 		932FDA67153DD96000E9D253 /* SA_OAuthTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */; };
 		932FDA68153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA62153DD96000E9D253 /* SA_OAuthTwitterEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDA69153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA62153DD96000E9D253 /* SA_OAuthTwitterEngine.m */; };
 		932FDA6A153DD96000E9D253 /* twitter_load.png in Resources */ = {isa = PBXBuildFile; fileRef = 932FDA63153DD96000E9D253 /* twitter_load.png */; };
 		932FDA6D153DD9D300E9D253 /* NSString+UUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA6B153DD9D300E9D253 /* NSString+UUID.h */; };
-		932FDA6E153DD9D300E9D253 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA6C153DD9D300E9D253 /* NSString+UUID.m */; };
+		932FDA6E153DD9D300E9D253 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA6C153DD9D300E9D253 /* NSString+UUID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDA6F153DD9D300E9D253 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA6C153DD9D300E9D253 /* NSString+UUID.m */; };
 		932FDA91153DDA9000E9D253 /* MGTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA71153DDA8F00E9D253 /* MGTwitterEngine.h */; };
 		932FDA92153DDA9000E9D253 /* MGTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA72153DDA8F00E9D253 /* MGTwitterEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDA93153DDA9000E9D253 /* MGTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA72153DDA8F00E9D253 /* MGTwitterEngine.m */; };
 		932FDA94153DDA9000E9D253 /* MGTwitterEngineDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA73153DDA8F00E9D253 /* MGTwitterEngineDelegate.h */; };
 		932FDA95153DDA9000E9D253 /* MGTwitterEngineGlobalHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA74153DDA8F00E9D253 /* MGTwitterEngineGlobalHeader.h */; };
 		932FDA96153DDA9000E9D253 /* MGTwitterHTTPURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA75153DDA8F00E9D253 /* MGTwitterHTTPURLConnection.h */; };
 		932FDA97153DDA9000E9D253 /* MGTwitterHTTPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA76153DDA8F00E9D253 /* MGTwitterHTTPURLConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDA98153DDA9000E9D253 /* MGTwitterHTTPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA76153DDA8F00E9D253 /* MGTwitterHTTPURLConnection.m */; };
 		932FDA99153DDA9000E9D253 /* MGTwitterLibXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA77153DDA8F00E9D253 /* MGTwitterLibXMLParser.h */; };
 		932FDA9A153DDA9000E9D253 /* MGTwitterLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA78153DDA8F00E9D253 /* MGTwitterLibXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDA9B153DDA9000E9D253 /* MGTwitterLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA78153DDA8F00E9D253 /* MGTwitterLibXMLParser.m */; };
 		932FDA9C153DDA9000E9D253 /* MGTwitterMessagesLibXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA79153DDA8F00E9D253 /* MGTwitterMessagesLibXMLParser.h */; };
 		932FDA9D153DDA9000E9D253 /* MGTwitterMessagesLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7A153DDA8F00E9D253 /* MGTwitterMessagesLibXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDA9E153DDA9000E9D253 /* MGTwitterMessagesLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7A153DDA8F00E9D253 /* MGTwitterMessagesLibXMLParser.m */; };
 		932FDA9F153DDA9000E9D253 /* MGTwitterMessagesParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA7B153DDA8F00E9D253 /* MGTwitterMessagesParser.h */; };
 		932FDAA0153DDA9000E9D253 /* MGTwitterMessagesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7C153DDA8F00E9D253 /* MGTwitterMessagesParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAA1153DDA9000E9D253 /* MGTwitterMessagesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7C153DDA8F00E9D253 /* MGTwitterMessagesParser.m */; };
 		932FDAA2153DDA9000E9D253 /* MGTwitterMiscLibXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA7D153DDA8F00E9D253 /* MGTwitterMiscLibXMLParser.h */; };
 		932FDAA3153DDA9000E9D253 /* MGTwitterMiscLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7E153DDA8F00E9D253 /* MGTwitterMiscLibXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAA4153DDA9000E9D253 /* MGTwitterMiscLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7E153DDA8F00E9D253 /* MGTwitterMiscLibXMLParser.m */; };
 		932FDAA5153DDA9000E9D253 /* MGTwitterMiscParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA7F153DDA8F00E9D253 /* MGTwitterMiscParser.h */; };
 		932FDAA6153DDA9000E9D253 /* MGTwitterMiscParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA80153DDA8F00E9D253 /* MGTwitterMiscParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAA7153DDA9000E9D253 /* MGTwitterMiscParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA80153DDA8F00E9D253 /* MGTwitterMiscParser.m */; };
 		932FDAA8153DDA9000E9D253 /* MGTwitterParserDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA81153DDA8F00E9D253 /* MGTwitterParserDelegate.h */; };
 		932FDAA9153DDA9000E9D253 /* MGTwitterRequestTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA82153DDA8F00E9D253 /* MGTwitterRequestTypes.h */; };
 		932FDAAA153DDA9000E9D253 /* MGTwitterStatusesLibXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA83153DDA8F00E9D253 /* MGTwitterStatusesLibXMLParser.h */; };
 		932FDAAB153DDA9000E9D253 /* MGTwitterStatusesLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA84153DDA8F00E9D253 /* MGTwitterStatusesLibXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAAC153DDA9000E9D253 /* MGTwitterStatusesLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA84153DDA8F00E9D253 /* MGTwitterStatusesLibXMLParser.m */; };
 		932FDAAD153DDA9000E9D253 /* MGTwitterStatusesParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA85153DDA8F00E9D253 /* MGTwitterStatusesParser.h */; };
 		932FDAAE153DDA9000E9D253 /* MGTwitterStatusesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA86153DDA8F00E9D253 /* MGTwitterStatusesParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAAF153DDA9000E9D253 /* MGTwitterStatusesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA86153DDA8F00E9D253 /* MGTwitterStatusesParser.m */; };
 		932FDAB0153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA87153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.h */; };
-		932FDAB1153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA88153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.m */; };
-		932FDAB2153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA88153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.m */; };
+		932FDAB1153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA88153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDAB3153DDA9000E9D253 /* MGTwitterUsersParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA89153DDA8F00E9D253 /* MGTwitterUsersParser.h */; };
 		932FDAB4153DDA9000E9D253 /* MGTwitterUsersParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA8A153DDA8F00E9D253 /* MGTwitterUsersParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAB5153DDA9000E9D253 /* MGTwitterUsersParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA8A153DDA8F00E9D253 /* MGTwitterUsersParser.m */; };
 		932FDAB6153DDA9000E9D253 /* MGTwitterXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA8B153DDA8F00E9D253 /* MGTwitterXMLParser.h */; };
 		932FDAB7153DDA9000E9D253 /* MGTwitterXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA8C153DDA8F00E9D253 /* MGTwitterXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAB8153DDA9000E9D253 /* MGTwitterXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA8C153DDA8F00E9D253 /* MGTwitterXMLParser.m */; };
 		932FDAC1153DDAC500E9D253 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDABF153DDAC500E9D253 /* NSData+Base64.h */; };
 		932FDAC2153DDAC500E9D253 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAC0153DDAC500E9D253 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAC3153DDAC500E9D253 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAC0153DDAC500E9D253 /* NSData+Base64.m */; };
 		932FDAD1153DDB2400E9D253 /* Facebook.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAC5153DDB2400E9D253 /* Facebook.h */; };
 		932FDAD2153DDB2400E9D253 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAC6153DDB2400E9D253 /* Facebook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAD3153DDB2400E9D253 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAC6153DDB2400E9D253 /* Facebook.m */; };
 		932FDAD4153DDB2400E9D253 /* FBConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAC7153DDB2400E9D253 /* FBConnect.h */; };
 		932FDAD5153DDB2400E9D253 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 932FDAC8153DDB2400E9D253 /* FBDialog.bundle */; };
 		932FDAD6153DDB2400E9D253 /* FBDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAC9153DDB2400E9D253 /* FBDialog.h */; };
 		932FDAD7153DDB2400E9D253 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACA153DDB2400E9D253 /* FBDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAD8153DDB2400E9D253 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACA153DDB2400E9D253 /* FBDialog.m */; };
 		932FDAD9153DDB2400E9D253 /* FBLoginDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDACB153DDB2400E9D253 /* FBLoginDialog.h */; };
 		932FDADA153DDB2400E9D253 /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACC153DDB2400E9D253 /* FBLoginDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDADB153DDB2400E9D253 /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACC153DDB2400E9D253 /* FBLoginDialog.m */; };
 		932FDADC153DDB2400E9D253 /* FBRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDACD153DDB2400E9D253 /* FBRequest.h */; };
 		932FDADD153DDB2400E9D253 /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACE153DDB2400E9D253 /* FBRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDADE153DDB2400E9D253 /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACE153DDB2400E9D253 /* FBRequest.m */; };
 		932FDADF153DDB2400E9D253 /* FTFacebook.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDACF153DDB2400E9D253 /* FTFacebook.h */; };
 		932FDAE0153DDB2400E9D253 /* FTFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAD0153DDB2400E9D253 /* FTFacebook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDAE1153DDB2400E9D253 /* FTFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAD0153DDB2400E9D253 /* FTFacebook.m */; };
 		932FDB01153DDBAA00E9D253 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAE5153DDBAA00E9D253 /* JSON.h */; };
 		932FDB02153DDBAA00E9D253 /* NSObject+SBJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAE6153DDBAA00E9D253 /* NSObject+SBJson.h */; };
 		932FDB03153DDBAA00E9D253 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAE7153DDBAA00E9D253 /* NSObject+SBJson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB04153DDBAA00E9D253 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAE7153DDBAA00E9D253 /* NSObject+SBJson.m */; };
+		932FDB04153DDBAA00E9D253 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAE7153DDBAA00E9D253 /* NSObject+SBJson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB05153DDBAA00E9D253 /* NSString+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAE8153DDBAA00E9D253 /* NSString+SBJSON.h */; };
 		932FDB06153DDBAA00E9D253 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAE9153DDBAA00E9D253 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB07153DDBAA00E9D253 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAE9153DDBAA00E9D253 /* NSString+SBJSON.m */; };
+		932FDB07153DDBAA00E9D253 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAE9153DDBAA00E9D253 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB08153DDBAA00E9D253 /* SBJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAEA153DDBAA00E9D253 /* SBJson.h */; };
 		932FDB09153DDBAA00E9D253 /* SBJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAEB153DDBAA00E9D253 /* SBJsonParser.h */; };
 		932FDB0A153DDBAA00E9D253 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAEC153DDBAA00E9D253 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB0B153DDBAA00E9D253 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAEC153DDBAA00E9D253 /* SBJsonParser.m */; };
+		932FDB0B153DDBAA00E9D253 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAEC153DDBAA00E9D253 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB0C153DDBAA00E9D253 /* SBJsonStreamParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAED153DDBAA00E9D253 /* SBJsonStreamParser.h */; };
 		932FDB0D153DDBAA00E9D253 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAEE153DDBAA00E9D253 /* SBJsonStreamParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB0E153DDBAA00E9D253 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAEE153DDBAA00E9D253 /* SBJsonStreamParser.m */; };
+		932FDB0E153DDBAA00E9D253 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAEE153DDBAA00E9D253 /* SBJsonStreamParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB0F153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAEF153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.h */; };
 		932FDB10153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF0153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB11153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF0153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m */; };
+		932FDB11153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF0153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB12153DDBAA00E9D253 /* SBJsonStreamParserAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAF1153DDBAA00E9D253 /* SBJsonStreamParserAdapter.h */; };
 		932FDB13153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF2153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB14153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF2153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m */; };
+		932FDB14153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF2153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB15153DDBAA00E9D253 /* SBJsonStreamParserState.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAF3153DDBAA00E9D253 /* SBJsonStreamParserState.h */; };
 		932FDB16153DDBAA00E9D253 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF4153DDBAA00E9D253 /* SBJsonStreamParserState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB17153DDBAA00E9D253 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF4153DDBAA00E9D253 /* SBJsonStreamParserState.m */; };
 		932FDB18153DDBAA00E9D253 /* SBJsonStreamWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAF5153DDBAA00E9D253 /* SBJsonStreamWriter.h */; };
 		932FDB19153DDBAA00E9D253 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF6153DDBAA00E9D253 /* SBJsonStreamWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB1A153DDBAA00E9D253 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF6153DDBAA00E9D253 /* SBJsonStreamWriter.m */; };
+		932FDB1A153DDBAA00E9D253 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF6153DDBAA00E9D253 /* SBJsonStreamWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB1B153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAF7153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.h */; };
 		932FDB1C153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF8153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB1D153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF8153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m */; };
+		932FDB1D153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF8153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB1E153DDBAA00E9D253 /* SBJsonStreamWriterState.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAF9153DDBAA00E9D253 /* SBJsonStreamWriterState.h */; };
 		932FDB1F153DDBAA00E9D253 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFA153DDBAA00E9D253 /* SBJsonStreamWriterState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB20153DDBAA00E9D253 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFA153DDBAA00E9D253 /* SBJsonStreamWriterState.m */; };
 		932FDB21153DDBAA00E9D253 /* SBJsonTokeniser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAFB153DDBAA00E9D253 /* SBJsonTokeniser.h */; };
 		932FDB22153DDBAA00E9D253 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFC153DDBAA00E9D253 /* SBJsonTokeniser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB23153DDBAA00E9D253 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFC153DDBAA00E9D253 /* SBJsonTokeniser.m */; };
+		932FDB23153DDBAA00E9D253 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFC153DDBAA00E9D253 /* SBJsonTokeniser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB24153DDBAA00E9D253 /* SBJsonUTF8Stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAFD153DDBAA00E9D253 /* SBJsonUTF8Stream.h */; };
 		932FDB25153DDBAA00E9D253 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFE153DDBAA00E9D253 /* SBJsonUTF8Stream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB26153DDBAA00E9D253 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFE153DDBAA00E9D253 /* SBJsonUTF8Stream.m */; };
+		932FDB26153DDBAA00E9D253 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFE153DDBAA00E9D253 /* SBJsonUTF8Stream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB27153DDBAA00E9D253 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAFF153DDBAA00E9D253 /* SBJsonWriter.h */; };
 		932FDB28153DDBAA00E9D253 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDB00153DDBAA00E9D253 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		932FDB29153DDBAA00E9D253 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDB00153DDBAA00E9D253 /* SBJsonWriter.m */; };
+		932FDB29153DDBAA00E9D253 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDB00153DDBAA00E9D253 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDB3E153DDDF900E9D253 /* jQueryInject.txt in Resources */ = {isa = PBXBuildFile; fileRef = 932FDB2B153DDDF900E9D253 /* jQueryInject.txt */; };
 		932FDB3F153DDDF900E9D253 /* jQueryInjectLandscape.txt in Resources */ = {isa = PBXBuildFile; fileRef = 932FDB2C153DDDF900E9D253 /* jQueryInjectLandscape.txt */; };
 		932FDB40153DDDF900E9D253 /* libOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 932FDB2D153DDDF900E9D253 /* libOAuth.a */; };
@@ -235,8 +221,18 @@
 		93C265D8153EC1DB0010A059 /* FT2System.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265D5153EC1DA0010A059 /* FT2System.m */; };
 		93C265DC153EC32E0010A059 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265DA153EC32E0010A059 /* Reachability.h */; };
 		93C265DD153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		93C265DE153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; };
+		93C265DE153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68978E79153F2A34008EF4E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 938D5809153DC4370067CEFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 938D5811153DC4380067CEFA;
+			remoteInfo = FTLibrary2;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		68978E41153F161E008EF4E8 /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Data.h; path = FTLibrary2/Sources/FT2Data.h; sourceTree = "<group>"; };
@@ -244,6 +240,17 @@
 		68978E4F153F16BD008EF4E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		68978E56153F1ECD008EF4E8 /* FT2FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2FileSystem.h; path = FTLibrary2/Sources/FT2FileSystem.h; sourceTree = "<group>"; };
 		68978E57153F1ECD008EF4E8 /* FT2FileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2FileSystem.m; path = FTLibrary2/Sources/FT2FileSystem.m; sourceTree = "<group>"; };
+		68978E5E153F298D008EF4E8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		68978E60153F29CB008EF4E8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		68978E67153F2A03008EF4E8 /* FTLibrary2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTLibrary2Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68978E68153F2A03008EF4E8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		68978E6E153F2A03008EF4E8 /* FTLibrary2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FTLibrary2Tests-Info.plist"; sourceTree = "<group>"; };
+		68978E70153F2A03008EF4E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		68978E72153F2A03008EF4E8 /* FTLibrary2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLibrary2Tests.h; sourceTree = "<group>"; };
+		68978E73153F2A03008EF4E8 /* FTLibrary2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLibrary2Tests.m; sourceTree = "<group>"; };
+		68978E75153F2A03008EF4E8 /* FTLibrary2Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLibrary2Tests-Prefix.pch"; sourceTree = "<group>"; };
+		68978E7B153F2B96008EF4E8 /* FTFileSystemTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFileSystemTests.h; sourceTree = "<group>"; };
+		68978E7C153F2B96008EF4E8 /* FTFileSystemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTFileSystemTests.m; sourceTree = "<group>"; };
 		932FDA43153DD8B700E9D253 /* FT2Share.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Share.h; path = FTLibrary2/Sources/FT2Share.h; sourceTree = "<group>"; };
 		932FDA44153DD8B700E9D253 /* FT2Share.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Share.m; path = FTLibrary2/Sources/FT2Share.m; sourceTree = "<group>"; };
 		932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareEmail.h; path = FTLibrary2/Sources/FT2ShareEmail.h; sourceTree = "<group>"; };
@@ -413,6 +420,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		68978E63153F2A03008EF4E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68978E69153F2A03008EF4E8 /* SenTestingKit.framework in Frameworks */,
+				68978E6A153F2A03008EF4E8 /* UIKit.framework in Frameworks */,
+				68978E6B153F2A03008EF4E8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		938D580F153DC4380067CEFA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,6 +446,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68978E61153F29CC008EF4E8 /* SystemConfiguration.framework in Frameworks */,
+				68978E5F153F298D008EF4E8 /* CFNetwork.framework in Frameworks */,
+				68978E5D153F2986008EF4E8 /* QuartzCore.framework in Frameworks */,
+				68978E5C153F2958008EF4E8 /* CoreData.framework in Frameworks */,
 				938D5829153DCA840067CEFA /* UIKit.framework in Frameworks */,
 				938D582A153DCA840067CEFA /* Foundation.framework in Frameworks */,
 				938D582C153DCA840067CEFA /* CoreGraphics.framework in Frameworks */,
@@ -439,6 +460,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68978E6C153F2A03008EF4E8 /* FTLibrary2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				68978E72153F2A03008EF4E8 /* FTLibrary2Tests.h */,
+				68978E73153F2A03008EF4E8 /* FTLibrary2Tests.m */,
+				68978E6D153F2A03008EF4E8 /* Supporting Files */,
+				68978E7B153F2B96008EF4E8 /* FTFileSystemTests.h */,
+				68978E7C153F2B96008EF4E8 /* FTFileSystemTests.m */,
+			);
+			path = FTLibrary2Tests;
+			sourceTree = "<group>";
+		};
+		68978E6D153F2A03008EF4E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68978E6E153F2A03008EF4E8 /* FTLibrary2Tests-Info.plist */,
+				68978E6F153F2A03008EF4E8 /* InfoPlist.strings */,
+				68978E75153F2A03008EF4E8 /* FTLibrary2Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		932FDA3F153DD86800E9D253 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,10 +731,13 @@
 		938D5807153DC4370067CEFA = {
 			isa = PBXGroup;
 			children = (
+				68978E60153F29CB008EF4E8 /* SystemConfiguration.framework */,
+				68978E5E153F298D008EF4E8 /* CFNetwork.framework */,
 				932FDA5C153DD91B00E9D253 /* ThirdParty */,
 				938D583C153DCA9B0067CEFA /* Source */,
 				938D5817153DC4380067CEFA /* FTLibrary2 */,
 				938D582D153DCA840067CEFA /* FTLibrary2Test */,
+				68978E6C153F2A03008EF4E8 /* FTLibrary2Tests */,
 				938D5814153DC4380067CEFA /* Frameworks */,
 				938D5813153DC4380067CEFA /* Products */,
 			);
@@ -702,6 +748,7 @@
 			children = (
 				938D5812153DC4380067CEFA /* libFTLibrary2.a */,
 				938D5826153DCA840067CEFA /* FTLibrary2Test.app */,
+				68978E67153F2A03008EF4E8 /* FTLibrary2Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -715,6 +762,7 @@
 				938D5815153DC4380067CEFA /* Foundation.framework */,
 				938D5828153DCA840067CEFA /* UIKit.framework */,
 				938D582B153DCA840067CEFA /* CoreGraphics.framework */,
+				68978E68153F2A03008EF4E8 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -923,6 +971,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		68978E66153F2A03008EF4E8 /* FTLibrary2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68978E76153F2A03008EF4E8 /* Build configuration list for PBXNativeTarget "FTLibrary2Tests" */;
+			buildPhases = (
+				68978E62153F2A03008EF4E8 /* Sources */,
+				68978E63153F2A03008EF4E8 /* Frameworks */,
+				68978E64153F2A03008EF4E8 /* Resources */,
+				68978E65153F2A03008EF4E8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68978E7A153F2A34008EF4E8 /* PBXTargetDependency */,
+			);
+			name = FTLibrary2Tests;
+			productName = FTLibrary2Tests;
+			productReference = 68978E67153F2A03008EF4E8 /* FTLibrary2Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		938D5811153DC4380067CEFA /* FTLibrary2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 938D581F153DC4380067CEFA /* Build configuration list for PBXNativeTarget "FTLibrary2" */;
@@ -979,11 +1046,20 @@
 			targets = (
 				938D5811153DC4380067CEFA /* FTLibrary2 */,
 				938D5825153DCA840067CEFA /* FTLibrary2Test */,
+				68978E66153F2A03008EF4E8 /* FTLibrary2Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		68978E64153F2A03008EF4E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68978E71153F2A03008EF4E8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		938D5824153DCA840067CEFA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -999,7 +1075,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68978E65153F2A03008EF4E8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		68978E62153F2A03008EF4E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68978E74153F2A03008EF4E8 /* FTLibrary2Tests.m in Sources */,
+				68978E7D153F2B96008EF4E8 /* FTFileSystemTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		938D580E153DC4380067CEFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1073,6 +1174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68978E5B153F2838008EF4E8 /* FTLibrary2-Prefix.pch in Sources */,
 				938D5834153DCA840067CEFA /* main.m in Sources */,
 				938D5838153DCA840067CEFA /* FT2AppDelegate.m in Sources */,
 				938CB4A8153DD1630057A19B /* NSArray+Tools.m in Sources */,
@@ -1089,32 +1191,7 @@
 				938CB4F2153DD4BD0057A19B /* FT2ActionSheet.m in Sources */,
 				938CB4F4153DD4BD0057A19B /* FT2AlertView.m in Sources */,
 				938CB4F6153DD4BD0057A19B /* FT2CustomAnimationView.m in Sources */,
-				932FDA4F153DD8B700E9D253 /* FT2Share.m in Sources */,
-				932FDA52153DD8B700E9D253 /* FT2ShareEmail.m in Sources */,
-				932FDA55153DD8B700E9D253 /* FT2ShareFacebook.m in Sources */,
-				932FDA58153DD8B700E9D253 /* FT2ShareMessageController.m in Sources */,
-				932FDA5B153DD8B700E9D253 /* FT2ShareTwitter.m in Sources */,
-				932FDA66153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */,
-				932FDA69153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */,
 				932FDA6F153DD9D300E9D253 /* NSString+UUID.m in Sources */,
-				932FDA93153DDA9000E9D253 /* MGTwitterEngine.m in Sources */,
-				932FDA98153DDA9000E9D253 /* MGTwitterHTTPURLConnection.m in Sources */,
-				932FDA9B153DDA9000E9D253 /* MGTwitterLibXMLParser.m in Sources */,
-				932FDA9E153DDA9000E9D253 /* MGTwitterMessagesLibXMLParser.m in Sources */,
-				932FDAA1153DDA9000E9D253 /* MGTwitterMessagesParser.m in Sources */,
-				932FDAA4153DDA9000E9D253 /* MGTwitterMiscLibXMLParser.m in Sources */,
-				932FDAA7153DDA9000E9D253 /* MGTwitterMiscParser.m in Sources */,
-				932FDAAC153DDA9000E9D253 /* MGTwitterStatusesLibXMLParser.m in Sources */,
-				932FDAAF153DDA9000E9D253 /* MGTwitterStatusesParser.m in Sources */,
-				932FDAB2153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.m in Sources */,
-				932FDAB5153DDA9000E9D253 /* MGTwitterUsersParser.m in Sources */,
-				932FDAB8153DDA9000E9D253 /* MGTwitterXMLParser.m in Sources */,
-				932FDAC3153DDAC500E9D253 /* NSData+Base64.m in Sources */,
-				932FDAD3153DDB2400E9D253 /* Facebook.m in Sources */,
-				932FDAD8153DDB2400E9D253 /* FBDialog.m in Sources */,
-				932FDADB153DDB2400E9D253 /* FBLoginDialog.m in Sources */,
-				932FDADE153DDB2400E9D253 /* FBRequest.m in Sources */,
-				932FDAE1153DDB2400E9D253 /* FTFacebook.m in Sources */,
 				932FDB04153DDBAA00E9D253 /* NSObject+SBJson.m in Sources */,
 				932FDB07153DDBAA00E9D253 /* NSString+SBJSON.m in Sources */,
 				932FDB0B153DDBAA00E9D253 /* SBJsonParser.m in Sources */,
@@ -1142,7 +1219,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		68978E7A153F2A34008EF4E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 938D5811153DC4380067CEFA /* FTLibrary2 */;
+			targetProxy = 68978E79153F2A34008EF4E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		68978E6F153F2A03008EF4E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68978E70153F2A03008EF4E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		938D5830153DCA840067CEFA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1154,6 +1247,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		68978E77153F2A03008EF4E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libFTLibrary2.a";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FTLibrary2Tests/FTLibrary2Tests-Prefix.pch";
+				INFOPLIST_FILE = "FTLibrary2Tests/FTLibrary2Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		68978E78153F2A03008EF4E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libFTLibrary2.a";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FTLibrary2Tests/FTLibrary2Tests-Prefix.pch";
+				INFOPLIST_FILE = "FTLibrary2Tests/FTLibrary2Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		938D581D153DC4380067CEFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1270,6 +1399,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		68978E76153F2A03008EF4E8 /* Build configuration list for PBXNativeTarget "FTLibrary2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68978E77153F2A03008EF4E8 /* Debug */,
+				68978E78153F2A03008EF4E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		938D580C153DC4370067CEFA /* Build configuration list for PBXProject "FTLibrary2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

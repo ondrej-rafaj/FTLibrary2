@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "FT22AppDelegate.h"
+#import "FT2AppDelegate.h"
 
-@implementation FT22AppDelegate
+@implementation FT2AppDelegate
 
 @synthesize window = _window;
 

@@ -58,7 +58,7 @@
 #pragma mark paths
 
 + (NSString *)pathForFileName:(NSString *)fileName checkBundleFirst:(BOOL)chekcBundle forDirectoryType:(NSSearchPathDirectory)directory {
-    NSString *filePath = [[NSString alloc] init];
+    NSString *filePath = nil;
     if (chekcBundle) {
         NSString *onlyFile = [fileName lastPathComponent];
         NSString *ext = [onlyFile pathExtension];
