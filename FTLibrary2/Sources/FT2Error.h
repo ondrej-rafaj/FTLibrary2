@@ -16,5 +16,6 @@
 
 - (void)showAsAlertViewWithDelegate:(id <UIAlertViewDelegate>)delegate;
 - (void)showInConsole;
+- (void)sendToFlurry;
 
 @end

@@ -11,15 +11,6 @@
 
 @implementation FT2Error
 
-+ (void)handleErrorWithString:(NSString *)errorMessage {
-	//[NSException raise:errorMessage format:@""];
-    NSLog(@"Error: %@", errorMessage);
-	//abort();
-}
-
-+ (void)handleError:(NSError *)error {
-	[self handleErrorWithString:error.localizedDescription];
-}
 
 + (FT2Error *)errorWithError:(NSError *)error
 {
@@ -50,6 +41,10 @@
 - (void)showInConsole
 {
 	NSLog(@"%@ - %@", self, self.userInfo);
+}
+
+- (void)sendToFlurry {
+    NSLog(@"Flurry erro log not implemented yet!");
 }
 
 @end
