@@ -6,17 +6,17 @@
 //  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
-#import "FTReachabilityManager.h"
-#import "FTError.h"
+#import "FT2ReachabilityManager.h"
+#import "FT2Error.h"
 
 NSString * const FTReachabilityStateDidChangeNotification = @"FTReachabilityStateDidChangeNotification";
 NSString * const FTReachabilityNetworkDidChangeNotification = @"FTReachabilityNetworkDidChangeNotification";
 
-@interface FTReachabilityManager ()
+@interface FT2ReachabilityManager ()
 void reachabilityDidChange(SCNetworkReachabilityRef target, SCNetworkReachabilityFlags flags,void *info);
 @end
 
-@implementation FTReachabilityManager
+@implementation FT2ReachabilityManager
 
 @synthesize reachabilityState = _reachabilityState;
 @synthesize networkType = _networkType;
@@ -78,7 +78,7 @@ void reachabilityDidChange(SCNetworkReachabilityRef target, SCNetworkReachabilit
 // reachability callback implementation
 void reachabilityDidChange(SCNetworkReachabilityRef target, SCNetworkReachabilityFlags flags,void *info)
 {
-	FTReachabilityManager *theTarget = (__bridge FTReachabilityManager *)info;
+	FT2ReachabilityManager *theTarget = (__bridge FT2ReachabilityManager *)info;
     FTReachabilityState newState = FTReachabilityStateUnknown;
     
 	FTReachabilityNetworkType netType = FTReachabilityNetworkTypeUnknown;
@@ -105,10 +105,10 @@ void reachabilityDidChange(SCNetworkReachabilityRef target, SCNetworkReachabilit
 
 #pragma mark - Other Methods
 
-- (void)performConnectionNeededTask:(void (^)(void))block failureBlock:(void (^)(FTError *error))failureBlock
+- (void)performConnectionNeededTask:(void (^)(void))block failureBlock:(void (^)(FT2Error *error))failureBlock
 {
 	NSInteger reachabilityState = [self.reachabilityState intValue];
-	FTError *error = [FTError errorWithTitle:@"No Internet Connection" andDescription:@"Your device appears to be offline."];
+	FT2Error *error = [FT2Error errorWithTitle:@"No Internet Connection" andDescription:@"Your device appears to be offline."];
 	if (reachabilityState == FTReachabilityStateYes) {
 		block();
 	}

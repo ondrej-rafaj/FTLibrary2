@@ -212,20 +212,20 @@
 		938D5832153DCA840067CEFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 938D5830153DCA840067CEFA /* InfoPlist.strings */; };
 		938D5834153DCA840067CEFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5833153DCA840067CEFA /* main.m */; };
 		938D5838153DCA840067CEFA /* FT2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5837153DCA840067CEFA /* FT2AppDelegate.m */; };
-		93C265C4153EBF6A0010A059 /* FTReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265C0153EBF6A0010A059 /* FTReachabilityManager.h */; };
-		93C265C5153EBF6A0010A059 /* FTReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C1153EBF6A0010A059 /* FTReachabilityManager.m */; };
-		93C265C6153EBF6A0010A059 /* FTReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C1153EBF6A0010A059 /* FTReachabilityManager.m */; };
-		93C265C7153EBF6A0010A059 /* FTTaskMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265C2153EBF6A0010A059 /* FTTaskMaker.h */; };
-		93C265C8153EBF6A0010A059 /* FTTaskMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C3153EBF6A0010A059 /* FTTaskMaker.m */; };
-		93C265C9153EBF6A0010A059 /* FTTaskMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C3153EBF6A0010A059 /* FTTaskMaker.m */; };
-		93C265CC153EC01B0010A059 /* FTLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265CB153EC01B0010A059 /* FTLog.h */; };
-		93C265CF153EC09B0010A059 /* FTError.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265CD153EC09B0010A059 /* FTError.h */; };
-		93C265D0153EC09B0010A059 /* FTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265CE153EC09B0010A059 /* FTError.m */; };
-		93C265D1153EC09B0010A059 /* FTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265CE153EC09B0010A059 /* FTError.m */; };
-		93C265D3153EC1A50010A059 /* FTMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265D2153EC1A40010A059 /* FTMath.h */; };
-		93C265D6153EC1DB0010A059 /* FTSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265D4153EC1DA0010A059 /* FTSystem.h */; };
-		93C265D7153EC1DB0010A059 /* FTSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265D5153EC1DA0010A059 /* FTSystem.m */; };
-		93C265D8153EC1DB0010A059 /* FTSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265D5153EC1DA0010A059 /* FTSystem.m */; };
+		93C265C4153EBF6A0010A059 /* FT2ReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */; };
+		93C265C5153EBF6A0010A059 /* FT2ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C1153EBF6A0010A059 /* FT2ReachabilityManager.m */; };
+		93C265C6153EBF6A0010A059 /* FT2ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C1153EBF6A0010A059 /* FT2ReachabilityManager.m */; };
+		93C265C7153EBF6A0010A059 /* FT2TaskMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265C2153EBF6A0010A059 /* FT2TaskMaker.h */; };
+		93C265C8153EBF6A0010A059 /* FT2TaskMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C3153EBF6A0010A059 /* FT2TaskMaker.m */; };
+		93C265C9153EBF6A0010A059 /* FT2TaskMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C3153EBF6A0010A059 /* FT2TaskMaker.m */; };
+		93C265CC153EC01B0010A059 /* FT2Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265CB153EC01B0010A059 /* FT2Log.h */; };
+		93C265CF153EC09B0010A059 /* FT2Error.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265CD153EC09B0010A059 /* FT2Error.h */; };
+		93C265D0153EC09B0010A059 /* FT2Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265CE153EC09B0010A059 /* FT2Error.m */; };
+		93C265D1153EC09B0010A059 /* FT2Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265CE153EC09B0010A059 /* FT2Error.m */; };
+		93C265D3153EC1A50010A059 /* FT2Math.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265D2153EC1A40010A059 /* FT2Math.h */; };
+		93C265D6153EC1DB0010A059 /* FT2System.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265D4153EC1DA0010A059 /* FT2System.h */; };
+		93C265D7153EC1DB0010A059 /* FT2System.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265D5153EC1DA0010A059 /* FT2System.m */; };
+		93C265D8153EC1DB0010A059 /* FT2System.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265D5153EC1DA0010A059 /* FT2System.m */; };
 		93C265DC153EC32E0010A059 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265DA153EC32E0010A059 /* Reachability.h */; };
 		93C265DD153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93C265DE153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; };
@@ -386,16 +386,16 @@
 		938D5835153DCA840067CEFA /* FTLibrary2Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLibrary2Test-Prefix.pch"; sourceTree = "<group>"; };
 		938D5836153DCA840067CEFA /* FT2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FT2AppDelegate.h; sourceTree = "<group>"; };
 		938D5837153DCA840067CEFA /* FT2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FT2AppDelegate.m; sourceTree = "<group>"; };
-		93C265C0153EBF6A0010A059 /* FTReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTReachabilityManager.h; path = FTLibrary2/Sources/FTReachabilityManager.h; sourceTree = "<group>"; };
-		93C265C1153EBF6A0010A059 /* FTReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTReachabilityManager.m; path = FTLibrary2/Sources/FTReachabilityManager.m; sourceTree = "<group>"; };
-		93C265C2153EBF6A0010A059 /* FTTaskMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTTaskMaker.h; path = FTLibrary2/Sources/FTTaskMaker.h; sourceTree = "<group>"; };
-		93C265C3153EBF6A0010A059 /* FTTaskMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTTaskMaker.m; path = FTLibrary2/Sources/FTTaskMaker.m; sourceTree = "<group>"; };
-		93C265CB153EC01B0010A059 /* FTLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTLog.h; path = FTLibrary2/Sources/FTLog.h; sourceTree = "<group>"; };
-		93C265CD153EC09B0010A059 /* FTError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTError.h; path = FTLibrary2/Sources/FTError.h; sourceTree = "<group>"; };
-		93C265CE153EC09B0010A059 /* FTError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTError.m; path = FTLibrary2/Sources/FTError.m; sourceTree = "<group>"; };
-		93C265D2153EC1A40010A059 /* FTMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTMath.h; path = FTLibrary2/Sources/FTMath.h; sourceTree = "<group>"; };
-		93C265D4153EC1DA0010A059 /* FTSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTSystem.h; path = FTLibrary2/Sources/FTSystem.h; sourceTree = "<group>"; };
-		93C265D5153EC1DA0010A059 /* FTSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTSystem.m; path = FTLibrary2/Sources/FTSystem.m; sourceTree = "<group>"; };
+		93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ReachabilityManager.h; path = FTLibrary2/Sources/FT2ReachabilityManager.h; sourceTree = "<group>"; };
+		93C265C1153EBF6A0010A059 /* FT2ReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ReachabilityManager.m; path = FTLibrary2/Sources/FT2ReachabilityManager.m; sourceTree = "<group>"; };
+		93C265C2153EBF6A0010A059 /* FT2TaskMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2TaskMaker.h; path = FTLibrary2/Sources/FT2TaskMaker.h; sourceTree = "<group>"; };
+		93C265C3153EBF6A0010A059 /* FT2TaskMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2TaskMaker.m; path = FTLibrary2/Sources/FT2TaskMaker.m; sourceTree = "<group>"; };
+		93C265CB153EC01B0010A059 /* FT2Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Log.h; path = FTLibrary2/Sources/FT2Log.h; sourceTree = "<group>"; };
+		93C265CD153EC09B0010A059 /* FT2Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Error.h; path = FTLibrary2/Sources/FT2Error.h; sourceTree = "<group>"; };
+		93C265CE153EC09B0010A059 /* FT2Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Error.m; path = FTLibrary2/Sources/FT2Error.m; sourceTree = "<group>"; };
+		93C265D2153EC1A40010A059 /* FT2Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Math.h; path = FTLibrary2/Sources/FT2Math.h; sourceTree = "<group>"; };
+		93C265D4153EC1DA0010A059 /* FT2System.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2System.h; path = FTLibrary2/Sources/FT2System.h; sourceTree = "<group>"; };
+		93C265D5153EC1DA0010A059 /* FT2System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2System.m; path = FTLibrary2/Sources/FT2System.m; sourceTree = "<group>"; };
 		93C265DA153EC32E0010A059 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		93C265DB153EC32E0010A059 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -456,16 +456,16 @@
 		932FDA42153DD88100E9D253 /* System */ = {
 			isa = PBXGroup;
 			children = (
-				93C265C0153EBF6A0010A059 /* FTReachabilityManager.h */,
-				93C265C1153EBF6A0010A059 /* FTReachabilityManager.m */,
-				93C265C2153EBF6A0010A059 /* FTTaskMaker.h */,
-				93C265C3153EBF6A0010A059 /* FTTaskMaker.m */,
-				93C265CB153EC01B0010A059 /* FTLog.h */,
-				93C265CD153EC09B0010A059 /* FTError.h */,
-				93C265CE153EC09B0010A059 /* FTError.m */,
-				93C265D2153EC1A40010A059 /* FTMath.h */,
-				93C265D4153EC1DA0010A059 /* FTSystem.h */,
-				93C265D5153EC1DA0010A059 /* FTSystem.m */,
+				93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */,
+				93C265C1153EBF6A0010A059 /* FT2ReachabilityManager.m */,
+				93C265C2153EBF6A0010A059 /* FT2TaskMaker.h */,
+				93C265C3153EBF6A0010A059 /* FT2TaskMaker.m */,
+				93C265CB153EC01B0010A059 /* FT2Log.h */,
+				93C265CD153EC09B0010A059 /* FT2Error.h */,
+				93C265CE153EC09B0010A059 /* FT2Error.m */,
+				93C265D2153EC1A40010A059 /* FT2Math.h */,
+				93C265D4153EC1DA0010A059 /* FT2System.h */,
+				93C265D5153EC1DA0010A059 /* FT2System.m */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -887,12 +887,12 @@
 				932FDB4E153DDDF900E9D253 /* OAToken.h in Headers */,
 				932FDB4F153DDDF900E9D253 /* OAToken_KeychainExtensions.h in Headers */,
 				932FDB50153DDDF900E9D253 /* OAuthConsumer.h in Headers */,
-				93C265C4153EBF6A0010A059 /* FTReachabilityManager.h in Headers */,
-				93C265C7153EBF6A0010A059 /* FTTaskMaker.h in Headers */,
-				93C265CC153EC01B0010A059 /* FTLog.h in Headers */,
-				93C265CF153EC09B0010A059 /* FTError.h in Headers */,
-				93C265D3153EC1A50010A059 /* FTMath.h in Headers */,
-				93C265D6153EC1DB0010A059 /* FTSystem.h in Headers */,
+				93C265C4153EBF6A0010A059 /* FT2ReachabilityManager.h in Headers */,
+				93C265C7153EBF6A0010A059 /* FT2TaskMaker.h in Headers */,
+				93C265CC153EC01B0010A059 /* FT2Log.h in Headers */,
+				93C265CF153EC09B0010A059 /* FT2Error.h in Headers */,
+				93C265D3153EC1A50010A059 /* FT2Math.h in Headers */,
+				93C265D6153EC1DB0010A059 /* FT2System.h in Headers */,
 				93C265DC153EC32E0010A059 /* Reachability.h in Headers */,
 				93879812153ED11A001FE131 /* FT2PageScrollView.h in Headers */,
 				93879815153ED11A001FE131 /* FT2PageView.h in Headers */,
@@ -1037,10 +1037,10 @@
 				932FDB22153DDBAA00E9D253 /* SBJsonTokeniser.m in Sources */,
 				932FDB25153DDBAA00E9D253 /* SBJsonUTF8Stream.m in Sources */,
 				932FDB28153DDBAA00E9D253 /* SBJsonWriter.m in Sources */,
-				93C265C5153EBF6A0010A059 /* FTReachabilityManager.m in Sources */,
-				93C265C8153EBF6A0010A059 /* FTTaskMaker.m in Sources */,
-				93C265D0153EC09B0010A059 /* FTError.m in Sources */,
-				93C265D7153EC1DB0010A059 /* FTSystem.m in Sources */,
+				93C265C5153EBF6A0010A059 /* FT2ReachabilityManager.m in Sources */,
+				93C265C8153EBF6A0010A059 /* FT2TaskMaker.m in Sources */,
+				93C265D0153EC09B0010A059 /* FT2Error.m in Sources */,
+				93C265D7153EC1DB0010A059 /* FT2System.m in Sources */,
 				93C265DD153EC32E0010A059 /* Reachability.m in Sources */,
 				93879813153ED11A001FE131 /* FT2PageScrollView.m in Sources */,
 				93879816153ED11A001FE131 /* FT2PageView.m in Sources */,
@@ -1106,10 +1106,10 @@
 				932FDB23153DDBAA00E9D253 /* SBJsonTokeniser.m in Sources */,
 				932FDB26153DDBAA00E9D253 /* SBJsonUTF8Stream.m in Sources */,
 				932FDB29153DDBAA00E9D253 /* SBJsonWriter.m in Sources */,
-				93C265C6153EBF6A0010A059 /* FTReachabilityManager.m in Sources */,
-				93C265C9153EBF6A0010A059 /* FTTaskMaker.m in Sources */,
-				93C265D1153EC09B0010A059 /* FTError.m in Sources */,
-				93C265D8153EC1DB0010A059 /* FTSystem.m in Sources */,
+				93C265C6153EBF6A0010A059 /* FT2ReachabilityManager.m in Sources */,
+				93C265C9153EBF6A0010A059 /* FT2TaskMaker.m in Sources */,
+				93C265D1153EC09B0010A059 /* FT2Error.m in Sources */,
+				93C265D8153EC1DB0010A059 /* FT2System.m in Sources */,
 				93C265DE153EC32E0010A059 /* Reachability.m in Sources */,
 				93879814153ED11A001FE131 /* FT2PageScrollView.m in Sources */,
 				93879817153ED11A001FE131 /* FT2PageView.m in Sources */,

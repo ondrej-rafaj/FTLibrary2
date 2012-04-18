@@ -29,9 +29,9 @@ typedef enum  {
     FTReachabilityNetworkTypeCarrier
 } FTReachabilityNetworkType;
 
-@class FTError;
+@class FT2Error;
 
-@interface FTReachabilityManager : NSObject {
+@interface FT2ReachabilityManager : NSObject {
 	
     SCNetworkReachabilityRef	_reachabilityRef;
 	NSMutableArray				*_queuedTask;
@@ -44,6 +44,6 @@ typedef enum  {
 
 //if connection status is undefined, wait in background for the connection to be known
 //block and failureBlock are always executed on the caller's queue
-- (void)performConnectionNeededTask:(void (^)(void))block failureBlock:(void (^)(FTError *error))failureBlock;
+- (void)performConnectionNeededTask:(void (^)(void))block failureBlock:(void (^)(FT2Error *error))failureBlock;
 
 @end

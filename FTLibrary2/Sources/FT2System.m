@@ -1,16 +1,16 @@
 //
-//  FTSystem.m
+//  FT2System.m
 //  FTLibrary
 //
 //  Created by Ondrej Rafaj on 01/05/2011.
 //  Copyright 2011 Fuerte International. All rights reserved.
 //
 
-#import "FTSystem.h"
+#import "FT2System.h"
 #import "Reachability.h"
 #import "NSString+UUID.h"
 
-@implementation FTSystem
+@implementation FT2System
 
 static float systemVersion = -1;
 

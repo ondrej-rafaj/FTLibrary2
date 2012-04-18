@@ -1,5 +1,5 @@
 //
-//  FTError.h
+//  FT2Error.h
 //  FTLibrary
 //
 //  Created by Ondrej Rafaj on 29/06/2011.
@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface FTError : NSError
+@interface FT2Error : NSError
 
-+ (FTError *)errorWithError:(NSError *)error;
-+ (FTError *)errorWithTitle:(NSString *)title andDescription:(NSString *)description;
++ (FT2Error *)errorWithError:(NSError *)error;
++ (FT2Error *)errorWithTitle:(NSString *)title andDescription:(NSString *)description;
 
 - (void)showAsAlertViewWithDelegate:(id <UIAlertViewDelegate>)delegate;
 - (void)showInConsole;

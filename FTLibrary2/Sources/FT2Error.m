@@ -1,15 +1,15 @@
 //
-//  FTError.m
+//  FT2Error.m
 //  FTLibrary
 //
 //  Created by Ondrej Rafaj on 29/06/2011.
 //  Copyright 2011 Fuerte International. All rights reserved.
 //
 
-#import "FTError.h"
-#import "FTTaskMaker.h"
+#import "FT2Error.h"
+#import "FT2TaskMaker.h"
 
-@implementation FTError
+@implementation FT2Error
 
 + (void)handleErrorWithString:(NSString *)errorMessage {
 	//[NSException raise:errorMessage format:@""];
@@ -21,15 +21,15 @@
 	[self handleErrorWithString:error.localizedDescription];
 }
 
-+ (FTError *)errorWithError:(NSError *)error
++ (FT2Error *)errorWithError:(NSError *)error
 {
-	FTError *newError = [FTError errorWithDomain:error.domain code:error.code userInfo:error.userInfo];
+	FT2Error *newError = [FT2Error errorWithDomain:error.domain code:error.code userInfo:error.userInfo];
 	return newError;
 }
 
-+ (FTError *)errorWithTitle:(NSString *)title andDescription:(NSString *)description
++ (FT2Error *)errorWithTitle:(NSString *)title andDescription:(NSString *)description
 {
-	FTError *error = [FTError errorWithDomain:(__bridge NSString *)CFBundleGetIdentifier(CFBundleGetMainBundle())
+	FT2Error *error = [FT2Error errorWithDomain:(__bridge NSString *)CFBundleGetIdentifier(CFBundleGetMainBundle())
 										 code:0
 									 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:title, NSLocalizedDescriptionKey,
 											   description, NSLocalizedFailureReasonErrorKey, nil]];
@@ -38,7 +38,7 @@
 
 - (void)showAsAlertViewWithDelegate:(id <UIAlertViewDelegate>)delegate
 {
-	[FTTaskMaker performBlockOnMainQueue:^{
+	[FT2TaskMaker performBlockOnMainQueue:^{
 		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:self.localizedDescription
 														 message:self.localizedFailureReason
 														delegate:delegate

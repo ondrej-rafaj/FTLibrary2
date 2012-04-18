@@ -14,7 +14,7 @@ typedef enum {
 	FTTaskPriorityHigh
 } FTTaskPriority;
 
-@interface FTTaskMaker : NSObject
+@interface FT2TaskMaker : NSObject
 
 + (void)performBlockInBackground:(void (^)(void))block priority:(FTTaskPriority)priority;
 + (void)performBlockInBackground:(void (^)(void))block;

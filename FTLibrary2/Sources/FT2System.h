@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface FTSystem : NSObject
+@interface FT2System : NSObject
 
 //uses the NSString + UUID Category
 + (NSString *)uuid;

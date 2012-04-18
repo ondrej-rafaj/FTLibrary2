@@ -6,9 +6,9 @@
 //  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
-#import "FTTaskMaker.h"
+#import "FT2TaskMaker.h"
 
-@implementation FTTaskMaker
+@implementation FT2TaskMaker
 
 + (void)performBlockInBackground:(void (^)(void))block priority:(FTTaskPriority)priority
 {
@@ -34,7 +34,7 @@
 
 + (void)performBlockOnMainQueue:(void (^)(void))block
 {
-	[FTTaskMaker performBlockOnMainQueue:block andWait:NO];
+	[FT2TaskMaker performBlockOnMainQueue:block andWait:NO];
 }
 
 + (void)performBlockOnMainQueue:(void (^)(void))block andWait:(BOOL)wait
