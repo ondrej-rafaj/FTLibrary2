@@ -1,3 +1,6 @@
 [submodule "FTLibrary2/Third Party/AQGridView"]
 	path = FTLibrary2/ThirdParty/AQGridView
 	url = https://github.com/AlanQuatermain/AQGridView.git
+[submodule "/Projects/FTLibrary2/FTLibrary2/ThirdParty/AQGridView"]
+	path = /Projects/FTLibrary2/FTLibrary2/ThirdParty/AQGridView
+	url = https://github.com/AlanQuatermain/AQGridView.git
