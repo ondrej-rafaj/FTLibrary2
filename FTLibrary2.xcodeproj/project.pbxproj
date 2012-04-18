@@ -639,6 +639,25 @@
 			name = AQGridView;
 			sourceTree = "<group>";
 		};
+		93879819153ED181001FE131 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				938CB4AE153DD2620057A19B /* UIImage+Alpha.h */,
+				938CB4AF153DD2620057A19B /* UIImage+Alpha.m */,
+				938CB4B0153DD2620057A19B /* UIImage+ColorPicker.h */,
+				938CB4B1153DD2620057A19B /* UIImage+ColorPicker.m */,
+				938CB4B2153DD2620057A19B /* UIImage+Resize.h */,
+				938CB4B3153DD2620057A19B /* UIImage+Resize.m */,
+				938CB4B4153DD2620057A19B /* UIImage+RoundedCorner.h */,
+				938CB4B5153DD2620057A19B /* UIImage+RoundedCorner.m */,
+				938CB4B6153DD2620057A19B /* UIImage+Tint.h */,
+				938CB4B7153DD2620057A19B /* UIImage+Tint.m */,
+				938CB4B8153DD2620057A19B /* UIImage+Tools.h */,
+				938CB4B9153DD2620057A19B /* UIImage+Tools.m */,
+			);
+			name = UIImage;
+			sourceTree = "<group>";
+		};
 		938CB502153DD54F0057A19B /* PageScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,29 +767,18 @@
 		938D583E153DCAE40067CEFA /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				938CB4A9153DD2610057A19B /* CGAffineTransformAdditions.h */,
 				932FDABF153DDAC500E9D253 /* NSData+Base64.h */,
 				932FDAC0153DDAC500E9D253 /* NSData+Base64.m */,
 				932FDA6B153DD9D300E9D253 /* NSString+UUID.h */,
 				932FDA6C153DD9D300E9D253 /* NSString+UUID.m */,
 				938CB4A4153DD1630057A19B /* NSArray+Tools.h */,
 				938CB4A5153DD1630057A19B /* NSArray+Tools.m */,
-				938CB4A9153DD2610057A19B /* CGAffineTransformAdditions.h */,
 				938CB4AA153DD2610057A19B /* NSIndexPath+Tools.h */,
 				938CB4AB153DD2610057A19B /* NSIndexPath+Tools.m */,
 				938CB4AC153DD2620057A19B /* UIColor+Tools.h */,
 				938CB4AD153DD2620057A19B /* UIColor+Tools.m */,
-				938CB4AE153DD2620057A19B /* UIImage+Alpha.h */,
-				938CB4AF153DD2620057A19B /* UIImage+Alpha.m */,
-				938CB4B0153DD2620057A19B /* UIImage+ColorPicker.h */,
-				938CB4B1153DD2620057A19B /* UIImage+ColorPicker.m */,
-				938CB4B2153DD2620057A19B /* UIImage+Resize.h */,
-				938CB4B3153DD2620057A19B /* UIImage+Resize.m */,
-				938CB4B4153DD2620057A19B /* UIImage+RoundedCorner.h */,
-				938CB4B5153DD2620057A19B /* UIImage+RoundedCorner.m */,
-				938CB4B6153DD2620057A19B /* UIImage+Tint.h */,
-				938CB4B7153DD2620057A19B /* UIImage+Tint.m */,
-				938CB4B8153DD2620057A19B /* UIImage+Tools.h */,
-				938CB4B9153DD2620057A19B /* UIImage+Tools.m */,
+				93879819153ED181001FE131 /* UIImage */,
 				938CB4BA153DD2620057A19B /* UILabel+DynamicHeight.h */,
 				938CB4BB153DD2620057A19B /* UILabel+DynamicHeight.m */,
 				938CB4BC153DD2620057A19B /* UIView+Layout.h */,

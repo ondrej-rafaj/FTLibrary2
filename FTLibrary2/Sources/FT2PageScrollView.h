@@ -74,8 +74,8 @@
     } _pageScrollViewFlags;
 }
 
-@property (nonatomic, weak) id <FT2PageScrollViewDataSource> dataSource;
-@property (nonatomic, weak) id <FT2PageScrollViewDelegate> delegate;
+@property (nonatomic, assign) id <FT2PageScrollViewDataSource> dataSource;
+@property (nonatomic, assign) id <FT2PageScrollViewDelegate> delegate;
 @property (nonatomic) CGSize visibleSize;
 //use page size to define width of pages when paging is disabled
 @property (nonatomic, assign) CGSize pageSize; 
