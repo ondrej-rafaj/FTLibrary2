@@ -456,7 +456,7 @@
 			name = System;
 			sourceTree = "<group>";
 		};
-		932FDA5C153DD91B00E9D253 /* Third Party */ = {
+		932FDA5C153DD91B00E9D253 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
 				93C265D9153EC32E0010A059 /* Reachability */,
@@ -464,7 +464,7 @@
 				932FDAC4153DDB2400E9D253 /* Facebook */,
 				932FDAE3153DDB3300E9D253 /* Twitter */,
 			);
-			name = "Third Party";
+			name = "ThirdParty";
 			sourceTree = "<group>";
 		};
 		932FDA5E153DD96000E9D253 /* SAOAuthTwitterEngine */ = {
@@ -477,7 +477,7 @@
 				932FDA63153DD96000E9D253 /* twitter_load.png */,
 			);
 			name = SAOAuthTwitterEngine;
-			path = "FTLibrary2/Third Party/SAOAuthTwitterEngine";
+			path = "FTLibrary2/ThirdParty/SAOAuthTwitterEngine";
 			sourceTree = "<group>";
 		};
 		932FDA70153DDA8F00E9D253 /* MGTwitterEngine */ = {
@@ -513,7 +513,7 @@
 				932FDA8C153DDA8F00E9D253 /* MGTwitterXMLParser.m */,
 			);
 			name = MGTwitterEngine;
-			path = "FTLibrary2/Third Party/MGTwitterEngine";
+			path = "FTLibrary2/ThirdParty/MGTwitterEngine";
 			sourceTree = "<group>";
 		};
 		932FDAC4153DDB2400E9D253 /* Facebook */ = {
@@ -533,7 +533,7 @@
 				932FDAD0153DDB2400E9D253 /* FTFacebook.m */,
 			);
 			name = Facebook;
-			path = "FTLibrary2/Third Party/Facebook";
+			path = "FTLibrary2/ThirdParty/Facebook";
 			sourceTree = "<group>";
 		};
 		932FDAE3153DDB3300E9D253 /* Twitter */ = {
@@ -579,7 +579,7 @@
 				932FDB00153DDBAA00E9D253 /* SBJsonWriter.m */,
 			);
 			name = JSONFramework;
-			path = "FTLibrary2/Third Party/JSONFramework";
+			path = "FTLibrary2/ThirdParty/JSONFramework";
 			sourceTree = "<group>";
 		};
 		932FDB2A153DDDF900E9D253 /* Libraries & Headers */ = {
@@ -591,7 +591,7 @@
 				932FDB2E153DDDF900E9D253 /* OAuthConsumer */,
 			);
 			name = "Libraries & Headers";
-			path = "FTLibrary2/Third Party/Libraries & Headers";
+			path = "FTLibrary2/ThirdParty/Libraries & Headers";
 			sourceTree = "<group>";
 		};
 		932FDB2E153DDDF900E9D253 /* OAuthConsumer */ = {
@@ -626,7 +626,7 @@
 		938D5807153DC4370067CEFA = {
 			isa = PBXGroup;
 			children = (
-				932FDA5C153DD91B00E9D253 /* Third Party */,
+				932FDA5C153DD91B00E9D253 /* ThirdParty */,
 				938D583C153DCA9B0067CEFA /* Source */,
 				938D5817153DC4380067CEFA /* FTLibrary2 */,
 				938D582D153DCA840067CEFA /* FTLibrary2Test */,
@@ -765,7 +765,7 @@
 				93C265DB153EC32E0010A059 /* Reachability.m */,
 			);
 			name = Reachability;
-			path = "FTLibrary2/Third Party/Reachability";
+			path = "FTLibrary2/ThirdParty/Reachability";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1142,7 +1142,7 @@
 				GCC_PREFIX_HEADER = "FTLibrary2/FTLibrary2-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/FTLibrary2/Third Party/Libraries & Headers\"",
+					"\"$(SRCROOT)/FTLibrary2/ThirdParty/Libraries & Headers\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1158,7 +1158,7 @@
 				GCC_PREFIX_HEADER = "FTLibrary2/FTLibrary2-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/FTLibrary2/Third Party/Libraries & Headers\"",
+					"\"$(SRCROOT)/FTLibrary2/ThirdParty/Libraries & Headers\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1175,7 +1175,7 @@
 				INFOPLIST_FILE = "FTLibrary2Test/FTLibrary2Test-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/FTLibrary2/Third Party/Libraries & Headers\"",
+					"\"$(SRCROOT)/FTLibrary2/ThirdParty/Libraries & Headers\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1191,7 +1191,7 @@
 				INFOPLIST_FILE = "FTLibrary2Test/FTLibrary2Test-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/FTLibrary2/Third Party/Libraries & Headers\"",
+					"\"$(SRCROOT)/FTLibrary2/ThirdParty/Libraries & Headers\"",
 				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
