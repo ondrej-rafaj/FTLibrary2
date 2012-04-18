@@ -1,0 +1,1235 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		932FDA4D153DD8B700E9D253 /* FTShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA43153DD8B700E9D253 /* FTShare.h */; };
+		932FDA4E153DD8B700E9D253 /* FTShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FTShare.m */; };
+		932FDA4F153DD8B700E9D253 /* FTShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FTShare.m */; };
+		932FDA50153DD8B700E9D253 /* FTShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA45153DD8B700E9D253 /* FTShareEmail.h */; };
+		932FDA51153DD8B700E9D253 /* FTShareEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA46153DD8B700E9D253 /* FTShareEmail.m */; };
+		932FDA52153DD8B700E9D253 /* FTShareEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA46153DD8B700E9D253 /* FTShareEmail.m */; };
+		932FDA53153DD8B700E9D253 /* FTShareFacebook.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA47153DD8B700E9D253 /* FTShareFacebook.h */; };
+		932FDA54153DD8B700E9D253 /* FTShareFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA48153DD8B700E9D253 /* FTShareFacebook.m */; };
+		932FDA55153DD8B700E9D253 /* FTShareFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA48153DD8B700E9D253 /* FTShareFacebook.m */; };
+		932FDA56153DD8B700E9D253 /* FTShareMessageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA49153DD8B700E9D253 /* FTShareMessageController.h */; };
+		932FDA57153DD8B700E9D253 /* FTShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4A153DD8B700E9D253 /* FTShareMessageController.m */; };
+		932FDA58153DD8B700E9D253 /* FTShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4A153DD8B700E9D253 /* FTShareMessageController.m */; };
+		932FDA59153DD8B700E9D253 /* FTShareTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA4B153DD8B700E9D253 /* FTShareTwitter.h */; };
+		932FDA5A153DD8B700E9D253 /* FTShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4C153DD8B700E9D253 /* FTShareTwitter.m */; };
+		932FDA5B153DD8B700E9D253 /* FTShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4C153DD8B700E9D253 /* FTShareTwitter.m */; };
+		932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */; };
+		932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDA66153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; };
+		932FDA67153DD96000E9D253 /* SA_OAuthTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */; };
+		932FDA68153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA62153DD96000E9D253 /* SA_OAuthTwitterEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDA69153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA62153DD96000E9D253 /* SA_OAuthTwitterEngine.m */; };
+		932FDA6A153DD96000E9D253 /* twitter_load.png in Resources */ = {isa = PBXBuildFile; fileRef = 932FDA63153DD96000E9D253 /* twitter_load.png */; };
+		932FDA6D153DD9D300E9D253 /* NSString+UUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA6B153DD9D300E9D253 /* NSString+UUID.h */; };
+		932FDA6E153DD9D300E9D253 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA6C153DD9D300E9D253 /* NSString+UUID.m */; };
+		932FDA6F153DD9D300E9D253 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA6C153DD9D300E9D253 /* NSString+UUID.m */; };
+		932FDA91153DDA9000E9D253 /* MGTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA71153DDA8F00E9D253 /* MGTwitterEngine.h */; };
+		932FDA92153DDA9000E9D253 /* MGTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA72153DDA8F00E9D253 /* MGTwitterEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDA93153DDA9000E9D253 /* MGTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA72153DDA8F00E9D253 /* MGTwitterEngine.m */; };
+		932FDA94153DDA9000E9D253 /* MGTwitterEngineDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA73153DDA8F00E9D253 /* MGTwitterEngineDelegate.h */; };
+		932FDA95153DDA9000E9D253 /* MGTwitterEngineGlobalHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA74153DDA8F00E9D253 /* MGTwitterEngineGlobalHeader.h */; };
+		932FDA96153DDA9000E9D253 /* MGTwitterHTTPURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA75153DDA8F00E9D253 /* MGTwitterHTTPURLConnection.h */; };
+		932FDA97153DDA9000E9D253 /* MGTwitterHTTPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA76153DDA8F00E9D253 /* MGTwitterHTTPURLConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDA98153DDA9000E9D253 /* MGTwitterHTTPURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA76153DDA8F00E9D253 /* MGTwitterHTTPURLConnection.m */; };
+		932FDA99153DDA9000E9D253 /* MGTwitterLibXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA77153DDA8F00E9D253 /* MGTwitterLibXMLParser.h */; };
+		932FDA9A153DDA9000E9D253 /* MGTwitterLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA78153DDA8F00E9D253 /* MGTwitterLibXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDA9B153DDA9000E9D253 /* MGTwitterLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA78153DDA8F00E9D253 /* MGTwitterLibXMLParser.m */; };
+		932FDA9C153DDA9000E9D253 /* MGTwitterMessagesLibXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA79153DDA8F00E9D253 /* MGTwitterMessagesLibXMLParser.h */; };
+		932FDA9D153DDA9000E9D253 /* MGTwitterMessagesLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7A153DDA8F00E9D253 /* MGTwitterMessagesLibXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDA9E153DDA9000E9D253 /* MGTwitterMessagesLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7A153DDA8F00E9D253 /* MGTwitterMessagesLibXMLParser.m */; };
+		932FDA9F153DDA9000E9D253 /* MGTwitterMessagesParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA7B153DDA8F00E9D253 /* MGTwitterMessagesParser.h */; };
+		932FDAA0153DDA9000E9D253 /* MGTwitterMessagesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7C153DDA8F00E9D253 /* MGTwitterMessagesParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAA1153DDA9000E9D253 /* MGTwitterMessagesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7C153DDA8F00E9D253 /* MGTwitterMessagesParser.m */; };
+		932FDAA2153DDA9000E9D253 /* MGTwitterMiscLibXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA7D153DDA8F00E9D253 /* MGTwitterMiscLibXMLParser.h */; };
+		932FDAA3153DDA9000E9D253 /* MGTwitterMiscLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7E153DDA8F00E9D253 /* MGTwitterMiscLibXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAA4153DDA9000E9D253 /* MGTwitterMiscLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA7E153DDA8F00E9D253 /* MGTwitterMiscLibXMLParser.m */; };
+		932FDAA5153DDA9000E9D253 /* MGTwitterMiscParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA7F153DDA8F00E9D253 /* MGTwitterMiscParser.h */; };
+		932FDAA6153DDA9000E9D253 /* MGTwitterMiscParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA80153DDA8F00E9D253 /* MGTwitterMiscParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAA7153DDA9000E9D253 /* MGTwitterMiscParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA80153DDA8F00E9D253 /* MGTwitterMiscParser.m */; };
+		932FDAA8153DDA9000E9D253 /* MGTwitterParserDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA81153DDA8F00E9D253 /* MGTwitterParserDelegate.h */; };
+		932FDAA9153DDA9000E9D253 /* MGTwitterRequestTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA82153DDA8F00E9D253 /* MGTwitterRequestTypes.h */; };
+		932FDAAA153DDA9000E9D253 /* MGTwitterStatusesLibXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA83153DDA8F00E9D253 /* MGTwitterStatusesLibXMLParser.h */; };
+		932FDAAB153DDA9000E9D253 /* MGTwitterStatusesLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA84153DDA8F00E9D253 /* MGTwitterStatusesLibXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAAC153DDA9000E9D253 /* MGTwitterStatusesLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA84153DDA8F00E9D253 /* MGTwitterStatusesLibXMLParser.m */; };
+		932FDAAD153DDA9000E9D253 /* MGTwitterStatusesParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA85153DDA8F00E9D253 /* MGTwitterStatusesParser.h */; };
+		932FDAAE153DDA9000E9D253 /* MGTwitterStatusesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA86153DDA8F00E9D253 /* MGTwitterStatusesParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAAF153DDA9000E9D253 /* MGTwitterStatusesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA86153DDA8F00E9D253 /* MGTwitterStatusesParser.m */; };
+		932FDAB0153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA87153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.h */; };
+		932FDAB1153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA88153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.m */; };
+		932FDAB2153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA88153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.m */; };
+		932FDAB3153DDA9000E9D253 /* MGTwitterUsersParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA89153DDA8F00E9D253 /* MGTwitterUsersParser.h */; };
+		932FDAB4153DDA9000E9D253 /* MGTwitterUsersParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA8A153DDA8F00E9D253 /* MGTwitterUsersParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAB5153DDA9000E9D253 /* MGTwitterUsersParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA8A153DDA8F00E9D253 /* MGTwitterUsersParser.m */; };
+		932FDAB6153DDA9000E9D253 /* MGTwitterXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA8B153DDA8F00E9D253 /* MGTwitterXMLParser.h */; };
+		932FDAB7153DDA9000E9D253 /* MGTwitterXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA8C153DDA8F00E9D253 /* MGTwitterXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAB8153DDA9000E9D253 /* MGTwitterXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA8C153DDA8F00E9D253 /* MGTwitterXMLParser.m */; };
+		932FDAC1153DDAC500E9D253 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDABF153DDAC500E9D253 /* NSData+Base64.h */; };
+		932FDAC2153DDAC500E9D253 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAC0153DDAC500E9D253 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAC3153DDAC500E9D253 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAC0153DDAC500E9D253 /* NSData+Base64.m */; };
+		932FDAD1153DDB2400E9D253 /* Facebook.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAC5153DDB2400E9D253 /* Facebook.h */; };
+		932FDAD2153DDB2400E9D253 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAC6153DDB2400E9D253 /* Facebook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAD3153DDB2400E9D253 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAC6153DDB2400E9D253 /* Facebook.m */; };
+		932FDAD4153DDB2400E9D253 /* FBConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAC7153DDB2400E9D253 /* FBConnect.h */; };
+		932FDAD5153DDB2400E9D253 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 932FDAC8153DDB2400E9D253 /* FBDialog.bundle */; };
+		932FDAD6153DDB2400E9D253 /* FBDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAC9153DDB2400E9D253 /* FBDialog.h */; };
+		932FDAD7153DDB2400E9D253 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACA153DDB2400E9D253 /* FBDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAD8153DDB2400E9D253 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACA153DDB2400E9D253 /* FBDialog.m */; };
+		932FDAD9153DDB2400E9D253 /* FBLoginDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDACB153DDB2400E9D253 /* FBLoginDialog.h */; };
+		932FDADA153DDB2400E9D253 /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACC153DDB2400E9D253 /* FBLoginDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDADB153DDB2400E9D253 /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACC153DDB2400E9D253 /* FBLoginDialog.m */; };
+		932FDADC153DDB2400E9D253 /* FBRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDACD153DDB2400E9D253 /* FBRequest.h */; };
+		932FDADD153DDB2400E9D253 /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACE153DDB2400E9D253 /* FBRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDADE153DDB2400E9D253 /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDACE153DDB2400E9D253 /* FBRequest.m */; };
+		932FDADF153DDB2400E9D253 /* FTFacebook.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDACF153DDB2400E9D253 /* FTFacebook.h */; };
+		932FDAE0153DDB2400E9D253 /* FTFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAD0153DDB2400E9D253 /* FTFacebook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDAE1153DDB2400E9D253 /* FTFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAD0153DDB2400E9D253 /* FTFacebook.m */; };
+		932FDB01153DDBAA00E9D253 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAE5153DDBAA00E9D253 /* JSON.h */; };
+		932FDB02153DDBAA00E9D253 /* NSObject+SBJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAE6153DDBAA00E9D253 /* NSObject+SBJson.h */; };
+		932FDB03153DDBAA00E9D253 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAE7153DDBAA00E9D253 /* NSObject+SBJson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB04153DDBAA00E9D253 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAE7153DDBAA00E9D253 /* NSObject+SBJson.m */; };
+		932FDB05153DDBAA00E9D253 /* NSString+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAE8153DDBAA00E9D253 /* NSString+SBJSON.h */; };
+		932FDB06153DDBAA00E9D253 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAE9153DDBAA00E9D253 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB07153DDBAA00E9D253 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAE9153DDBAA00E9D253 /* NSString+SBJSON.m */; };
+		932FDB08153DDBAA00E9D253 /* SBJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAEA153DDBAA00E9D253 /* SBJson.h */; };
+		932FDB09153DDBAA00E9D253 /* SBJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAEB153DDBAA00E9D253 /* SBJsonParser.h */; };
+		932FDB0A153DDBAA00E9D253 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAEC153DDBAA00E9D253 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB0B153DDBAA00E9D253 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAEC153DDBAA00E9D253 /* SBJsonParser.m */; };
+		932FDB0C153DDBAA00E9D253 /* SBJsonStreamParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAED153DDBAA00E9D253 /* SBJsonStreamParser.h */; };
+		932FDB0D153DDBAA00E9D253 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAEE153DDBAA00E9D253 /* SBJsonStreamParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB0E153DDBAA00E9D253 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAEE153DDBAA00E9D253 /* SBJsonStreamParser.m */; };
+		932FDB0F153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAEF153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.h */; };
+		932FDB10153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF0153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB11153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF0153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m */; };
+		932FDB12153DDBAA00E9D253 /* SBJsonStreamParserAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAF1153DDBAA00E9D253 /* SBJsonStreamParserAdapter.h */; };
+		932FDB13153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF2153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB14153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF2153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m */; };
+		932FDB15153DDBAA00E9D253 /* SBJsonStreamParserState.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAF3153DDBAA00E9D253 /* SBJsonStreamParserState.h */; };
+		932FDB16153DDBAA00E9D253 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF4153DDBAA00E9D253 /* SBJsonStreamParserState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB17153DDBAA00E9D253 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF4153DDBAA00E9D253 /* SBJsonStreamParserState.m */; };
+		932FDB18153DDBAA00E9D253 /* SBJsonStreamWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAF5153DDBAA00E9D253 /* SBJsonStreamWriter.h */; };
+		932FDB19153DDBAA00E9D253 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF6153DDBAA00E9D253 /* SBJsonStreamWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB1A153DDBAA00E9D253 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF6153DDBAA00E9D253 /* SBJsonStreamWriter.m */; };
+		932FDB1B153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAF7153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.h */; };
+		932FDB1C153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF8153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB1D153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAF8153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m */; };
+		932FDB1E153DDBAA00E9D253 /* SBJsonStreamWriterState.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAF9153DDBAA00E9D253 /* SBJsonStreamWriterState.h */; };
+		932FDB1F153DDBAA00E9D253 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFA153DDBAA00E9D253 /* SBJsonStreamWriterState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB20153DDBAA00E9D253 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFA153DDBAA00E9D253 /* SBJsonStreamWriterState.m */; };
+		932FDB21153DDBAA00E9D253 /* SBJsonTokeniser.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAFB153DDBAA00E9D253 /* SBJsonTokeniser.h */; };
+		932FDB22153DDBAA00E9D253 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFC153DDBAA00E9D253 /* SBJsonTokeniser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB23153DDBAA00E9D253 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFC153DDBAA00E9D253 /* SBJsonTokeniser.m */; };
+		932FDB24153DDBAA00E9D253 /* SBJsonUTF8Stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAFD153DDBAA00E9D253 /* SBJsonUTF8Stream.h */; };
+		932FDB25153DDBAA00E9D253 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFE153DDBAA00E9D253 /* SBJsonUTF8Stream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB26153DDBAA00E9D253 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDAFE153DDBAA00E9D253 /* SBJsonUTF8Stream.m */; };
+		932FDB27153DDBAA00E9D253 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDAFF153DDBAA00E9D253 /* SBJsonWriter.h */; };
+		932FDB28153DDBAA00E9D253 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDB00153DDBAA00E9D253 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDB29153DDBAA00E9D253 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDB00153DDBAA00E9D253 /* SBJsonWriter.m */; };
+		932FDB3E153DDDF900E9D253 /* jQueryInject.txt in Resources */ = {isa = PBXBuildFile; fileRef = 932FDB2B153DDDF900E9D253 /* jQueryInject.txt */; };
+		932FDB3F153DDDF900E9D253 /* jQueryInjectLandscape.txt in Resources */ = {isa = PBXBuildFile; fileRef = 932FDB2C153DDDF900E9D253 /* jQueryInjectLandscape.txt */; };
+		932FDB40153DDDF900E9D253 /* libOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 932FDB2D153DDDF900E9D253 /* libOAuth.a */; };
+		932FDB41153DDDF900E9D253 /* libOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 932FDB2D153DDDF900E9D253 /* libOAuth.a */; };
+		932FDB42153DDDF900E9D253 /* NSMutableURLRequest+Parameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB2F153DDDF900E9D253 /* NSMutableURLRequest+Parameters.h */; };
+		932FDB43153DDDF900E9D253 /* NSString+URLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB30153DDDF900E9D253 /* NSString+URLEncoding.h */; };
+		932FDB44153DDDF900E9D253 /* NSURL+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB31153DDDF900E9D253 /* NSURL+Base.h */; };
+		932FDB45153DDDF900E9D253 /* OAAsynchronousDataFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB32153DDDF900E9D253 /* OAAsynchronousDataFetcher.h */; };
+		932FDB46153DDDF900E9D253 /* OAConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB33153DDDF900E9D253 /* OAConsumer.h */; };
+		932FDB47153DDDF900E9D253 /* OADataFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB34153DDDF900E9D253 /* OADataFetcher.h */; };
+		932FDB48153DDDF900E9D253 /* OAHMAC_SHA1SignatureProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB35153DDDF900E9D253 /* OAHMAC_SHA1SignatureProvider.h */; };
+		932FDB49153DDDF900E9D253 /* OAMutableURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB36153DDDF900E9D253 /* OAMutableURLRequest.h */; };
+		932FDB4A153DDDF900E9D253 /* OAPlaintextSignatureProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB37153DDDF900E9D253 /* OAPlaintextSignatureProvider.h */; };
+		932FDB4B153DDDF900E9D253 /* OARequestParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB38153DDDF900E9D253 /* OARequestParameter.h */; };
+		932FDB4C153DDDF900E9D253 /* OAServiceTicket.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB39153DDDF900E9D253 /* OAServiceTicket.h */; };
+		932FDB4D153DDDF900E9D253 /* OASignatureProviding.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3A153DDDF900E9D253 /* OASignatureProviding.h */; };
+		932FDB4E153DDDF900E9D253 /* OAToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3B153DDDF900E9D253 /* OAToken.h */; };
+		932FDB4F153DDDF900E9D253 /* OAToken_KeychainExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */; };
+		932FDB50153DDDF900E9D253 /* OAuthConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */; };
+		932FDB53153DDE7C00E9D253 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 932FDB51153DDE5100E9D253 /* libxml2.dylib */; };
+		938CB4A6153DD1630057A19B /* NSArray+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4A4153DD1630057A19B /* NSArray+Tools.h */; };
+		938CB4A7153DD1630057A19B /* NSArray+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4A5153DD1630057A19B /* NSArray+Tools.m */; };
+		938CB4A8153DD1630057A19B /* NSArray+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4A5153DD1630057A19B /* NSArray+Tools.m */; };
+		938CB4BE153DD2620057A19B /* CGAffineTransformAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4A9153DD2610057A19B /* CGAffineTransformAdditions.h */; };
+		938CB4BF153DD2620057A19B /* NSIndexPath+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4AA153DD2610057A19B /* NSIndexPath+Tools.h */; };
+		938CB4C0153DD2620057A19B /* NSIndexPath+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4AB153DD2610057A19B /* NSIndexPath+Tools.m */; };
+		938CB4C1153DD2620057A19B /* NSIndexPath+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4AB153DD2610057A19B /* NSIndexPath+Tools.m */; };
+		938CB4C2153DD2620057A19B /* UIColor+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4AC153DD2620057A19B /* UIColor+Tools.h */; };
+		938CB4C3153DD2620057A19B /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4AD153DD2620057A19B /* UIColor+Tools.m */; };
+		938CB4C4153DD2620057A19B /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4AD153DD2620057A19B /* UIColor+Tools.m */; };
+		938CB4C5153DD2620057A19B /* UIImage+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4AE153DD2620057A19B /* UIImage+Alpha.h */; };
+		938CB4C6153DD2620057A19B /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4AF153DD2620057A19B /* UIImage+Alpha.m */; };
+		938CB4C7153DD2620057A19B /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4AF153DD2620057A19B /* UIImage+Alpha.m */; };
+		938CB4C8153DD2620057A19B /* UIImage+ColorPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4B0153DD2620057A19B /* UIImage+ColorPicker.h */; };
+		938CB4C9153DD2620057A19B /* UIImage+ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4B1153DD2620057A19B /* UIImage+ColorPicker.m */; };
+		938CB4CA153DD2620057A19B /* UIImage+ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4B1153DD2620057A19B /* UIImage+ColorPicker.m */; };
+		938CB4CB153DD2620057A19B /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4B2153DD2620057A19B /* UIImage+Resize.h */; };
+		938CB4CC153DD2620057A19B /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4B3153DD2620057A19B /* UIImage+Resize.m */; };
+		938CB4CD153DD2620057A19B /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4B3153DD2620057A19B /* UIImage+Resize.m */; };
+		938CB4CE153DD2620057A19B /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4B4153DD2620057A19B /* UIImage+RoundedCorner.h */; };
+		938CB4CF153DD2620057A19B /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4B5153DD2620057A19B /* UIImage+RoundedCorner.m */; };
+		938CB4D0153DD2620057A19B /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4B5153DD2620057A19B /* UIImage+RoundedCorner.m */; };
+		938CB4D1153DD2620057A19B /* UIImage+Tint.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4B6153DD2620057A19B /* UIImage+Tint.h */; };
+		938CB4D2153DD2620057A19B /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4B7153DD2620057A19B /* UIImage+Tint.m */; };
+		938CB4D3153DD2620057A19B /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4B7153DD2620057A19B /* UIImage+Tint.m */; };
+		938CB4D4153DD2620057A19B /* UIImage+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4B8153DD2620057A19B /* UIImage+Tools.h */; };
+		938CB4D5153DD2620057A19B /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4B9153DD2620057A19B /* UIImage+Tools.m */; };
+		938CB4D6153DD2620057A19B /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4B9153DD2620057A19B /* UIImage+Tools.m */; };
+		938CB4D7153DD2620057A19B /* UILabel+DynamicHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4BA153DD2620057A19B /* UILabel+DynamicHeight.h */; };
+		938CB4D8153DD2620057A19B /* UILabel+DynamicHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4BB153DD2620057A19B /* UILabel+DynamicHeight.m */; };
+		938CB4D9153DD2620057A19B /* UILabel+DynamicHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4BB153DD2620057A19B /* UILabel+DynamicHeight.m */; };
+		938CB4DA153DD2620057A19B /* UIView+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4BC153DD2620057A19B /* UIView+Layout.h */; };
+		938CB4DB153DD2620057A19B /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4BD153DD2620057A19B /* UIView+Layout.m */; };
+		938CB4DC153DD2620057A19B /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4BD153DD2620057A19B /* UIView+Layout.m */; };
+		938CB4F1153DD4BD0057A19B /* FT2ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4E6153DD4BD0057A19B /* FT2ActionSheet.m */; };
+		938CB4F2153DD4BD0057A19B /* FT2ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4E6153DD4BD0057A19B /* FT2ActionSheet.m */; };
+		938CB4F3153DD4BD0057A19B /* FT2AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4E7153DD4BD0057A19B /* FT2AlertView.m */; };
+		938CB4F4153DD4BD0057A19B /* FT2AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4E7153DD4BD0057A19B /* FT2AlertView.m */; };
+		938CB4F5153DD4BD0057A19B /* FT2CustomAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4E8153DD4BD0057A19B /* FT2CustomAnimationView.m */; };
+		938CB4F6153DD4BD0057A19B /* FT2CustomAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4E8153DD4BD0057A19B /* FT2CustomAnimationView.m */; };
+		938CB4FB153DD4BD0057A19B /* FT2ActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4EB153DD4BD0057A19B /* FT2ActionSheet.h */; };
+		938CB4FC153DD4BD0057A19B /* FT2AlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4EC153DD4BD0057A19B /* FT2AlertView.h */; };
+		938CB4FD153DD4BD0057A19B /* FT2CustomAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4ED153DD4BD0057A19B /* FT2CustomAnimationView.h */; };
+		938CB503153DD7A70057A19B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D5828153DCA840067CEFA /* UIKit.framework */; };
+		938D5816153DC4380067CEFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D5815153DC4380067CEFA /* Foundation.framework */; };
+		938D5829153DCA840067CEFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D5828153DCA840067CEFA /* UIKit.framework */; };
+		938D582A153DCA840067CEFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D5815153DC4380067CEFA /* Foundation.framework */; };
+		938D582C153DCA840067CEFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D582B153DCA840067CEFA /* CoreGraphics.framework */; };
+		938D5832153DCA840067CEFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 938D5830153DCA840067CEFA /* InfoPlist.strings */; };
+		938D5834153DCA840067CEFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5833153DCA840067CEFA /* main.m */; };
+		938D5838153DCA840067CEFA /* FT2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5837153DCA840067CEFA /* FT2AppDelegate.m */; };
+		93C265C4153EBF6A0010A059 /* FTReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265C0153EBF6A0010A059 /* FTReachabilityManager.h */; };
+		93C265C5153EBF6A0010A059 /* FTReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C1153EBF6A0010A059 /* FTReachabilityManager.m */; };
+		93C265C6153EBF6A0010A059 /* FTReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C1153EBF6A0010A059 /* FTReachabilityManager.m */; };
+		93C265C7153EBF6A0010A059 /* FTTaskMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265C2153EBF6A0010A059 /* FTTaskMaker.h */; };
+		93C265C8153EBF6A0010A059 /* FTTaskMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C3153EBF6A0010A059 /* FTTaskMaker.m */; };
+		93C265C9153EBF6A0010A059 /* FTTaskMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265C3153EBF6A0010A059 /* FTTaskMaker.m */; };
+		93C265CC153EC01B0010A059 /* FTLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265CB153EC01B0010A059 /* FTLog.h */; };
+		93C265CF153EC09B0010A059 /* FTError.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265CD153EC09B0010A059 /* FTError.h */; };
+		93C265D0153EC09B0010A059 /* FTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265CE153EC09B0010A059 /* FTError.m */; };
+		93C265D1153EC09B0010A059 /* FTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265CE153EC09B0010A059 /* FTError.m */; };
+		93C265D3153EC1A50010A059 /* FTMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265D2153EC1A40010A059 /* FTMath.h */; };
+		93C265D6153EC1DB0010A059 /* FTSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265D4153EC1DA0010A059 /* FTSystem.h */; };
+		93C265D7153EC1DB0010A059 /* FTSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265D5153EC1DA0010A059 /* FTSystem.m */; };
+		93C265D8153EC1DB0010A059 /* FTSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265D5153EC1DA0010A059 /* FTSystem.m */; };
+		93C265DC153EC32E0010A059 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265DA153EC32E0010A059 /* Reachability.h */; };
+		93C265DD153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93C265DE153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		932FDA43153DD8B700E9D253 /* FTShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShare.h; path = FTLibrary2/Sources/FTShare.h; sourceTree = "<group>"; };
+		932FDA44153DD8B700E9D253 /* FTShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShare.m; path = FTLibrary2/Sources/FTShare.m; sourceTree = "<group>"; };
+		932FDA45153DD8B700E9D253 /* FTShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareEmail.h; path = FTLibrary2/Sources/FTShareEmail.h; sourceTree = "<group>"; };
+		932FDA46153DD8B700E9D253 /* FTShareEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareEmail.m; path = FTLibrary2/Sources/FTShareEmail.m; sourceTree = "<group>"; };
+		932FDA47153DD8B700E9D253 /* FTShareFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareFacebook.h; path = FTLibrary2/Sources/FTShareFacebook.h; sourceTree = "<group>"; };
+		932FDA48153DD8B700E9D253 /* FTShareFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareFacebook.m; path = FTLibrary2/Sources/FTShareFacebook.m; sourceTree = "<group>"; };
+		932FDA49153DD8B700E9D253 /* FTShareMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareMessageController.h; path = FTLibrary2/Sources/FTShareMessageController.h; sourceTree = "<group>"; };
+		932FDA4A153DD8B700E9D253 /* FTShareMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareMessageController.m; path = FTLibrary2/Sources/FTShareMessageController.m; sourceTree = "<group>"; };
+		932FDA4B153DD8B700E9D253 /* FTShareTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareTwitter.h; path = FTLibrary2/Sources/FTShareTwitter.h; sourceTree = "<group>"; };
+		932FDA4C153DD8B700E9D253 /* FTShareTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareTwitter.m; path = FTLibrary2/Sources/FTShareTwitter.m; sourceTree = "<group>"; };
+		932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterController.h; sourceTree = "<group>"; };
+		932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SA_OAuthTwitterController.m; sourceTree = "<group>"; };
+		932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterEngine.h; sourceTree = "<group>"; };
+		932FDA62153DD96000E9D253 /* SA_OAuthTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SA_OAuthTwitterEngine.m; sourceTree = "<group>"; };
+		932FDA63153DD96000E9D253 /* twitter_load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_load.png; sourceTree = "<group>"; };
+		932FDA6B153DD9D300E9D253 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+UUID.h"; path = "FTLibrary2/Sources/Categories/NSString+UUID.h"; sourceTree = "<group>"; };
+		932FDA6C153DD9D300E9D253 /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+UUID.m"; path = "FTLibrary2/Sources/Categories/NSString+UUID.m"; sourceTree = "<group>"; };
+		932FDA71153DDA8F00E9D253 /* MGTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterEngine.h; sourceTree = "<group>"; };
+		932FDA72153DDA8F00E9D253 /* MGTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterEngine.m; sourceTree = "<group>"; };
+		932FDA73153DDA8F00E9D253 /* MGTwitterEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterEngineDelegate.h; sourceTree = "<group>"; };
+		932FDA74153DDA8F00E9D253 /* MGTwitterEngineGlobalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterEngineGlobalHeader.h; sourceTree = "<group>"; };
+		932FDA75153DDA8F00E9D253 /* MGTwitterHTTPURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterHTTPURLConnection.h; sourceTree = "<group>"; };
+		932FDA76153DDA8F00E9D253 /* MGTwitterHTTPURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterHTTPURLConnection.m; sourceTree = "<group>"; };
+		932FDA77153DDA8F00E9D253 /* MGTwitterLibXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterLibXMLParser.h; sourceTree = "<group>"; };
+		932FDA78153DDA8F00E9D253 /* MGTwitterLibXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterLibXMLParser.m; sourceTree = "<group>"; };
+		932FDA79153DDA8F00E9D253 /* MGTwitterMessagesLibXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterMessagesLibXMLParser.h; sourceTree = "<group>"; };
+		932FDA7A153DDA8F00E9D253 /* MGTwitterMessagesLibXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterMessagesLibXMLParser.m; sourceTree = "<group>"; };
+		932FDA7B153DDA8F00E9D253 /* MGTwitterMessagesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterMessagesParser.h; sourceTree = "<group>"; };
+		932FDA7C153DDA8F00E9D253 /* MGTwitterMessagesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterMessagesParser.m; sourceTree = "<group>"; };
+		932FDA7D153DDA8F00E9D253 /* MGTwitterMiscLibXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterMiscLibXMLParser.h; sourceTree = "<group>"; };
+		932FDA7E153DDA8F00E9D253 /* MGTwitterMiscLibXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterMiscLibXMLParser.m; sourceTree = "<group>"; };
+		932FDA7F153DDA8F00E9D253 /* MGTwitterMiscParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterMiscParser.h; sourceTree = "<group>"; };
+		932FDA80153DDA8F00E9D253 /* MGTwitterMiscParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterMiscParser.m; sourceTree = "<group>"; };
+		932FDA81153DDA8F00E9D253 /* MGTwitterParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterParserDelegate.h; sourceTree = "<group>"; };
+		932FDA82153DDA8F00E9D253 /* MGTwitterRequestTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterRequestTypes.h; sourceTree = "<group>"; };
+		932FDA83153DDA8F00E9D253 /* MGTwitterStatusesLibXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterStatusesLibXMLParser.h; sourceTree = "<group>"; };
+		932FDA84153DDA8F00E9D253 /* MGTwitterStatusesLibXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterStatusesLibXMLParser.m; sourceTree = "<group>"; };
+		932FDA85153DDA8F00E9D253 /* MGTwitterStatusesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterStatusesParser.h; sourceTree = "<group>"; };
+		932FDA86153DDA8F00E9D253 /* MGTwitterStatusesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterStatusesParser.m; sourceTree = "<group>"; };
+		932FDA87153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterUsersLibXMLParser.h; sourceTree = "<group>"; };
+		932FDA88153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterUsersLibXMLParser.m; sourceTree = "<group>"; };
+		932FDA89153DDA8F00E9D253 /* MGTwitterUsersParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterUsersParser.h; sourceTree = "<group>"; };
+		932FDA8A153DDA8F00E9D253 /* MGTwitterUsersParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterUsersParser.m; sourceTree = "<group>"; };
+		932FDA8B153DDA8F00E9D253 /* MGTwitterXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTwitterXMLParser.h; sourceTree = "<group>"; };
+		932FDA8C153DDA8F00E9D253 /* MGTwitterXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTwitterXMLParser.m; sourceTree = "<group>"; };
+		932FDABF153DDAC500E9D253 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "FTLibrary2/Sources/Categories/NSData+Base64.h"; sourceTree = "<group>"; };
+		932FDAC0153DDAC500E9D253 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "FTLibrary2/Sources/Categories/NSData+Base64.m"; sourceTree = "<group>"; };
+		932FDAC5153DDB2400E9D253 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
+		932FDAC6153DDB2400E9D253 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
+		932FDAC7153DDB2400E9D253 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
+		932FDAC8153DDB2400E9D253 /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
+		932FDAC9153DDB2400E9D253 /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
+		932FDACA153DDB2400E9D253 /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
+		932FDACB153DDB2400E9D253 /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
+		932FDACC153DDB2400E9D253 /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
+		932FDACD153DDB2400E9D253 /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
+		932FDACE153DDB2400E9D253 /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
+		932FDACF153DDB2400E9D253 /* FTFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFacebook.h; sourceTree = "<group>"; };
+		932FDAD0153DDB2400E9D253 /* FTFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTFacebook.m; sourceTree = "<group>"; };
+		932FDAE5153DDBAA00E9D253 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		932FDAE6153DDBAA00E9D253 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		932FDAE7153DDBAA00E9D253 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		932FDAE8153DDBAA00E9D253 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		932FDAE9153DDBAA00E9D253 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		932FDAEA153DDBAA00E9D253 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		932FDAEB153DDBAA00E9D253 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		932FDAEC153DDBAA00E9D253 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		932FDAED153DDBAA00E9D253 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		932FDAEE153DDBAA00E9D253 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		932FDAEF153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		932FDAF0153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		932FDAF1153DDBAA00E9D253 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		932FDAF2153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		932FDAF3153DDBAA00E9D253 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		932FDAF4153DDBAA00E9D253 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		932FDAF5153DDBAA00E9D253 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		932FDAF6153DDBAA00E9D253 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		932FDAF7153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		932FDAF8153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		932FDAF9153DDBAA00E9D253 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		932FDAFA153DDBAA00E9D253 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		932FDAFB153DDBAA00E9D253 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		932FDAFC153DDBAA00E9D253 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		932FDAFD153DDBAA00E9D253 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		932FDAFE153DDBAA00E9D253 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		932FDAFF153DDBAA00E9D253 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		932FDB00153DDBAA00E9D253 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		932FDB2B153DDDF900E9D253 /* jQueryInject.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInject.txt; sourceTree = "<group>"; };
+		932FDB2C153DDDF900E9D253 /* jQueryInjectLandscape.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInjectLandscape.txt; sourceTree = "<group>"; };
+		932FDB2D153DDDF900E9D253 /* libOAuth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOAuth.a; sourceTree = "<group>"; };
+		932FDB2F153DDDF900E9D253 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
+		932FDB30153DDDF900E9D253 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		932FDB31153DDDF900E9D253 /* NSURL+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Base.h"; sourceTree = "<group>"; };
+		932FDB32153DDDF900E9D253 /* OAAsynchronousDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAsynchronousDataFetcher.h; sourceTree = "<group>"; };
+		932FDB33153DDDF900E9D253 /* OAConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAConsumer.h; sourceTree = "<group>"; };
+		932FDB34153DDDF900E9D253 /* OADataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OADataFetcher.h; sourceTree = "<group>"; };
+		932FDB35153DDDF900E9D253 /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
+		932FDB36153DDDF900E9D253 /* OAMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAMutableURLRequest.h; sourceTree = "<group>"; };
+		932FDB37153DDDF900E9D253 /* OAPlaintextSignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAPlaintextSignatureProvider.h; sourceTree = "<group>"; };
+		932FDB38153DDDF900E9D253 /* OARequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARequestParameter.h; sourceTree = "<group>"; };
+		932FDB39153DDDF900E9D253 /* OAServiceTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAServiceTicket.h; sourceTree = "<group>"; };
+		932FDB3A153DDDF900E9D253 /* OASignatureProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASignatureProviding.h; sourceTree = "<group>"; };
+		932FDB3B153DDDF900E9D253 /* OAToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken.h; sourceTree = "<group>"; };
+		932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken_KeychainExtensions.h; sourceTree = "<group>"; };
+		932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
+		932FDB51153DDE5100E9D253 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		938CB4A4153DD1630057A19B /* NSArray+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Tools.h"; path = "FTLibrary2/Sources/Categories/NSArray+Tools.h"; sourceTree = "<group>"; };
+		938CB4A5153DD1630057A19B /* NSArray+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Tools.m"; path = "FTLibrary2/Sources/Categories/NSArray+Tools.m"; sourceTree = "<group>"; };
+		938CB4A9153DD2610057A19B /* CGAffineTransformAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGAffineTransformAdditions.h; path = FTLibrary2/Sources/Categories/CGAffineTransformAdditions.h; sourceTree = "<group>"; };
+		938CB4AA153DD2610057A19B /* NSIndexPath+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSIndexPath+Tools.h"; path = "FTLibrary2/Sources/Categories/NSIndexPath+Tools.h"; sourceTree = "<group>"; };
+		938CB4AB153DD2610057A19B /* NSIndexPath+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexPath+Tools.m"; path = "FTLibrary2/Sources/Categories/NSIndexPath+Tools.m"; sourceTree = "<group>"; };
+		938CB4AC153DD2620057A19B /* UIColor+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Tools.h"; path = "FTLibrary2/Sources/Categories/UIColor+Tools.h"; sourceTree = "<group>"; };
+		938CB4AD153DD2620057A19B /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Tools.m"; path = "FTLibrary2/Sources/Categories/UIColor+Tools.m"; sourceTree = "<group>"; };
+		938CB4AE153DD2620057A19B /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Alpha.h"; path = "FTLibrary2/Sources/Categories/UIImage+Alpha.h"; sourceTree = "<group>"; };
+		938CB4AF153DD2620057A19B /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Alpha.m"; path = "FTLibrary2/Sources/Categories/UIImage+Alpha.m"; sourceTree = "<group>"; };
+		938CB4B0153DD2620057A19B /* UIImage+ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ColorPicker.h"; path = "FTLibrary2/Sources/Categories/UIImage+ColorPicker.h"; sourceTree = "<group>"; };
+		938CB4B1153DD2620057A19B /* UIImage+ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorPicker.m"; path = "FTLibrary2/Sources/Categories/UIImage+ColorPicker.m"; sourceTree = "<group>"; };
+		938CB4B2153DD2620057A19B /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "FTLibrary2/Sources/Categories/UIImage+Resize.h"; sourceTree = "<group>"; };
+		938CB4B3153DD2620057A19B /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "FTLibrary2/Sources/Categories/UIImage+Resize.m"; sourceTree = "<group>"; };
+		938CB4B4153DD2620057A19B /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+RoundedCorner.h"; path = "FTLibrary2/Sources/Categories/UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		938CB4B5153DD2620057A19B /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RoundedCorner.m"; path = "FTLibrary2/Sources/Categories/UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		938CB4B6153DD2620057A19B /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tint.h"; path = "FTLibrary2/Sources/Categories/UIImage+Tint.h"; sourceTree = "<group>"; };
+		938CB4B7153DD2620057A19B /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tint.m"; path = "FTLibrary2/Sources/Categories/UIImage+Tint.m"; sourceTree = "<group>"; };
+		938CB4B8153DD2620057A19B /* UIImage+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Tools.h"; path = "FTLibrary2/Sources/Categories/UIImage+Tools.h"; sourceTree = "<group>"; };
+		938CB4B9153DD2620057A19B /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Tools.m"; path = "FTLibrary2/Sources/Categories/UIImage+Tools.m"; sourceTree = "<group>"; };
+		938CB4BA153DD2620057A19B /* UILabel+DynamicHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+DynamicHeight.h"; path = "FTLibrary2/Sources/Categories/UILabel+DynamicHeight.h"; sourceTree = "<group>"; };
+		938CB4BB153DD2620057A19B /* UILabel+DynamicHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+DynamicHeight.m"; path = "FTLibrary2/Sources/Categories/UILabel+DynamicHeight.m"; sourceTree = "<group>"; };
+		938CB4BC153DD2620057A19B /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Layout.h"; path = "FTLibrary2/Sources/Categories/UIView+Layout.h"; sourceTree = "<group>"; };
+		938CB4BD153DD2620057A19B /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Layout.m"; path = "FTLibrary2/Sources/Categories/UIView+Layout.m"; sourceTree = "<group>"; };
+		938CB4E6153DD4BD0057A19B /* FT2ActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ActionSheet.m; path = FTLibrary2/Sources/FT2ActionSheet.m; sourceTree = "<group>"; };
+		938CB4E7153DD4BD0057A19B /* FT2AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2AlertView.m; path = FTLibrary2/Sources/FT2AlertView.m; sourceTree = "<group>"; };
+		938CB4E8153DD4BD0057A19B /* FT2CustomAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2CustomAnimationView.m; path = FTLibrary2/Sources/FT2CustomAnimationView.m; sourceTree = "<group>"; };
+		938CB4EB153DD4BD0057A19B /* FT2ActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ActionSheet.h; path = FTLibrary2/Sources/FT2ActionSheet.h; sourceTree = "<group>"; };
+		938CB4EC153DD4BD0057A19B /* FT2AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2AlertView.h; path = FTLibrary2/Sources/FT2AlertView.h; sourceTree = "<group>"; };
+		938CB4ED153DD4BD0057A19B /* FT2CustomAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2CustomAnimationView.h; path = FTLibrary2/Sources/FT2CustomAnimationView.h; sourceTree = "<group>"; };
+		938CB504153DD7AE0057A19B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		938D5812153DC4380067CEFA /* libFTLibrary2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFTLibrary2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		938D5815153DC4380067CEFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		938D5819153DC4380067CEFA /* FTLibrary2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLibrary2-Prefix.pch"; sourceTree = "<group>"; };
+		938D5826153DCA840067CEFA /* FTLibrary2Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTLibrary2Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		938D5828153DCA840067CEFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		938D582B153DCA840067CEFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		938D582F153DCA840067CEFA /* FTLibrary2Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FTLibrary2Test-Info.plist"; sourceTree = "<group>"; };
+		938D5831153DCA840067CEFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		938D5833153DCA840067CEFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		938D5835153DCA840067CEFA /* FTLibrary2Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLibrary2Test-Prefix.pch"; sourceTree = "<group>"; };
+		938D5836153DCA840067CEFA /* FT2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FT2AppDelegate.h; sourceTree = "<group>"; };
+		938D5837153DCA840067CEFA /* FT2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FT2AppDelegate.m; sourceTree = "<group>"; };
+		93C265C0153EBF6A0010A059 /* FTReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTReachabilityManager.h; path = FTLibrary2/Sources/FTReachabilityManager.h; sourceTree = "<group>"; };
+		93C265C1153EBF6A0010A059 /* FTReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTReachabilityManager.m; path = FTLibrary2/Sources/FTReachabilityManager.m; sourceTree = "<group>"; };
+		93C265C2153EBF6A0010A059 /* FTTaskMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTTaskMaker.h; path = FTLibrary2/Sources/FTTaskMaker.h; sourceTree = "<group>"; };
+		93C265C3153EBF6A0010A059 /* FTTaskMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTTaskMaker.m; path = FTLibrary2/Sources/FTTaskMaker.m; sourceTree = "<group>"; };
+		93C265CB153EC01B0010A059 /* FTLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTLog.h; path = FTLibrary2/Sources/FTLog.h; sourceTree = "<group>"; };
+		93C265CD153EC09B0010A059 /* FTError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTError.h; path = FTLibrary2/Sources/FTError.h; sourceTree = "<group>"; };
+		93C265CE153EC09B0010A059 /* FTError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTError.m; path = FTLibrary2/Sources/FTError.m; sourceTree = "<group>"; };
+		93C265D2153EC1A40010A059 /* FTMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTMath.h; path = FTLibrary2/Sources/FTMath.h; sourceTree = "<group>"; };
+		93C265D4153EC1DA0010A059 /* FTSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTSystem.h; path = FTLibrary2/Sources/FTSystem.h; sourceTree = "<group>"; };
+		93C265D5153EC1DA0010A059 /* FTSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTSystem.m; path = FTLibrary2/Sources/FTSystem.m; sourceTree = "<group>"; };
+		93C265DA153EC32E0010A059 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		93C265DB153EC32E0010A059 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		938D580F153DC4380067CEFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932FDB53153DDE7C00E9D253 /* libxml2.dylib in Frameworks */,
+				938CB503153DD7A70057A19B /* UIKit.framework in Frameworks */,
+				938D5816153DC4380067CEFA /* Foundation.framework in Frameworks */,
+				932FDB40153DDDF900E9D253 /* libOAuth.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		938D5823153DCA840067CEFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				938D5829153DCA840067CEFA /* UIKit.framework in Frameworks */,
+				938D582A153DCA840067CEFA /* Foundation.framework in Frameworks */,
+				938D582C153DCA840067CEFA /* CoreGraphics.framework in Frameworks */,
+				932FDB41153DDDF900E9D253 /* libOAuth.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		932FDA3F153DD86800E9D253 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				932FDA42153DD88100E9D253 /* System */,
+				938D5840153DCBB80067CEFA /* Data */,
+				932FDA41153DD87300E9D253 /* Share */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		932FDA41153DD87300E9D253 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				932FDA43153DD8B700E9D253 /* FTShare.h */,
+				932FDA44153DD8B700E9D253 /* FTShare.m */,
+				932FDA45153DD8B700E9D253 /* FTShareEmail.h */,
+				932FDA46153DD8B700E9D253 /* FTShareEmail.m */,
+				932FDA47153DD8B700E9D253 /* FTShareFacebook.h */,
+				932FDA48153DD8B700E9D253 /* FTShareFacebook.m */,
+				932FDA49153DD8B700E9D253 /* FTShareMessageController.h */,
+				932FDA4A153DD8B700E9D253 /* FTShareMessageController.m */,
+				932FDA4B153DD8B700E9D253 /* FTShareTwitter.h */,
+				932FDA4C153DD8B700E9D253 /* FTShareTwitter.m */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
+		932FDA42153DD88100E9D253 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				93C265C0153EBF6A0010A059 /* FTReachabilityManager.h */,
+				93C265C1153EBF6A0010A059 /* FTReachabilityManager.m */,
+				93C265C2153EBF6A0010A059 /* FTTaskMaker.h */,
+				93C265C3153EBF6A0010A059 /* FTTaskMaker.m */,
+				93C265CB153EC01B0010A059 /* FTLog.h */,
+				93C265CD153EC09B0010A059 /* FTError.h */,
+				93C265CE153EC09B0010A059 /* FTError.m */,
+				93C265D2153EC1A40010A059 /* FTMath.h */,
+				93C265D4153EC1DA0010A059 /* FTSystem.h */,
+				93C265D5153EC1DA0010A059 /* FTSystem.m */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		932FDA5C153DD91B00E9D253 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				93C265D9153EC32E0010A059 /* Reachability */,
+				932FDAE4153DDBAA00E9D253 /* JSONFramework */,
+				932FDAC4153DDB2400E9D253 /* Facebook */,
+				932FDAE3153DDB3300E9D253 /* Twitter */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		932FDA5E153DD96000E9D253 /* SAOAuthTwitterEngine */ = {
+			isa = PBXGroup;
+			children = (
+				932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */,
+				932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */,
+				932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */,
+				932FDA62153DD96000E9D253 /* SA_OAuthTwitterEngine.m */,
+				932FDA63153DD96000E9D253 /* twitter_load.png */,
+			);
+			name = SAOAuthTwitterEngine;
+			path = "FTLibrary2/Third Party/SAOAuthTwitterEngine";
+			sourceTree = "<group>";
+		};
+		932FDA70153DDA8F00E9D253 /* MGTwitterEngine */ = {
+			isa = PBXGroup;
+			children = (
+				932FDA71153DDA8F00E9D253 /* MGTwitterEngine.h */,
+				932FDA72153DDA8F00E9D253 /* MGTwitterEngine.m */,
+				932FDA73153DDA8F00E9D253 /* MGTwitterEngineDelegate.h */,
+				932FDA74153DDA8F00E9D253 /* MGTwitterEngineGlobalHeader.h */,
+				932FDA75153DDA8F00E9D253 /* MGTwitterHTTPURLConnection.h */,
+				932FDA76153DDA8F00E9D253 /* MGTwitterHTTPURLConnection.m */,
+				932FDA77153DDA8F00E9D253 /* MGTwitterLibXMLParser.h */,
+				932FDA78153DDA8F00E9D253 /* MGTwitterLibXMLParser.m */,
+				932FDA79153DDA8F00E9D253 /* MGTwitterMessagesLibXMLParser.h */,
+				932FDA7A153DDA8F00E9D253 /* MGTwitterMessagesLibXMLParser.m */,
+				932FDA7B153DDA8F00E9D253 /* MGTwitterMessagesParser.h */,
+				932FDA7C153DDA8F00E9D253 /* MGTwitterMessagesParser.m */,
+				932FDA7D153DDA8F00E9D253 /* MGTwitterMiscLibXMLParser.h */,
+				932FDA7E153DDA8F00E9D253 /* MGTwitterMiscLibXMLParser.m */,
+				932FDA7F153DDA8F00E9D253 /* MGTwitterMiscParser.h */,
+				932FDA80153DDA8F00E9D253 /* MGTwitterMiscParser.m */,
+				932FDA81153DDA8F00E9D253 /* MGTwitterParserDelegate.h */,
+				932FDA82153DDA8F00E9D253 /* MGTwitterRequestTypes.h */,
+				932FDA83153DDA8F00E9D253 /* MGTwitterStatusesLibXMLParser.h */,
+				932FDA84153DDA8F00E9D253 /* MGTwitterStatusesLibXMLParser.m */,
+				932FDA85153DDA8F00E9D253 /* MGTwitterStatusesParser.h */,
+				932FDA86153DDA8F00E9D253 /* MGTwitterStatusesParser.m */,
+				932FDA87153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.h */,
+				932FDA88153DDA8F00E9D253 /* MGTwitterUsersLibXMLParser.m */,
+				932FDA89153DDA8F00E9D253 /* MGTwitterUsersParser.h */,
+				932FDA8A153DDA8F00E9D253 /* MGTwitterUsersParser.m */,
+				932FDA8B153DDA8F00E9D253 /* MGTwitterXMLParser.h */,
+				932FDA8C153DDA8F00E9D253 /* MGTwitterXMLParser.m */,
+			);
+			name = MGTwitterEngine;
+			path = "FTLibrary2/Third Party/MGTwitterEngine";
+			sourceTree = "<group>";
+		};
+		932FDAC4153DDB2400E9D253 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				932FDAC5153DDB2400E9D253 /* Facebook.h */,
+				932FDAC6153DDB2400E9D253 /* Facebook.m */,
+				932FDAC7153DDB2400E9D253 /* FBConnect.h */,
+				932FDAC8153DDB2400E9D253 /* FBDialog.bundle */,
+				932FDAC9153DDB2400E9D253 /* FBDialog.h */,
+				932FDACA153DDB2400E9D253 /* FBDialog.m */,
+				932FDACB153DDB2400E9D253 /* FBLoginDialog.h */,
+				932FDACC153DDB2400E9D253 /* FBLoginDialog.m */,
+				932FDACD153DDB2400E9D253 /* FBRequest.h */,
+				932FDACE153DDB2400E9D253 /* FBRequest.m */,
+				932FDACF153DDB2400E9D253 /* FTFacebook.h */,
+				932FDAD0153DDB2400E9D253 /* FTFacebook.m */,
+			);
+			name = Facebook;
+			path = "FTLibrary2/Third Party/Facebook";
+			sourceTree = "<group>";
+		};
+		932FDAE3153DDB3300E9D253 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				932FDB2A153DDDF900E9D253 /* Libraries & Headers */,
+				932FDA70153DDA8F00E9D253 /* MGTwitterEngine */,
+				932FDA5E153DD96000E9D253 /* SAOAuthTwitterEngine */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
+		932FDAE4153DDBAA00E9D253 /* JSONFramework */ = {
+			isa = PBXGroup;
+			children = (
+				932FDAE5153DDBAA00E9D253 /* JSON.h */,
+				932FDAE6153DDBAA00E9D253 /* NSObject+SBJson.h */,
+				932FDAE7153DDBAA00E9D253 /* NSObject+SBJson.m */,
+				932FDAE8153DDBAA00E9D253 /* NSString+SBJSON.h */,
+				932FDAE9153DDBAA00E9D253 /* NSString+SBJSON.m */,
+				932FDAEA153DDBAA00E9D253 /* SBJson.h */,
+				932FDAEB153DDBAA00E9D253 /* SBJsonParser.h */,
+				932FDAEC153DDBAA00E9D253 /* SBJsonParser.m */,
+				932FDAED153DDBAA00E9D253 /* SBJsonStreamParser.h */,
+				932FDAEE153DDBAA00E9D253 /* SBJsonStreamParser.m */,
+				932FDAEF153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.h */,
+				932FDAF0153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m */,
+				932FDAF1153DDBAA00E9D253 /* SBJsonStreamParserAdapter.h */,
+				932FDAF2153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m */,
+				932FDAF3153DDBAA00E9D253 /* SBJsonStreamParserState.h */,
+				932FDAF4153DDBAA00E9D253 /* SBJsonStreamParserState.m */,
+				932FDAF5153DDBAA00E9D253 /* SBJsonStreamWriter.h */,
+				932FDAF6153DDBAA00E9D253 /* SBJsonStreamWriter.m */,
+				932FDAF7153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.h */,
+				932FDAF8153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m */,
+				932FDAF9153DDBAA00E9D253 /* SBJsonStreamWriterState.h */,
+				932FDAFA153DDBAA00E9D253 /* SBJsonStreamWriterState.m */,
+				932FDAFB153DDBAA00E9D253 /* SBJsonTokeniser.h */,
+				932FDAFC153DDBAA00E9D253 /* SBJsonTokeniser.m */,
+				932FDAFD153DDBAA00E9D253 /* SBJsonUTF8Stream.h */,
+				932FDAFE153DDBAA00E9D253 /* SBJsonUTF8Stream.m */,
+				932FDAFF153DDBAA00E9D253 /* SBJsonWriter.h */,
+				932FDB00153DDBAA00E9D253 /* SBJsonWriter.m */,
+			);
+			name = JSONFramework;
+			path = "FTLibrary2/Third Party/JSONFramework";
+			sourceTree = "<group>";
+		};
+		932FDB2A153DDDF900E9D253 /* Libraries & Headers */ = {
+			isa = PBXGroup;
+			children = (
+				932FDB2B153DDDF900E9D253 /* jQueryInject.txt */,
+				932FDB2C153DDDF900E9D253 /* jQueryInjectLandscape.txt */,
+				932FDB2D153DDDF900E9D253 /* libOAuth.a */,
+				932FDB2E153DDDF900E9D253 /* OAuthConsumer */,
+			);
+			name = "Libraries & Headers";
+			path = "FTLibrary2/Third Party/Libraries & Headers";
+			sourceTree = "<group>";
+		};
+		932FDB2E153DDDF900E9D253 /* OAuthConsumer */ = {
+			isa = PBXGroup;
+			children = (
+				932FDB2F153DDDF900E9D253 /* NSMutableURLRequest+Parameters.h */,
+				932FDB30153DDDF900E9D253 /* NSString+URLEncoding.h */,
+				932FDB31153DDDF900E9D253 /* NSURL+Base.h */,
+				932FDB32153DDDF900E9D253 /* OAAsynchronousDataFetcher.h */,
+				932FDB33153DDDF900E9D253 /* OAConsumer.h */,
+				932FDB34153DDDF900E9D253 /* OADataFetcher.h */,
+				932FDB35153DDDF900E9D253 /* OAHMAC_SHA1SignatureProvider.h */,
+				932FDB36153DDDF900E9D253 /* OAMutableURLRequest.h */,
+				932FDB37153DDDF900E9D253 /* OAPlaintextSignatureProvider.h */,
+				932FDB38153DDDF900E9D253 /* OARequestParameter.h */,
+				932FDB39153DDDF900E9D253 /* OAServiceTicket.h */,
+				932FDB3A153DDDF900E9D253 /* OASignatureProviding.h */,
+				932FDB3B153DDDF900E9D253 /* OAToken.h */,
+				932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */,
+				932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */,
+			);
+			path = OAuthConsumer;
+			sourceTree = "<group>";
+		};
+		938CB502153DD54F0057A19B /* PageScrollView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PageScrollView;
+			sourceTree = "<group>";
+		};
+		938D5807153DC4370067CEFA = {
+			isa = PBXGroup;
+			children = (
+				932FDA5C153DD91B00E9D253 /* Third Party */,
+				938D583C153DCA9B0067CEFA /* Source */,
+				938D5817153DC4380067CEFA /* FTLibrary2 */,
+				938D582D153DCA840067CEFA /* FTLibrary2Test */,
+				938D5814153DC4380067CEFA /* Frameworks */,
+				938D5813153DC4380067CEFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		938D5813153DC4380067CEFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				938D5812153DC4380067CEFA /* libFTLibrary2.a */,
+				938D5826153DCA840067CEFA /* FTLibrary2Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		938D5814153DC4380067CEFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				932FDB51153DDE5100E9D253 /* libxml2.dylib */,
+				938CB504153DD7AE0057A19B /* QuartzCore.framework */,
+				938D5815153DC4380067CEFA /* Foundation.framework */,
+				938D5828153DCA840067CEFA /* UIKit.framework */,
+				938D582B153DCA840067CEFA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		938D5817153DC4380067CEFA /* FTLibrary2 */ = {
+			isa = PBXGroup;
+			children = (
+				938D5818153DC4380067CEFA /* Supporting Files */,
+			);
+			path = FTLibrary2;
+			sourceTree = "<group>";
+		};
+		938D5818153DC4380067CEFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				938D5819153DC4380067CEFA /* FTLibrary2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		938D582D153DCA840067CEFA /* FTLibrary2Test */ = {
+			isa = PBXGroup;
+			children = (
+				938D5836153DCA840067CEFA /* FT2AppDelegate.h */,
+				938D5837153DCA840067CEFA /* FT2AppDelegate.m */,
+				938D582E153DCA840067CEFA /* Supporting Files */,
+			);
+			path = FTLibrary2Test;
+			sourceTree = "<group>";
+		};
+		938D582E153DCA840067CEFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				938D582F153DCA840067CEFA /* FTLibrary2Test-Info.plist */,
+				938D5830153DCA840067CEFA /* InfoPlist.strings */,
+				938D5833153DCA840067CEFA /* main.m */,
+				938D5835153DCA840067CEFA /* FTLibrary2Test-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		938D583C153DCA9B0067CEFA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				932FDA3F153DD86800E9D253 /* Libs */,
+				938D583E153DCAE40067CEFA /* Categories */,
+				938D583D153DCAB30067CEFA /* Views */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		938D583D153DCAB30067CEFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				938CB4EB153DD4BD0057A19B /* FT2ActionSheet.h */,
+				938CB4E6153DD4BD0057A19B /* FT2ActionSheet.m */,
+				938CB4EC153DD4BD0057A19B /* FT2AlertView.h */,
+				938CB4E7153DD4BD0057A19B /* FT2AlertView.m */,
+				938CB4ED153DD4BD0057A19B /* FT2CustomAnimationView.h */,
+				938CB4E8153DD4BD0057A19B /* FT2CustomAnimationView.m */,
+				938CB502153DD54F0057A19B /* PageScrollView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		938D583E153DCAE40067CEFA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				932FDABF153DDAC500E9D253 /* NSData+Base64.h */,
+				932FDAC0153DDAC500E9D253 /* NSData+Base64.m */,
+				932FDA6B153DD9D300E9D253 /* NSString+UUID.h */,
+				932FDA6C153DD9D300E9D253 /* NSString+UUID.m */,
+				938CB4A4153DD1630057A19B /* NSArray+Tools.h */,
+				938CB4A5153DD1630057A19B /* NSArray+Tools.m */,
+				938CB4A9153DD2610057A19B /* CGAffineTransformAdditions.h */,
+				938CB4AA153DD2610057A19B /* NSIndexPath+Tools.h */,
+				938CB4AB153DD2610057A19B /* NSIndexPath+Tools.m */,
+				938CB4AC153DD2620057A19B /* UIColor+Tools.h */,
+				938CB4AD153DD2620057A19B /* UIColor+Tools.m */,
+				938CB4AE153DD2620057A19B /* UIImage+Alpha.h */,
+				938CB4AF153DD2620057A19B /* UIImage+Alpha.m */,
+				938CB4B0153DD2620057A19B /* UIImage+ColorPicker.h */,
+				938CB4B1153DD2620057A19B /* UIImage+ColorPicker.m */,
+				938CB4B2153DD2620057A19B /* UIImage+Resize.h */,
+				938CB4B3153DD2620057A19B /* UIImage+Resize.m */,
+				938CB4B4153DD2620057A19B /* UIImage+RoundedCorner.h */,
+				938CB4B5153DD2620057A19B /* UIImage+RoundedCorner.m */,
+				938CB4B6153DD2620057A19B /* UIImage+Tint.h */,
+				938CB4B7153DD2620057A19B /* UIImage+Tint.m */,
+				938CB4B8153DD2620057A19B /* UIImage+Tools.h */,
+				938CB4B9153DD2620057A19B /* UIImage+Tools.m */,
+				938CB4BA153DD2620057A19B /* UILabel+DynamicHeight.h */,
+				938CB4BB153DD2620057A19B /* UILabel+DynamicHeight.m */,
+				938CB4BC153DD2620057A19B /* UIView+Layout.h */,
+				938CB4BD153DD2620057A19B /* UIView+Layout.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		938D5840153DCBB80067CEFA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		93C265D9153EC32E0010A059 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				93C265DA153EC32E0010A059 /* Reachability.h */,
+				93C265DB153EC32E0010A059 /* Reachability.m */,
+			);
+			name = Reachability;
+			path = "FTLibrary2/Third Party/Reachability";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		938D5810153DC4380067CEFA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				938CB4A6153DD1630057A19B /* NSArray+Tools.h in Headers */,
+				938CB4BE153DD2620057A19B /* CGAffineTransformAdditions.h in Headers */,
+				938CB4BF153DD2620057A19B /* NSIndexPath+Tools.h in Headers */,
+				938CB4C2153DD2620057A19B /* UIColor+Tools.h in Headers */,
+				938CB4C5153DD2620057A19B /* UIImage+Alpha.h in Headers */,
+				938CB4C8153DD2620057A19B /* UIImage+ColorPicker.h in Headers */,
+				938CB4CB153DD2620057A19B /* UIImage+Resize.h in Headers */,
+				938CB4CE153DD2620057A19B /* UIImage+RoundedCorner.h in Headers */,
+				938CB4D1153DD2620057A19B /* UIImage+Tint.h in Headers */,
+				938CB4D4153DD2620057A19B /* UIImage+Tools.h in Headers */,
+				938CB4D7153DD2620057A19B /* UILabel+DynamicHeight.h in Headers */,
+				938CB4DA153DD2620057A19B /* UIView+Layout.h in Headers */,
+				938CB4FB153DD4BD0057A19B /* FT2ActionSheet.h in Headers */,
+				938CB4FC153DD4BD0057A19B /* FT2AlertView.h in Headers */,
+				938CB4FD153DD4BD0057A19B /* FT2CustomAnimationView.h in Headers */,
+				932FDA4D153DD8B700E9D253 /* FTShare.h in Headers */,
+				932FDA50153DD8B700E9D253 /* FTShareEmail.h in Headers */,
+				932FDA53153DD8B700E9D253 /* FTShareFacebook.h in Headers */,
+				932FDA56153DD8B700E9D253 /* FTShareMessageController.h in Headers */,
+				932FDA59153DD8B700E9D253 /* FTShareTwitter.h in Headers */,
+				932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */,
+				932FDA67153DD96000E9D253 /* SA_OAuthTwitterEngine.h in Headers */,
+				932FDA6D153DD9D300E9D253 /* NSString+UUID.h in Headers */,
+				932FDA91153DDA9000E9D253 /* MGTwitterEngine.h in Headers */,
+				932FDA94153DDA9000E9D253 /* MGTwitterEngineDelegate.h in Headers */,
+				932FDA95153DDA9000E9D253 /* MGTwitterEngineGlobalHeader.h in Headers */,
+				932FDA96153DDA9000E9D253 /* MGTwitterHTTPURLConnection.h in Headers */,
+				932FDA99153DDA9000E9D253 /* MGTwitterLibXMLParser.h in Headers */,
+				932FDA9C153DDA9000E9D253 /* MGTwitterMessagesLibXMLParser.h in Headers */,
+				932FDA9F153DDA9000E9D253 /* MGTwitterMessagesParser.h in Headers */,
+				932FDAA2153DDA9000E9D253 /* MGTwitterMiscLibXMLParser.h in Headers */,
+				932FDAA5153DDA9000E9D253 /* MGTwitterMiscParser.h in Headers */,
+				932FDAA8153DDA9000E9D253 /* MGTwitterParserDelegate.h in Headers */,
+				932FDAA9153DDA9000E9D253 /* MGTwitterRequestTypes.h in Headers */,
+				932FDAAA153DDA9000E9D253 /* MGTwitterStatusesLibXMLParser.h in Headers */,
+				932FDAAD153DDA9000E9D253 /* MGTwitterStatusesParser.h in Headers */,
+				932FDAB0153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.h in Headers */,
+				932FDAB3153DDA9000E9D253 /* MGTwitterUsersParser.h in Headers */,
+				932FDAB6153DDA9000E9D253 /* MGTwitterXMLParser.h in Headers */,
+				932FDAC1153DDAC500E9D253 /* NSData+Base64.h in Headers */,
+				932FDAD1153DDB2400E9D253 /* Facebook.h in Headers */,
+				932FDAD4153DDB2400E9D253 /* FBConnect.h in Headers */,
+				932FDAD6153DDB2400E9D253 /* FBDialog.h in Headers */,
+				932FDAD9153DDB2400E9D253 /* FBLoginDialog.h in Headers */,
+				932FDADC153DDB2400E9D253 /* FBRequest.h in Headers */,
+				932FDADF153DDB2400E9D253 /* FTFacebook.h in Headers */,
+				932FDB01153DDBAA00E9D253 /* JSON.h in Headers */,
+				932FDB02153DDBAA00E9D253 /* NSObject+SBJson.h in Headers */,
+				932FDB05153DDBAA00E9D253 /* NSString+SBJSON.h in Headers */,
+				932FDB08153DDBAA00E9D253 /* SBJson.h in Headers */,
+				932FDB09153DDBAA00E9D253 /* SBJsonParser.h in Headers */,
+				932FDB0C153DDBAA00E9D253 /* SBJsonStreamParser.h in Headers */,
+				932FDB0F153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.h in Headers */,
+				932FDB12153DDBAA00E9D253 /* SBJsonStreamParserAdapter.h in Headers */,
+				932FDB15153DDBAA00E9D253 /* SBJsonStreamParserState.h in Headers */,
+				932FDB18153DDBAA00E9D253 /* SBJsonStreamWriter.h in Headers */,
+				932FDB1B153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.h in Headers */,
+				932FDB1E153DDBAA00E9D253 /* SBJsonStreamWriterState.h in Headers */,
+				932FDB21153DDBAA00E9D253 /* SBJsonTokeniser.h in Headers */,
+				932FDB24153DDBAA00E9D253 /* SBJsonUTF8Stream.h in Headers */,
+				932FDB27153DDBAA00E9D253 /* SBJsonWriter.h in Headers */,
+				932FDB42153DDDF900E9D253 /* NSMutableURLRequest+Parameters.h in Headers */,
+				932FDB43153DDDF900E9D253 /* NSString+URLEncoding.h in Headers */,
+				932FDB44153DDDF900E9D253 /* NSURL+Base.h in Headers */,
+				932FDB45153DDDF900E9D253 /* OAAsynchronousDataFetcher.h in Headers */,
+				932FDB46153DDDF900E9D253 /* OAConsumer.h in Headers */,
+				932FDB47153DDDF900E9D253 /* OADataFetcher.h in Headers */,
+				932FDB48153DDDF900E9D253 /* OAHMAC_SHA1SignatureProvider.h in Headers */,
+				932FDB49153DDDF900E9D253 /* OAMutableURLRequest.h in Headers */,
+				932FDB4A153DDDF900E9D253 /* OAPlaintextSignatureProvider.h in Headers */,
+				932FDB4B153DDDF900E9D253 /* OARequestParameter.h in Headers */,
+				932FDB4C153DDDF900E9D253 /* OAServiceTicket.h in Headers */,
+				932FDB4D153DDDF900E9D253 /* OASignatureProviding.h in Headers */,
+				932FDB4E153DDDF900E9D253 /* OAToken.h in Headers */,
+				932FDB4F153DDDF900E9D253 /* OAToken_KeychainExtensions.h in Headers */,
+				932FDB50153DDDF900E9D253 /* OAuthConsumer.h in Headers */,
+				93C265C4153EBF6A0010A059 /* FTReachabilityManager.h in Headers */,
+				93C265C7153EBF6A0010A059 /* FTTaskMaker.h in Headers */,
+				93C265CC153EC01B0010A059 /* FTLog.h in Headers */,
+				93C265CF153EC09B0010A059 /* FTError.h in Headers */,
+				93C265D3153EC1A50010A059 /* FTMath.h in Headers */,
+				93C265D6153EC1DB0010A059 /* FTSystem.h in Headers */,
+				93C265DC153EC32E0010A059 /* Reachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		938D5811153DC4380067CEFA /* FTLibrary2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 938D581F153DC4380067CEFA /* Build configuration list for PBXNativeTarget "FTLibrary2" */;
+			buildPhases = (
+				938D580E153DC4380067CEFA /* Sources */,
+				938D580F153DC4380067CEFA /* Frameworks */,
+				938D5810153DC4380067CEFA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTLibrary2;
+			productName = FTLibrary2;
+			productReference = 938D5812153DC4380067CEFA /* libFTLibrary2.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		938D5825153DCA840067CEFA /* FTLibrary2Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 938D5839153DCA840067CEFA /* Build configuration list for PBXNativeTarget "FTLibrary2Test" */;
+			buildPhases = (
+				938D5822153DCA840067CEFA /* Sources */,
+				938D5823153DCA840067CEFA /* Frameworks */,
+				938D5824153DCA840067CEFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTLibrary2Test;
+			productName = FTLibrary2Test;
+			productReference = 938D5826153DCA840067CEFA /* FTLibrary2Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		938D5809153DC4370067CEFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 938D580C153DC4370067CEFA /* Build configuration list for PBXProject "FTLibrary2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 938D5807153DC4370067CEFA;
+			productRefGroup = 938D5813153DC4380067CEFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				938D5811153DC4380067CEFA /* FTLibrary2 */,
+				938D5825153DCA840067CEFA /* FTLibrary2Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		938D5824153DCA840067CEFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				938D5832153DCA840067CEFA /* InfoPlist.strings in Resources */,
+				932FDA6A153DD96000E9D253 /* twitter_load.png in Resources */,
+				932FDAD5153DDB2400E9D253 /* FBDialog.bundle in Resources */,
+				932FDB3E153DDDF900E9D253 /* jQueryInject.txt in Resources */,
+				932FDB3F153DDDF900E9D253 /* jQueryInjectLandscape.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		938D580E153DC4380067CEFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				938CB4A7153DD1630057A19B /* NSArray+Tools.m in Sources */,
+				938CB4C0153DD2620057A19B /* NSIndexPath+Tools.m in Sources */,
+				938CB4C3153DD2620057A19B /* UIColor+Tools.m in Sources */,
+				938CB4C6153DD2620057A19B /* UIImage+Alpha.m in Sources */,
+				938CB4C9153DD2620057A19B /* UIImage+ColorPicker.m in Sources */,
+				938CB4CC153DD2620057A19B /* UIImage+Resize.m in Sources */,
+				938CB4CF153DD2620057A19B /* UIImage+RoundedCorner.m in Sources */,
+				938CB4D2153DD2620057A19B /* UIImage+Tint.m in Sources */,
+				938CB4D5153DD2620057A19B /* UIImage+Tools.m in Sources */,
+				938CB4D8153DD2620057A19B /* UILabel+DynamicHeight.m in Sources */,
+				938CB4DB153DD2620057A19B /* UIView+Layout.m in Sources */,
+				938CB4F1153DD4BD0057A19B /* FT2ActionSheet.m in Sources */,
+				938CB4F3153DD4BD0057A19B /* FT2AlertView.m in Sources */,
+				938CB4F5153DD4BD0057A19B /* FT2CustomAnimationView.m in Sources */,
+				932FDA4E153DD8B700E9D253 /* FTShare.m in Sources */,
+				932FDA51153DD8B700E9D253 /* FTShareEmail.m in Sources */,
+				932FDA54153DD8B700E9D253 /* FTShareFacebook.m in Sources */,
+				932FDA57153DD8B700E9D253 /* FTShareMessageController.m in Sources */,
+				932FDA5A153DD8B700E9D253 /* FTShareTwitter.m in Sources */,
+				932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */,
+				932FDA68153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */,
+				932FDA6E153DD9D300E9D253 /* NSString+UUID.m in Sources */,
+				932FDA92153DDA9000E9D253 /* MGTwitterEngine.m in Sources */,
+				932FDA97153DDA9000E9D253 /* MGTwitterHTTPURLConnection.m in Sources */,
+				932FDA9A153DDA9000E9D253 /* MGTwitterLibXMLParser.m in Sources */,
+				932FDA9D153DDA9000E9D253 /* MGTwitterMessagesLibXMLParser.m in Sources */,
+				932FDAA0153DDA9000E9D253 /* MGTwitterMessagesParser.m in Sources */,
+				932FDAA3153DDA9000E9D253 /* MGTwitterMiscLibXMLParser.m in Sources */,
+				932FDAA6153DDA9000E9D253 /* MGTwitterMiscParser.m in Sources */,
+				932FDAAB153DDA9000E9D253 /* MGTwitterStatusesLibXMLParser.m in Sources */,
+				932FDAAE153DDA9000E9D253 /* MGTwitterStatusesParser.m in Sources */,
+				932FDAB1153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.m in Sources */,
+				932FDAB4153DDA9000E9D253 /* MGTwitterUsersParser.m in Sources */,
+				932FDAB7153DDA9000E9D253 /* MGTwitterXMLParser.m in Sources */,
+				932FDAC2153DDAC500E9D253 /* NSData+Base64.m in Sources */,
+				932FDAD2153DDB2400E9D253 /* Facebook.m in Sources */,
+				932FDAD7153DDB2400E9D253 /* FBDialog.m in Sources */,
+				932FDADA153DDB2400E9D253 /* FBLoginDialog.m in Sources */,
+				932FDADD153DDB2400E9D253 /* FBRequest.m in Sources */,
+				932FDAE0153DDB2400E9D253 /* FTFacebook.m in Sources */,
+				932FDB03153DDBAA00E9D253 /* NSObject+SBJson.m in Sources */,
+				932FDB06153DDBAA00E9D253 /* NSString+SBJSON.m in Sources */,
+				932FDB0A153DDBAA00E9D253 /* SBJsonParser.m in Sources */,
+				932FDB0D153DDBAA00E9D253 /* SBJsonStreamParser.m in Sources */,
+				932FDB10153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m in Sources */,
+				932FDB13153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m in Sources */,
+				932FDB16153DDBAA00E9D253 /* SBJsonStreamParserState.m in Sources */,
+				932FDB19153DDBAA00E9D253 /* SBJsonStreamWriter.m in Sources */,
+				932FDB1C153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				932FDB1F153DDBAA00E9D253 /* SBJsonStreamWriterState.m in Sources */,
+				932FDB22153DDBAA00E9D253 /* SBJsonTokeniser.m in Sources */,
+				932FDB25153DDBAA00E9D253 /* SBJsonUTF8Stream.m in Sources */,
+				932FDB28153DDBAA00E9D253 /* SBJsonWriter.m in Sources */,
+				93C265C5153EBF6A0010A059 /* FTReachabilityManager.m in Sources */,
+				93C265C8153EBF6A0010A059 /* FTTaskMaker.m in Sources */,
+				93C265D0153EC09B0010A059 /* FTError.m in Sources */,
+				93C265D7153EC1DB0010A059 /* FTSystem.m in Sources */,
+				93C265DD153EC32E0010A059 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		938D5822153DCA840067CEFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				938D5834153DCA840067CEFA /* main.m in Sources */,
+				938D5838153DCA840067CEFA /* FT2AppDelegate.m in Sources */,
+				938CB4A8153DD1630057A19B /* NSArray+Tools.m in Sources */,
+				938CB4C1153DD2620057A19B /* NSIndexPath+Tools.m in Sources */,
+				938CB4C4153DD2620057A19B /* UIColor+Tools.m in Sources */,
+				938CB4C7153DD2620057A19B /* UIImage+Alpha.m in Sources */,
+				938CB4CA153DD2620057A19B /* UIImage+ColorPicker.m in Sources */,
+				938CB4CD153DD2620057A19B /* UIImage+Resize.m in Sources */,
+				938CB4D0153DD2620057A19B /* UIImage+RoundedCorner.m in Sources */,
+				938CB4D3153DD2620057A19B /* UIImage+Tint.m in Sources */,
+				938CB4D6153DD2620057A19B /* UIImage+Tools.m in Sources */,
+				938CB4D9153DD2620057A19B /* UILabel+DynamicHeight.m in Sources */,
+				938CB4DC153DD2620057A19B /* UIView+Layout.m in Sources */,
+				938CB4F2153DD4BD0057A19B /* FT2ActionSheet.m in Sources */,
+				938CB4F4153DD4BD0057A19B /* FT2AlertView.m in Sources */,
+				938CB4F6153DD4BD0057A19B /* FT2CustomAnimationView.m in Sources */,
+				932FDA4F153DD8B700E9D253 /* FTShare.m in Sources */,
+				932FDA52153DD8B700E9D253 /* FTShareEmail.m in Sources */,
+				932FDA55153DD8B700E9D253 /* FTShareFacebook.m in Sources */,
+				932FDA58153DD8B700E9D253 /* FTShareMessageController.m in Sources */,
+				932FDA5B153DD8B700E9D253 /* FTShareTwitter.m in Sources */,
+				932FDA66153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */,
+				932FDA69153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */,
+				932FDA6F153DD9D300E9D253 /* NSString+UUID.m in Sources */,
+				932FDA93153DDA9000E9D253 /* MGTwitterEngine.m in Sources */,
+				932FDA98153DDA9000E9D253 /* MGTwitterHTTPURLConnection.m in Sources */,
+				932FDA9B153DDA9000E9D253 /* MGTwitterLibXMLParser.m in Sources */,
+				932FDA9E153DDA9000E9D253 /* MGTwitterMessagesLibXMLParser.m in Sources */,
+				932FDAA1153DDA9000E9D253 /* MGTwitterMessagesParser.m in Sources */,
+				932FDAA4153DDA9000E9D253 /* MGTwitterMiscLibXMLParser.m in Sources */,
+				932FDAA7153DDA9000E9D253 /* MGTwitterMiscParser.m in Sources */,
+				932FDAAC153DDA9000E9D253 /* MGTwitterStatusesLibXMLParser.m in Sources */,
+				932FDAAF153DDA9000E9D253 /* MGTwitterStatusesParser.m in Sources */,
+				932FDAB2153DDA9000E9D253 /* MGTwitterUsersLibXMLParser.m in Sources */,
+				932FDAB5153DDA9000E9D253 /* MGTwitterUsersParser.m in Sources */,
+				932FDAB8153DDA9000E9D253 /* MGTwitterXMLParser.m in Sources */,
+				932FDAC3153DDAC500E9D253 /* NSData+Base64.m in Sources */,
+				932FDAD3153DDB2400E9D253 /* Facebook.m in Sources */,
+				932FDAD8153DDB2400E9D253 /* FBDialog.m in Sources */,
+				932FDADB153DDB2400E9D253 /* FBLoginDialog.m in Sources */,
+				932FDADE153DDB2400E9D253 /* FBRequest.m in Sources */,
+				932FDAE1153DDB2400E9D253 /* FTFacebook.m in Sources */,
+				932FDB04153DDBAA00E9D253 /* NSObject+SBJson.m in Sources */,
+				932FDB07153DDBAA00E9D253 /* NSString+SBJSON.m in Sources */,
+				932FDB0B153DDBAA00E9D253 /* SBJsonParser.m in Sources */,
+				932FDB0E153DDBAA00E9D253 /* SBJsonStreamParser.m in Sources */,
+				932FDB11153DDBAA00E9D253 /* SBJsonStreamParserAccumulator.m in Sources */,
+				932FDB14153DDBAA00E9D253 /* SBJsonStreamParserAdapter.m in Sources */,
+				932FDB17153DDBAA00E9D253 /* SBJsonStreamParserState.m in Sources */,
+				932FDB1A153DDBAA00E9D253 /* SBJsonStreamWriter.m in Sources */,
+				932FDB1D153DDBAA00E9D253 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				932FDB20153DDBAA00E9D253 /* SBJsonStreamWriterState.m in Sources */,
+				932FDB23153DDBAA00E9D253 /* SBJsonTokeniser.m in Sources */,
+				932FDB26153DDBAA00E9D253 /* SBJsonUTF8Stream.m in Sources */,
+				932FDB29153DDBAA00E9D253 /* SBJsonWriter.m in Sources */,
+				93C265C6153EBF6A0010A059 /* FTReachabilityManager.m in Sources */,
+				93C265C9153EBF6A0010A059 /* FTTaskMaker.m in Sources */,
+				93C265D1153EC09B0010A059 /* FTError.m in Sources */,
+				93C265D8153EC1DB0010A059 /* FTSystem.m in Sources */,
+				93C265DE153EC32E0010A059 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		938D5830153DCA840067CEFA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				938D5831153DCA840067CEFA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		938D581D153DC4380067CEFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+			};
+			name = Debug;
+		};
+		938D581E153DC4380067CEFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		938D5820153DC4380067CEFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/FTLibrary2.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FTLibrary2/FTLibrary2-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FTLibrary2/Third Party/Libraries & Headers\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		938D5821153DC4380067CEFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/FTLibrary2.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FTLibrary2/FTLibrary2-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FTLibrary2/Third Party/Libraries & Headers\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		938D583A153DCA840067CEFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FTLibrary2Test/FTLibrary2Test-Prefix.pch";
+				INFOPLIST_FILE = "FTLibrary2Test/FTLibrary2Test-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FTLibrary2/Third Party/Libraries & Headers\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		938D583B153DCA840067CEFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FTLibrary2Test/FTLibrary2Test-Prefix.pch";
+				INFOPLIST_FILE = "FTLibrary2Test/FTLibrary2Test-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FTLibrary2/Third Party/Libraries & Headers\"",
+				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		938D580C153DC4370067CEFA /* Build configuration list for PBXProject "FTLibrary2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				938D581D153DC4380067CEFA /* Debug */,
+				938D581E153DC4380067CEFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		938D581F153DC4380067CEFA /* Build configuration list for PBXNativeTarget "FTLibrary2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				938D5820153DC4380067CEFA /* Debug */,
+				938D5821153DC4380067CEFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		938D5839153DCA840067CEFA /* Build configuration list for PBXNativeTarget "FTLibrary2Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				938D583A153DCA840067CEFA /* Debug */,
+				938D583B153DCA840067CEFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 938D5809153DC4370067CEFA /* Project object */;
+}
