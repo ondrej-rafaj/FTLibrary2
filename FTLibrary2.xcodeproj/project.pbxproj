@@ -153,6 +153,7 @@
 		932FDB4F153DDDF900E9D253 /* OAToken_KeychainExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */; };
 		932FDB50153DDDF900E9D253 /* OAuthConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */; };
 		932FDB53153DDE7C00E9D253 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 932FDB51153DDE5100E9D253 /* libxml2.dylib */; };
+		9387980C153ECEBD001FE131 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 9387980B153ECEBD001FE131 /* Classes */; };
 		938CB4A6153DD1630057A19B /* NSArray+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 938CB4A4153DD1630057A19B /* NSArray+Tools.h */; };
 		938CB4A7153DD1630057A19B /* NSArray+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4A5153DD1630057A19B /* NSArray+Tools.m */; };
 		938CB4A8153DD1630057A19B /* NSArray+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 938CB4A5153DD1630057A19B /* NSArray+Tools.m */; };
@@ -330,6 +331,7 @@
 		932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken_KeychainExtensions.h; sourceTree = "<group>"; };
 		932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		932FDB51153DDE5100E9D253 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		9387980B153ECEBD001FE131 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Classes; path = FTLibrary2/ThirdParty/AQGridView/Classes; sourceTree = "<group>"; };
 		938CB4A4153DD1630057A19B /* NSArray+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Tools.h"; path = "FTLibrary2/Sources/Categories/NSArray+Tools.h"; sourceTree = "<group>"; };
 		938CB4A5153DD1630057A19B /* NSArray+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Tools.m"; path = "FTLibrary2/Sources/Categories/NSArray+Tools.m"; sourceTree = "<group>"; };
 		938CB4A9153DD2610057A19B /* CGAffineTransformAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGAffineTransformAdditions.h; path = FTLibrary2/Sources/Categories/CGAffineTransformAdditions.h; sourceTree = "<group>"; };
@@ -459,12 +461,13 @@
 		932FDA5C153DD91B00E9D253 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				93879809153ECE8D001FE131 /* AQGridView */,
 				93C265D9153EC32E0010A059 /* Reachability */,
 				932FDAE4153DDBAA00E9D253 /* JSONFramework */,
 				932FDAC4153DDB2400E9D253 /* Facebook */,
 				932FDAE3153DDB3300E9D253 /* Twitter */,
 			);
-			name = "ThirdParty";
+			name = ThirdParty;
 			sourceTree = "<group>";
 		};
 		932FDA5E153DD96000E9D253 /* SAOAuthTwitterEngine */ = {
@@ -477,7 +480,7 @@
 				932FDA63153DD96000E9D253 /* twitter_load.png */,
 			);
 			name = SAOAuthTwitterEngine;
-			path = "FTLibrary2/ThirdParty/SAOAuthTwitterEngine";
+			path = FTLibrary2/ThirdParty/SAOAuthTwitterEngine;
 			sourceTree = "<group>";
 		};
 		932FDA70153DDA8F00E9D253 /* MGTwitterEngine */ = {
@@ -513,7 +516,7 @@
 				932FDA8C153DDA8F00E9D253 /* MGTwitterXMLParser.m */,
 			);
 			name = MGTwitterEngine;
-			path = "FTLibrary2/ThirdParty/MGTwitterEngine";
+			path = FTLibrary2/ThirdParty/MGTwitterEngine;
 			sourceTree = "<group>";
 		};
 		932FDAC4153DDB2400E9D253 /* Facebook */ = {
@@ -533,7 +536,7 @@
 				932FDAD0153DDB2400E9D253 /* FTFacebook.m */,
 			);
 			name = Facebook;
-			path = "FTLibrary2/ThirdParty/Facebook";
+			path = FTLibrary2/ThirdParty/Facebook;
 			sourceTree = "<group>";
 		};
 		932FDAE3153DDB3300E9D253 /* Twitter */ = {
@@ -579,7 +582,7 @@
 				932FDB00153DDBAA00E9D253 /* SBJsonWriter.m */,
 			);
 			name = JSONFramework;
-			path = "FTLibrary2/ThirdParty/JSONFramework";
+			path = FTLibrary2/ThirdParty/JSONFramework;
 			sourceTree = "<group>";
 		};
 		932FDB2A153DDDF900E9D253 /* Libraries & Headers */ = {
@@ -614,6 +617,14 @@
 				932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */,
 			);
 			path = OAuthConsumer;
+			sourceTree = "<group>";
+		};
+		93879809153ECE8D001FE131 /* AQGridView */ = {
+			isa = PBXGroup;
+			children = (
+				9387980B153ECEBD001FE131 /* Classes */,
+			);
+			name = AQGridView;
 			sourceTree = "<group>";
 		};
 		938CB502153DD54F0057A19B /* PageScrollView */ = {
@@ -765,7 +776,7 @@
 				93C265DB153EC32E0010A059 /* Reachability.m */,
 			);
 			name = Reachability;
-			path = "FTLibrary2/ThirdParty/Reachability";
+			path = FTLibrary2/ThirdParty/Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -934,6 +945,7 @@
 				932FDAD5153DDB2400E9D253 /* FBDialog.bundle in Resources */,
 				932FDB3E153DDDF900E9D253 /* jQueryInject.txt in Resources */,
 				932FDB3F153DDDF900E9D253 /* jQueryInjectLandscape.txt in Resources */,
+				9387980C153ECEBD001FE131 /* Classes in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
