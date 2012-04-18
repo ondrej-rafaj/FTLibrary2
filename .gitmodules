@@ -1,0 +1,3 @@
+[submodule "/Projects/FTLibrary2/FTLibrary2/Third Party/AQGridView"]
+	path = /Projects/FTLibrary2/FTLibrary2/Third Party/AQGridView
+	url = https://github.com/AlanQuatermain/AQGridView.git
