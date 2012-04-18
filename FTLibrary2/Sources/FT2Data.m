@@ -22,15 +22,19 @@ static dispatch_queue_t _managedContextQueue = NULL;
 static NSString * __managedObjectModelName;
 static NSString * __databaseName;
 
+#pragma mark --
+#pragma mark - Init
+
 - (id)init {
-    NSAssert(nil, @"FT2Error initialized without Manajed Object Name");
+    // This class cannot be initialized without a managed object name
+    NSAssert(nil, @"FT2Data initialized without Manajed Object Name, use initWithManagedObjectName: instead");
     return nil;
 }
 
 - (id)initWithManagedObjectName:(NSString *)managedObjectName {
     self = [super init];
     if (self) {
-        NSAssert((managedObjectName || managedObjectName.length == 0), @"FT2Error initialized without Manajed Object Name");
+        NSAssert((managedObjectName || managedObjectName.length == 0), @"FT2Data initialized without Manajed Object Name");
         __managedObjectModelName = managedObjectName;
         __databaseName = [managedObjectName stringByAppendingString:@".sqlite"];
     }
