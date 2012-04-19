@@ -25,6 +25,9 @@
 		68978E71153F2A03008EF4E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68978E6F153F2A03008EF4E8 /* InfoPlist.strings */; };
 		68978E74153F2A03008EF4E8 /* FTLibrary2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E73153F2A03008EF4E8 /* FTLibrary2Tests.m */; };
 		68978E7D153F2B96008EF4E8 /* FT2FileSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E7C153F2B96008EF4E8 /* FT2FileSystemTests.m */; };
+		68978EB3154021C6008EF4E8 /* FT2ObjectAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978EB1154021C6008EF4E8 /* FT2ObjectAttributes.h */; };
+		68978EB4154021C6008EF4E8 /* FT2ObjectAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978EB2154021C6008EF4E8 /* FT2ObjectAttributes.m */; };
+		68978EB5154021C6008EF4E8 /* FT2ObjectAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978EB2154021C6008EF4E8 /* FT2ObjectAttributes.m */; };
 		932FDA4D153DD8B700E9D253 /* FT2Share.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA43153DD8B700E9D253 /* FT2Share.h */; };
 		932FDA4E153DD8B700E9D253 /* FT2Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FT2Share.m */; };
 		932FDA50153DD8B700E9D253 /* FT2ShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */; };
@@ -251,6 +254,8 @@
 		68978E75153F2A03008EF4E8 /* FTLibrary2Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLibrary2Tests-Prefix.pch"; sourceTree = "<group>"; };
 		68978E7B153F2B96008EF4E8 /* FT2FileSystemTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2FileSystemTests.h; sourceTree = "<group>"; };
 		68978E7C153F2B96008EF4E8 /* FT2FileSystemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2FileSystemTests.m; sourceTree = "<group>"; };
+		68978EB1154021C6008EF4E8 /* FT2ObjectAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ObjectAttributes.h; path = FTLibrary2/Sources/FT2ObjectAttributes.h; sourceTree = "<group>"; };
+		68978EB2154021C6008EF4E8 /* FT2ObjectAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ObjectAttributes.m; path = FTLibrary2/Sources/FT2ObjectAttributes.m; sourceTree = "<group>"; };
 		932FDA43153DD8B700E9D253 /* FT2Share.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Share.h; path = FTLibrary2/Sources/FT2Share.h; sourceTree = "<group>"; };
 		932FDA44153DD8B700E9D253 /* FT2Share.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Share.m; path = FTLibrary2/Sources/FT2Share.m; sourceTree = "<group>"; };
 		932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareEmail.h; path = FTLibrary2/Sources/FT2ShareEmail.h; sourceTree = "<group>"; };
@@ -856,6 +861,8 @@
 			children = (
 				68978E41153F161E008EF4E8 /* FT2Data.h */,
 				68978E42153F161E008EF4E8 /* FT2Data.m */,
+				68978EB1154021C6008EF4E8 /* FT2ObjectAttributes.h */,
+				68978EB2154021C6008EF4E8 /* FT2ObjectAttributes.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -965,6 +972,7 @@
 				93879818153ED11A001FE131 /* FT2ReusableView.h in Headers */,
 				68978E43153F161E008EF4E8 /* FT2Data.h in Headers */,
 				68978E58153F1ECD008EF4E8 /* FT2FileSystem.h in Headers */,
+				68978EB3154021C6008EF4E8 /* FT2ObjectAttributes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1167,6 +1175,7 @@
 				93879816153ED11A001FE131 /* FT2PageView.m in Sources */,
 				68978E44153F161E008EF4E8 /* FT2Data.m in Sources */,
 				68978E59153F1ECD008EF4E8 /* FT2FileSystem.m in Sources */,
+				68978EB4154021C6008EF4E8 /* FT2ObjectAttributes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1214,6 +1223,7 @@
 				93879817153ED11A001FE131 /* FT2PageView.m in Sources */,
 				68978E45153F161E008EF4E8 /* FT2Data.m in Sources */,
 				68978E5A153F1ECD008EF4E8 /* FT2FileSystem.m in Sources */,
+				68978EB5154021C6008EF4E8 /* FT2ObjectAttributes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
