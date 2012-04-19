@@ -15,13 +15,14 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-
 - (NSURL *)applicationDocumentsDirectory;
 - (void)saveContext;
 
 - (id)managedObjectFromName:(NSString *)entityName;
 
 - (id)initWithManagedObjectName:(NSString *)managedObjectName;
+
+- (NSArray *)entitiesForName:(NSString *)entityName orderedBy:(NSString *)orderKey;
 
 - (void)performBlockOnContext:(void (^)(void))block;
 - (void)performBlockOnContextAndWait:(void (^)(void))block;
