@@ -44,27 +44,6 @@ static NSString * __databaseName;
     return self;
 }
 
-
-- (void)jsonObjectFromURL:(NSURL *)url completed:(finishedDataDownload)block {
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    NSStringEncoding encoding = NSUTF8StringEncoding;
-    NSError *error = nil;
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageAllowed timeoutInterval:10];
-    NSURLResponse *response;
-    NSData * data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    
-    NSString *dataString = [[NSString alloc] initWithData:data encoding:encoding];
-    if (!dataString) {
-        block(nil, error);
-        return;
-    }
-    
-    id result = [parser objectWithString:dataString error:&error];
-    block(result, error);
-    
-}
-
 - (NSArray *)entitiesForName:(NSString *)entityName orderedBy:(NSString *)orderKey {
     __block NSArray *entities = nil;
     [self performBlockOnContextAndWait:^{
