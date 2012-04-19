@@ -17,6 +17,7 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
+static dispatch_queue_t _queue = NULL;
 static dispatch_queue_t _managedContextQueue = NULL;
 
 static NSString * __managedObjectModelName;
@@ -37,6 +38,8 @@ static NSString * __databaseName;
         NSAssert((managedObjectName || managedObjectName.length == 0), @"FT2Data initialized without Manajed Object Name");
         __managedObjectModelName = managedObjectName;
         __databaseName = [managedObjectName stringByAppendingString:@".sqlite"];
+        _queue = dispatch_queue_create("com.fuerte.internetQueue",0); 
+		_managedContextQueue = dispatch_queue_create("com.fuerte.managedContext",0); 
     }
     return self;
 }
