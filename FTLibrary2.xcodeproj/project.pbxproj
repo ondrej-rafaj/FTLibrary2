@@ -28,6 +28,15 @@
 		68978EB3154021C6008EF4E8 /* FT2ObjectAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978EB1154021C6008EF4E8 /* FT2ObjectAttributes.h */; };
 		68978EB4154021C6008EF4E8 /* FT2ObjectAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978EB2154021C6008EF4E8 /* FT2ObjectAttributes.m */; };
 		68978EB5154021C6008EF4E8 /* FT2ObjectAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978EB2154021C6008EF4E8 /* FT2ObjectAttributes.m */; };
+		68978EFA15406C05008EF4E8 /* FT2TwitterFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978EF815406C05008EF4E8 /* FT2TwitterFeed.h */; };
+		68978EFB15406C05008EF4E8 /* FT2TwitterFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978EF915406C05008EF4E8 /* FT2TwitterFeed.m */; };
+		68978EFC15406C05008EF4E8 /* FT2TwitterFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978EF915406C05008EF4E8 /* FT2TwitterFeed.m */; };
+		68978EFF15406C1B008EF4E8 /* FT2YouTubeFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978EFD15406C1B008EF4E8 /* FT2YouTubeFeed.h */; };
+		68978F0015406C1B008EF4E8 /* FT2YouTubeFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978EFE15406C1B008EF4E8 /* FT2YouTubeFeed.m */; };
+		68978F0115406C1B008EF4E8 /* FT2YouTubeFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978EFE15406C1B008EF4E8 /* FT2YouTubeFeed.m */; };
+		68978F0415406DAD008EF4E8 /* FT2JSONCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978F0215406DAD008EF4E8 /* FT2JSONCollection.h */; };
+		68978F0515406DAD008EF4E8 /* FT2JSONCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978F0315406DAD008EF4E8 /* FT2JSONCollection.m */; };
+		68978F0615406DAD008EF4E8 /* FT2JSONCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978F0315406DAD008EF4E8 /* FT2JSONCollection.m */; };
 		932FDA4D153DD8B700E9D253 /* FT2Share.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA43153DD8B700E9D253 /* FT2Share.h */; };
 		932FDA4E153DD8B700E9D253 /* FT2Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FT2Share.m */; };
 		932FDA50153DD8B700E9D253 /* FT2ShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */; };
@@ -256,6 +265,12 @@
 		68978E7C153F2B96008EF4E8 /* FT2FileSystemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2FileSystemTests.m; sourceTree = "<group>"; };
 		68978EB1154021C6008EF4E8 /* FT2ObjectAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ObjectAttributes.h; path = FTLibrary2/Sources/FT2ObjectAttributes.h; sourceTree = "<group>"; };
 		68978EB2154021C6008EF4E8 /* FT2ObjectAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ObjectAttributes.m; path = FTLibrary2/Sources/FT2ObjectAttributes.m; sourceTree = "<group>"; };
+		68978EF815406C05008EF4E8 /* FT2TwitterFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2TwitterFeed.h; path = FTLibrary2/Sources/FT2TwitterFeed.h; sourceTree = "<group>"; };
+		68978EF915406C05008EF4E8 /* FT2TwitterFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2TwitterFeed.m; path = FTLibrary2/Sources/FT2TwitterFeed.m; sourceTree = "<group>"; };
+		68978EFD15406C1B008EF4E8 /* FT2YouTubeFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2YouTubeFeed.h; path = FTLibrary2/Sources/FT2YouTubeFeed.h; sourceTree = "<group>"; };
+		68978EFE15406C1B008EF4E8 /* FT2YouTubeFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2YouTubeFeed.m; path = FTLibrary2/Sources/FT2YouTubeFeed.m; sourceTree = "<group>"; };
+		68978F0215406DAD008EF4E8 /* FT2JSONCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2JSONCollection.h; path = FTLibrary2/Sources/FT2JSONCollection.h; sourceTree = "<group>"; };
+		68978F0315406DAD008EF4E8 /* FT2JSONCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2JSONCollection.m; path = FTLibrary2/Sources/FT2JSONCollection.m; sourceTree = "<group>"; };
 		932FDA43153DD8B700E9D253 /* FT2Share.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Share.h; path = FTLibrary2/Sources/FT2Share.h; sourceTree = "<group>"; };
 		932FDA44153DD8B700E9D253 /* FT2Share.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Share.m; path = FTLibrary2/Sources/FT2Share.m; sourceTree = "<group>"; };
 		932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareEmail.h; path = FTLibrary2/Sources/FT2ShareEmail.h; sourceTree = "<group>"; };
@@ -487,9 +502,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		68978EF715406BE8008EF4E8 /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				68978EF815406C05008EF4E8 /* FT2TwitterFeed.h */,
+				68978EF915406C05008EF4E8 /* FT2TwitterFeed.m */,
+				68978EFD15406C1B008EF4E8 /* FT2YouTubeFeed.h */,
+				68978EFE15406C1B008EF4E8 /* FT2YouTubeFeed.m */,
+				68978F0215406DAD008EF4E8 /* FT2JSONCollection.h */,
+				68978F0315406DAD008EF4E8 /* FT2JSONCollection.m */,
+			);
+			name = Feeds;
+			sourceTree = "<group>";
+		};
 		932FDA3F153DD86800E9D253 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				68978EF715406BE8008EF4E8 /* Feeds */,
 				932FDA42153DD88100E9D253 /* System */,
 				938D5840153DCBB80067CEFA /* Data */,
 				932FDA41153DD87300E9D253 /* Share */,
@@ -973,6 +1002,9 @@
 				68978E43153F161E008EF4E8 /* FT2Data.h in Headers */,
 				68978E58153F1ECD008EF4E8 /* FT2FileSystem.h in Headers */,
 				68978EB3154021C6008EF4E8 /* FT2ObjectAttributes.h in Headers */,
+				68978EFA15406C05008EF4E8 /* FT2TwitterFeed.h in Headers */,
+				68978EFF15406C1B008EF4E8 /* FT2YouTubeFeed.h in Headers */,
+				68978F0415406DAD008EF4E8 /* FT2JSONCollection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1176,6 +1208,9 @@
 				68978E44153F161E008EF4E8 /* FT2Data.m in Sources */,
 				68978E59153F1ECD008EF4E8 /* FT2FileSystem.m in Sources */,
 				68978EB4154021C6008EF4E8 /* FT2ObjectAttributes.m in Sources */,
+				68978EFB15406C05008EF4E8 /* FT2TwitterFeed.m in Sources */,
+				68978F0015406C1B008EF4E8 /* FT2YouTubeFeed.m in Sources */,
+				68978F0515406DAD008EF4E8 /* FT2JSONCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,6 +1259,9 @@
 				68978E45153F161E008EF4E8 /* FT2Data.m in Sources */,
 				68978E5A153F1ECD008EF4E8 /* FT2FileSystem.m in Sources */,
 				68978EB5154021C6008EF4E8 /* FT2ObjectAttributes.m in Sources */,
+				68978EFC15406C05008EF4E8 /* FT2TwitterFeed.m in Sources */,
+				68978F0115406C1B008EF4E8 /* FT2YouTubeFeed.m in Sources */,
+				68978F0615406DAD008EF4E8 /* FT2JSONCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

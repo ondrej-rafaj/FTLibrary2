@@ -34,6 +34,23 @@
         [dict setValue:type forKey:name];
     }
     
+    Class parent = class_getSuperclass(obj);
+    properties = class_copyPropertyList(parent, &count);
+    for (int i = 0; i < count; i++) {
+        objc_property_t property = properties[i];
+        NSString *name = [NSString stringWithUTF8String:property_getName(property)];
+        NSString *attributes = [NSString stringWithUTF8String:property_getAttributes(property)];
+        __block NSString *type;
+        // __block NSMutableArray *others;
+        
+        [regEx enumerateMatchesInString:attributes options:NSMatchingHitEnd range:NSMakeRange(0, attributes.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+            type = [attributes substringWithRange:[result rangeAtIndex:1]];
+        }];
+        
+        [dict setValue:type forKey:name];
+    }
+    
+    
     return (NSDictionary *)dict;
 }
 
