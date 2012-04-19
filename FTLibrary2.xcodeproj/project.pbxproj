@@ -24,7 +24,7 @@
 		68978E6B153F2A03008EF4E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D5815153DC4380067CEFA /* Foundation.framework */; };
 		68978E71153F2A03008EF4E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68978E6F153F2A03008EF4E8 /* InfoPlist.strings */; };
 		68978E74153F2A03008EF4E8 /* FTLibrary2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E73153F2A03008EF4E8 /* FTLibrary2Tests.m */; };
-		68978E7D153F2B96008EF4E8 /* FTFileSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E7C153F2B96008EF4E8 /* FTFileSystemTests.m */; };
+		68978E7D153F2B96008EF4E8 /* FT2FileSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E7C153F2B96008EF4E8 /* FT2FileSystemTests.m */; };
 		932FDA4D153DD8B700E9D253 /* FT2Share.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA43153DD8B700E9D253 /* FT2Share.h */; };
 		932FDA4E153DD8B700E9D253 /* FT2Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FT2Share.m */; };
 		932FDA50153DD8B700E9D253 /* FT2ShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */; };
@@ -249,8 +249,8 @@
 		68978E72153F2A03008EF4E8 /* FTLibrary2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLibrary2Tests.h; sourceTree = "<group>"; };
 		68978E73153F2A03008EF4E8 /* FTLibrary2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLibrary2Tests.m; sourceTree = "<group>"; };
 		68978E75153F2A03008EF4E8 /* FTLibrary2Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLibrary2Tests-Prefix.pch"; sourceTree = "<group>"; };
-		68978E7B153F2B96008EF4E8 /* FTFileSystemTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFileSystemTests.h; sourceTree = "<group>"; };
-		68978E7C153F2B96008EF4E8 /* FTFileSystemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTFileSystemTests.m; sourceTree = "<group>"; };
+		68978E7B153F2B96008EF4E8 /* FT2FileSystemTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2FileSystemTests.h; sourceTree = "<group>"; };
+		68978E7C153F2B96008EF4E8 /* FT2FileSystemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2FileSystemTests.m; sourceTree = "<group>"; };
 		932FDA43153DD8B700E9D253 /* FT2Share.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Share.h; path = FTLibrary2/Sources/FT2Share.h; sourceTree = "<group>"; };
 		932FDA44153DD8B700E9D253 /* FT2Share.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Share.m; path = FTLibrary2/Sources/FT2Share.m; sourceTree = "<group>"; };
 		932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareEmail.h; path = FTLibrary2/Sources/FT2ShareEmail.h; sourceTree = "<group>"; };
@@ -466,8 +466,8 @@
 				68978E72153F2A03008EF4E8 /* FTLibrary2Tests.h */,
 				68978E73153F2A03008EF4E8 /* FTLibrary2Tests.m */,
 				68978E6D153F2A03008EF4E8 /* Supporting Files */,
-				68978E7B153F2B96008EF4E8 /* FTFileSystemTests.h */,
-				68978E7C153F2B96008EF4E8 /* FTFileSystemTests.m */,
+				68978E7B153F2B96008EF4E8 /* FT2FileSystemTests.h */,
+				68978E7C153F2B96008EF4E8 /* FT2FileSystemTests.m */,
 			);
 			path = FTLibrary2Tests;
 			sourceTree = "<group>";
@@ -1097,7 +1097,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68978E74153F2A03008EF4E8 /* FTLibrary2Tests.m in Sources */,
-				68978E7D153F2B96008EF4E8 /* FTFileSystemTests.m in Sources */,
+				68978E7D153F2B96008EF4E8 /* FT2FileSystemTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

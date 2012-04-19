@@ -8,9 +8,11 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface FTFileSystemTests : SenTestCase
+@interface FT2FileSystemTests : SenTestCase
 - (void)testDetectDirectoryPaths;
 - (void)testReadWriteDataToDocuments;
 - (void)testReadWriteDataToLibrary;
+- (void)testReadWriteDataToDocumentsBundleFirst;
+- (void)testReadWriteDataToLibraryBundleFirst;
 
 @end

@@ -6,12 +6,12 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "FTFileSystemTests.h"
+#import "FT2FileSystemTests.h"
 #import "FT2FileSystem.h"
 
 #define TEST_TEXT @"this is atest to check data\n"
 
-@implementation FTFileSystemTests
+@implementation FT2FileSystemTests
 
 - (void)testDetectDirectoryPaths {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
@@ -37,6 +37,26 @@
     data = nil;
     data = [FT2FileSystem dataWithName:docName checkBundleFirst:NO forDirectoryType:NSLibraryDirectory];
     STAssertNotNil(data, @"Data is Nil");    
+}
+
+- (void)testReadWriteDataToDocumentsBundleFirst {
+    NSString *docName = @"document.txt";
+    NSData *data = [TEST_TEXT dataUsingEncoding:NSUTF8StringEncoding];
+    BOOL wrote = [FT2FileSystem writeData:data toDocumentsWithName:docName];
+    STAssertTrue(wrote, @"Problem writing file");
+    data = nil;
+    data = [FT2FileSystem dataFromDocumentsWithName:docName checkBundleFirst:YES];
+    STAssertNotNil(data, @"Data is Nil");    
+}
+
+- (void)testReadWriteDataToLibraryBundleFirst {
+    NSString *docName = @"document.txt";
+    NSData *data = [TEST_TEXT dataUsingEncoding:NSUTF8StringEncoding];
+    BOOL wrote = [FT2FileSystem writeData:data withName:docName forDirectoryType:NSLibraryDirectory];
+    STAssertTrue(wrote, @"Problem writing file");
+    data = nil;
+    data = [FT2FileSystem dataWithName:docName checkBundleFirst:YES forDirectoryType:NSLibraryDirectory];
+    STAssertNotNil(data, @"Data is Nil");      
 }
 
 @end
