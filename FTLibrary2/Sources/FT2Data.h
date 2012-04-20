@@ -23,6 +23,7 @@
 - (id)initWithManagedObjectName:(NSString *)managedObjectName;
 
 - (NSArray *)entitiesForName:(NSString *)entityName orderedBy:(NSString *)orderKey;
+- (NSArray *)entitiesForName:(NSString *)entityName withSortDescriptors:(NSArray *)sortDescriptors;
 
 - (void)performBlockOnContext:(void (^)(void))block;
 - (void)performBlockOnContextAndWait:(void (^)(void))block;

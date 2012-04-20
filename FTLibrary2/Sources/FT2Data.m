@@ -44,7 +44,7 @@ static NSString * __databaseName;
     return self;
 }
 
-- (NSArray *)entitiesForName:(NSString *)entityName orderedBy:(NSString *)orderKey {
+- (NSArray *)entitiesForName:(NSString *)entityName withSortDescriptors:(NSArray *)sortDescriptors {
     __block NSArray *entities = nil;
     [self performBlockOnContextAndWait:^{
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -52,18 +52,25 @@ static NSString * __databaseName;
         [request setEntity:entity];
         
         // Order by indexPath
-        if (orderKey) {
-            NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:orderKey ascending:YES selector:@selector(compare:)];
-            [request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-            
+        if (sortDescriptors && sortDescriptors.count > 0) {
+            [request setSortDescriptors:sortDescriptors];
         }
         
         // Execute the fetch
         NSError *error = nil;
         entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
     }];
-		
+    
     return entities;
+}
+
+- (NSArray *)entitiesForName:(NSString *)entityName orderedBy:(NSString *)orderKey {
+    NSArray *descriptors = nil;
+    if (orderKey && orderKey.length > 0) {
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:orderKey ascending:YES selector:@selector(compare:)];
+        descriptors = [NSArray arrayWithObject:sortDescriptor];
+    }
+    return [self entitiesForName:entityName withSortDescriptors:descriptors];
 }
 
 
