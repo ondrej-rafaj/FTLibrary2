@@ -10,4 +10,6 @@
 
 @interface FTLibrary2Tests : SenTestCase
 
+@property (nonatomic, assign) BOOL done;
+
 @end

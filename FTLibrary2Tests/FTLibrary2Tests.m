@@ -10,23 +10,25 @@
 
 @implementation FTLibrary2Tests
 
+@synthesize done;
+
 - (void)setUp
 {
     [super setUp];
     
-    // Set-up code here.
+    done = YES;
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
+    while (!done) {
+        // This executes another run loop.
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        // Sleep 1/100th sec
+        usleep(10000);
+    }
     
     [super tearDown];
-}
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in FTLibrary2Tests");
 }
 
 @end
