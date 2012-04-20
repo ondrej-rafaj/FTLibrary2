@@ -28,19 +28,18 @@
 
 #pragma mark write data
 
-+ (BOOL)writeData:(NSData *)data toDocumentsWithName:(NSString *)fileName {
-    return [FT2FileSystem writeData:data withName:fileName forDirectoryType:NSDocumentDirectory];
++ (void)writeData:(NSData *)data toDocumentsWithName:(NSString *)fileName error:(NSError *__autoreleasing *)error{
+    [FT2FileSystem writeData:data withName:fileName forDirectoryType:NSDocumentDirectory error:error];
 }
 
 
 
-+ (BOOL)writeData:(NSData *)data withName:(NSString *)fileName forDirectoryType:(NSSearchPathDirectory)directory {
++ (void)writeData:(NSData *)data withName:(NSString *)fileName forDirectoryType:(NSSearchPathDirectory)directory error:(NSError *__autoreleasing *)error{
     NSString *filePath = [[FT2FileSystem pathForSearchPath:directory] stringByAppendingPathComponent:fileName];
     NSDictionary *attr = nil;
-    NSError *error = nil;
-    BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:[filePath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:attr error:&error];
-    success = [[NSFileManager defaultManager] createFileAtPath:filePath contents:data attributes:attr];
-    return success;    
+    *error = nil;
+    BOOL success = [[NSFileManager defaultManager] createDirectoryAtPath:[filePath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:attr error:error];
+    success = [[NSFileManager defaultManager] createFileAtPath:filePath contents:data attributes:attr];  
 }
 
 

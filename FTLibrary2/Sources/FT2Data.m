@@ -74,6 +74,27 @@ static NSString * __databaseName;
 }
 
 
+- (id)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate {
+    __block id entity = nil;
+    [self performBlockOnContextAndWait:^{
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
+        [request setEntity:entity];
+        
+        // Order by indexPath
+        if (predicate) {
+            [request setPredicate:predicate];
+        }
+        
+        // Execute the fetch
+        NSError *error = nil;
+        NSArray *entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
+        if (entities.count > 0) entity = [entities objectAtIndex:0];
+    }];
+    
+    return entity;
+}
+
 
 
 
