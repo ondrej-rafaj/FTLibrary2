@@ -35,11 +35,19 @@ static NSString * __databaseName;
 - (id)initWithManagedObjectName:(NSString *)managedObjectName {
     self = [super init];
     if (self) {
+        //init Core Data
         NSAssert((managedObjectName || managedObjectName.length == 0), @"FT2Data initialized without Manajed Object Name");
         __managedObjectModelName = managedObjectName;
         __databaseName = [managedObjectName stringByAppendingString:@".sqlite"];
+        
+        //init queues
         _queue = dispatch_queue_create("com.fuerte.internetQueue",0); 
 		_managedContextQueue = dispatch_queue_create("com.fuerte.managedContext",0); 
+        
+        //init backgrouynd task handler
+        _backgroundUpdate = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+            [self backgroundUpdateExpired];
+        }];
     }
     return self;
 }
@@ -94,10 +102,6 @@ static NSString * __databaseName;
     
     return entity;
 }
-
-
-
-
 
 #pragma mark --
 #pragma mark - Core Data stack

@@ -15,6 +15,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+
 - (NSURL *)applicationDocumentsDirectory;
 - (void)saveContext;
 
@@ -30,6 +31,5 @@
 - (void)performBlockOnContext:(void (^)(void))block;
 - (void)performBlockOnContextAndWait:(void (^)(void))block;
 
-
-
 @end
+
