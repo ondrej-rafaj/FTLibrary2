@@ -780,8 +780,6 @@
 		938D5807153DC4370067CEFA = {
 			isa = PBXGroup;
 			children = (
-				68978E60153F29CB008EF4E8 /* SystemConfiguration.framework */,
-				68978E5E153F298D008EF4E8 /* CFNetwork.framework */,
 				932FDA5C153DD91B00E9D253 /* ThirdParty */,
 				938D583C153DCA9B0067CEFA /* Source */,
 				938D5817153DC4380067CEFA /* FTLibrary2 */,
@@ -805,6 +803,8 @@
 		938D5814153DC4380067CEFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68978E60153F29CB008EF4E8 /* SystemConfiguration.framework */,
+				68978E5E153F298D008EF4E8 /* CFNetwork.framework */,
 				68978E4F153F16BD008EF4E8 /* CoreData.framework */,
 				932FDB51153DDE5100E9D253 /* libxml2.dylib */,
 				938CB504153DD7AE0057A19B /* QuartzCore.framework */,
