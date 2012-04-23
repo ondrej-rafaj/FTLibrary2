@@ -10,9 +10,10 @@
 
 @implementation FT2TaskMaker
 
-+ (void)performBlockInBackground:(void (^)(void))block priority:(FTTaskPriority)priority
-{
-	dispatch_queue_priority_t dispatchPriority;
+@synthesize backgroundTaskIdentifier = _backgroundTaskIdentifier;
+
++ (void)performBlockInBackground:(void (^)(void))block priority:(FTTaskPriority)priority completed:(void (^)(void))completed expired:(void (^)(void))expired {
+    dispatch_queue_priority_t dispatchPriority;
 	switch (priority) {
 		case FTTaskPriorityNormal:
 			dispatchPriority = DISPATCH_QUEUE_PRIORITY_DEFAULT;
@@ -24,7 +25,22 @@
 			dispatchPriority = DISPATCH_QUEUE_PRIORITY_LOW;
 			break;
 	}	
-	dispatch_async(dispatch_get_global_queue(dispatchPriority, 0), block);
+    FT2TaskMaker *instance = [[FT2TaskMaker alloc] init];
+    if (expired) instance.backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:expired];
+    dispatch_async(dispatch_get_global_queue(dispatchPriority, 0), ^{
+        if (block) block();
+        if (instance.backgroundTaskIdentifier) [[UIApplication sharedApplication] endBackgroundTask:instance.backgroundTaskIdentifier];
+        if (completed) completed();
+    });
+}
+
++ (void)performBlockInBackground:(void (^)(void))block priority:(FTTaskPriority)priority
+{
+    [self performBlockInBackground:block priority:priority completed:nil expired:nil];
+}
+
++ (void)performBlockInBackground:(void (^)(void))block completed:(void (^)(void))completed expired:(void (^)(void))expired {
+    [self performBlockInBackground:block priority:FTTaskPriorityNormal completed:completed expired:expired];
 }
 
 + (void)performBlockInBackground:(void (^)(void))block
@@ -34,7 +50,7 @@
 
 + (void)performBlockOnMainQueue:(void (^)(void))block
 {
-	[FT2TaskMaker performBlockOnMainQueue:block andWait:NO];
+	[self performBlockOnMainQueue:block andWait:NO];
 }
 
 + (void)performBlockOnMainQueue:(void (^)(void))block andWait:(BOOL)wait

@@ -103,21 +103,6 @@ static NSString * __databaseName;
     return entity;
 }
 
-
-#pragma mark Background Update
-
-- (void)backgroundUpdateCompleted {
-    // do nothing
-    [[UIApplication sharedApplication] endBackgroundTask:_backgroundUpdate];
-}
-
-- (void)backgroundUpdateExpired {
-    //do nothing
-}
-
-
-
-
 #pragma mark --
 #pragma mark - Core Data stack
 
