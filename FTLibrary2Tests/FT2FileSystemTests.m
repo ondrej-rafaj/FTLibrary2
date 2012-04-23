@@ -22,8 +22,9 @@
 - (void)testReadWriteDataToDocuments {
     NSString *docName = @"document.txt";
     NSData *data = [TEST_TEXT dataUsingEncoding:NSUTF8StringEncoding];
-    BOOL wrote = [FT2FileSystem writeData:data toDocumentsWithName:docName];
-    STAssertTrue(wrote, @"Problem writing file");
+    NSError *error = nil;
+    [FT2FileSystem writeData:data toDocumentsWithName:docName error:&error];
+    STAssertNil(error, @"Problem writing file");
     data = nil;
     data = [FT2FileSystem dataFromDocumentsWithName:docName checkBundleFirst:NO];
     STAssertNotNil(data, @"Data is Nil");
@@ -32,8 +33,9 @@
 - (void)testReadWriteDataToLibrary {
     NSString *docName = @"document.txt";
     NSData *data = [TEST_TEXT dataUsingEncoding:NSUTF8StringEncoding];
-    BOOL wrote = [FT2FileSystem writeData:data withName:docName forDirectoryType:NSLibraryDirectory];
-    STAssertTrue(wrote, @"Problem writing file");
+    NSError *error = nil;
+    [FT2FileSystem writeData:data withName:docName forDirectoryType:NSLibraryDirectory error:&error];
+    STAssertNil(error, @"Problem writing file");
     data = nil;
     data = [FT2FileSystem dataWithName:docName checkBundleFirst:NO forDirectoryType:NSLibraryDirectory];
     STAssertNotNil(data, @"Data is Nil");    
@@ -42,8 +44,9 @@
 - (void)testReadWriteDataToDocumentsBundleFirst {
     NSString *docName = @"document.txt";
     NSData *data = [TEST_TEXT dataUsingEncoding:NSUTF8StringEncoding];
-    BOOL wrote = [FT2FileSystem writeData:data toDocumentsWithName:docName];
-    STAssertTrue(wrote, @"Problem writing file");
+    NSError *error = nil;
+    [FT2FileSystem writeData:data toDocumentsWithName:docName error:&error];
+    STAssertNil(error, @"Problem writing file");
     data = nil;
     data = [FT2FileSystem dataFromDocumentsWithName:docName checkBundleFirst:YES];
     STAssertNotNil(data, @"Data is Nil");    
@@ -52,8 +55,9 @@
 - (void)testReadWriteDataToLibraryBundleFirst {
     NSString *docName = @"document.txt";
     NSData *data = [TEST_TEXT dataUsingEncoding:NSUTF8StringEncoding];
-    BOOL wrote = [FT2FileSystem writeData:data withName:docName forDirectoryType:NSLibraryDirectory];
-    STAssertTrue(wrote, @"Problem writing file");
+    NSError *error = nil;
+    [FT2FileSystem writeData:data withName:docName forDirectoryType:NSLibraryDirectory error:&error];
+    STAssertNil(error, @"Problem writing file");
     data = nil;
     data = [FT2FileSystem dataWithName:docName checkBundleFirst:YES forDirectoryType:NSLibraryDirectory];
     STAssertNotNil(data, @"Data is Nil");      

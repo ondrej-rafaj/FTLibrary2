@@ -40,6 +40,7 @@
 		68978F1A1541859C008EF4E8 /* FT2JSONCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978F191541859C008EF4E8 /* FT2JSONCollectionTests.m */; };
 		68978F1E154187EB008EF4E8 /* FT2TwitterFeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978F1D154187EB008EF4E8 /* FT2TwitterFeedTests.m */; };
 		68978F2115418BCC008EF4E8 /* FT2YouTubeFeedsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978F2015418BCC008EF4E8 /* FT2YouTubeFeedsTests.m */; };
+		68B252DC1545898A00F961B3 /* FT2TaskMakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B252DB1545898A00F961B3 /* FT2TaskMakerTests.m */; };
 		932FDA4D153DD8B700E9D253 /* FT2Share.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA43153DD8B700E9D253 /* FT2Share.h */; };
 		932FDA4E153DD8B700E9D253 /* FT2Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FT2Share.m */; };
 		932FDA50153DD8B700E9D253 /* FT2ShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */; };
@@ -280,6 +281,8 @@
 		68978F1D154187EB008EF4E8 /* FT2TwitterFeedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2TwitterFeedTests.m; sourceTree = "<group>"; };
 		68978F1F15418BCC008EF4E8 /* FT2YouTubeFeedsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2YouTubeFeedsTests.h; sourceTree = "<group>"; };
 		68978F2015418BCC008EF4E8 /* FT2YouTubeFeedsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2YouTubeFeedsTests.m; sourceTree = "<group>"; };
+		68B252DA1545898A00F961B3 /* FT2TaskMakerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2TaskMakerTests.h; sourceTree = "<group>"; };
+		68B252DB1545898A00F961B3 /* FT2TaskMakerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2TaskMakerTests.m; sourceTree = "<group>"; };
 		932FDA43153DD8B700E9D253 /* FT2Share.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Share.h; path = FTLibrary2/Sources/FT2Share.h; sourceTree = "<group>"; };
 		932FDA44153DD8B700E9D253 /* FT2Share.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Share.m; path = FTLibrary2/Sources/FT2Share.m; sourceTree = "<group>"; };
 		932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareEmail.h; path = FTLibrary2/Sources/FT2ShareEmail.h; sourceTree = "<group>"; };
@@ -503,6 +506,8 @@
 				68978F1D154187EB008EF4E8 /* FT2TwitterFeedTests.m */,
 				68978F1F15418BCC008EF4E8 /* FT2YouTubeFeedsTests.h */,
 				68978F2015418BCC008EF4E8 /* FT2YouTubeFeedsTests.m */,
+				68B252DA1545898A00F961B3 /* FT2TaskMakerTests.h */,
+				68B252DB1545898A00F961B3 /* FT2TaskMakerTests.m */,
 			);
 			path = FTLibrary2Tests;
 			sourceTree = "<group>";
@@ -1156,6 +1161,7 @@
 				68978F1A1541859C008EF4E8 /* FT2JSONCollectionTests.m in Sources */,
 				68978F1E154187EB008EF4E8 /* FT2TwitterFeedTests.m in Sources */,
 				68978F2115418BCC008EF4E8 /* FT2YouTubeFeedsTests.m in Sources */,
+				68B252DC1545898A00F961B3 /* FT2TaskMakerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

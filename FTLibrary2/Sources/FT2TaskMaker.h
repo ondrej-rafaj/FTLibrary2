@@ -6,6 +6,19 @@
 //  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
+/**
+ *  Perform task i nthe background and implements handlers for completed and expired task if app has been terminated during the task
+ *
+ *      [FT2TaskMaker performBlockInBackground:^{
+ *           // the task itself
+ *       } completed:^{
+ *           // background update finished. Finalise changes
+ *       } expired:^{
+ *           // app terminated before finishing update. Maybe remove changes
+ *       }];
+ *
+ */
+
 #import <Foundation/Foundation.h>
 
 typedef enum {

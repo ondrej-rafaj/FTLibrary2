@@ -43,11 +43,7 @@ static NSString * __databaseName;
         //init queues
         _queue = dispatch_queue_create("com.fuerte.internetQueue",0); 
 		_managedContextQueue = dispatch_queue_create("com.fuerte.managedContext",0); 
-        
-        //init backgrouynd task handler
-        _backgroundUpdate = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
-            [self backgroundUpdateExpired];
-        }];
+
     }
     return self;
 }

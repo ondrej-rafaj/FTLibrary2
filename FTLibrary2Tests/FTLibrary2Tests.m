@@ -16,19 +16,25 @@
 {
     [super setUp];
     
-    done = YES;
+    self.done = YES;
 }
 
 - (void)tearDown
 {
-    while (!done) {
+
+    [self performBlockOnceDone:nil];
+    [super tearDown];
+}
+
+
+- (void)performBlockOnceDone:(void (^)(void))block {
+    while (!self.done) {
         // This executes another run loop.
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         // Sleep 1/100th sec
         usleep(10000);
     }
-    
-    [super tearDown];
+    if (block) block();
 }
 
 @end

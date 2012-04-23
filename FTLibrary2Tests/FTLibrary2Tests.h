@@ -12,4 +12,6 @@
 
 @property (nonatomic, assign) BOOL done;
 
+- (void)performBlockOnceDone:(void (^)(void))block;
+
 @end
