@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface FT2Data : NSObject 
+@interface FT2Data : NSObject {
+    UIBackgroundTaskIdentifier _backgroundUpdate;
+}
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+
 
 - (NSURL *)applicationDocumentsDirectory;
 - (void)saveContext;
@@ -26,6 +30,9 @@
 - (NSArray *)entitiesForName:(NSString *)entityName withSortDescriptors:(NSArray *)sortDescriptors;
 
 - (id)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
+
+- (void)backgroundUpdateCompleted;
+- (void)backgroundUpdateExpired;
 
 - (void)performBlockOnContext:(void (^)(void))block;
 - (void)performBlockOnContextAndWait:(void (^)(void))block;
