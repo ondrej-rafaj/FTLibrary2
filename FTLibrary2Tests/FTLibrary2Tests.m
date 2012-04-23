@@ -8,9 +8,18 @@
 
 #import "FTLibrary2Tests.h"
 
+
+
 @implementation FTLibrary2Tests
 
-@synthesize done;
+@synthesize done = _done;
+@synthesize theBlock;
+
+- (void)setDone:(BOOL)done {
+    _done = done;
+    
+    if (done && theBlock) theBlock();
+}
 
 - (void)setUp
 {
@@ -21,20 +30,18 @@
 
 - (void)tearDown
 {
-
-    [self performBlockOnceDone:nil];
+    while (!self.done) {
+        // This executes another run loop.
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:0]];
+        // Sleep 1/100th sec
+        usleep(10000);
+    }
     [super tearDown];
 }
 
 
 - (void)performBlockOnceDone:(void (^)(void))block {
-    while (!self.done) {
-        // This executes another run loop.
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-        // Sleep 1/100th sec
-        usleep(10000);
-    }
-    if (block) block();
+    if (block) theBlock = block;
 }
 
 @end
