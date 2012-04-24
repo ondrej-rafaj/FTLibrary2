@@ -238,6 +238,7 @@
 		93C265DC153EC32E0010A059 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265DA153EC32E0010A059 /* Reachability.h */; };
 		93C265DD153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93C265DE153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93CF7B0B1546D0EC0047C412 /* CoreGraphicAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -449,6 +450,7 @@
 		93C265D5153EC1DA0010A059 /* FT2System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2System.m; path = FTLibrary2/Sources/FT2System.m; sourceTree = "<group>"; };
 		93C265DA153EC32E0010A059 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		93C265DB153EC32E0010A059 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreGraphicAdditions.h; path = FTLibrary2/Sources/Categories/CoreGraphicAdditions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -885,6 +887,7 @@
 		938D583E153DCAE40067CEFA /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */,
 				938CB4A9153DD2610057A19B /* CGAffineTransformAdditions.h */,
 				932FDABF153DDAC500E9D253 /* NSData+Base64.h */,
 				932FDAC0153DDAC500E9D253 /* NSData+Base64.m */,
@@ -1025,6 +1028,7 @@
 				68978EFA15406C05008EF4E8 /* FT2TwitterFeed.h in Headers */,
 				68978EFF15406C1B008EF4E8 /* FT2YouTubeFeed.h in Headers */,
 				68978F0415406DAD008EF4E8 /* FT2JSONCollection.h in Headers */,
+				93CF7B0B1546D0EC0047C412 /* CoreGraphicAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

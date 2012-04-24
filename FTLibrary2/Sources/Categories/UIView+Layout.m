@@ -115,7 +115,7 @@
 
 - (CGPoint)boundsCenter
 {
-	CGRect frame = self.frame;
+	CGRect frame = self.bounds;
 	return CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
 }
 
