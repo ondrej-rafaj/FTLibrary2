@@ -239,6 +239,8 @@
 		93C265DD153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93C265DE153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93CF7B0B1546D0EC0047C412 /* CoreGraphicAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */; };
+		93EDD068154705F50074EC20 /* FT2PageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EDD066154705F50074EC20 /* FT2PageControl.h */; };
+		93EDD069154705F50074EC20 /* FT2PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EDD067154705F50074EC20 /* FT2PageControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -451,6 +453,8 @@
 		93C265DA153EC32E0010A059 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		93C265DB153EC32E0010A059 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreGraphicAdditions.h; path = FTLibrary2/Sources/Categories/CoreGraphicAdditions.h; sourceTree = "<group>"; };
+		93EDD066154705F50074EC20 /* FT2PageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageControl.h; path = FTLibrary2/Sources/FT2PageControl.h; sourceTree = "<group>"; };
+		93EDD067154705F50074EC20 /* FT2PageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageControl.m; path = FTLibrary2/Sources/FT2PageControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -873,6 +877,8 @@
 		938D583D153DCAB30067CEFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				93EDD066154705F50074EC20 /* FT2PageControl.h */,
+				93EDD067154705F50074EC20 /* FT2PageControl.m */,
 				938CB4EB153DD4BD0057A19B /* FT2ActionSheet.h */,
 				938CB4E6153DD4BD0057A19B /* FT2ActionSheet.m */,
 				938CB4EC153DD4BD0057A19B /* FT2AlertView.h */,
@@ -1029,6 +1035,7 @@
 				68978EFF15406C1B008EF4E8 /* FT2YouTubeFeed.h in Headers */,
 				68978F0415406DAD008EF4E8 /* FT2JSONCollection.h in Headers */,
 				93CF7B0B1546D0EC0047C412 /* CoreGraphicAdditions.h in Headers */,
+				93EDD068154705F50074EC20 /* FT2PageControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1239,6 +1246,7 @@
 				68978EFB15406C05008EF4E8 /* FT2TwitterFeed.m in Sources */,
 				68978F0015406C1B008EF4E8 /* FT2YouTubeFeed.m in Sources */,
 				68978F0515406DAD008EF4E8 /* FT2JSONCollection.m in Sources */,
+				93EDD069154705F50074EC20 /* FT2PageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
