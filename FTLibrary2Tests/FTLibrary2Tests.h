@@ -8,9 +8,12 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
+typedef void (^blockOnYes)();
+
 @interface FTLibrary2Tests : SenTestCase
 
 @property (nonatomic, assign) BOOL done;
+@property (copy) blockOnYes theBlock;
 
 - (void)performBlockOnceDone:(void (^)(void))block;
 
