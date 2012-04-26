@@ -79,25 +79,28 @@ static NSString * __databaseName;
 
 
 - (id)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate {
-    __block id entity = nil;
+    __block NSManagedObject *entity = nil;
     [self performBlockOnContextAndWait:^{
-        NSFetchRequest *request = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
-        [request setEntity:entity];
         
-        // Order by indexPath
-        if (predicate) {
-            [request setPredicate:predicate];
+        NSEntityDescription *entityDesc = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
+        
+        if (!predicate) {
+            entity = [[NSManagedObject alloc] initWithEntity:entityDesc insertIntoManagedObjectContext:self.managedObjectContext];
+            return;
         }
         
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entityDesc];
+        [request setPredicate:predicate];
         [request setFetchLimit:1];
         
         // Execute the fetch
         NSError *error = nil;
         NSArray *entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
         if (entities.count > 0) entity = [entities objectAtIndex:0];
+
     }];
-    
+
     return entity;
 }
 
