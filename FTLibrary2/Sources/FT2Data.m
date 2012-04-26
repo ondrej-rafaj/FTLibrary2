@@ -90,6 +90,8 @@ static NSString * __databaseName;
             [request setPredicate:predicate];
         }
         
+        [request setFetchLimit:1];
+        
         // Execute the fetch
         NSError *error = nil;
         NSArray *entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
