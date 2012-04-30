@@ -229,7 +229,7 @@ static NSString * __databaseName;
     return returnedEntity;
 }
 
-- (id)storedObjectFromKey:(NSString *)key {
+- (id)storedObjectForKey:(NSString *)key {
     return nil;
 }
 
