@@ -31,5 +31,8 @@
 - (void)performBlockOnContext:(void (^)(void))block;
 - (void)performBlockOnContextAndWait:(void (^)(void))block;
 
+- (id)storedObjectFromKey:(NSString *)key;
+- (void)storeObejct:(id)object forKey:(NSString *)key;
+
 @end
 

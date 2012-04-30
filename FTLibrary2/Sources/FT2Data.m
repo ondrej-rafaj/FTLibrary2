@@ -229,6 +229,14 @@ static NSString * __databaseName;
     return returnedEntity;
 }
 
+- (id)storedObjectFromKey:(NSString *)key {
+    return nil;
+}
+
+- (void)storeObejct:(id)object forKey:(NSString *)key {
+    
+}
+
 
 
 @end
