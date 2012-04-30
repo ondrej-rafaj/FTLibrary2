@@ -17,6 +17,8 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
+@synthesize storedObjects = _storedObjects;
+
 static dispatch_queue_t _queue = NULL;
 static dispatch_queue_t _managedContextQueue = NULL;
 
@@ -229,12 +231,36 @@ static NSString * __databaseName;
     return returnedEntity;
 }
 
+
+#pragma mark --
+#pragma mark stored object
+
+/**
+ *  wrapper to easely save data to sandboxed NSUserDefaults
+ *  Use storedObjectForKey: and storeObject:forKey: for retrieve and set data
+ *  Example:
+ *      [self storeObejct:@"sometext" forKey:@"aKey"];
+ *      NSString *text = [self storedObjectForKey:@"aKey"];
+ */
+
+static NSString *_storedObjectKey = @"FTStoredObjectKey";
+
+- (NSMutableDictionary *)storedObjects {
+    if (!_storedObjects) _storedObjects = [[NSUserDefaults standardUserDefaults] objectForKey:_storedObjectKey];
+    if (!_storedObjects) _storedObjects = [NSMutableDictionary dictionary];
+    return _storedObjects;
+
+}
+
 - (id)storedObjectForKey:(NSString *)key {
-    return nil;
+    return [self.storedObjects objectForKey:key];
 }
 
 - (void)storeObejct:(id)object forKey:(NSString *)key {
+    [self.storedObjects setObject:object forKey:key];
     
+    [[NSUserDefaults standardUserDefaults] setObject:self.storedObjects forKey:_storedObjectKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 

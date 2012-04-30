@@ -15,6 +15,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property (nonatomic, strong) NSMutableDictionary *storedObjects;
+
 
 - (NSURL *)applicationDocumentsDirectory;
 - (void)saveContext;
@@ -31,7 +33,7 @@
 - (void)performBlockOnContext:(void (^)(void))block;
 - (void)performBlockOnContextAndWait:(void (^)(void))block;
 
-- (id)storedObjectFoKey:(NSString *)key;
+- (id)storedObjectForKey:(NSString *)key;
 - (void)storeObejct:(id)object forKey:(NSString *)key;
 
 @end
