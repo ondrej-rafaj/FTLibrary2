@@ -46,6 +46,12 @@
 	self.imageView.autoresizingMask = self.autoresizingMask;
 }
 
+- (void)setFrame:(CGRect)frame
+{
+	[super setFrame:frame];
+	[self setImage:self.image];
+}
+
 #pragma mark - Getters
 
 - (UIImageView *)imageView
@@ -57,7 +63,6 @@
 {
 	return self.imageView.image;
 }
-
 
 
 //
