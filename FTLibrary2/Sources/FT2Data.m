@@ -55,6 +55,11 @@ static NSString * __databaseName;
     [self performBlockOnContextAndWait:^{
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
         NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
+        
+        if (!entity && entityName.length > 2) {
+            NSString *pathName = [entityName stringByReplacingCharactersInRange:NSMakeRange(0, 2) withString:@""];
+            entity = [NSEntityDescription entityForName:pathName inManagedObjectContext:[self managedObjectContext]];
+        }
         [request setEntity:entity];
         
         // Order by indexPath
