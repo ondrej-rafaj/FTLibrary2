@@ -3,7 +3,7 @@
 //  FT2Library
 //
 //  Created by Baldoph Pourprix on 14/12/2011.
-//  Copyright (c) 2011 Coronal Sky. All rights reserved.
+//  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

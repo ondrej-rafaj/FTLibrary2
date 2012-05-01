@@ -1,9 +1,9 @@
 //
 //  CoreGraphicAdditions.h
-//  CSLibrary
+//  FTLibrary2
 //
 //  Created by Baldoph Pourprix on 02/01/2012.
-//  Copyright (c) 2012 Coronal Sky. All rights reserved.
+//  Copyright (c) 2012 Fuerte International. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

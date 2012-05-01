@@ -239,6 +239,14 @@
 		93C265DD153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93C265DE153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93CF7B0B1546D0EC0047C412 /* CoreGraphicAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */; };
+		93D385E6154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */; };
+		93D385E7154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */; };
+		93D385E8154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */; };
+		93D385E9154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */; };
+		93D385EA154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */; };
+		93D385EB154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */; };
+		93D385EC154FF1B0009A6895 /* FT2ImageMagnifyingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D385E4154FF1B0009A6895 /* FT2ImageMagnifyingView.h */; };
+		93D385ED154FF1B0009A6895 /* FT2MagnifyingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D385E5154FF1B0009A6895 /* FT2MagnifyingView.h */; };
 		93EDD068154705F50074EC20 /* FT2PageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EDD066154705F50074EC20 /* FT2PageControl.h */; };
 		93EDD069154705F50074EC20 /* FT2PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EDD067154705F50074EC20 /* FT2PageControl.m */; };
 /* End PBXBuildFile section */
@@ -453,6 +461,10 @@
 		93C265DA153EC32E0010A059 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		93C265DB153EC32E0010A059 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreGraphicAdditions.h; path = FTLibrary2/Sources/Categories/CoreGraphicAdditions.h; sourceTree = "<group>"; };
+		93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ImageMagnifyingView.m; path = FTLibrary2/Sources/FT2ImageMagnifyingView.m; sourceTree = "<group>"; };
+		93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2MagnifyingView.m; path = FTLibrary2/Sources/FT2MagnifyingView.m; sourceTree = "<group>"; };
+		93D385E4154FF1B0009A6895 /* FT2ImageMagnifyingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ImageMagnifyingView.h; path = FTLibrary2/Sources/FT2ImageMagnifyingView.h; sourceTree = "<group>"; };
+		93D385E5154FF1B0009A6895 /* FT2MagnifyingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2MagnifyingView.h; path = FTLibrary2/Sources/FT2MagnifyingView.h; sourceTree = "<group>"; };
 		93EDD066154705F50074EC20 /* FT2PageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageControl.h; path = FTLibrary2/Sources/FT2PageControl.h; sourceTree = "<group>"; };
 		93EDD067154705F50074EC20 /* FT2PageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageControl.m; path = FTLibrary2/Sources/FT2PageControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -885,6 +897,7 @@
 				938CB4E7153DD4BD0057A19B /* FT2AlertView.m */,
 				938CB4ED153DD4BD0057A19B /* FT2CustomAnimationView.h */,
 				938CB4E8153DD4BD0057A19B /* FT2CustomAnimationView.m */,
+				93D385E0154FF195009A6895 /* Magnifying Views */,
 				938CB502153DD54F0057A19B /* PageScrollView */,
 			);
 			name = Views;
@@ -933,6 +946,17 @@
 			);
 			name = Reachability;
 			path = FTLibrary2/ThirdParty/Reachability;
+			sourceTree = "<group>";
+		};
+		93D385E0154FF195009A6895 /* Magnifying Views */ = {
+			isa = PBXGroup;
+			children = (
+				93D385E5154FF1B0009A6895 /* FT2MagnifyingView.h */,
+				93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */,
+				93D385E4154FF1B0009A6895 /* FT2ImageMagnifyingView.h */,
+				93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */,
+			);
+			name = "Magnifying Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1036,6 +1060,8 @@
 				68978F0415406DAD008EF4E8 /* FT2JSONCollection.h in Headers */,
 				93CF7B0B1546D0EC0047C412 /* CoreGraphicAdditions.h in Headers */,
 				93EDD068154705F50074EC20 /* FT2PageControl.h in Headers */,
+				93D385EC154FF1B0009A6895 /* FT2ImageMagnifyingView.h in Headers */,
+				93D385ED154FF1B0009A6895 /* FT2MagnifyingView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1173,6 +1199,8 @@
 				68978F1E154187EB008EF4E8 /* FT2TwitterFeedTests.m in Sources */,
 				68978F2115418BCC008EF4E8 /* FT2YouTubeFeedsTests.m in Sources */,
 				68B252DC1545898A00F961B3 /* FT2TaskMakerTests.m in Sources */,
+				93D385E8154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
+				93D385EB154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1247,6 +1275,8 @@
 				68978F0015406C1B008EF4E8 /* FT2YouTubeFeed.m in Sources */,
 				68978F0515406DAD008EF4E8 /* FT2JSONCollection.m in Sources */,
 				93EDD069154705F50074EC20 /* FT2PageControl.m in Sources */,
+				93D385E6154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
+				93D385E9154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1298,6 +1328,8 @@
 				68978EFC15406C05008EF4E8 /* FT2TwitterFeed.m in Sources */,
 				68978F0115406C1B008EF4E8 /* FT2YouTubeFeed.m in Sources */,
 				68978F0615406DAD008EF4E8 /* FT2JSONCollection.m in Sources */,
+				93D385E7154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
+				93D385EA154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
