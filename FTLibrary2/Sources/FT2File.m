@@ -15,59 +15,112 @@
 @synthesize path = _path;
 @synthesize source = _source;
 @synthesize date = _date;
+@synthesize shouldOverride = _shouldOverride;
+@synthesize type = _type;
 @synthesize exists = _exists;
 @synthesize data = _data;
 
-- (void)initializeDataDownloadInFolder:(NSString *)folder withCompletitionBlock:(fileSaved)block {
+@synthesize delegate = _delegate;
+
+static dispatch_queue_t _queue;
+
+- (NSString *)folder {
+    NSString *folder;
+    switch (self.type) {
+        case FT2FileTypeImage:
+            folder = @"images";
+            break;
+        case FT2FileTypeVideo:
+            folder = @"videos";
+            break;
+        case FT2FileTypeDoc:
+            folder = @"docs";
+            break;
+        case FT2FileTypePDF:
+            folder = @"pdfs";
+            break;
+        default:
+            folder = @"files";
+            break;
+    }
+    return folder;
+}
+
+- (BOOL)exists {
+    if (!_exists) {
+        _exists = [FT2FileSystem existsAtPath:self.path];
+    }
+    return _exists;
+}
+
+-(void)setSource:(NSURL *)source {
+    _source = source;
+    
+    static NSString *pattern = @"^[http|https|ftp]*://";
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
+    NSArray *matches = [regex matchesInString:_source.path options:NSMatchingProgress range:NSMakeRange(0, _source.path.length)];
+    if (matches.count == 0 && self.delegate && [self.delegate respondsToSelector:@selector(relatedURLForFile:)]) {
+        NSURL *baseURL = [self.delegate relatedURLForFile:self];
+        _source = [NSURL URLWithString:_source.path relativeToURL:baseURL];
+    }
+}
+
+- (NSString *)path {
+    if (!_path) {
+        NSString *fileName = [self.source lastPathComponent];
+        NSString *filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
+        if (!filePath || self.shouldOverride) {
+            fileName = [NSString stringWithFormat:@"%@/%d_%@", [self folder], [self.uid intValue], fileName];
+            filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
+        }
+        _path = filePath;
+    }
+    return _path;
+}
+
+- (NSData *)data {
+    if (!_data) {
+        _data = [NSData dataWithContentsOfFile:self.path];
+    }
+    return _data;
+}
+
+- (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block {
     if (!self.source) return;
-    
-    NSString *fileName = [NSString stringWithFormat:@"%@/%d_%@", folder, [self.uid intValue], [self.source.path lastPathComponent]];
-    __block NSString *resourcePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
-    
+        
     [FT2File downloadDataFromURL:self.source completed:^(NSData *data, NSError *error) {
-        if (error) {
+        if (error || !data) {
             FT2Error *ftError = [FT2Error errorWithError:error];
             [ftError showInConsole];
+            block(error);
+            return;
         }
         
-        [FT2FileSystem writeData:data toDocumentsWithName:resourcePath error:&error];
+        self.path = nil;
+        
+        [FT2FileSystem writeData:data toDocumentsWithName:self.path error:&error];
         if (error) {
             FT2Error *ftError = [FT2Error errorWithError:error];
             [ftError showInConsole];
+            block(error);
+            return;
         }
-        else {
-            self.path = resourcePath;
-        }
-        self.exists = (error != nil);
-        self.data = nil;
+        
+        self.exists = (error == nil);
+        self.data = data;
         
         block(error);
     }];
 }
 
-- (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block {
-    [self initializeDataDownloadInFolder:@"" withCompletitionBlock:block];
-}
 
-- (BOOL)exists {
-    if (!_exists) {
-        _exists = (self.data != nil);
-    }
-    return _exists;
-}
-
-- (NSData *)data {
-    if (!_data) {
-        _data = [FT2FileSystem dataWithName:self.path checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
-    }
-    return _data;
-}
-
+#pragma mark Download process
 
 + (void)downloadDataFromURL:(NSURL *)url completed:(fileDownloaded)block {
     @autoreleasepool {
         NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-        dispatch_queue_t _queue = dispatch_queue_create("com.fuerte.FT2Library.internetQueue",0);
+        if (!_queue) _queue = dispatch_queue_create("com.fuerte.FT2Library.internetQueue",0);
         dispatch_async(_queue, ^{
             NSURLResponse *response = nil;
             NSError *error = nil;
@@ -78,7 +131,6 @@
             }
             
             block(data, error);
-            dispatch_release(_queue);
         });
     }
 }
