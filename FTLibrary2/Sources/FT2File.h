@@ -23,7 +23,7 @@ typedef void (^fileDownloaded)(NSData *data, NSError *error);
 @interface FT2File : NSObject
 
 @property (nonatomic, strong) NSNumber *uid;
-@property (nonatomic, strong) NSURL *pathURL;
+@property (nonatomic, strong) NSString *path;
 @property (nonatomic, strong) NSURL *source;
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, assign) BOOL shouldOverride;

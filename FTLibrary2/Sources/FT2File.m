@@ -12,7 +12,7 @@
 @implementation FT2File
 
 @synthesize uid = _uid;
-@synthesize pathURL = _pathURL;
+@synthesize path = _path;
 @synthesize source = _source;
 @synthesize date = _date;
 @synthesize shouldOverride = _shouldOverride;
@@ -48,8 +48,7 @@ static dispatch_queue_t _queue;
 
 - (BOOL)exists {
     if (!_exists) {
-        if (self.pathURL) return YES;
-        _exists = (self.pathURL.path.length > 0);
+        _exists = [FT2FileSystem existsAtPath:self.path];
     }
     return _exists;
 }
@@ -67,22 +66,22 @@ static dispatch_queue_t _queue;
     }
 }
 
-- (NSURL *)pathURL {
-    if (!_pathURL) {
+- (NSString *)path {
+    if (!_path) {
         NSString *fileName = [self.source lastPathComponent];
         NSString *filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
         if (!filePath || self.shouldOverride) {
             fileName = [NSString stringWithFormat:@"%@/%d_%@", [self folder], [self.uid intValue], fileName];
             filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
         }
-        _pathURL = [NSURL URLWithString:filePath];
+        _path = filePath;
     }
-    return _pathURL;
+    return _path;
 }
 
 - (NSData *)data {
     if (!_data) {
-        _data = [NSData dataWithContentsOfURL:self.pathURL];
+        _data = [NSData dataWithContentsOfFile:self.path];
     }
     return _data;
 }
@@ -98,21 +97,18 @@ static dispatch_queue_t _queue;
             return;
         }
         
-        self.pathURL = nil;
-        self.shouldOverride = YES;
+        self.path = nil;
         
-        [FT2FileSystem writeData:data toDocumentsWithName:self.pathURL.path error:&error];
+        [FT2FileSystem writeData:data toDocumentsWithName:self.path error:&error];
         if (error) {
             FT2Error *ftError = [FT2Error errorWithError:error];
             [ftError showInConsole];
-            self.pathURL = nil;
             block(error);
             return;
         }
         
-        self.exists = (error != nil);
-        self.data = nil;
-        self.shouldOverride = NO;
+        self.exists = (error == nil);
+        self.data = data;
         
         block(error);
     }];

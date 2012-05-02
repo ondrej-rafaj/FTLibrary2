@@ -21,4 +21,6 @@
 
 + (NSString *)pathForFileName:(NSString *)fileName checkBundleFirst:(BOOL)chekcBundle forDirectoryType:(NSSearchPathDirectory)directory;
 
++ (BOOL)existsAtPath:(NSString *)path;
+
 @end
