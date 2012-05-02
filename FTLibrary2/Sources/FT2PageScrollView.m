@@ -280,8 +280,6 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 
 - (void)scrollToPageAtIndex:(NSInteger)index animated:(BOOL)animated
 {
-	_didUpdateFrame = NO;
-	
 	if (animated && index != self.selectedIndex) [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
 	CGFloat xOffset = index * _internalPageSize.width;
 	if (index != 0 && self.contentSize.width - xOffset < self.bounds.size.width) {
