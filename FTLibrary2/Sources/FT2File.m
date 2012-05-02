@@ -12,62 +12,104 @@
 @implementation FT2File
 
 @synthesize uid = _uid;
-@synthesize path = _path;
+@synthesize pathURL = _pathURL;
 @synthesize source = _source;
 @synthesize date = _date;
+@synthesize shouldOverride = _shouldOverride;
+@synthesize type = _type;
 @synthesize exists = _exists;
 @synthesize data = _data;
 
-- (void)initializeDataDownloadInFolder:(NSString *)folder withCompletitionBlock:(fileSaved)block {
+static dispatch_queue_t _queue;
+
+- (NSString *)folder {
+    NSString *folder;
+    switch (self.type) {
+        case FT2FileTypeImage:
+            folder = @"images";
+            break;
+        case FT2FileTypeVideo:
+            folder = @"videos";
+            break;
+        case FT2FileTypeDoc:
+            folder = @"docs";
+            break;
+        case FT2FileTypePDF:
+            folder = @"pdfs";
+            break;
+        default:
+            folder = @"files";
+            break;
+    }
+    return folder;
+}
+
+- (BOOL)exists {
+    if (!_exists) {
+        if (self.pathURL) return YES;
+        _exists = (self.pathURL.path.length > 0);
+    }
+    return _exists;
+}
+
+- (NSURL *)pathURL {
+    if (!_pathURL) {
+        NSString *fileName = [self.source lastPathComponent];
+        NSString *filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
+        if (!filePath || self.shouldOverride) {
+            fileName = [NSString stringWithFormat:@"%@/%d_%@", [self folder], [self.uid intValue], fileName];
+            filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
+        }
+        _pathURL = [NSURL URLWithString:filePath];
+    }
+    return _pathURL;
+}
+
+- (NSData *)data {
+    if (!_data) {
+        _data = [NSData dataWithContentsOfURL:self.pathURL];
+    }
+    return _data;
+}
+
+- (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block {
     if (!self.source) return;
-    
-    NSString *fileName = [NSString stringWithFormat:@"%@/%d_%@", folder, [self.uid intValue], [self.source.path lastPathComponent]];
-    __block NSString *resourcePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
-    
+        
     [FT2File downloadDataFromURL:self.source completed:^(NSData *data, NSError *error) {
-        if (error) {
+        if (error || !data) {
             FT2Error *ftError = [FT2Error errorWithError:error];
             [ftError showInConsole];
+            block(error);
+            return;
         }
         
-        [FT2FileSystem writeData:data toDocumentsWithName:resourcePath error:&error];
+        self.pathURL = nil;
+        self.shouldOverride = YES;
+        
+        [FT2FileSystem writeData:data toDocumentsWithName:self.pathURL.path error:&error];
         if (error) {
             FT2Error *ftError = [FT2Error errorWithError:error];
             [ftError showInConsole];
+            self.pathURL = nil;
+            block(error);
+            return;
         }
-        else {
-            self.path = resourcePath;
-        }
+        
         self.exists = (error != nil);
         self.data = nil;
+        self.shouldOverride = NO;
         
         block(error);
     }];
 }
 
-- (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block {
-    [self initializeDataDownloadInFolder:@"" withCompletitionBlock:block];
-}
 
-- (BOOL)exists {
-    if (!_exists) {
-        _exists = (self.data != nil);
-    }
-    return _exists;
-}
-
-- (NSData *)data {
-    if (!_data) {
-        _data = [FT2FileSystem dataWithName:self.path checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
-    }
-    return _data;
-}
-
+#pragma mark Download process
 
 + (void)downloadDataFromURL:(NSURL *)url completed:(fileDownloaded)block {
     @autoreleasepool {
         NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-        dispatch_queue_t _queue = dispatch_queue_create("com.fuerte.FT2Library.internetQueue",0);
+        if (!_queue) _queue = dispatch_queue_create("com.fuerte.FT2Library.internetQueue",0);
         dispatch_async(_queue, ^{
             NSURLResponse *response = nil;
             NSError *error = nil;
@@ -78,7 +120,6 @@
             }
             
             block(data, error);
-            dispatch_release(_queue);
         });
     }
 }
