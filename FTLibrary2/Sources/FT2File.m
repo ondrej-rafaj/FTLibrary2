@@ -20,6 +20,8 @@
 @synthesize exists = _exists;
 @synthesize data = _data;
 
+@synthesize delegate = _delegate;
+
 static dispatch_queue_t _queue;
 
 - (NSString *)folder {
@@ -50,6 +52,19 @@ static dispatch_queue_t _queue;
         _exists = (self.pathURL.path.length > 0);
     }
     return _exists;
+}
+
+-(void)setSource:(NSURL *)source {
+    _source = source;
+    
+    static NSString *pattern = @"^[http|https|ftp]*://";
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
+    NSArray *matches = [regex matchesInString:_source.path options:NSMatchingProgress range:NSMakeRange(0, _source.path.length)];
+    if (matches.count == 0 && self.delegate && [self.delegate respondsToSelector:@selector(relatedURLForFile:)]) {
+        NSURL *baseURL = [self.delegate relatedURLForFile:self];
+        _source = [NSURL URLWithString:_source.path relativeToURL:baseURL];
+    }
 }
 
 - (NSURL *)pathURL {

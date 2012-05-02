@@ -19,6 +19,7 @@ typedef enum {
 typedef void (^fileSaved)(NSError *error);
 typedef void (^fileDownloaded)(NSData *data, NSError *error);
 
+@protocol FT2FileDelegate;
 @interface FT2File : NSObject
 
 @property (nonatomic, strong) NSNumber *uid;
@@ -30,7 +31,15 @@ typedef void (^fileDownloaded)(NSData *data, NSError *error);
 @property (nonatomic, assign) BOOL exists;
 @property (nonatomic, strong) NSData *data;
 
+@property (nonatomic, assign) __unsafe_unretained id<FT2FileDelegate> delegate;
+
 - (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block;
 + (void)downloadDataFromURL:(NSURL *)url completed:(fileDownloaded)block;
+
+@end
+
+@protocol FT2FileDelegate <NSObject>
+@required
+- (NSURL *)relatedURLForFile:(FT2File *)file;
 
 @end
