@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6842EC571552BE5500C18C9F /* FT2CoreTextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC531552BE5500C18C9F /* FT2CoreTextStyle.h */; };
+		6842EC581552BE5500C18C9F /* FT2CoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC541552BE5500C18C9F /* FT2CoreTextStyle.m */; };
+		6842EC591552BE5500C18C9F /* FT2CoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC541552BE5500C18C9F /* FT2CoreTextStyle.m */; };
+		6842EC5A1552BE5500C18C9F /* FT2CoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC551552BE5500C18C9F /* FT2CoreTextView.h */; };
+		6842EC5B1552BE5500C18C9F /* FT2CoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC561552BE5500C18C9F /* FT2CoreTextView.m */; };
+		6842EC5C1552BE5500C18C9F /* FT2CoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC561552BE5500C18C9F /* FT2CoreTextView.m */; };
+		6842EC5E1552BFFE00C18C9F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6842EC5D1552BFFE00C18C9F /* CoreText.framework */; };
 		6853970B1550298300B2D2A4 /* FT2File.h in Headers */ = {isa = PBXBuildFile; fileRef = 685397091550298300B2D2A4 /* FT2File.h */; };
 		6853970C1550298300B2D2A4 /* FT2File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6853970A1550298300B2D2A4 /* FT2File.m */; };
 		68978E43153F161E008EF4E8 /* FT2Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978E41153F161E008EF4E8 /* FT2Data.h */; };
@@ -264,6 +271,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6842EC531552BE5500C18C9F /* FT2CoreTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2CoreTextStyle.h; sourceTree = "<group>"; };
+		6842EC541552BE5500C18C9F /* FT2CoreTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2CoreTextStyle.m; sourceTree = "<group>"; };
+		6842EC551552BE5500C18C9F /* FT2CoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2CoreTextView.h; sourceTree = "<group>"; };
+		6842EC561552BE5500C18C9F /* FT2CoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2CoreTextView.m; sourceTree = "<group>"; };
+		6842EC5D1552BFFE00C18C9F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		685397091550298300B2D2A4 /* FT2File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2File.h; path = FTLibrary2/Sources/FT2File.h; sourceTree = "<group>"; };
 		6853970A1550298300B2D2A4 /* FT2File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2File.m; path = FTLibrary2/Sources/FT2File.m; sourceTree = "<group>"; };
 		68978E41153F161E008EF4E8 /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Data.h; path = FTLibrary2/Sources/FT2Data.h; sourceTree = "<group>"; };
@@ -488,6 +500,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6842EC5E1552BFFE00C18C9F /* CoreText.framework in Frameworks */,
 				68978E50153F16BD008EF4E8 /* CoreData.framework in Frameworks */,
 				932FDB53153DDE7C00E9D253 /* libxml2.dylib in Frameworks */,
 				938CB503153DD7A70057A19B /* UIKit.framework in Frameworks */,
@@ -514,6 +527,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6842EC511552BE2700C18C9F /* CoreText */ = {
+			isa = PBXGroup;
+			children = (
+				6842EC531552BE5500C18C9F /* FT2CoreTextStyle.h */,
+				6842EC541552BE5500C18C9F /* FT2CoreTextStyle.m */,
+				6842EC551552BE5500C18C9F /* FT2CoreTextView.h */,
+				6842EC561552BE5500C18C9F /* FT2CoreTextView.m */,
+			);
+			name = CoreText;
+			sourceTree = "<group>";
+		};
 		68978E6C153F2A03008EF4E8 /* FTLibrary2Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,6 +831,7 @@
 		938D5807153DC4370067CEFA = {
 			isa = PBXGroup;
 			children = (
+				6842EC5D1552BFFE00C18C9F /* CoreText.framework */,
 				932FDA5C153DD91B00E9D253 /* ThirdParty */,
 				938D583C153DCA9B0067CEFA /* Source */,
 				938D5817153DC4380067CEFA /* FTLibrary2 */,
@@ -893,6 +918,7 @@
 		938D583D153DCAB30067CEFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6842EC511552BE2700C18C9F /* CoreText */,
 				93EDD066154705F50074EC20 /* FT2PageControl.h */,
 				93EDD067154705F50074EC20 /* FT2PageControl.m */,
 				938CB4EB153DD4BD0057A19B /* FT2ActionSheet.h */,
@@ -1069,6 +1095,8 @@
 				93D385EC154FF1B0009A6895 /* FT2ImageMagnifyingView.h in Headers */,
 				93D385ED154FF1B0009A6895 /* FT2MagnifyingView.h in Headers */,
 				6853970B1550298300B2D2A4 /* FT2File.h in Headers */,
+				6842EC571552BE5500C18C9F /* FT2CoreTextStyle.h in Headers */,
+				6842EC5A1552BE5500C18C9F /* FT2CoreTextView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1285,6 +1313,8 @@
 				93D385E6154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
 				93D385E9154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 				6853970C1550298300B2D2A4 /* FT2File.m in Sources */,
+				6842EC581552BE5500C18C9F /* FT2CoreTextStyle.m in Sources */,
+				6842EC5B1552BE5500C18C9F /* FT2CoreTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1338,6 +1368,8 @@
 				68978F0615406DAD008EF4E8 /* FT2JSONCollection.m in Sources */,
 				93D385E7154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
 				93D385EA154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
+				6842EC591552BE5500C18C9F /* FT2CoreTextStyle.m in Sources */,
+				6842EC5C1552BE5500C18C9F /* FT2CoreTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
