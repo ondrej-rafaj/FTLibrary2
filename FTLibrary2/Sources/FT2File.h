@@ -13,7 +13,8 @@ typedef enum {
     FT2FileTypeImage,
     FT2FileTypeVideo,
     FT2FileTypePDF,
-    FT2FileTypeDoc
+    FT2FileTypeDoc,
+    FT2FileTypeThumbnail
 } FT2FileType;
 
 typedef void (^fileSaved)(NSError *error);

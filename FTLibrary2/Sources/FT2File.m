@@ -39,6 +39,9 @@ static dispatch_queue_t _queue;
         case FT2FileTypePDF:
             folder = @"pdfs";
             break;
+        case FT2FileTypeThumbnail:
+            folder = @"thumbnails";
+            break;
         default:
             folder = @"files";
             break;
@@ -87,7 +90,10 @@ static dispatch_queue_t _queue;
 }
 
 - (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block {
-    if (!self.source) return;
+    if (!self.source) {
+        NSError *error = [NSError errorWithDomain:@"com.fuerteint.error" code:404 userInfo:nil];
+        block(error);
+    }
         
     [FT2File downloadDataFromURL:self.source completed:^(NSData *data, NSError *error) {
         if (error || !data) {
