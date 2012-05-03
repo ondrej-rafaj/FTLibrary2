@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6842EC5E1552BFFE00C18C9F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6842EC5D1552BFFE00C18C9F /* CoreText.framework */; };
-		6842EC651552C67F00C18C9F /* FTCoreTextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC611552C67F00C18C9F /* FTCoreTextStyle.h */; };
-		6842EC661552C67F00C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC621552C67F00C18C9F /* FTCoreTextStyle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6842EC671552C67F00C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC621552C67F00C18C9F /* FTCoreTextStyle.m */; };
-		6842EC681552C67F00C18C9F /* FTCoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC631552C67F00C18C9F /* FTCoreTextView.h */; };
-		6842EC691552C67F00C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC641552C67F00C18C9F /* FTCoreTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6842EC6A1552C67F00C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC641552C67F00C18C9F /* FTCoreTextView.m */; };
+		6842EC731552D95800C18C9F /* FTCoreTextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */; };
+		6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC701552D95800C18C9F /* FTCoreTextStyle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6842EC751552D95800C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC701552D95800C18C9F /* FTCoreTextStyle.m */; };
+		6842EC761552D95800C18C9F /* FTCoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC711552D95800C18C9F /* FTCoreTextView.h */; };
+		6842EC771552D95800C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC721552D95800C18C9F /* FTCoreTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6842EC781552D95800C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC721552D95800C18C9F /* FTCoreTextView.m */; };
 		6853970B1550298300B2D2A4 /* FT2File.h in Headers */ = {isa = PBXBuildFile; fileRef = 685397091550298300B2D2A4 /* FT2File.h */; };
 		6853970C1550298300B2D2A4 /* FT2File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6853970A1550298300B2D2A4 /* FT2File.m */; };
 		68978E43153F161E008EF4E8 /* FT2Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978E41153F161E008EF4E8 /* FT2Data.h */; };
@@ -272,10 +272,10 @@
 
 /* Begin PBXFileReference section */
 		6842EC5D1552BFFE00C18C9F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		6842EC611552C67F00C18C9F /* FTCoreTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCoreTextStyle.h; path = ../../FTCoreTextView/FTCoreText/classes/FTCoreTextStyle.h; sourceTree = "<group>"; };
-		6842EC621552C67F00C18C9F /* FTCoreTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCoreTextStyle.m; path = ../../FTCoreTextView/FTCoreText/classes/FTCoreTextStyle.m; sourceTree = "<group>"; };
-		6842EC631552C67F00C18C9F /* FTCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCoreTextView.h; path = ../../FTCoreTextView/FTCoreText/classes/FTCoreTextView.h; sourceTree = "<group>"; };
-		6842EC641552C67F00C18C9F /* FTCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCoreTextView.m; path = ../../FTCoreTextView/FTCoreText/classes/FTCoreTextView.m; sourceTree = "<group>"; };
+		6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextStyle.h; sourceTree = "<group>"; };
+		6842EC701552D95800C18C9F /* FTCoreTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextStyle.m; sourceTree = "<group>"; };
+		6842EC711552D95800C18C9F /* FTCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextView.h; sourceTree = "<group>"; };
+		6842EC721552D95800C18C9F /* FTCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextView.m; sourceTree = "<group>"; };
 		685397091550298300B2D2A4 /* FT2File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2File.h; path = FTLibrary2/Sources/FT2File.h; sourceTree = "<group>"; };
 		6853970A1550298300B2D2A4 /* FT2File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2File.m; path = FTLibrary2/Sources/FT2File.m; sourceTree = "<group>"; };
 		68978E41153F161E008EF4E8 /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Data.h; path = FTLibrary2/Sources/FT2Data.h; sourceTree = "<group>"; };
@@ -530,10 +530,10 @@
 		6842EC511552BE2700C18C9F /* CoreText */ = {
 			isa = PBXGroup;
 			children = (
-				6842EC611552C67F00C18C9F /* FTCoreTextStyle.h */,
-				6842EC621552C67F00C18C9F /* FTCoreTextStyle.m */,
-				6842EC631552C67F00C18C9F /* FTCoreTextView.h */,
-				6842EC641552C67F00C18C9F /* FTCoreTextView.m */,
+				6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */,
+				6842EC701552D95800C18C9F /* FTCoreTextStyle.m */,
+				6842EC711552D95800C18C9F /* FTCoreTextView.h */,
+				6842EC721552D95800C18C9F /* FTCoreTextView.m */,
 			);
 			name = CoreText;
 			sourceTree = "<group>";
@@ -1095,8 +1095,8 @@
 				93D385EC154FF1B0009A6895 /* FT2ImageMagnifyingView.h in Headers */,
 				93D385ED154FF1B0009A6895 /* FT2MagnifyingView.h in Headers */,
 				6853970B1550298300B2D2A4 /* FT2File.h in Headers */,
-				6842EC651552C67F00C18C9F /* FTCoreTextStyle.h in Headers */,
-				6842EC681552C67F00C18C9F /* FTCoreTextView.h in Headers */,
+				6842EC731552D95800C18C9F /* FTCoreTextStyle.h in Headers */,
+				6842EC761552D95800C18C9F /* FTCoreTextView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1313,8 +1313,8 @@
 				93D385E6154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
 				93D385E9154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 				6853970C1550298300B2D2A4 /* FT2File.m in Sources */,
-				6842EC661552C67F00C18C9F /* FTCoreTextStyle.m in Sources */,
-				6842EC691552C67F00C18C9F /* FTCoreTextView.m in Sources */,
+				6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */,
+				6842EC771552D95800C18C9F /* FTCoreTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1368,8 +1368,8 @@
 				68978F0615406DAD008EF4E8 /* FT2JSONCollection.m in Sources */,
 				93D385E7154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
 				93D385EA154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
-				6842EC671552C67F00C18C9F /* FTCoreTextStyle.m in Sources */,
-				6842EC6A1552C67F00C18C9F /* FTCoreTextView.m in Sources */,
+				6842EC751552D95800C18C9F /* FTCoreTextStyle.m in Sources */,
+				6842EC781552D95800C18C9F /* FTCoreTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
