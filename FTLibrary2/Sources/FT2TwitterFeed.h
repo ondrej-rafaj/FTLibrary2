@@ -10,7 +10,7 @@
 #import "FT2JSONCollection.h"
 
 #define twitter_URL             @"https://api.twitter.com/statuses/user_timeline.json?screen_name=%@&include_rts=%d"
-#define twitter_date_format     @"ddd MMM dd HH:mm:ss zzz yyyy"
+#define twitter_date_format     @"eee MMM dd HH:mm:ss zzzz yyyy"
 
 @interface FT2TwitterFeed : FT2JSONCollection
 
