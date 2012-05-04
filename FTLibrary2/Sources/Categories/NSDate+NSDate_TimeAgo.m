@@ -18,8 +18,17 @@
 #define MONTH (30 * DAY)
 #define YEAR (365 * DAY)
 
-- (NSInteger)timeIntervalWithStartDate:(NSDate*)start withEndDate:(NSDate*)end ofType:(NSDate_TimeAgeType *)type
-{
+
+
+- (NSInteger)timePassedsinceDate:(NSDate *)date ofType:(NSDate_TimeAgeType *)type {
+    return [NSDate timePassedWithStartDate:self withEndDate:date ofType:type];
+}
+
+- (NSInteger)timePassedSinceNowOfType:(NSDate_TimeAgeType *)type {
+    return [self timePassedsinceDate:[NSDate date] ofType:type];
+}
+
++ (NSInteger)timePassedWithStartDate:(NSDate *)start withEndDate:(NSDate *)end ofType:(NSDate_TimeAgeType *)type{
     //Calculate the delta in seconds between the two dates
     NSTimeInterval delta = [end timeIntervalSinceDate:start];
     

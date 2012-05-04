@@ -19,6 +19,7 @@ typedef enum {
 
 @interface NSDate (NSDate_TimeAgo)
 
-- (NSInteger)timeIntervalWithStartDate:(NSDate*)start withEndDate:(NSDate*)end ofType:(NSDate_TimeAgeType *)type;
-
++ (NSInteger)timePassedWithStartDate:(NSDate*)start withEndDate:(NSDate*)end ofType:(NSDate_TimeAgeType *)type;
+- (NSInteger)timePassedsinceDate:(NSDate*)date ofType:(NSDate_TimeAgeType *)type;
+- (NSInteger)timePassedSinceNowOfType:(NSDate_TimeAgeType *)type;
 @end
