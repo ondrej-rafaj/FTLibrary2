@@ -835,7 +835,6 @@
 		938D5807153DC4370067CEFA = {
 			isa = PBXGroup;
 			children = (
-				6842EC5D1552BFFE00C18C9F /* CoreText.framework */,
 				932FDA5C153DD91B00E9D253 /* ThirdParty */,
 				938D583C153DCA9B0067CEFA /* Source */,
 				938D5817153DC4380067CEFA /* FTLibrary2 */,
@@ -859,6 +858,7 @@
 		938D5814153DC4380067CEFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6842EC5D1552BFFE00C18C9F /* CoreText.framework */,
 				68978E60153F29CB008EF4E8 /* SystemConfiguration.framework */,
 				68978E5E153F298D008EF4E8 /* CFNetwork.framework */,
 				68978E4F153F16BD008EF4E8 /* CoreData.framework */,
@@ -1466,7 +1466,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1486,7 +1486,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
