@@ -29,6 +29,7 @@
 - (NSArray *)entitiesForName:(NSString *)entityName withSortDescriptors:(NSArray *)sortDescriptors;
 
 - (id)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
+- (id)entityForName:(NSString *)entityName withUID:(NSString *)uid;
 
 - (void)performBlockOnContext:(void (^)(void))block;
 - (void)performBlockOnContextAndWait:(void (^)(void))block;

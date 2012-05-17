@@ -111,6 +111,11 @@ static NSString * __databaseName;
     return entity;
 }
 
+- (id)entityForName:(NSString *)entityName withUID:(NSString *)uid {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uid = %@", uid];
+    return [self entityForName:entityName withPredicate:predicate];
+}
+
 #pragma mark --
 #pragma mark - Core Data stack
 
