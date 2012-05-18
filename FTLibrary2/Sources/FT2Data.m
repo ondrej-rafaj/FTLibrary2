@@ -105,7 +105,6 @@ static NSString * __databaseName;
         NSError *error = nil;
         NSArray *entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
         if (entities.count > 0) entity = [entities objectAtIndex:0];
-        else entity = [[NSManagedObject alloc] initWithEntity:entityDesc insertIntoManagedObjectContext:self.managedObjectContext];
 
     }];
 
@@ -113,8 +112,14 @@ static NSString * __databaseName;
 }
 
 - (id)entityForName:(NSString *)entityName withUID:(id)uid {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uid = %@", uid];
-    return [self entityForName:entityName withPredicate:predicate];
+    static NSString *uidKey = @"uid";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", uidKey, uid];
+    id entity = [self entityForName:entityName withPredicate:predicate];
+
+    if (![[entity valueForKey:uidKey] isEqual:uid]) {
+        [entity setValue:uid forKey:uidKey];
+    }
+    return entity;
 }
 
 #pragma mark --
