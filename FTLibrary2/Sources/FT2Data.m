@@ -105,7 +105,7 @@ static NSString * __databaseName;
         NSError *error = nil;
         NSArray *entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
         if (entities.count > 0) entity = [entities objectAtIndex:0];
-
+        else entity = [[NSManagedObject alloc] initWithEntity:entityDesc insertIntoManagedObjectContext:self.managedObjectContext];
     }];
 
     return entity;
@@ -150,17 +150,17 @@ static NSString * __databaseName;
  */
 - (NSManagedObjectContext *)managedObjectContext
 {
-    if (__managedObjectContext != nil)
-    {
-        return __managedObjectContext;
-    }
+    if (__managedObjectContext != nil) return __managedObjectContext;
     
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil)
-    {
-        __managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [__managedObjectContext setPersistentStoreCoordinator:coordinator];
-    }
+    [self performBlockOnContextAndWait:^{
+        NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+        if (coordinator != nil)
+        {
+            __managedObjectContext = [[NSManagedObjectContext alloc] init];
+            [__managedObjectContext setPersistentStoreCoordinator:coordinator];
+        }    
+    }];
+    
     return __managedObjectContext;
 }
 
