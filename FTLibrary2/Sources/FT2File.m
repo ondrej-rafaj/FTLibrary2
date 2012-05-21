@@ -59,6 +59,7 @@ static dispatch_queue_t _queue;
 -(void)setSource:(NSURL *)source {
     _source = source;
     
+    if (!_source || _source.path.length == 0) return;
     static NSString *pattern = @"^[http|https|ftp]*://";
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
