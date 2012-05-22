@@ -19,10 +19,18 @@
 
 - (id)initWithReferencedController:(id)controller
 {
-    self = [super init];
+    self = [self init];
     if (self) {
         // Initialization code here.
         [self setReferencedController:controller];
+    }
+    
+    return self;
+}
+
+- (id)init {
+    self = [super init];
+    if (self) {
         _twitterEngine = [[FT2ShareTwitter alloc] init];
         
         _facebookEngine = [[FT2ShareFacebook alloc] init];
@@ -30,7 +38,6 @@
         
         _emailEngine = [[FT2ShareEmail alloc] init];
     }
-    
     return self;
 }
 
