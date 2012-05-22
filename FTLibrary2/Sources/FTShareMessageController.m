@@ -6,14 +6,14 @@
 //  Copyright (c) 2012 Lost Bytes. All rights reserved.
 //
 
-#import "FT2ShareMessageController.h"
+#import "FTShareMessageController.h"
 #import "UIColor+Tools.h"
 
 #define MAX_TWITTER_CHARS   160
 #define ALERT_TWITTER_CHARS 10
 
 
-@implementation FT2ShareMessageController
+@implementation FTShareMessageController
 
 @synthesize textView = _textView;
 @synthesize delegate = _delegate;
@@ -61,8 +61,8 @@
 }
 
 - (void)setMessage:(NSString *)message {
-
-    _message = message;
+    [_message release];
+    _message = [message retain];
     
     NSInteger length = (self.type == FTShareMessageControllerTypeTwitter)? [self twitterCharactersForString:message] : message.length;
     NSInteger remaining = MAX_TWITTER_CHARS - length;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
-#import "FT2ShareEmail.h"
+#import "FTShareEmail.h"
 
 #pragma mark --
 #pragma mark Data Type
@@ -43,13 +43,22 @@
     [_attachments addObject:dict];
 }
 
+- (void)dealloc {
+    
+    [_subject release], _subject = nil;
+    [_plainBody release], _plainBody = nil;
+    [_htmlBody release], _htmlBody = nil;
+    [_attachments release], _attachments = nil;
+    [super dealloc];
+}
+
 @end
 
 
 #pragma mark --
 #pragma mark Class
 
-@implementation FT2ShareEmail
+@implementation FTShareEmail
 
 @synthesize mailDelegate = _mailDelegate;
 
@@ -66,10 +75,7 @@
     if (![data isRequestValid]) {
         if (self.mailDelegate && [self.mailDelegate respondsToSelector:@selector(mailShareData)]) {
             data = [self.mailDelegate mailShareData];      
-            if (![data isRequestValid]) {
-				// @cescofry to fix! :) ... Love ya!
-				//[NSException raise:@"Mail cannot post empy data" format:nil];
-			}
+            if (![data isRequestValid]) [NSException raise:@"Mail cannot post empy data" format:nil];
         }
         
     }
@@ -98,6 +104,7 @@
     
     
 	if(mc) [_referencedController presentModalViewController:mc animated:YES];
+	[mc release];  
 }
 
 

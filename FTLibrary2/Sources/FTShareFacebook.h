@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FBConnect.h"
-#import "FT2ShareMessageController.h"
+#import "FTShareMessageController.h"
 
 #pragma mark --
 #pragma mark Data Type
@@ -35,17 +35,17 @@ typedef enum {
 } FTShareFacebookHttpType;
 
 @interface FTShareFacebookPhoto : NSObject {
-    UIImage *__unsafe_unretained _photo;
-    NSString *__unsafe_unretained _album;
-    NSString *__unsafe_unretained _message;
-    NSMutableArray *__unsafe_unretained _tags;
+    UIImage *_photo;
+    NSString *_album;
+    NSString *_message;
+    NSMutableArray *_tags;
     
 }
 
-@property (unsafe_unretained, nonatomic) UIImage *photo;
-@property (unsafe_unretained, nonatomic) NSString *album;
-@property (unsafe_unretained, nonatomic) NSString *message;
-@property (unsafe_unretained, nonatomic) NSMutableArray *tags;
+@property (nonatomic, retain) UIImage *photo;
+@property (nonatomic, retain) NSString *album;
+@property (nonatomic, retain) NSString *message;
+@property (nonatomic, retain) NSMutableArray *tags;
 
 + (id)facebookPhotoFromImage:(UIImage *)image;
 - (void)addTagToUserID:(NSString *)userID atPoint:(CGPoint)point;
@@ -54,28 +54,28 @@ typedef enum {
 @end
 
 @interface FTShareFacebookData : NSObject {
-    NSString *__unsafe_unretained _message;
-    NSString *__unsafe_unretained _link;
-    NSString *__unsafe_unretained _name;
-    NSString *__unsafe_unretained _caption;
-    NSString *__unsafe_unretained _picture;
-    NSString *__unsafe_unretained _description;
+    NSString *_message;
+    NSString *_link;
+    NSString *_name;
+    NSString *_caption;
+    NSString *_picture;
+    NSString *_description;
     BOOL _hasControllerSupport;
     FTShareFacebookRequestType _type;
     FTShareFacebookHttpType _httpType;
     
-    FTShareFacebookPhoto  *__unsafe_unretained _uploadPhoto;
+    FTShareFacebookPhoto  *_uploadPhoto;
     
 }
 
-@property (unsafe_unretained, nonatomic) NSString *message;
-@property (unsafe_unretained, nonatomic) NSString *link;
-@property (unsafe_unretained, nonatomic) NSString *name;
-@property (unsafe_unretained, nonatomic) NSString *caption;
-@property (unsafe_unretained, nonatomic) NSString *picture;
-@property (unsafe_unretained, nonatomic) NSString *description;
+@property (nonatomic, retain) NSString *message;
+@property (nonatomic, retain) NSString *link;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *caption;
+@property (nonatomic, retain) NSString *picture;
+@property (nonatomic, retain) NSString *description;
 @property (nonatomic, assign) BOOL hasControllerSupport;
-@property (unsafe_unretained, nonatomic) FTShareFacebookPhoto *uploadPhoto;
+@property (nonatomic, retain) FTShareFacebookPhoto *uploadPhoto;
 @property (nonatomic, assign) FTShareFacebookRequestType type;
 @property (nonatomic, assign) FTShareFacebookHttpType httpType;
 
@@ -91,18 +91,18 @@ typedef enum {
 #pragma mark Class
 
 @protocol FTShareFacebookDelegate;
-@interface FT2ShareFacebook : NSObject <FBRequestDelegate, FBSessionDelegate, FBDialogDelegate, FTShareMessageControllerDelegate> {
+@interface FTShareFacebook : NSObject <FBRequestDelegate, FBSessionDelegate, FBDialogDelegate, FTShareMessageControllerDelegate> {
     Facebook *_facebook;
-    id <FTShareFacebookDelegate> __unsafe_unretained _facebookDelegate;
+    id <FTShareFacebookDelegate> _facebookDelegate;
     id _referencedController;
     FTShareFacebookData *_params;
-    NSArray *__unsafe_unretained _permissions;
+    NSArray *_permissions;
 }
 
-@property (nonatomic) Facebook *facebook;
-@property (nonatomic, unsafe_unretained) id<FTShareFacebookDelegate> facebookDelegate;
+@property (nonatomic, retain) Facebook *facebook;
+@property (nonatomic, assign) id<FTShareFacebookDelegate> facebookDelegate;
 @property (nonatomic, readonly) FTShareFacebookData *params;
-@property (unsafe_unretained, nonatomic, readonly) NSArray *permissions;
+@property (nonatomic, readonly) NSArray *permissions;
 
 - (void)setUpFacebookWithAppID:(NSString *)appID referencedController:(id)referencedController andDelegate:(id<FTShareFacebookDelegate>)delegate;
 - (void)setUpPermissions:(FTShareFacebookPermission)permission;

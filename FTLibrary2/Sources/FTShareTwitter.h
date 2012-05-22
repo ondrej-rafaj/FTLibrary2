@@ -10,17 +10,17 @@
 #import <Foundation/Foundation.h>
 #import "SA_OAuthTwitterEngine.h"
 #import "SA_OAuthTwitterController.h"
-#import "FT2ShareMessageController.h"
+#import "FTShareMessageController.h"
 
 #pragma mark --
 #pragma mark Data Type
 
 @interface FTShareTwitterData : NSObject {
-    NSString *__unsafe_unretained _message;
+    NSString *_message;
     BOOL _hasControllerSupport;
 }
 
-@property (unsafe_unretained, nonatomic) NSString *message;
+@property (nonatomic, retain) NSString *message;
 @property (nonatomic, assign) BOOL hasControllerSupport;
 
 - (BOOL)isRequestValid;
@@ -34,15 +34,15 @@
 
 
 @protocol FTShareTwitterDelegate;
-@interface FT2ShareTwitter : NSObject <SA_OAuthTwitterControllerDelegate, SA_OAuthTwitterEngineDelegate, FTShareMessageControllerDelegate> {
+@interface FTShareTwitter : NSObject <SA_OAuthTwitterControllerDelegate, SA_OAuthTwitterEngineDelegate, FTShareMessageControllerDelegate> {
     SA_OAuthTwitterEngine *_twitter;
-    id <FTShareTwitterDelegate> __unsafe_unretained _twitterDelegate;
-    FTShareTwitterData *__unsafe_unretained _twitterParams;
+    id <FTShareTwitterDelegate> _twitterDelegate;
+    FTShareTwitterData *_twitterParams;
     id _referencedController;
 }
 
-@property (nonatomic, unsafe_unretained) id<FTShareTwitterDelegate> twitterDelegate;
-@property (unsafe_unretained, nonatomic, readonly) FTShareTwitterData *twitterParams;
+@property (nonatomic, assign) id<FTShareTwitterDelegate> twitterDelegate;
+@property (nonatomic, readonly) FTShareTwitterData *twitterParams;
 
 - (void)setUpTwitterWithConsumerKey:(NSString *)consumerKey secret:(NSString *)secret referencedController:(id)referencedController andDelegate:(id<FTShareTwitterDelegate>)delegate;
 - (void)shareViaTwitter:(FTShareTwitterData *)data;
