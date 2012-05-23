@@ -17,9 +17,9 @@
 #import <MessageUI/MessageUI.h>
 
 
-#import "FT2ShareTwitter.h"
-#import "FT2ShareFacebook.h"
-#import "FT2ShareEmail.h"
+#import "FTShareTwitter.h"
+#import "FTShareFacebook.h"
+#import "FTShareEmail.h"
 
 
 enum {
@@ -30,15 +30,19 @@ enum {
 typedef NSUInteger FTShareOptions;
 
 
-@interface FT2Share : NSObject <UIActionSheetDelegate> {
+
+
+@interface FTShare : NSObject <UIActionSheetDelegate> {
     
-    FT2ShareTwitter *_twitterEngine;
-    FT2ShareFacebook *_facebookEngine;
-    FT2ShareEmail *_emailEngine;    
+    FTShareTwitter *_twitterEngine;
+    FTShareFacebook *_facebookEngine;
+    FTShareEmail *_emailEngine;
+    
+    id _referencedController;
 }
 
-@property (unsafe_unretained, nonatomic) Facebook *facebook; // needs to be public for UIApplication
-@property (nonatomic, unsafe_unretained) id referencedController;
+@property (nonatomic, retain) Facebook *facebook; // needs to be pubblic for UIApplication
+@property (nonatomic, assign) id referencedController;
 
 
 - (id)initWithReferencedController:(id)controller;
@@ -46,6 +50,8 @@ typedef NSUInteger FTShareOptions;
 
 - (void)setUpTwitterWithConsumerKey:(NSString *)consumerKey secret:(NSString *)secret andDelegate:(id<FTShareTwitterDelegate>)delegate;
 - (void)shareViaTwitter:(FTShareTwitterData *)data;
+
+
 
 - (void)setUpFacebookWithAppID:(NSString *)appID permissions:(FTShareFacebookPermission)permissions andDelegate:(id<FTShareFacebookDelegate>)delegate;
 - (void)shareViaFacebook:(FTShareFacebookData *)data;

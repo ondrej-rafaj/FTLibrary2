@@ -6,33 +6,56 @@
 //  Copyright 2011 Fuerte International. All rights reserved.
 //
 
-#import "FT2Share.h"
+#import "FTShare.h"
 
-@implementation FT2Share
+@implementation FTShare
 
 @synthesize facebook;
+
+
 
 @synthesize referencedController = _referencedController;
 
 
 #pragma mark Initialization
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        _twitterEngine = [[FTShareTwitter alloc] init];
+        
+        _facebookEngine = [[FTShareFacebook alloc] init];
+        self.facebook = nil;
+        
+        _emailEngine = [[FTShareEmail alloc] init];
+    }
+    return self;
+}
+
 - (id)initWithReferencedController:(id)controller
 {
-    self = [super init];
+    self = [self init];
     if (self) {
         // Initialization code here.
         [self setReferencedController:controller];
-        _twitterEngine = [[FT2ShareTwitter alloc] init];
-        
-        _facebookEngine = [[FT2ShareFacebook alloc] init];
-        self.facebook = nil;
-        
-        _emailEngine = [[FT2ShareEmail alloc] init];
+
     }
     
     return self;
 }
+
+#pragma mark Memory management
+
+- (void)dealloc {
+    [_facebookEngine release], _facebookEngine = nil;
+    [_twitterEngine release], _twitterEngine = nil;
+    [_emailEngine release], _emailEngine = nil;
+    
+    _referencedController = nil;
+    [super dealloc];
+}
+
+
 
 #pragma mark Twitter section
 
@@ -104,6 +127,7 @@
     [actionSheet setCancelButtonIndex:index];
     
     [actionSheet showInView:[(UIViewController *)self.referencedController view]];
+    [actionSheet release];
 }
 
 #pragma mark ActionSheet delegate
