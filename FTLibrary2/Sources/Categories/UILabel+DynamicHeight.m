@@ -71,4 +71,10 @@
     }
 }
 
+- (void)fitToSuggestedHeight
+{
+	CGSize size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(self.width, MAXFLOAT)];
+	[self setHeight:size.height];
+}
+
 @end
