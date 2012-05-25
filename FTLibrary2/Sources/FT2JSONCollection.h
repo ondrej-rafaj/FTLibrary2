@@ -12,6 +12,7 @@ typedef void (^finishedDataDownload)(id data, NSError *error);
 
 @interface FT2JSONCollection : NSObject
 
-+ (void)collectionFromURL:(NSURL *)url completed:(finishedDataDownload)block;
++ (void)collectionFromURL:(NSURL *)url completed:(finishedDataDownload)block; //asynchronus
++ (id)collectionFromURL:(NSURL *)url error:(NSError **)error;  //synchronus
 
 @end
