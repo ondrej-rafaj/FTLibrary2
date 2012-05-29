@@ -12,42 +12,40 @@
 
 @implementation FT2JSONCollection
 
-+ (void)collectionFromURL:(NSURL *)url completed:(finishedDataDownload)block {
-    //[FT2TaskMaker perf
-    dispatch_queue_t currentQ = dispatch_get_current_queue();
-    if (currentQ == dispatch_get_main_queue()) {
-        [FT2TaskMaker performBlockInBackground:^{
-            NSError *error;
-            id result = [self collectionFromURL:url error:&error];
-            [FT2TaskMaker performBlockOnMainQueue:^{
-                block(result, error);
-            }];        
-        }];
-    }
-    else{
-        NSError *error;
-        id result = [self collectionFromURL:url error:&error];
-        block(result, error);
-    }
-    
-
-}
-
-+ (id)collectionFromURL:(NSURL *)url error:(NSError **)error {
++ (id)collectionFromData:(NSData *)data error:(NSError **)error {
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     NSStringEncoding encoding = NSUTF8StringEncoding;
     NSError *_error = nil;
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageAllowed timeoutInterval:10];
-    NSURLResponse *response;
-    NSData * data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&_error];
     
     NSString *dataString = [[NSString alloc] initWithData:data encoding:encoding];
     if (!dataString) {
         *error = _error;
         return nil;
     }
-    return [parser objectWithString:dataString error:&_error];
+    id result = [parser objectWithString:dataString error:&_error];
+    *error = _error;
+    
+    return result;
+}
+
++ (void)collectionFromURL:(NSURL *)url completed:(finishedDataDownload)block {
+    [FT2Download dataFromURL:url completed:^(id data, NSError *error) {
+        if (!data || error) {
+            block(nil, error);
+            return;
+        }
+        id result = [self collectionFromData:data error:&error];
+        block(result, error);
+    }];
+
+}
+
++ (id)collectionFromURL:(NSURL *)url error:(NSError **)error {
+    NSError *_error = nil;
+    NSData *data = [FT2Download dataFromURL:url error:&_error];
+    id result = [self collectionFromData:data error:&_error];
+    *error = _error;
+    return result;
 }
 
 @end

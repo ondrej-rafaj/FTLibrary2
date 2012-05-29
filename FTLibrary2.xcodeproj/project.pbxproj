@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681C087A157505CC00BB8E2D /* FT2Download.h in Headers */ = {isa = PBXBuildFile; fileRef = 681C0878157505CB00BB8E2D /* FT2Download.h */; };
+		681C087B157505CC00BB8E2D /* FT2Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C0879157505CC00BB8E2D /* FT2Download.m */; };
 		6842EC5E1552BFFE00C18C9F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6842EC5D1552BFFE00C18C9F /* CoreText.framework */; };
 		6842EC731552D95800C18C9F /* FTCoreTextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */; };
 		6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC701552D95800C18C9F /* FTCoreTextStyle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -273,6 +275,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		681C0878157505CB00BB8E2D /* FT2Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Download.h; path = FTLibrary2/Sources/FT2Download.h; sourceTree = "<group>"; };
+		681C0879157505CC00BB8E2D /* FT2Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Download.m; path = FTLibrary2/Sources/FT2Download.m; sourceTree = "<group>"; };
 		6842EC5D1552BFFE00C18C9F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextStyle.h; sourceTree = "<group>"; };
 		6842EC701552D95800C18C9F /* FTCoreTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextStyle.m; sourceTree = "<group>"; };
@@ -581,6 +585,8 @@
 				68978EFE15406C1B008EF4E8 /* FT2YouTubeFeed.m */,
 				68978F0215406DAD008EF4E8 /* FT2JSONCollection.h */,
 				68978F0315406DAD008EF4E8 /* FT2JSONCollection.m */,
+				681C0878157505CB00BB8E2D /* FT2Download.h */,
+				681C0879157505CC00BB8E2D /* FT2Download.m */,
 			);
 			name = Feeds;
 			sourceTree = "<group>";
@@ -1104,6 +1110,7 @@
 				688D7B7C156BE26E00B2156B /* FTShareFacebook.h in Headers */,
 				688D7B7E156BE26E00B2156B /* FTShareMessageController.h in Headers */,
 				688D7B80156BE26E00B2156B /* FTShareTwitter.h in Headers */,
+				681C087A157505CC00BB8E2D /* FT2Download.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1323,6 +1330,7 @@
 				688D7B7D156BE26E00B2156B /* FTShareFacebook.m in Sources */,
 				688D7B7F156BE26E00B2156B /* FTShareMessageController.m in Sources */,
 				688D7B81156BE26E00B2156B /* FTShareTwitter.m in Sources */,
+				681C087B157505CC00BB8E2D /* FT2Download.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

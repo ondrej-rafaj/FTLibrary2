@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FT2Download.h"
 
-typedef void (^finishedDataDownload)(id data, NSError *error);
 
 @interface FT2JSONCollection : NSObject
 
