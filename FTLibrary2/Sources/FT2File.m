@@ -74,7 +74,7 @@
         NSString *fileName = [self.source lastPathComponent];
         NSString *filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
         if (!filePath || self.shouldOverride) {
-            fileName = [NSString stringWithFormat:@"%@/%d_%@", [self folder], [self.uid intValue], fileName];
+            fileName = [NSString stringWithFormat:@"%@/%@_%@", [self folder], self.uid, fileName];
             filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
         }
         _path = filePath;
