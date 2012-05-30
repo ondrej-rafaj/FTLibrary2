@@ -24,18 +24,14 @@
 + (void)dataFromURL:(NSURL *)url completed:(finishedDataDownload)block {
     __block NSError *error;
     dispatch_queue_t currentQ = dispatch_get_current_queue();
-    if (currentQ == dispatch_get_main_queue()) {
-        [FT2TaskMaker performBlockInBackground:^{
-            id result = [FT2Download dataFromURL:url error:&error];
-            [FT2TaskMaker performBlockOnMainQueue:^{
-                block(result, error);
-            }];        
-        }];
-    }
-    else{
+
+    [FT2TaskMaker performBlockInBackground:^{
         id result = [FT2Download dataFromURL:url error:&error];
-        block(result, error);
-    }
+        dispatch_sync(currentQ, ^{
+            block(result, error);
+        });       
+    }];
+
 }
 
 @end
