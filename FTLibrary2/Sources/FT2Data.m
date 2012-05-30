@@ -8,7 +8,7 @@
 
 #import "FT2Data.h"
 #import "FT2Error.h"
-
+#import "FT2FileSystem.h"
 
 
 @implementation FT2Data
@@ -18,6 +18,7 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
 @synthesize storedObjects = _storedObjects;
+@synthesize mediaInQueue = _mediaInQueue;
 
 static dispatch_queue_t _queue = NULL;
 static dispatch_queue_t _managedContextQueue = NULL;
@@ -27,6 +28,13 @@ static NSString * __databaseName;
 
 #pragma mark --
 #pragma mark - Init
+
+- (void)removeMediaInQueueObject:(id)object {
+    [_mediaInQueue removeObject:object];
+    if (_mediaInQueue.count == 0) {
+        [self saveContext];
+    }
+}
 
 - (id)init {
     // This class cannot be initialized without a managed object name
@@ -41,6 +49,7 @@ static NSString * __databaseName;
         NSAssert((managedObjectName || managedObjectName.length == 0), @"FT2Data initialized without Manajed Object Name");
         __managedObjectModelName = managedObjectName;
         __databaseName = [managedObjectName stringByAppendingString:@".sqlite"];
+
         
         //init queues
         _queue = dispatch_queue_create("com.fuerte.internetQueue",0); 
@@ -113,11 +122,12 @@ static NSString * __databaseName;
 
 - (id)entityForName:(NSString *)entityName withUID:(id)uid {
     static NSString *uidKey = @"uid";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", uidKey, uid];
+    NSString *stringUID = ([uid isKindOfClass:[NSNumber class]])? [(NSNumber *)uid stringValue] : uid;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", uidKey, stringUID];
     id entity = [self entityForName:entityName withPredicate:predicate];
 
-    if (![[entity valueForKey:uidKey] isEqual:uid]) {
-        [entity setValue:uid forKey:uidKey];
+    if (![[entity valueForKey:uidKey] isEqual:stringUID]) {
+        [entity setValue:stringUID forKey:uidKey];
     }
     return entity;
 }
@@ -192,6 +202,17 @@ static NSString * __databaseName;
     }
     
     [self performBlockOnContextAndWait:^{
+        
+        //copy database if first time
+        NSString *dbBundlePath = [FT2FileSystem pathForFileName:__databaseName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];        
+        NSString *dbDocPath = [FT2FileSystem pathForFileName:__databaseName checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
+        if (![FT2FileSystem existsAtPath:dbDocPath] && [FT2FileSystem existsAtPath:dbBundlePath]) {
+            NSError *error;
+            [FT2FileSystem writeData:[FT2FileSystem dataFromDocumentsWithName:dbBundlePath checkBundleFirst:YES]
+                            withName:__databaseName
+                    forDirectoryType:NSDocumentDirectory
+                               error:&error];
+        }
     
         NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:__databaseName];
         

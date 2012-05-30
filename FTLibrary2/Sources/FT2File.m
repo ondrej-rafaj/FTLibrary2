@@ -7,6 +7,7 @@
 //
 
 #import "FT2File.h"
+#import "FT2Download.h"
 #import "FT2FileSystem.h"
 
 @implementation FT2File
@@ -21,8 +22,6 @@
 @synthesize data = _data;
 
 @synthesize delegate = _delegate;
-
-static dispatch_queue_t _queue;
 
 - (NSString *)folder {
     NSString *folder;
@@ -96,7 +95,7 @@ static dispatch_queue_t _queue;
         block(error);
     }
         
-    [FT2File downloadDataFromURL:self.source completed:^(NSData *data, NSError *error) {
+    [FT2Download dataFromURL:self.source completed:^(id data, NSError *error) {
         if (error || !data) {
             FT2Error *ftError = [FT2Error errorWithError:error];
             [ftError showInConsole];
@@ -121,26 +120,6 @@ static dispatch_queue_t _queue;
     }];
 }
 
-
-#pragma mark Download process
-
-+ (void)downloadDataFromURL:(NSURL *)url completed:(fileDownloaded)block {
-    @autoreleasepool {
-        NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-        if (!_queue) _queue = dispatch_queue_create("com.fuerte.FT2Library.internetQueue",0);
-        dispatch_async(_queue, ^{
-            NSURLResponse *response = nil;
-            NSError *error = nil;
-            NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-            if (error) {
-                FT2Error *ftError = [FT2Error errorWithError:error];
-                [ftError showInConsole];
-            }
-            
-            block(data, error);
-        });
-    }
-}
 
 
 @end

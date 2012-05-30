@@ -16,6 +16,7 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property (nonatomic, strong) NSMutableDictionary *storedObjects;
+@property (nonatomic, strong) NSMutableArray *mediaInQueue;
 
 
 - (NSURL *)applicationDocumentsDirectory;

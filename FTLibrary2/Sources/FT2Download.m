@@ -10,6 +10,7 @@
 
 @implementation FT2Download
 
+static dispatch_queue_t _queue;
 
 + (NSData *)dataFromURL:(NSURL *)url error:(NSError **)error {
     NSError *_error = nil;
@@ -21,17 +22,20 @@
     return data;
 }
 
-+ (void)dataFromURL:(NSURL *)url completed:(finishedDataDownload)block {
-    __block NSError *error;
-    dispatch_queue_t currentQ = dispatch_get_current_queue();
 
-    [FT2TaskMaker performBlockInBackground:^{
-        id result = [FT2Download dataFromURL:url error:&error];
-        dispatch_sync(currentQ, ^{
-            block(result, error);
-        });       
-    }];
-
++ (void)dataFromURL:(NSURL *)url completed:(finishedDataDownload)block  {
+    @autoreleasepool {
+        __block NSError *error;
+        dispatch_queue_t currentQ = dispatch_get_current_queue();
+        if (!_queue) _queue = dispatch_queue_create("com.fuerte.FT2Library.internetQueue",0);
+        
+        dispatch_async(_queue, ^{
+            id result = [FT2Download dataFromURL:url error:&error];
+            dispatch_async(currentQ, ^{
+                block(result, error);
+            });  
+        });
+    }
 }
 
 @end

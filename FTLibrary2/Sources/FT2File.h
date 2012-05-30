@@ -35,7 +35,6 @@ typedef void (^fileDownloaded)(NSData *data, NSError *error);
 @property (nonatomic, assign) __unsafe_unretained id<FT2FileDelegate> delegate;
 
 - (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block;
-+ (void)downloadDataFromURL:(NSURL *)url completed:(fileDownloaded)block;
 
 @end
 

@@ -7,7 +7,7 @@
 //
 
 #import "FT2TwitterFeed.h"
-#import "FT2Download.h"
+#import "FT2File.h"
 
 @implementation FT2TwitterFeed
 
@@ -20,7 +20,7 @@
 
 + (void)thumbnailForFeedID:(NSString *)feedID completed:(finishedDataDownload)block {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:thumbnail_format, feedID]];
-    [FT2Download dataFromURL:url completed:^(id data, NSError *error) {
+    [FT2Download dataFromURL:url completed:^(NSData *data, NSError *error) {
         block(data, error);
     }];
 }
