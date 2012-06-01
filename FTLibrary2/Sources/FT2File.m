@@ -58,15 +58,19 @@
 -(void)setSource:(NSURL *)source {
     _source = source;
     
-    if (!_source || _source.path.length == 0) return;
+    if (!_source || _source.absoluteString.length == 0) return;
     static NSString *pattern = @"^[http|https|ftp]*://";
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
-    NSArray *matches = [regex matchesInString:_source.path options:NSMatchingProgress range:NSMakeRange(0, _source.path.length)];
+    NSArray *matches = [regex matchesInString:_source.absoluteString options:NSMatchingProgress range:NSMakeRange(0, _source.absoluteString.length)];
     if (matches.count == 0 && self.delegate && [self.delegate respondsToSelector:@selector(relatedURLForFile:)]) {
         NSURL *baseURL = [self.delegate relatedURLForFile:self];
         _source = [NSURL URLWithString:_source.path relativeToURL:baseURL];
     }
+}
+
+- (NSString *)fileName {
+    return [NSString stringWithFormat:@"%@/%@_%@", [self folder], self.uid, [self.source lastPathComponent]];
 }
 
 - (NSString *)path {
@@ -74,8 +78,7 @@
         NSString *fileName = [self.source lastPathComponent];
         NSString *filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
         if (!filePath || self.shouldOverride) {
-            fileName = [NSString stringWithFormat:@"%@/%@_%@", [self folder], self.uid, fileName];
-            filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
+            filePath = [FT2FileSystem pathForFileName:[self fileName] checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
         }
         _path = filePath;
     }
@@ -94,6 +97,8 @@
         NSError *error = [NSError errorWithDomain:@"com.fuerteint.error" code:404 userInfo:nil];
         block(error);
     }
+    
+    NSLog(@"spurce: %@", self.source);
         
     [FT2Download dataFromURL:self.source completed:^(id data, NSError *error) {
         if (error || !data) {
@@ -105,7 +110,7 @@
         
         self.path = nil;
         
-        [FT2FileSystem writeData:data toDocumentsWithName:self.path error:&error];
+        [FT2FileSystem writeData:data toDocumentsWithName:[self fileName] error:&error];
         if (error) {
             FT2Error *ftError = [FT2Error errorWithError:error];
             [ftError showInConsole];
