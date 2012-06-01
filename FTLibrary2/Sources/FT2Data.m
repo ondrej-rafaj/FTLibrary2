@@ -208,10 +208,10 @@ static NSString * __databaseName;
         NSString *dbDocPath = [FT2FileSystem pathForFileName:__databaseName checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
         if (![FT2FileSystem existsAtPath:dbDocPath] && [FT2FileSystem existsAtPath:dbBundlePath]) {
             NSError *error;
-            [FT2FileSystem writeData:[FT2FileSystem dataFromDocumentsWithName:dbBundlePath checkBundleFirst:YES]
-                            withName:__databaseName
-                    forDirectoryType:NSDocumentDirectory
-                               error:&error];
+            NSData *data = [FT2FileSystem dataFromDocumentsWithName:dbBundlePath checkBundleFirst:YES];
+            if (data) {
+                [FT2FileSystem writeData:data withName:__databaseName forDirectoryType:NSDocumentDirectory error:&error];
+            }
         }
     
         NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:__databaseName];
