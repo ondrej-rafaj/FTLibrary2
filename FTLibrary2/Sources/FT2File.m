@@ -75,8 +75,7 @@
 
 - (NSString *)path {
     if (!_path) {
-        NSString *fileName = [self.source lastPathComponent];
-        NSString *filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
+        NSString *filePath = [FT2FileSystem pathForFileName:[self fileName] checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
         if (!filePath || self.shouldOverride) {
             filePath = [FT2FileSystem pathForFileName:[self fileName] checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
         }
@@ -97,8 +96,6 @@
         NSError *error = [NSError errorWithDomain:@"com.fuerteint.error" code:404 userInfo:nil];
         block(error);
     }
-    
-    NSLog(@"spurce: %@", self.source);
         
     [FT2Download dataFromURL:self.source completed:^(id data, NSError *error) {
         if (error || !data) {
