@@ -55,22 +55,28 @@
     return _exists;
 }
 
--(void)setSource:(NSURL *)source {
-    _source = source;
-    
-    if (!_source || _source.absoluteString.length == 0) return;
+- (BOOL)isSourceLocal {
     static NSString *pattern = @"^[http|https|ftp]*://";
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray *matches = [regex matchesInString:_source.absoluteString options:NSMatchingProgress range:NSMakeRange(0, _source.absoluteString.length)];
-    if (matches.count == 0 && self.delegate && [self.delegate respondsToSelector:@selector(relatedURLForFile:)]) {
+    return (matches.count == 0);
+}
+
+-(void)setSource:(NSURL *)source {
+    _source = source;
+    
+    if (!_source || _source.absoluteString.length == 0) return;
+    
+    if ([self isSourceLocal] && self.delegate && [self.delegate respondsToSelector:@selector(relatedURLForFile:)]) {
         NSURL *baseURL = [self.delegate relatedURLForFile:self];
         _source = [NSURL URLWithString:_source.path relativeToURL:baseURL];
     }
 }
 
 - (NSString *)fileName {
-    return [NSString stringWithFormat:@"%@/%@_%@", [self folder], self.uid, [self.source lastPathComponent]];
+    if ([self isSourceLocal]) return self.source.lastPathComponent;
+    else return [NSString stringWithFormat:@"%@/%@_%@", [self folder], self.uid, [self.source lastPathComponent]];
 }
 
 - (NSString *)path {
@@ -92,7 +98,8 @@
 }
 
 - (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block {
-    if (!self.source) {
+    if (!self.source || [self isSourceLocal]) {
+        self.path = nil;
         NSError *error = [NSError errorWithDomain:@"com.fuerteint.error" code:404 userInfo:nil];
         block(error);
     }
