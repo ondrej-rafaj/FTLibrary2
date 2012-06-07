@@ -12,29 +12,40 @@
 
 @implementation FT2JSONCollection
 
++ (id)collectionFromData:(NSData *)data error:(NSError **)error {
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSStringEncoding encoding = NSUTF8StringEncoding;
+    NSError *_error = nil;
+    
+    NSString *dataString = [[NSString alloc] initWithData:data encoding:encoding];
+    if (!dataString) {
+        *error = _error;
+        return nil;
+    }
+    id result = [parser objectWithString:dataString error:&_error];
+    *error = _error;
+    
+    return result;
+}
+
 + (void)collectionFromURL:(NSURL *)url completed:(finishedDataDownload)block {
-    //[FT2TaskMaker perf
-    [FT2TaskMaker performBlockInBackground:^{
-        SBJsonParser *parser = [[SBJsonParser alloc] init];
-        NSStringEncoding encoding = NSUTF8StringEncoding;
-        NSError *error = nil;
-        
-        NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageAllowed timeoutInterval:10];
-        NSURLResponse *response;
-        NSData * data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-        
-        NSString *dataString = [[NSString alloc] initWithData:data encoding:encoding];
-        if (!dataString) {
-            [FT2TaskMaker performBlockOnMainQueue:^{
-                block(nil, error);
-            }];
+    [FT2Download dataFromURL:url completed:^(id data, NSError *error) {
+        if (!data || error) {
+            block(nil, error);
             return;
         }
-        __block id result = [parser objectWithString:dataString error:&error];
-        [FT2TaskMaker performBlockOnMainQueue:^{
-            block(result, error);
-        }];        
+        id result = [self collectionFromData:data error:&error];
+        block(result, error);
     }];
+
+}
+
++ (id)collectionFromURL:(NSURL *)url error:(NSError **)error {
+    NSError *_error = nil;
+    NSData *data = [FT2Download dataFromURL:url error:&_error];
+    id result = [self collectionFromData:data error:&_error];
+    *error = _error;
+    return result;
 }
 
 @end

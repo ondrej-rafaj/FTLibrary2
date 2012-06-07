@@ -3,7 +3,7 @@
 //  FT2Library
 //
 //  Created by Baldoph Pourprix on 19/02/2012.
-//  Copyright (c) 2012 Coronal Sky. All rights reserved.
+//  Copyright (c) 2012 Fuerte International. All rights reserved.
 //
 
 #import "FT2AlertView.h"

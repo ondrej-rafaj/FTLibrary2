@@ -3,7 +3,7 @@
 //  FT2Library
 //
 //  Created by Baldoph Pourprix on 06/12/2011.
-//  Copyright (c) 2011 Coronal Sky. All rights reserved.
+//  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
 #import <QuartzCore/QuartzCore.h>
@@ -56,6 +56,7 @@
 @implementation FT2CustomAnimationView
 
 @synthesize isAnimating = _isAnimating;
+@synthesize delegate = _delegate;
 
 #pragma mark - private
 
@@ -146,6 +147,12 @@
 	return self;
 }
 
+- (void)setDelegate:(id<FT2CustomAnimationViewDelegate>)delegate
+{
+	_delegate = delegate;
+	_delegateImplementsDrawRect = [_delegate respondsToSelector:@selector(drawCustomAnimationView:inRect:forAnimation:withAnimationProgress:)];
+}
+
 - (void)drawRect:(CGRect)rect
 {
 	NSMutableArray *animsToDelete = [NSMutableArray new];
@@ -165,7 +172,7 @@
 
 - (void)drawRect:(CGRect)rect forAnimation:(FT2CustomAnimation *)animation withAnimationProgress:(float)progress
 {
-	
+	if (_delegateImplementsDrawRect) [_delegate drawCustomAnimationView:self inRect:rect forAnimation:animation withAnimationProgress:progress];
 }
 
 - (void)dealloc

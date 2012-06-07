@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681C087A157505CC00BB8E2D /* FT2Download.h in Headers */ = {isa = PBXBuildFile; fileRef = 681C0878157505CB00BB8E2D /* FT2Download.h */; };
+		681C087B157505CC00BB8E2D /* FT2Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C0879157505CC00BB8E2D /* FT2Download.m */; };
+		6842EC5E1552BFFE00C18C9F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6842EC5D1552BFFE00C18C9F /* CoreText.framework */; };
+		6842EC731552D95800C18C9F /* FTCoreTextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */; };
+		6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC701552D95800C18C9F /* FTCoreTextStyle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6842EC751552D95800C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC701552D95800C18C9F /* FTCoreTextStyle.m */; };
+		6842EC761552D95800C18C9F /* FTCoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC711552D95800C18C9F /* FTCoreTextView.h */; };
+		6842EC771552D95800C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC721552D95800C18C9F /* FTCoreTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6842EC781552D95800C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC721552D95800C18C9F /* FTCoreTextView.m */; };
+		6842EC941553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC921553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h */; };
+		6842EC951553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC931553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m */; };
+		6853970B1550298300B2D2A4 /* FT2File.h in Headers */ = {isa = PBXBuildFile; fileRef = 685397091550298300B2D2A4 /* FT2File.h */; };
+		6853970C1550298300B2D2A4 /* FT2File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6853970A1550298300B2D2A4 /* FT2File.m */; };
+		688D7B78156BE26E00B2156B /* FTShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 688D7B6E156BE26E00B2156B /* FTShare.h */; };
+		688D7B79156BE26E00B2156B /* FTShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D7B6F156BE26E00B2156B /* FTShare.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		688D7B7A156BE26E00B2156B /* FTShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 688D7B70156BE26E00B2156B /* FTShareEmail.h */; };
+		688D7B7B156BE26E00B2156B /* FTShareEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D7B71156BE26E00B2156B /* FTShareEmail.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		688D7B7C156BE26E00B2156B /* FTShareFacebook.h in Headers */ = {isa = PBXBuildFile; fileRef = 688D7B72156BE26E00B2156B /* FTShareFacebook.h */; };
+		688D7B7D156BE26E00B2156B /* FTShareFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D7B73156BE26E00B2156B /* FTShareFacebook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		688D7B7E156BE26E00B2156B /* FTShareMessageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 688D7B74156BE26E00B2156B /* FTShareMessageController.h */; };
+		688D7B7F156BE26E00B2156B /* FTShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D7B75156BE26E00B2156B /* FTShareMessageController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		688D7B80156BE26E00B2156B /* FTShareTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 688D7B76156BE26E00B2156B /* FTShareTwitter.h */; };
+		688D7B81156BE26E00B2156B /* FTShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D7B77156BE26E00B2156B /* FTShareTwitter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		68978E43153F161E008EF4E8 /* FT2Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978E41153F161E008EF4E8 /* FT2Data.h */; };
 		68978E44153F161E008EF4E8 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E42153F161E008EF4E8 /* FT2Data.m */; };
 		68978E45153F161E008EF4E8 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E42153F161E008EF4E8 /* FT2Data.m */; };
@@ -41,16 +64,6 @@
 		68978F1E154187EB008EF4E8 /* FT2TwitterFeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978F1D154187EB008EF4E8 /* FT2TwitterFeedTests.m */; };
 		68978F2115418BCC008EF4E8 /* FT2YouTubeFeedsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978F2015418BCC008EF4E8 /* FT2YouTubeFeedsTests.m */; };
 		68B252DC1545898A00F961B3 /* FT2TaskMakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B252DB1545898A00F961B3 /* FT2TaskMakerTests.m */; };
-		932FDA4D153DD8B700E9D253 /* FT2Share.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA43153DD8B700E9D253 /* FT2Share.h */; };
-		932FDA4E153DD8B700E9D253 /* FT2Share.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA44153DD8B700E9D253 /* FT2Share.m */; };
-		932FDA50153DD8B700E9D253 /* FT2ShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */; };
-		932FDA51153DD8B700E9D253 /* FT2ShareEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA46153DD8B700E9D253 /* FT2ShareEmail.m */; };
-		932FDA53153DD8B700E9D253 /* FT2ShareFacebook.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA47153DD8B700E9D253 /* FT2ShareFacebook.h */; };
-		932FDA54153DD8B700E9D253 /* FT2ShareFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA48153DD8B700E9D253 /* FT2ShareFacebook.m */; };
-		932FDA56153DD8B700E9D253 /* FT2ShareMessageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA49153DD8B700E9D253 /* FT2ShareMessageController.h */; };
-		932FDA57153DD8B700E9D253 /* FT2ShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4A153DD8B700E9D253 /* FT2ShareMessageController.m */; };
-		932FDA59153DD8B700E9D253 /* FT2ShareTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA4B153DD8B700E9D253 /* FT2ShareTwitter.h */; };
-		932FDA5A153DD8B700E9D253 /* FT2ShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA4C153DD8B700E9D253 /* FT2ShareTwitter.m */; };
 		932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */; };
 		932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDA67153DD96000E9D253 /* SA_OAuthTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */; };
@@ -239,6 +252,14 @@
 		93C265DD153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93C265DE153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93CF7B0B1546D0EC0047C412 /* CoreGraphicAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */; };
+		93D385E6154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */; };
+		93D385E7154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */; };
+		93D385E8154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */; };
+		93D385E9154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */; };
+		93D385EA154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */; };
+		93D385EB154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */; };
+		93D385EC154FF1B0009A6895 /* FT2ImageMagnifyingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D385E4154FF1B0009A6895 /* FT2ImageMagnifyingView.h */; };
+		93D385ED154FF1B0009A6895 /* FT2MagnifyingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D385E5154FF1B0009A6895 /* FT2MagnifyingView.h */; };
 		93EDD068154705F50074EC20 /* FT2PageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EDD066154705F50074EC20 /* FT2PageControl.h */; };
 		93EDD069154705F50074EC20 /* FT2PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EDD067154705F50074EC20 /* FT2PageControl.m */; };
 /* End PBXBuildFile section */
@@ -254,6 +275,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		681C0878157505CB00BB8E2D /* FT2Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Download.h; path = FTLibrary2/Sources/FT2Download.h; sourceTree = "<group>"; };
+		681C0879157505CC00BB8E2D /* FT2Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Download.m; path = FTLibrary2/Sources/FT2Download.m; sourceTree = "<group>"; };
+		6842EC5D1552BFFE00C18C9F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextStyle.h; sourceTree = "<group>"; };
+		6842EC701552D95800C18C9F /* FTCoreTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextStyle.m; sourceTree = "<group>"; };
+		6842EC711552D95800C18C9F /* FTCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextView.h; sourceTree = "<group>"; };
+		6842EC721552D95800C18C9F /* FTCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextView.m; sourceTree = "<group>"; };
+		6842EC921553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+NSDate_TimeAgo.h"; path = "FTLibrary2/Sources/Categories/NSDate+NSDate_TimeAgo.h"; sourceTree = "<group>"; };
+		6842EC931553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+NSDate_TimeAgo.m"; path = "FTLibrary2/Sources/Categories/NSDate+NSDate_TimeAgo.m"; sourceTree = "<group>"; };
+		685397091550298300B2D2A4 /* FT2File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2File.h; path = FTLibrary2/Sources/FT2File.h; sourceTree = "<group>"; };
+		6853970A1550298300B2D2A4 /* FT2File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2File.m; path = FTLibrary2/Sources/FT2File.m; sourceTree = "<group>"; };
+		688D7B6E156BE26E00B2156B /* FTShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShare.h; path = FTLibrary2/Sources/FTShare.h; sourceTree = "<group>"; };
+		688D7B6F156BE26E00B2156B /* FTShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShare.m; path = FTLibrary2/Sources/FTShare.m; sourceTree = "<group>"; };
+		688D7B70156BE26E00B2156B /* FTShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareEmail.h; path = FTLibrary2/Sources/FTShareEmail.h; sourceTree = "<group>"; };
+		688D7B71156BE26E00B2156B /* FTShareEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareEmail.m; path = FTLibrary2/Sources/FTShareEmail.m; sourceTree = "<group>"; };
+		688D7B72156BE26E00B2156B /* FTShareFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareFacebook.h; path = FTLibrary2/Sources/FTShareFacebook.h; sourceTree = "<group>"; };
+		688D7B73156BE26E00B2156B /* FTShareFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareFacebook.m; path = FTLibrary2/Sources/FTShareFacebook.m; sourceTree = "<group>"; };
+		688D7B74156BE26E00B2156B /* FTShareMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareMessageController.h; path = FTLibrary2/Sources/FTShareMessageController.h; sourceTree = "<group>"; };
+		688D7B75156BE26E00B2156B /* FTShareMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareMessageController.m; path = FTLibrary2/Sources/FTShareMessageController.m; sourceTree = "<group>"; };
+		688D7B76156BE26E00B2156B /* FTShareTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareTwitter.h; path = FTLibrary2/Sources/FTShareTwitter.h; sourceTree = "<group>"; };
+		688D7B77156BE26E00B2156B /* FTShareTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareTwitter.m; path = FTLibrary2/Sources/FTShareTwitter.m; sourceTree = "<group>"; };
 		68978E41153F161E008EF4E8 /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Data.h; path = FTLibrary2/Sources/FT2Data.h; sourceTree = "<group>"; };
 		68978E42153F161E008EF4E8 /* FT2Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Data.m; path = FTLibrary2/Sources/FT2Data.m; sourceTree = "<group>"; };
 		68978E4F153F16BD008EF4E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -286,16 +328,6 @@
 		68978F2015418BCC008EF4E8 /* FT2YouTubeFeedsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2YouTubeFeedsTests.m; sourceTree = "<group>"; };
 		68B252DA1545898A00F961B3 /* FT2TaskMakerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2TaskMakerTests.h; sourceTree = "<group>"; };
 		68B252DB1545898A00F961B3 /* FT2TaskMakerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2TaskMakerTests.m; sourceTree = "<group>"; };
-		932FDA43153DD8B700E9D253 /* FT2Share.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Share.h; path = FTLibrary2/Sources/FT2Share.h; sourceTree = "<group>"; };
-		932FDA44153DD8B700E9D253 /* FT2Share.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Share.m; path = FTLibrary2/Sources/FT2Share.m; sourceTree = "<group>"; };
-		932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareEmail.h; path = FTLibrary2/Sources/FT2ShareEmail.h; sourceTree = "<group>"; };
-		932FDA46153DD8B700E9D253 /* FT2ShareEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ShareEmail.m; path = FTLibrary2/Sources/FT2ShareEmail.m; sourceTree = "<group>"; };
-		932FDA47153DD8B700E9D253 /* FT2ShareFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareFacebook.h; path = FTLibrary2/Sources/FT2ShareFacebook.h; sourceTree = "<group>"; };
-		932FDA48153DD8B700E9D253 /* FT2ShareFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ShareFacebook.m; path = FTLibrary2/Sources/FT2ShareFacebook.m; sourceTree = "<group>"; };
-		932FDA49153DD8B700E9D253 /* FT2ShareMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareMessageController.h; path = FTLibrary2/Sources/FT2ShareMessageController.h; sourceTree = "<group>"; };
-		932FDA4A153DD8B700E9D253 /* FT2ShareMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ShareMessageController.m; path = FTLibrary2/Sources/FT2ShareMessageController.m; sourceTree = "<group>"; };
-		932FDA4B153DD8B700E9D253 /* FT2ShareTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShareTwitter.h; path = FTLibrary2/Sources/FT2ShareTwitter.h; sourceTree = "<group>"; };
-		932FDA4C153DD8B700E9D253 /* FT2ShareTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ShareTwitter.m; path = FTLibrary2/Sources/FT2ShareTwitter.m; sourceTree = "<group>"; };
 		932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterController.h; sourceTree = "<group>"; };
 		932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SA_OAuthTwitterController.m; sourceTree = "<group>"; };
 		932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterEngine.h; sourceTree = "<group>"; };
@@ -453,6 +485,10 @@
 		93C265DA153EC32E0010A059 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		93C265DB153EC32E0010A059 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreGraphicAdditions.h; path = FTLibrary2/Sources/Categories/CoreGraphicAdditions.h; sourceTree = "<group>"; };
+		93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ImageMagnifyingView.m; path = FTLibrary2/Sources/FT2ImageMagnifyingView.m; sourceTree = "<group>"; };
+		93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2MagnifyingView.m; path = FTLibrary2/Sources/FT2MagnifyingView.m; sourceTree = "<group>"; };
+		93D385E4154FF1B0009A6895 /* FT2ImageMagnifyingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ImageMagnifyingView.h; path = FTLibrary2/Sources/FT2ImageMagnifyingView.h; sourceTree = "<group>"; };
+		93D385E5154FF1B0009A6895 /* FT2MagnifyingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2MagnifyingView.h; path = FTLibrary2/Sources/FT2MagnifyingView.h; sourceTree = "<group>"; };
 		93EDD066154705F50074EC20 /* FT2PageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageControl.h; path = FTLibrary2/Sources/FT2PageControl.h; sourceTree = "<group>"; };
 		93EDD067154705F50074EC20 /* FT2PageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageControl.m; path = FTLibrary2/Sources/FT2PageControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -472,6 +508,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6842EC5E1552BFFE00C18C9F /* CoreText.framework in Frameworks */,
 				68978E50153F16BD008EF4E8 /* CoreData.framework in Frameworks */,
 				932FDB53153DDE7C00E9D253 /* libxml2.dylib in Frameworks */,
 				938CB503153DD7A70057A19B /* UIKit.framework in Frameworks */,
@@ -498,6 +535,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6842EC511552BE2700C18C9F /* CoreText */ = {
+			isa = PBXGroup;
+			children = (
+				6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */,
+				6842EC701552D95800C18C9F /* FTCoreTextStyle.m */,
+				6842EC711552D95800C18C9F /* FTCoreTextView.h */,
+				6842EC721552D95800C18C9F /* FTCoreTextView.m */,
+			);
+			name = CoreText;
+			sourceTree = "<group>";
+		};
 		68978E6C153F2A03008EF4E8 /* FTLibrary2Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +585,8 @@
 				68978EFE15406C1B008EF4E8 /* FT2YouTubeFeed.m */,
 				68978F0215406DAD008EF4E8 /* FT2JSONCollection.h */,
 				68978F0315406DAD008EF4E8 /* FT2JSONCollection.m */,
+				681C0878157505CB00BB8E2D /* FT2Download.h */,
+				681C0879157505CC00BB8E2D /* FT2Download.m */,
 			);
 			name = Feeds;
 			sourceTree = "<group>";
@@ -555,16 +605,16 @@
 		932FDA41153DD87300E9D253 /* Share */ = {
 			isa = PBXGroup;
 			children = (
-				932FDA43153DD8B700E9D253 /* FT2Share.h */,
-				932FDA44153DD8B700E9D253 /* FT2Share.m */,
-				932FDA45153DD8B700E9D253 /* FT2ShareEmail.h */,
-				932FDA46153DD8B700E9D253 /* FT2ShareEmail.m */,
-				932FDA47153DD8B700E9D253 /* FT2ShareFacebook.h */,
-				932FDA48153DD8B700E9D253 /* FT2ShareFacebook.m */,
-				932FDA49153DD8B700E9D253 /* FT2ShareMessageController.h */,
-				932FDA4A153DD8B700E9D253 /* FT2ShareMessageController.m */,
-				932FDA4B153DD8B700E9D253 /* FT2ShareTwitter.h */,
-				932FDA4C153DD8B700E9D253 /* FT2ShareTwitter.m */,
+				688D7B6E156BE26E00B2156B /* FTShare.h */,
+				688D7B6F156BE26E00B2156B /* FTShare.m */,
+				688D7B70156BE26E00B2156B /* FTShareEmail.h */,
+				688D7B71156BE26E00B2156B /* FTShareEmail.m */,
+				688D7B72156BE26E00B2156B /* FTShareFacebook.h */,
+				688D7B73156BE26E00B2156B /* FTShareFacebook.m */,
+				688D7B74156BE26E00B2156B /* FTShareMessageController.h */,
+				688D7B75156BE26E00B2156B /* FTShareMessageController.m */,
+				688D7B76156BE26E00B2156B /* FTShareTwitter.h */,
+				688D7B77156BE26E00B2156B /* FTShareTwitter.m */,
 			);
 			name = Share;
 			sourceTree = "<group>";
@@ -814,6 +864,7 @@
 		938D5814153DC4380067CEFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6842EC5D1552BFFE00C18C9F /* CoreText.framework */,
 				68978E60153F29CB008EF4E8 /* SystemConfiguration.framework */,
 				68978E5E153F298D008EF4E8 /* CFNetwork.framework */,
 				68978E4F153F16BD008EF4E8 /* CoreData.framework */,
@@ -877,6 +928,7 @@
 		938D583D153DCAB30067CEFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6842EC511552BE2700C18C9F /* CoreText */,
 				93EDD066154705F50074EC20 /* FT2PageControl.h */,
 				93EDD067154705F50074EC20 /* FT2PageControl.m */,
 				938CB4EB153DD4BD0057A19B /* FT2ActionSheet.h */,
@@ -885,6 +937,7 @@
 				938CB4E7153DD4BD0057A19B /* FT2AlertView.m */,
 				938CB4ED153DD4BD0057A19B /* FT2CustomAnimationView.h */,
 				938CB4E8153DD4BD0057A19B /* FT2CustomAnimationView.m */,
+				93D385E0154FF195009A6895 /* Magnifying Views */,
 				938CB502153DD54F0057A19B /* PageScrollView */,
 			);
 			name = Views;
@@ -910,6 +963,8 @@
 				938CB4BB153DD2620057A19B /* UILabel+DynamicHeight.m */,
 				938CB4BC153DD2620057A19B /* UIView+Layout.h */,
 				938CB4BD153DD2620057A19B /* UIView+Layout.m */,
+				6842EC921553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h */,
+				6842EC931553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -921,6 +976,8 @@
 				68978E42153F161E008EF4E8 /* FT2Data.m */,
 				68978EB1154021C6008EF4E8 /* FT2ObjectAttributes.h */,
 				68978EB2154021C6008EF4E8 /* FT2ObjectAttributes.m */,
+				685397091550298300B2D2A4 /* FT2File.h */,
+				6853970A1550298300B2D2A4 /* FT2File.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -933,6 +990,17 @@
 			);
 			name = Reachability;
 			path = FTLibrary2/ThirdParty/Reachability;
+			sourceTree = "<group>";
+		};
+		93D385E0154FF195009A6895 /* Magnifying Views */ = {
+			isa = PBXGroup;
+			children = (
+				93D385E5154FF1B0009A6895 /* FT2MagnifyingView.h */,
+				93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */,
+				93D385E4154FF1B0009A6895 /* FT2ImageMagnifyingView.h */,
+				93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */,
+			);
+			name = "Magnifying Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -957,11 +1025,6 @@
 				938CB4FB153DD4BD0057A19B /* FT2ActionSheet.h in Headers */,
 				938CB4FC153DD4BD0057A19B /* FT2AlertView.h in Headers */,
 				938CB4FD153DD4BD0057A19B /* FT2CustomAnimationView.h in Headers */,
-				932FDA4D153DD8B700E9D253 /* FT2Share.h in Headers */,
-				932FDA50153DD8B700E9D253 /* FT2ShareEmail.h in Headers */,
-				932FDA53153DD8B700E9D253 /* FT2ShareFacebook.h in Headers */,
-				932FDA56153DD8B700E9D253 /* FT2ShareMessageController.h in Headers */,
-				932FDA59153DD8B700E9D253 /* FT2ShareTwitter.h in Headers */,
 				932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */,
 				932FDA67153DD96000E9D253 /* SA_OAuthTwitterEngine.h in Headers */,
 				932FDA6D153DD9D300E9D253 /* NSString+UUID.h in Headers */,
@@ -1036,6 +1099,18 @@
 				68978F0415406DAD008EF4E8 /* FT2JSONCollection.h in Headers */,
 				93CF7B0B1546D0EC0047C412 /* CoreGraphicAdditions.h in Headers */,
 				93EDD068154705F50074EC20 /* FT2PageControl.h in Headers */,
+				93D385EC154FF1B0009A6895 /* FT2ImageMagnifyingView.h in Headers */,
+				93D385ED154FF1B0009A6895 /* FT2MagnifyingView.h in Headers */,
+				6853970B1550298300B2D2A4 /* FT2File.h in Headers */,
+				6842EC731552D95800C18C9F /* FTCoreTextStyle.h in Headers */,
+				6842EC761552D95800C18C9F /* FTCoreTextView.h in Headers */,
+				6842EC941553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h in Headers */,
+				688D7B78156BE26E00B2156B /* FTShare.h in Headers */,
+				688D7B7A156BE26E00B2156B /* FTShareEmail.h in Headers */,
+				688D7B7C156BE26E00B2156B /* FTShareFacebook.h in Headers */,
+				688D7B7E156BE26E00B2156B /* FTShareMessageController.h in Headers */,
+				688D7B80156BE26E00B2156B /* FTShareTwitter.h in Headers */,
+				681C087A157505CC00BB8E2D /* FT2Download.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1173,6 +1248,8 @@
 				68978F1E154187EB008EF4E8 /* FT2TwitterFeedTests.m in Sources */,
 				68978F2115418BCC008EF4E8 /* FT2YouTubeFeedsTests.m in Sources */,
 				68B252DC1545898A00F961B3 /* FT2TaskMakerTests.m in Sources */,
+				93D385E8154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
+				93D385EB154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1194,11 +1271,6 @@
 				938CB4F1153DD4BD0057A19B /* FT2ActionSheet.m in Sources */,
 				938CB4F3153DD4BD0057A19B /* FT2AlertView.m in Sources */,
 				938CB4F5153DD4BD0057A19B /* FT2CustomAnimationView.m in Sources */,
-				932FDA4E153DD8B700E9D253 /* FT2Share.m in Sources */,
-				932FDA51153DD8B700E9D253 /* FT2ShareEmail.m in Sources */,
-				932FDA54153DD8B700E9D253 /* FT2ShareFacebook.m in Sources */,
-				932FDA57153DD8B700E9D253 /* FT2ShareMessageController.m in Sources */,
-				932FDA5A153DD8B700E9D253 /* FT2ShareTwitter.m in Sources */,
 				932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */,
 				932FDA68153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */,
 				932FDA6E153DD9D300E9D253 /* NSString+UUID.m in Sources */,
@@ -1247,6 +1319,18 @@
 				68978F0015406C1B008EF4E8 /* FT2YouTubeFeed.m in Sources */,
 				68978F0515406DAD008EF4E8 /* FT2JSONCollection.m in Sources */,
 				93EDD069154705F50074EC20 /* FT2PageControl.m in Sources */,
+				93D385E6154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
+				93D385E9154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
+				6853970C1550298300B2D2A4 /* FT2File.m in Sources */,
+				6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */,
+				6842EC771552D95800C18C9F /* FTCoreTextView.m in Sources */,
+				6842EC951553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m in Sources */,
+				688D7B79156BE26E00B2156B /* FTShare.m in Sources */,
+				688D7B7B156BE26E00B2156B /* FTShareEmail.m in Sources */,
+				688D7B7D156BE26E00B2156B /* FTShareFacebook.m in Sources */,
+				688D7B7F156BE26E00B2156B /* FTShareMessageController.m in Sources */,
+				688D7B81156BE26E00B2156B /* FTShareTwitter.m in Sources */,
+				681C087B157505CC00BB8E2D /* FT2Download.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1298,6 +1382,10 @@
 				68978EFC15406C05008EF4E8 /* FT2TwitterFeed.m in Sources */,
 				68978F0115406C1B008EF4E8 /* FT2YouTubeFeed.m in Sources */,
 				68978F0615406DAD008EF4E8 /* FT2JSONCollection.m in Sources */,
+				93D385E7154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
+				93D385EA154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
+				6842EC751552D95800C18C9F /* FTCoreTextStyle.m in Sources */,
+				6842EC781552D95800C18C9F /* FTCoreTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1386,7 +1474,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1406,7 +1494,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

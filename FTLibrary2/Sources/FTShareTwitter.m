@@ -6,7 +6,7 @@
 //  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
-#import "FT2ShareTwitter.h"
+#import "FTShareTwitter.h"
 
 #pragma mark --
 #pragma mark Data Type
@@ -22,6 +22,11 @@
     return valid;
 }
 
+- (void)dealloc {
+    
+    [_message release], _message = nil;
+    [super dealloc];
+}
 
 @end
 
@@ -29,7 +34,7 @@
 #pragma mark --
 #pragma mark Class
 
-@implementation FT2ShareTwitter
+@implementation FTShareTwitter
 
 @synthesize twitterDelegate = _twitterDelegate;
 @synthesize twitterParams = _twitterParams;
@@ -44,6 +49,8 @@
 
 - (void)dealloc {
     _twitterDelegate = nil;
+    _twitterParams = nil;
+    [super dealloc];
 }
 
 
@@ -63,7 +70,7 @@
 
 - (void)shareViaTwitter:(FTShareTwitterData *)data {
     
-    if (data) _twitterParams = data;
+    if (data) _twitterParams = [data retain];
     
     //check if Twitter is authorized
     if(![_twitter isAuthorized]){  
@@ -83,7 +90,7 @@
     
     //check if should use Message Controller
     if ([_twitterParams hasControllerSupport]) {
-        FT2ShareMessageController *messageController = [[FT2ShareMessageController alloc] initWithMessage:_twitterParams.message type:FTShareMessageControllerTypeTwitter andelegate:self];
+        FTShareMessageController *messageController = [[FTShareMessageController alloc] initWithMessage:_twitterParams.message type:FTShareMessageControllerTypeTwitter andelegate:self];
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:messageController];
         [_referencedController presentModalViewController:nc animated:YES];
         return;
@@ -174,11 +181,11 @@
 
 #pragma mark sharemessagcontroller delgate
 
-- (void)shareMessageController:(FT2ShareMessageController *)controller didFinishWithMessage:(NSString *)message {
+- (void)shareMessageController:(FTShareMessageController *)controller didFinishWithMessage:(NSString *)message {
 
 }
 
--(void)shareMessageController:(FT2ShareMessageController *)controller didDisappearWithMessage:(NSString *)message {
+-(void)shareMessageController:(FTShareMessageController *)controller didDisappearWithMessage:(NSString *)message {
     if (!message || message.length == 0) return;
     FTShareTwitterData *data = [[FTShareTwitterData alloc] init];
     [data setMessage:message];
@@ -186,7 +193,7 @@
     [self shareViaTwitter:data];    
 }
 
-- (void)shareMessageControllerDidCancel:(FT2ShareMessageController *)controller {
+- (void)shareMessageControllerDidCancel:(FTShareMessageController *)controller {
     
 }
 

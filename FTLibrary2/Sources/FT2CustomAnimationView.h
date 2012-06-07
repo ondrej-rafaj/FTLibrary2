@@ -3,7 +3,7 @@
 //  FT2Library
 //
 //  Created by Baldoph Pourprix on 06/12/2011.
-//  Copyright (c) 2011 Coronal Sky. All rights reserved.
+//  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -19,6 +19,7 @@ typedef NSUInteger FT2CustomAnimationOptions;
 @class CADisplayLink;
 @class FT2CustomAnimation;
 @protocol FT2CustomAnimationObserver;
+@protocol FT2CustomAnimationViewDelegate;
 
 @interface FT2CustomAnimationView : UIView {
 	
@@ -26,9 +27,11 @@ typedef NSUInteger FT2CustomAnimationOptions;
 	NSMutableArray *_animations;
 	int _disableToken;
 	NSMutableArray *_animationObservers;
+	BOOL _delegateImplementsDrawRect;
 }
 
 @property (nonatomic, assign) BOOL isAnimating;
+@property (nonatomic, assign) id <FT2CustomAnimationViewDelegate> delegate;
 
 //handy method to start an animation
 - (void)startAnimationWithDuration:(NSTimeInterval)duration;
@@ -73,5 +76,11 @@ typedef NSUInteger FT2CustomAnimationOptions;
 - (void)animationView:(FT2CustomAnimationView *)animationView didChangeProgress:(float)progress forAnimation:(FT2CustomAnimation *)animation;
 - (void)animationView:(FT2CustomAnimationView *)animationView willStartAnimation:(FT2CustomAnimation *)animation;
 - (void)animationView:(FT2CustomAnimationView *)animationView didEndAnimation:(FT2CustomAnimation *)animation;
+
+@end
+
+@protocol FT2CustomAnimationViewDelegate <NSObject>
+
+- (void)drawCustomAnimationView:(FT2CustomAnimationView *)view inRect:(CGRect)rect forAnimation:(FT2CustomAnimation *)animation withAnimationProgress:(float)progress;
 
 @end

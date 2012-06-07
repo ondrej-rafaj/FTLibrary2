@@ -15,6 +15,9 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property (nonatomic, strong) NSMutableDictionary *storedObjects;
+@property (nonatomic, strong) NSMutableArray *mediaInQueue;
+
 
 - (NSURL *)applicationDocumentsDirectory;
 - (void)saveContext;
@@ -27,9 +30,13 @@
 - (NSArray *)entitiesForName:(NSString *)entityName withSortDescriptors:(NSArray *)sortDescriptors;
 
 - (id)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
+- (id)entityForName:(NSString *)entityName withUID:(id)uid;
 
 - (void)performBlockOnContext:(void (^)(void))block;
 - (void)performBlockOnContextAndWait:(void (^)(void))block;
+
+- (id)storedObjectForKey:(NSString *)key;
+- (void)storeObejct:(id)object forKey:(NSString *)key;
 
 @end
 
