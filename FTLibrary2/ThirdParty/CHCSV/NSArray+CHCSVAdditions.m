@@ -155,9 +155,9 @@
     return [self initWithContentsOfCSVStream:csvStream encoding:encoding delimiter:delimiter error:error];
 }
 
-- (NSString *) CSVString {
-    NSError *error = nil;
-    return [self CSVStringWithDelimiter:@"," error:&error];
-}
+//- (NSString *) CSVString {
+//    NSError *error = nil;
+//    return [self CSVStringWithDelimiter:@"," error:&error];
+//}
                              
 @end

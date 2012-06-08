@@ -48,10 +48,10 @@
 - (id) initWithContentsOfCSVString:(NSString *)csvString encoding:(NSStringEncoding)encoding error:(NSError **)error;
 - (id) initWithContentsOfCSVString:(NSString *)csvString encoding:(NSStringEncoding)encoding delimiter:(NSString *)delimiter error:(NSError **)error;
 
-- (BOOL) writeToCSVFile:(NSString *)csvFile atomically:(BOOL)atomically error:(NSError **)error;
-- (BOOL) writeToCSVFile:(NSString *)csvFile withDelimiter:(NSString *)delimiter atomically:(BOOL)atomically error:(NSError **)error;
+//- (BOOL) writeToCSVFile:(NSString *)csvFile atomically:(BOOL)atomically error:(NSError **)error;
+//- (BOOL) writeToCSVFile:(NSString *)csvFile withDelimiter:(NSString *)delimiter atomically:(BOOL)atomically error:(NSError **)error;
 
-- (NSString *) CSVString;
-- (NSString *) CSVStringWithDelimiter:(NSString *)delimiter error:(NSError **)error;
+//- (NSString *) CSVString;
+//- (NSString *) CSVStringWithDelimiter:(NSString *)delimiter error:(NSError **)error;
 
 @end
