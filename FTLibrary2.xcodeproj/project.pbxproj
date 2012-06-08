@@ -18,6 +18,13 @@
 		6842EC951553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC931553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m */; };
 		6853970B1550298300B2D2A4 /* FT2File.h in Headers */ = {isa = PBXBuildFile; fileRef = 685397091550298300B2D2A4 /* FT2File.h */; };
 		6853970C1550298300B2D2A4 /* FT2File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6853970A1550298300B2D2A4 /* FT2File.m */; };
+		68824F6915821B0900A20496 /* CHCSV.h in Headers */ = {isa = PBXBuildFile; fileRef = 68824F6415821B0900A20496 /* CHCSV.h */; };
+		68824F6A15821B0900A20496 /* CHCSVParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 68824F6515821B0900A20496 /* CHCSVParser.h */; };
+		68824F6B15821B0900A20496 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 68824F6615821B0900A20496 /* CHCSVParser.m */; };
+		68824F6C15821B0900A20496 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 68824F6615821B0900A20496 /* CHCSVParser.m */; };
+		68824F6D15821B0900A20496 /* NSArray+CHCSVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 68824F6715821B0900A20496 /* NSArray+CHCSVAdditions.h */; };
+		68824F6E15821B0900A20496 /* NSArray+CHCSVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 68824F6815821B0900A20496 /* NSArray+CHCSVAdditions.m */; };
+		68824F6F15821B0900A20496 /* NSArray+CHCSVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 68824F6815821B0900A20496 /* NSArray+CHCSVAdditions.m */; };
 		68978E43153F161E008EF4E8 /* FT2Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978E41153F161E008EF4E8 /* FT2Data.h */; };
 		68978E44153F161E008EF4E8 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E42153F161E008EF4E8 /* FT2Data.m */; };
 		68978E45153F161E008EF4E8 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E42153F161E008EF4E8 /* FT2Data.m */; };
@@ -282,6 +289,11 @@
 		6842EC931553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+NSDate_TimeAgo.m"; path = "FTLibrary2/Sources/Categories/NSDate+NSDate_TimeAgo.m"; sourceTree = "<group>"; };
 		685397091550298300B2D2A4 /* FT2File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2File.h; path = FTLibrary2/Sources/FT2File.h; sourceTree = "<group>"; };
 		6853970A1550298300B2D2A4 /* FT2File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2File.m; path = FTLibrary2/Sources/FT2File.m; sourceTree = "<group>"; };
+		68824F6415821B0900A20496 /* CHCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSV.h; sourceTree = "<group>"; };
+		68824F6515821B0900A20496 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		68824F6615821B0900A20496 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		68824F6715821B0900A20496 /* NSArray+CHCSVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CHCSVAdditions.h"; sourceTree = "<group>"; };
+		68824F6815821B0900A20496 /* NSArray+CHCSVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CHCSVAdditions.m"; sourceTree = "<group>"; };
 		68978E41153F161E008EF4E8 /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Data.h; path = FTLibrary2/Sources/FT2Data.h; sourceTree = "<group>"; };
 		68978E42153F161E008EF4E8 /* FT2Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Data.m; path = FTLibrary2/Sources/FT2Data.m; sourceTree = "<group>"; };
 		68978E4F153F16BD008EF4E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -542,6 +554,19 @@
 			name = CoreText;
 			sourceTree = "<group>";
 		};
+		68824F6315821B0900A20496 /* CHCSV */ = {
+			isa = PBXGroup;
+			children = (
+				68824F6415821B0900A20496 /* CHCSV.h */,
+				68824F6515821B0900A20496 /* CHCSVParser.h */,
+				68824F6615821B0900A20496 /* CHCSVParser.m */,
+				68824F6715821B0900A20496 /* NSArray+CHCSVAdditions.h */,
+				68824F6815821B0900A20496 /* NSArray+CHCSVAdditions.m */,
+			);
+			name = CHCSV;
+			path = FTLibrary2/ThirdParty/CHCSV;
+			sourceTree = "<group>";
+		};
 		68978E6C153F2A03008EF4E8 /* FTLibrary2Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,6 +660,7 @@
 		932FDA5C153DD91B00E9D253 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				68824F6315821B0900A20496 /* CHCSV */,
 				93879809153ECE8D001FE131 /* AQGridView */,
 				93C265D9153EC32E0010A059 /* Reachability */,
 				932FDAE4153DDBAA00E9D253 /* JSONFramework */,
@@ -1104,6 +1130,9 @@
 				6842EC731552D95800C18C9F /* FTCoreTextStyle.h in Headers */,
 				6842EC761552D95800C18C9F /* FTCoreTextView.h in Headers */,
 				6842EC941553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h in Headers */,
+				68824F6915821B0900A20496 /* CHCSV.h in Headers */,
+				68824F6A15821B0900A20496 /* CHCSVParser.h in Headers */,
+				68824F6D15821B0900A20496 /* NSArray+CHCSVAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1243,6 +1272,8 @@
 				68B252DC1545898A00F961B3 /* FT2TaskMakerTests.m in Sources */,
 				93D385E8154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
 				93D385EB154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
+				68824F6C15821B0900A20496 /* CHCSVParser.m in Sources */,
+				68824F6F15821B0900A20496 /* NSArray+CHCSVAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1323,6 +1354,8 @@
 				6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */,
 				6842EC771552D95800C18C9F /* FTCoreTextView.m in Sources */,
 				6842EC951553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m in Sources */,
+				68824F6B15821B0900A20496 /* CHCSVParser.m in Sources */,
+				68824F6E15821B0900A20496 /* NSArray+CHCSVAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
