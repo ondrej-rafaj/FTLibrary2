@@ -13,6 +13,7 @@
 @synthesize backgroundTaskIdentifier = _backgroundTaskIdentifier;
 
 + (void)performBlockInBackground:(void (^)(void))block priority:(FTTaskPriority)priority completed:(void (^)(void))completed expired:(void (^)(void))expired {
+    dispatch_queue_t thisQueue = dispatch_get_current_queue();
     dispatch_queue_priority_t dispatchPriority;
 	switch (priority) {
 		case FTTaskPriorityNormal:
@@ -29,8 +30,10 @@
     if (expired) instance.backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:expired];
     dispatch_async(dispatch_get_global_queue(dispatchPriority, 0), ^{
         if (block) block();
-        if (instance.backgroundTaskIdentifier) [[UIApplication sharedApplication] endBackgroundTask:instance.backgroundTaskIdentifier];
-        if (completed) completed();
+        dispatch_sync(thisQueue, ^{
+            if (instance.backgroundTaskIdentifier) [[UIApplication sharedApplication] endBackgroundTask:instance.backgroundTaskIdentifier];
+            if (completed) completed();
+        });
     });
 }
 

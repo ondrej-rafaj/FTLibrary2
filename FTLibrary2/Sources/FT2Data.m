@@ -8,7 +8,7 @@
 
 #import "FT2Data.h"
 #import "FT2Error.h"
-
+#import "FT2FileSystem.h"
 
 
 @implementation FT2Data
@@ -18,6 +18,7 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
 @synthesize storedObjects = _storedObjects;
+@synthesize mediaInQueue = _mediaInQueue;
 
 static dispatch_queue_t _queue = NULL;
 static dispatch_queue_t _managedContextQueue = NULL;
@@ -27,6 +28,13 @@ static NSString * __databaseName;
 
 #pragma mark --
 #pragma mark - Init
+
+- (void)removeMediaInQueueObject:(id)object {
+    [_mediaInQueue removeObject:object];
+    if (_mediaInQueue.count == 0) {
+        [self saveContext];
+    }
+}
 
 - (id)init {
     // This class cannot be initialized without a managed object name
@@ -41,6 +49,7 @@ static NSString * __databaseName;
         NSAssert((managedObjectName || managedObjectName.length == 0), @"FT2Data initialized without Manajed Object Name");
         __managedObjectModelName = managedObjectName;
         __databaseName = [managedObjectName stringByAppendingString:@".sqlite"];
+
         
         //init queues
         _queue = dispatch_queue_create("com.fuerte.internetQueue",0); 
@@ -105,9 +114,21 @@ static NSString * __databaseName;
         NSError *error = nil;
         NSArray *entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
         if (entities.count > 0) entity = [entities objectAtIndex:0];
-
+        else entity = [[NSManagedObject alloc] initWithEntity:entityDesc insertIntoManagedObjectContext:self.managedObjectContext];
     }];
 
+    return entity;
+}
+
+- (id)entityForName:(NSString *)entityName withUID:(id)uid {
+    static NSString *uidKey = @"uid";
+    NSString *stringUID = ([uid isKindOfClass:[NSNumber class]])? [(NSNumber *)uid stringValue] : uid;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", uidKey, stringUID];
+    id entity = [self entityForName:entityName withPredicate:predicate];
+
+    if (![[entity valueForKey:uidKey] isEqual:stringUID]) {
+        [entity setValue:stringUID forKey:uidKey];
+    }
     return entity;
 }
 
@@ -139,17 +160,17 @@ static NSString * __databaseName;
  */
 - (NSManagedObjectContext *)managedObjectContext
 {
-    if (__managedObjectContext != nil)
-    {
-        return __managedObjectContext;
-    }
+    if (__managedObjectContext != nil) return __managedObjectContext;
     
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil)
-    {
-        __managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [__managedObjectContext setPersistentStoreCoordinator:coordinator];
-    }
+    [self performBlockOnContextAndWait:^{
+        NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+        if (coordinator != nil)
+        {
+            __managedObjectContext = [[NSManagedObjectContext alloc] init];
+            [__managedObjectContext setPersistentStoreCoordinator:coordinator];
+        }    
+    }];
+    
     return __managedObjectContext;
 }
 
@@ -162,8 +183,11 @@ static NSString * __databaseName;
     {
         return __managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:__managedObjectModelName withExtension:@"momd"];
-    __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    [self performBlockOnContextAndWait:^{
+        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:__managedObjectModelName withExtension:@"momd"];
+        __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    }];
+    
     return __managedObjectModel;
 }
 
@@ -177,22 +201,36 @@ static NSString * __databaseName;
         return __persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:__databaseName];
-    
-    NSError *error = nil;
-    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-                             [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
-    
-    __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error])
-    {
+    [self performBlockOnContextAndWait:^{
         
-        NSLog(@"Unresolved error %@, %@\n\n", error, [error userInfo]);
-        FT2Error *fterror = [FT2Error errorWithError:error];
-        [fterror sendToFlurry];
-        //abort();
-    }    
+        //copy database if first time
+        NSString *dbBundlePath = [FT2FileSystem pathForFileName:__databaseName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];        
+        NSString *dbDocPath = [FT2FileSystem pathForFileName:__databaseName checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
+        if (![FT2FileSystem existsAtPath:dbDocPath] && [FT2FileSystem existsAtPath:dbBundlePath]) {
+            NSError *error;
+            NSData *data = [FT2FileSystem dataFromDocumentsWithName:dbBundlePath checkBundleFirst:YES];
+            if (data) {
+                [FT2FileSystem writeData:data withName:__databaseName forDirectoryType:NSDocumentDirectory error:&error];
+            }
+        }
+    
+        NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:__databaseName];
+        
+        NSError *error = nil;
+        NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+                                 [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+        
+        __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+        if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error])
+        {
+            
+            NSLog(@"Unresolved error %@, %@\n\n", error, [error userInfo]);
+            FT2Error *fterror = [FT2Error errorWithError:error];
+            [fterror sendToFlurry];
+            //abort();
+        }  
+    }];
     
     return __persistentStoreCoordinator;
 }

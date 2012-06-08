@@ -7,6 +7,7 @@
 //
 
 #import "FT2File.h"
+#import "FT2Download.h"
 #import "FT2FileSystem.h"
 
 @implementation FT2File
@@ -21,8 +22,6 @@
 @synthesize data = _data;
 
 @synthesize delegate = _delegate;
-
-static dispatch_queue_t _queue;
 
 - (NSString *)folder {
     NSString *folder;
@@ -56,26 +55,35 @@ static dispatch_queue_t _queue;
     return _exists;
 }
 
--(void)setSource:(NSURL *)source {
-    _source = source;
-    
+- (BOOL)isSourceLocal {
     static NSString *pattern = @"^[http|https|ftp]*://";
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
-    NSArray *matches = [regex matchesInString:_source.path options:NSMatchingProgress range:NSMakeRange(0, _source.path.length)];
-    if (matches.count == 0 && self.delegate && [self.delegate respondsToSelector:@selector(relatedURLForFile:)]) {
+    NSArray *matches = [regex matchesInString:_source.absoluteString options:NSMatchingProgress range:NSMakeRange(0, _source.absoluteString.length)];
+    return (matches.count == 0);
+}
+
+-(void)setSource:(NSURL *)source {
+    _source = source;
+    
+    if (!_source || _source.absoluteString.length == 0) return;
+    
+    if ([self isSourceLocal] && self.delegate && [self.delegate respondsToSelector:@selector(relatedURLForFile:)]) {
         NSURL *baseURL = [self.delegate relatedURLForFile:self];
         _source = [NSURL URLWithString:_source.path relativeToURL:baseURL];
     }
 }
 
+- (NSString *)fileName {
+    if ([self isSourceLocal]) return self.source.lastPathComponent;
+    else return [NSString stringWithFormat:@"%@/%@_%@", [self folder], self.uid, [self.source lastPathComponent]];
+}
+
 - (NSString *)path {
     if (!_path) {
-        NSString *fileName = [self.source lastPathComponent];
-        NSString *filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
+        NSString *filePath = [FT2FileSystem pathForFileName:[self fileName] checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];
         if (!filePath || self.shouldOverride) {
-            fileName = [NSString stringWithFormat:@"%@/%d_%@", [self folder], [self.uid intValue], fileName];
-            filePath = [FT2FileSystem pathForFileName:fileName checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
+            filePath = [FT2FileSystem pathForFileName:[self fileName] checkBundleFirst:NO forDirectoryType:NSDocumentDirectory];
         }
         _path = filePath;
     }
@@ -90,12 +98,13 @@ static dispatch_queue_t _queue;
 }
 
 - (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block {
-    if (!self.source) {
+    if (!self.source || [self isSourceLocal]) {
+        self.path = nil;
         NSError *error = [NSError errorWithDomain:@"com.fuerteint.error" code:404 userInfo:nil];
         block(error);
     }
         
-    [FT2File downloadDataFromURL:self.source completed:^(NSData *data, NSError *error) {
+    [FT2Download dataFromURL:self.source completed:^(id data, NSError *error) {
         if (error || !data) {
             FT2Error *ftError = [FT2Error errorWithError:error];
             [ftError showInConsole];
@@ -105,7 +114,7 @@ static dispatch_queue_t _queue;
         
         self.path = nil;
         
-        [FT2FileSystem writeData:data toDocumentsWithName:self.path error:&error];
+        [FT2FileSystem writeData:data toDocumentsWithName:[self fileName] error:&error];
         if (error) {
             FT2Error *ftError = [FT2Error errorWithError:error];
             [ftError showInConsole];
@@ -120,26 +129,6 @@ static dispatch_queue_t _queue;
     }];
 }
 
-
-#pragma mark Download process
-
-+ (void)downloadDataFromURL:(NSURL *)url completed:(fileDownloaded)block {
-    @autoreleasepool {
-        NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-        if (!_queue) _queue = dispatch_queue_create("com.fuerte.FT2Library.internetQueue",0);
-        dispatch_async(_queue, ^{
-            NSURLResponse *response = nil;
-            NSError *error = nil;
-            NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-            if (error) {
-                FT2Error *ftError = [FT2Error errorWithError:error];
-                [ftError showInConsole];
-            }
-            
-            block(data, error);
-        });
-    }
-}
 
 
 @end

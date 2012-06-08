@@ -6,7 +6,7 @@
 //  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
-#import "FT2ShareFacebook.h"
+#import "FTShareFacebook.h"
 
 #pragma mark --
 #pragma mark Data Type
@@ -133,6 +133,17 @@
     return path;    
 }
 
+- (void)dealloc {
+    
+    [_message release], _message = nil;
+    [_link release], _link = nil;
+    [_name release], _name = nil;
+    [_caption release], _caption = nil;
+    [_picture release], _picture = nil;
+    [_description release], _description = nil;
+    [_uploadPhoto release], _uploadPhoto = nil;
+    [super dealloc];
+}
 
 @end
 
@@ -141,7 +152,7 @@
 #pragma mark --
 #pragma mark Class
 
-@implementation FT2ShareFacebook
+@implementation FTShareFacebook
 
 @synthesize facebook = _facebook;
 @synthesize facebookDelegate = _facebookDelegate;
@@ -182,7 +193,7 @@
     
     if ([options count] > 0) {
         _permissions = nil;
-        _permissions = (NSArray *) options;   
+        _permissions = [(NSArray *) options retain];   
     }
 }
 
@@ -197,7 +208,7 @@
 
 - (void)shareViaFacebook:(FTShareFacebookData *)data {
     
-    if (data) _params = data;
+    if (data) _params = [data retain];
     
     //check login
     if (![_facebook isSessionValid]) {
@@ -207,14 +218,14 @@
     
     // gather delegate data
     if (![_params isRequestValid] && self.facebookDelegate && [self.facebookDelegate respondsToSelector:@selector(facebookShareData)]) {
-        _params = [self.facebookDelegate facebookShareData];
+        _params = [[self.facebookDelegate facebookShareData] retain];
     }
     
     //use Message Controller
     
     
     if ([_params hasControllerSupport]) {
-        FT2ShareMessageController *messageController = [[FT2ShareMessageController alloc] initWithMessage:_params.message type:FTShareMessageControllerTypeFacebook andelegate:self];
+        FTShareMessageController *messageController = [[FTShareMessageController alloc] initWithMessage:_params.message type:FTShareMessageControllerTypeFacebook andelegate:self];
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:messageController];
         [_referencedController presentModalViewController:nc animated:YES];
         return;
@@ -230,7 +241,7 @@
         if (!path) [NSException raise:@"Facebook request with no type will have no path either" format:@""];
     }
     
-    if (path) [_facebook requestWithGraphPath:path andParams:[_params dictionaryFromParams] andHttpMethod:httpMethod andDelegate:self];
+    [_facebook requestWithGraphPath:path andParams:[_params dictionaryFromParams] andHttpMethod:httpMethod andDelegate:self];
     
 }
 
@@ -306,11 +317,11 @@
 
 #pragma mark sharemessagcontroller delgate
 
-- (void)shareMessageController:(FT2ShareMessageController *)controller didFinishWithMessage:(NSString *)message {
+- (void)shareMessageController:(FTShareMessageController *)controller didFinishWithMessage:(NSString *)message {
 
 }
 
-- (void)shareMessageController:(FT2ShareMessageController *)controller didDisappearWithMessage:(NSString *)message {
+- (void)shareMessageController:(FTShareMessageController *)controller didDisappearWithMessage:(NSString *)message {
     if (!message || message.length == 0 || !_params) return;
     
     FTShareFacebookData *data = [[FTShareFacebookData alloc] init];
@@ -324,7 +335,7 @@
     [self shareViaFacebook:data];    
 }
 
-- (void)shareMessageControllerDidCancel:(FT2ShareMessageController *)controller {
+- (void)shareMessageControllerDidCancel:(FTShareMessageController *)controller {
     
 }
 

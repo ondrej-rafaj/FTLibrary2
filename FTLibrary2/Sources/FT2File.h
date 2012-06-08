@@ -23,7 +23,7 @@ typedef void (^fileDownloaded)(NSData *data, NSError *error);
 @protocol FT2FileDelegate;
 @interface FT2File : NSObject
 
-@property (nonatomic, strong) NSNumber *uid;
+@property (nonatomic, strong) NSString *uid;
 @property (nonatomic, strong) NSString *path;
 @property (nonatomic, strong) NSURL *source;
 @property (nonatomic, strong) NSDate *date;
@@ -35,7 +35,6 @@ typedef void (^fileDownloaded)(NSData *data, NSError *error);
 @property (nonatomic, assign) __unsafe_unretained id<FT2FileDelegate> delegate;
 
 - (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block;
-+ (void)downloadDataFromURL:(NSURL *)url completed:(fileDownloaded)block;
 
 @end
 

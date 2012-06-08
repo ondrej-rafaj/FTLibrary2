@@ -103,7 +103,7 @@
 
 - (CGFloat)right
 {
-	return CGRectGetMaxY(self.frame);
+	return CGRectGetMaxX(self.frame);
 }
 
 - (void)setRight:(CGFloat)right

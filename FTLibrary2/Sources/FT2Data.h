@@ -16,6 +16,7 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property (nonatomic, strong) NSMutableDictionary *storedObjects;
+@property (nonatomic, strong) NSMutableArray *mediaInQueue;
 
 
 - (NSURL *)applicationDocumentsDirectory;
@@ -29,6 +30,7 @@
 - (NSArray *)entitiesForName:(NSString *)entityName withSortDescriptors:(NSArray *)sortDescriptors;
 
 - (id)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
+- (id)entityForName:(NSString *)entityName withUID:(id)uid;
 
 - (void)performBlockOnContext:(void (^)(void))block;
 - (void)performBlockOnContextAndWait:(void (^)(void))block;

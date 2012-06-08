@@ -17,4 +17,6 @@
 - (void) alignTop;
 - (void) alignBottom;
 
+- (void)fitToSuggestedHeight;
+
 @end
