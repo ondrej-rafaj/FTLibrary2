@@ -59,7 +59,7 @@ static NSString * __databaseName;
     return self;
 }
 
-- (NSArray *)entitiesForName:(NSString *)entityName withSortDescriptors:(NSArray *)sortDescriptors {
+- (NSArray *)entitiesForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate andSortDescriptors:(NSArray *)sortDescriptors {
     __block NSArray *entities = nil;
     [self performBlockOnContextAndWait:^{
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -76,12 +76,22 @@ static NSString * __databaseName;
             [request setSortDescriptors:sortDescriptors];
         }
         
+        //predicate
+        if (predicate) {
+            [request setPredicate:predicate];
+        }
+        
         // Execute the fetch
         NSError *error = nil;
         entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
     }];
     
-    return entities;
+    return entities;    
+}
+
+
+- (NSArray *)entitiesForName:(NSString *)entityName withSortDescriptors:(NSArray *)sortDescriptors {
+    return [self entitiesForName:entityName withPredicate:nil andSortDescriptors:sortDescriptors];
 }
 
 - (NSArray *)entitiesForName:(NSString *)entityName orderedBy:(NSString *)orderKey {
@@ -92,6 +102,7 @@ static NSString * __databaseName;
     }
     return [self entitiesForName:entityName withSortDescriptors:descriptors];
 }
+
 
 
 - (id)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate {

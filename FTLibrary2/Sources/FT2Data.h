@@ -28,6 +28,7 @@
 
 - (NSArray *)entitiesForName:(NSString *)entityName orderedBy:(NSString *)orderKey;
 - (NSArray *)entitiesForName:(NSString *)entityName withSortDescriptors:(NSArray *)sortDescriptors;
+- (NSArray *)entitiesForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate andSortDescriptors:(NSArray *)sortDescriptors;
 
 - (id)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
 - (id)entityForName:(NSString *)entityName withUID:(id)uid;
