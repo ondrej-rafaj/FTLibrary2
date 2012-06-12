@@ -15,4 +15,8 @@
 
 + (id)arrayByOrderingSet:(NSSet *)set byKey:(NSString *)key ascending:(BOOL)ascending;
 
+- (NSArray *)safeSubarrayWithRange:(NSRange)range newRange:(NSRange *)returnedRange;
+
+- (NSArray *)safeSubarrayWithRange:(NSRange)range;
+
 @end
