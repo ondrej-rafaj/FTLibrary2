@@ -38,6 +38,7 @@
 }
 
 - (NSString *)tagsAsString {
+    if (!self.tags || self.tags.count == 0) return @"";
     SBJsonWriter *jsonWriter = [[SBJsonWriter alloc] init];
     NSError *error = nil;
     NSString *serializedString = [jsonWriter stringWithObject:self.tags error:&error];
