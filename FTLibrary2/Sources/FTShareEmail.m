@@ -114,6 +114,7 @@
     if (self.mailDelegate && [self.mailDelegate respondsToSelector:@selector(mailSent:)]) {
         [self.mailDelegate mailSent:result];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFTShareEmailPostNotification object:[NSNumber numberWithInt:result]];
     [controller dismissModalViewControllerAnimated:YES];
 }
 

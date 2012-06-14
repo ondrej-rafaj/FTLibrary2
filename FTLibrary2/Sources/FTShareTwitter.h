@@ -12,6 +12,8 @@
 #import "SA_OAuthTwitterController.h"
 #import "FTShareMessageController.h"
 
+#define kFTShareTwitterPostNotification     @"FTShareTwitterPostNotification"
+
 #pragma mark --
 #pragma mark Data Type
 

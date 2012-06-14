@@ -130,6 +130,7 @@
     if ([self.twitterDelegate respondsToSelector:@selector(twitterDidPost:)]) {
         [self.twitterDelegate twitterDidPost:nil];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFTShareTwitterPostNotification object:nil];
     
     _twitter = nil;
     self.twitterDelegate = nil;
