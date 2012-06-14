@@ -24,6 +24,7 @@
 - (CGFloat)yOrigin;
 - (void)setYOrigin:(CGFloat)yOrigin;
 
+- (CGPoint)origin;
 - (void)setOrigin:(CGPoint)origin;
 - (void)positionAtX:(CGFloat)xOrigin andY:(CGFloat)yOrigin;
 
