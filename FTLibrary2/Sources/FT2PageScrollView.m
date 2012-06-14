@@ -156,7 +156,9 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 		if (tellDelegate && _pageScrollViewFlags.delegateWillDiscardPage) {
 			[_pageScrollViewDelegate pageScrollView:self willDiscardPage:pageView];
 		}
-		if (pageView.reuseIdentifier) {
+		if (_pageScrollViewFlags.delegateEnsureQueuing) {
+			[self.delegate pageScrollView:self enqueuePage:pageView];
+		} else  if (pageView.reuseIdentifier) {
 			NSMutableSet *setForIdentifier = [_reusablePages objectForKey:pageView.reuseIdentifier];
 			if (setForIdentifier == nil) {
 				setForIdentifier = [NSMutableSet new];
@@ -262,9 +264,9 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 - (void)reloadData
 {
 	_numberOfPages = [_dataSource numberOfPagesInPageScrollView:self];
+	self.contentSize = CGSizeMake(_numberOfPages * _internalPageSize.width, _internalPageSize.height);
+	[self _disposeOfVisibleViewsAndTellDelegate:NO];
 	if (_numberOfPages > 0) {
-		self.contentSize = CGSizeMake(_numberOfPages * _internalPageSize.width, _internalPageSize.height);
-		[self _disposeOfVisibleViewsAndTellDelegate:NO];
 		[self _updateUIForCurrentHorizontalOffset];
 	}
 }
@@ -447,6 +449,7 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 	_pageScrollViewFlags.delegateWillDiscardPage = [d respondsToSelector:@selector(pageScrollView:willDiscardPage:)];
 	_pageScrollViewFlags.delegateWillDiscardView = [d respondsToSelector:@selector(pageScrollView:willDiscardView:)];
 	_pageScrollViewFlags.delegateCanBeRotated = [d respondsToSelector:@selector(pageScrollViewCanBeRotated:)];
+	_pageScrollViewFlags.delegateEnsureQueuing = [d respondsToSelector:@selector(pageScrollView:enqueuePage:)];
 }
 
 - (void)setPageSize:(CGSize)pageSize
@@ -462,7 +465,7 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 	if (_didUpdateFrame) {
 		_didUpdateFrame = NO;
 		for (FT2PageView *page in _visibleViews) {
-			page.xOrigin = page.index * scrollViewBoundsWidth - _visibleHorizontalPadding;
+			page.xOrigin = page.index * _pageSize.width - _visibleHorizontalPadding;
 		}
 	} else {
 		[self _updateUIForCurrentHorizontalOffset];	

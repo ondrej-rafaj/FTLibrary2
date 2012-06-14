@@ -27,7 +27,6 @@
 - (UIView *)pageScrollView:(FT2PageScrollView *)scrollView viewForPageAtIndex:(NSInteger)index reusedView:(UIView *)view;
 //cells queuing and reuse - table view like
 - (FT2PageView *)pageScrollView:(FT2PageScrollView *)scrollView pageViewAtIndex:(NSInteger)index;
-
 @end
 
 
@@ -43,6 +42,12 @@
 - (void)pageScrollView:(FT2PageScrollView *)scrollView willDiscardPage:(FT2PageView *)page;
 
 - (void)pageScrollViewCanBeRotated:(FT2PageScrollView *)scrollView;
+
+//if you provide this method to your delegate, page scroll view will let it
+//ensure the queuing of pages. Useful if several instances of page scroll views 
+//are using the same pages and you want to do a general caching of those pages.
+//Therefore -dequeuePageForIdentifer: will always return nil
+- (void)pageScrollView:(FT2PageScrollView *)scrollView enqueuePage:(FT2PageView *)pageView;
 
 @end
 
@@ -71,6 +76,7 @@
 		unsigned int delegateWillDiscardView:1;
 		unsigned int delegateWillDiscardPage:1;
 		unsigned int delegateCanBeRotated:1;
+		unsigned int delegateEnsureQueuing:1;
     } _pageScrollViewFlags;
 }
 
