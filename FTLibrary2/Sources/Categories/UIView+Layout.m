@@ -94,6 +94,11 @@
 	return CGRectGetMaxY(self.frame);
 }
 
+- (CGPoint)origin
+{
+	return self.frame.origin;
+}
+
 - (void)setBottom:(CGFloat)bottom
 {
 	CGRect frame = self.frame;
