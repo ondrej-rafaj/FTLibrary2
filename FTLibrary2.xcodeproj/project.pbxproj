@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CF02072159244C0009A93BF /* FTAutoLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF02070159244C0009A93BF /* FTAutoLineView.h */; };
+		4CF02073159244C0009A93BF /* FTAutoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF02071159244C0009A93BF /* FTAutoLineView.m */; };
 		681C087A157505CC00BB8E2D /* FT2Download.h in Headers */ = {isa = PBXBuildFile; fileRef = 681C0878157505CB00BB8E2D /* FT2Download.h */; };
 		681C087B157505CC00BB8E2D /* FT2Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C0879157505CC00BB8E2D /* FT2Download.m */; };
 		6842EC5E1552BFFE00C18C9F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6842EC5D1552BFFE00C18C9F /* CoreText.framework */; };
@@ -304,6 +306,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4CF02070159244C0009A93BF /* FTAutoLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAutoLineView.h; sourceTree = "<group>"; };
+		4CF02071159244C0009A93BF /* FTAutoLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAutoLineView.m; sourceTree = "<group>"; };
 		681C0878157505CB00BB8E2D /* FT2Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Download.h; path = FTLibrary2/Sources/FT2Download.h; sourceTree = "<group>"; };
 		681C0879157505CC00BB8E2D /* FT2Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Download.m; path = FTLibrary2/Sources/FT2Download.m; sourceTree = "<group>"; };
 		6842EC5D1552BFFE00C18C9F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -1021,6 +1025,8 @@
 		938D583D153DCAB30067CEFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CF02070159244C0009A93BF /* FTAutoLineView.h */,
+				4CF02071159244C0009A93BF /* FTAutoLineView.m */,
 				6842EC511552BE2700C18C9F /* CoreText */,
 				93EDD066154705F50074EC20 /* FT2PageControl.h */,
 				93EDD067154705F50074EC20 /* FT2PageControl.m */,
@@ -1220,6 +1226,7 @@
 				7AB65408158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h in Headers */,
 				7AB6540A158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h in Headers */,
 				7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */,
+				4CF02072159244C0009A93BF /* FTAutoLineView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1453,6 +1460,7 @@
 				7AB65409158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
 				7AB6540B158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
 				7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */,
+				4CF02073159244C0009A93BF /* FTAutoLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
