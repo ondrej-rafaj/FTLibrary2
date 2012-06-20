@@ -20,21 +20,20 @@
     // If the image does not have an alpha layer, add one
     UIImage *image = [self imageWithAlpha];
     
+	CGFloat scale = [[UIScreen mainScreen] scale];
+	UIGraphicsBeginImageContextWithOptions(image.size, !image.hasAlpha, 0);
+
     // Build a context that's the same dimensions as the new size
-    CGContextRef context = CGBitmapContextCreate(NULL,
-                                                 image.size.width,
-                                                 image.size.height,
-                                                 CGImageGetBitsPerComponent(image.CGImage),
-                                                 0,
-                                                 CGImageGetColorSpace(image.CGImage),
-                                                 CGImageGetBitmapInfo(image.CGImage));
+    CGContextRef context = UIGraphicsGetCurrentContext();
+	CGContextTranslateCTM(context, 0, image.size.height);
+	CGContextScaleCTM(context, 1.0, -1.0);
 
     // Create a clipping path with rounded corners
     CGContextBeginPath(context);
     [self addRoundedRectToPath:CGRectMake(borderSize, borderSize, image.size.width - borderSize * 2, image.size.height - borderSize * 2)
                        context:context
-                     ovalWidth:cornerSize
-                    ovalHeight:cornerSize];
+                     ovalWidth:cornerSize * scale
+                    ovalHeight:cornerSize * scale];
     CGContextClosePath(context);
     CGContextClip(context);
 
@@ -42,13 +41,10 @@
     CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
     
     // Create a CGImage from the context
-    CGImageRef clippedImage = CGBitmapContextCreateImage(context);
-    CGContextRelease(context);
+    UIImage *roundedImage = UIGraphicsGetImageFromCurrentImageContext();
     
-    // Create a UIImage from the CGImage
-    UIImage *roundedImage = [UIImage imageWithCGImage:clippedImage];
-    CGImageRelease(clippedImage);
-    
+	UIGraphicsEndImageContext();
+        
     return roundedImage;
 }
 
@@ -63,18 +59,8 @@
         CGContextAddRect(context, rect);
         return;
     }
-    CGContextSaveGState(context);
-    CGContextTranslateCTM(context, CGRectGetMinX(rect), CGRectGetMinY(rect));
-    CGContextScaleCTM(context, ovalWidth, ovalHeight);
-    CGFloat fw = CGRectGetWidth(rect) / ovalWidth;
-    CGFloat fh = CGRectGetHeight(rect) / ovalHeight;
-    CGContextMoveToPoint(context, fw, fh/2);
-    CGContextAddArcToPoint(context, fw, fh, fw/2, fh, 1);
-    CGContextAddArcToPoint(context, 0, fh, 0, fh/2, 1);
-    CGContextAddArcToPoint(context, 0, 0, fw/2, 0, 1);
-    CGContextAddArcToPoint(context, fw, 0, fw, fh/2, 1);
-    CGContextClosePath(context);
-    CGContextRestoreGState(context);
+	UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(ovalWidth, ovalHeight)];
+	CGContextAddPath(context, path.CGPath);
 }
 
 @end

@@ -7,49 +7,45 @@
 //
 
 #import "FT2ObjectAttributes.h"
+#import <CoreData/CoreData.h>
 #import <objc/runtime.h>
 
 
 @implementation FT2ObjectAttributes
 
-+ (NSDictionary *)propertiesOfClass:(id)obj {
++ (void)attributes:(NSMutableDictionary **)attributes forClass:(Class)class {    
     NSString *search = @"^T@\"([\\w]*)\"";
     NSError *error;
     NSRegularExpression *regEx = [NSRegularExpression regularExpressionWithPattern:search options:NSRegularExpressionSearch error:&error];
     
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary]; 
     unsigned int count;
-    objc_property_t *properties = class_copyPropertyList(obj, &count);
+    objc_property_t *properties = class_copyPropertyList(class, &count);
     for (int i = 0; i < count; i++) {
         objc_property_t property = properties[i];
         NSString *name = [NSString stringWithUTF8String:property_getName(property)];
-        NSString *attributes = [NSString stringWithUTF8String:property_getAttributes(property)];
+        NSString *types = [NSString stringWithUTF8String:property_getAttributes(property)];
         __block NSString *type;
         // __block NSMutableArray *others;
         
-        [regEx enumerateMatchesInString:attributes options:NSMatchingHitEnd range:NSMakeRange(0, attributes.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-            type = [attributes substringWithRange:[result rangeAtIndex:1]];
+        [regEx enumerateMatchesInString:types options:NSMatchingHitEnd range:NSMakeRange(0, types.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+            type = [types substringWithRange:[result rangeAtIndex:1]];
         }];
         
-        [dict setValue:type forKey:name];
+        [*attributes setValue:type forKey:name];
     }
     
-    Class parent = class_getSuperclass(obj);
-    properties = class_copyPropertyList(parent, &count);
-    for (int i = 0; i < count; i++) {
-        objc_property_t property = properties[i];
-        NSString *name = [NSString stringWithUTF8String:property_getName(property)];
-        NSString *attributes = [NSString stringWithUTF8String:property_getAttributes(property)];
-        __block NSString *type;
-        // __block NSMutableArray *others;
-        
-        [regEx enumerateMatchesInString:attributes options:NSMatchingHitEnd range:NSMakeRange(0, attributes.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-            type = [attributes substringWithRange:[result rangeAtIndex:1]];
-        }];
-        
-        [dict setValue:type forKey:name];
-    }
+    free(properties);
     
+    if (class == [NSManagedObject class]) return;
+    
+    Class parent = class_getSuperclass(class);
+    [self attributes:attributes forClass:parent];
+    
+}
+
++ (NSDictionary *)propertiesOfClass:(id)obj {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary]; 
+    [self attributes:&dict forClass:[obj class]];
     
     return (NSDictionary *)dict;
 }

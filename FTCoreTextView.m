@@ -1052,6 +1052,11 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	return [_styles allValues];
 }
 
+- (FTCoreTextStyle *)styleForName:(NSString *)tagName
+{
+	return [_styles objectForKey:tagName];
+}
+
 - (NSAttributedString *)attributedString
 {
 	if (!_coreTextViewFlags.updatedAttrString) {
