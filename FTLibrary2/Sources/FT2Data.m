@@ -20,8 +20,7 @@
 @synthesize storedObjects = _storedObjects;
 @synthesize mediaInQueue = _mediaInQueue;
 
-static dispatch_queue_t _queue = NULL;
-static dispatch_queue_t _managedContextQueue = NULL;
+
 
 static NSString * __managedObjectModelName;
 static NSString * __databaseName;
@@ -58,6 +57,15 @@ static NSString * __databaseName;
     }
     return self;
 }
+
+
+- (void)dealloc {
+    dispatch_release(_queue);
+    dispatch_release(_managedContextQueue);
+    
+}
+
+
 
 - (NSArray *)entitiesForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate andSortDescriptors:(NSArray *)sortDescriptors {
     __block NSArray *entities = nil;
