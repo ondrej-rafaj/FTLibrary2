@@ -318,7 +318,7 @@ static NSString *_storedObjectKey = @"FTStoredObjectKey";
     return [self.storedObjects objectForKey:key];
 }
 
-- (void)storeObejct:(id)object forKey:(NSString *)key {
+- (void)storeObject:(id)object forKey:(NSString *)key {
     [self.storedObjects setObject:object forKey:key];
     
     [[NSUserDefaults standardUserDefaults] setObject:self.storedObjects forKey:_storedObjectKey];

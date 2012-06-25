@@ -40,7 +40,7 @@
 - (void)performBlockOnContextAndWait:(void (^)(void))block;
 
 - (id)storedObjectForKey:(NSString *)key;
-- (void)storeObejct:(id)object forKey:(NSString *)key;
+- (void)storeObject:(id)object forKey:(NSString *)key;
 
 @end
 

@@ -127,6 +127,10 @@
     }
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return YES;
+}
+
 
 
 #pragma mark textview delegate

@@ -7,6 +7,7 @@
 //
 
 #import "FTShareFacebook.h"
+#import "FT2System.h"
 
 #pragma mark --
 #pragma mark Data Type
@@ -38,6 +39,7 @@
 }
 
 - (NSString *)tagsAsString {
+    if (!self.tags || self.tags.count == 0) return @"";
     SBJsonWriter *jsonWriter = [[SBJsonWriter alloc] init];
     NSError *error = nil;
     NSString *serializedString = [jsonWriter stringWithObject:self.tags error:&error];
@@ -227,6 +229,8 @@
     if ([_params hasControllerSupport]) {
         FTShareMessageController *messageController = [[FTShareMessageController alloc] initWithMessage:_params.message type:FTShareMessageControllerTypeFacebook andelegate:self];
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:messageController];
+        // if ipd use 
+        if ([FT2System isTabletIdiom]) nc.modalPresentationStyle = UIModalPresentationFormSheet;
         [_referencedController presentModalViewController:nc animated:YES];
         return;
     }
@@ -307,6 +311,7 @@
     if (self.facebookDelegate && [self.facebookDelegate respondsToSelector:@selector(facebookDidPost:)]) {
         [self.facebookDelegate facebookDidPost:nil];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFTShareFacebookPostNotification object:response];
 }
 
 - (void)request:(FBRequest *)request didFailWithError:(NSError *)error {

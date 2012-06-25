@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CF02072159244C0009A93BF /* FTAutoLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF02070159244C0009A93BF /* FTAutoLineView.h */; };
+		4CF02073159244C0009A93BF /* FTAutoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF02071159244C0009A93BF /* FTAutoLineView.m */; };
 		681C087A157505CC00BB8E2D /* FT2Download.h in Headers */ = {isa = PBXBuildFile; fileRef = 681C0878157505CB00BB8E2D /* FT2Download.h */; };
 		681C087B157505CC00BB8E2D /* FT2Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C0879157505CC00BB8E2D /* FT2Download.m */; };
 		6842EC5E1552BFFE00C18C9F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6842EC5D1552BFFE00C18C9F /* CoreText.framework */; };
@@ -27,7 +29,6 @@
 		68824F6D15821B0900A20496 /* NSArray+CHCSVAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 68824F6715821B0900A20496 /* NSArray+CHCSVAdditions.h */; };
 		68824F6E15821B0900A20496 /* NSArray+CHCSVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 68824F6815821B0900A20496 /* NSArray+CHCSVAdditions.m */; };
 		68824F6F15821B0900A20496 /* NSArray+CHCSVAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 68824F6815821B0900A20496 /* NSArray+CHCSVAdditions.m */; };
-
 		688D7B78156BE26E00B2156B /* FTShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 688D7B6E156BE26E00B2156B /* FTShare.h */; };
 		688D7B79156BE26E00B2156B /* FTShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D7B6F156BE26E00B2156B /* FTShare.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		688D7B7A156BE26E00B2156B /* FTShareEmail.h in Headers */ = {isa = PBXBuildFile; fileRef = 688D7B70156BE26E00B2156B /* FTShareEmail.h */; };
@@ -38,7 +39,6 @@
 		688D7B7F156BE26E00B2156B /* FTShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D7B75156BE26E00B2156B /* FTShareMessageController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		688D7B80156BE26E00B2156B /* FTShareTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 688D7B76156BE26E00B2156B /* FTShareTwitter.h */; };
 		688D7B81156BE26E00B2156B /* FTShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D7B77156BE26E00B2156B /* FTShareTwitter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-
 		68978E43153F161E008EF4E8 /* FT2Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978E41153F161E008EF4E8 /* FT2Data.h */; };
 		68978E44153F161E008EF4E8 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E42153F161E008EF4E8 /* FT2Data.m */; };
 		68978E45153F161E008EF4E8 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E42153F161E008EF4E8 /* FT2Data.m */; };
@@ -73,6 +73,29 @@
 		68978F1E154187EB008EF4E8 /* FT2TwitterFeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978F1D154187EB008EF4E8 /* FT2TwitterFeedTests.m */; };
 		68978F2115418BCC008EF4E8 /* FT2YouTubeFeedsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978F2015418BCC008EF4E8 /* FT2YouTubeFeedsTests.m */; };
 		68B252DC1545898A00F961B3 /* FT2TaskMakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B252DB1545898A00F961B3 /* FT2TaskMakerTests.m */; };
+		7AB653F7158A059900D307E7 /* AQGridView+CellLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E0158A059900D307E7 /* AQGridView+CellLayout.h */; };
+		7AB653F8158A059900D307E7 /* AQGridView+CellLocationDelegation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E1158A059900D307E7 /* AQGridView+CellLocationDelegation.h */; };
+		7AB653F9158A059900D307E7 /* AQGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E2158A059900D307E7 /* AQGridView.h */; };
+		7AB653FA158A059900D307E7 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653E3158A059900D307E7 /* AQGridView.m */; };
+		7AB653FB158A059900D307E7 /* AQGridViewAnimatorItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E4158A059900D307E7 /* AQGridViewAnimatorItem.h */; };
+		7AB653FC158A059900D307E7 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653E5158A059900D307E7 /* AQGridViewAnimatorItem.m */; };
+		7AB653FD158A059900D307E7 /* AQGridViewCell+AQGridViewCellPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E6158A059900D307E7 /* AQGridViewCell+AQGridViewCellPrivate.h */; };
+		7AB653FE158A059900D307E7 /* AQGridViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E7158A059900D307E7 /* AQGridViewCell.h */; };
+		7AB653FF158A059900D307E7 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653E8158A059900D307E7 /* AQGridViewCell.m */; };
+		7AB65400158A059900D307E7 /* AQGridViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E9158A059900D307E7 /* AQGridViewController.h */; };
+		7AB65401158A059900D307E7 /* AQGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653EA158A059900D307E7 /* AQGridViewController.m */; };
+		7AB65402158A059900D307E7 /* AQGridViewData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653EB158A059900D307E7 /* AQGridViewData.h */; };
+		7AB65403158A059900D307E7 /* AQGridViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653EC158A059900D307E7 /* AQGridViewData.m */; };
+		7AB65404158A059900D307E7 /* AQGridViewUpdateInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653ED158A059900D307E7 /* AQGridViewUpdateInfo.h */; };
+		7AB65405158A059900D307E7 /* AQGridViewUpdateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653EE158A059900D307E7 /* AQGridViewUpdateInfo.m */; };
+		7AB65406158A059900D307E7 /* AQGridViewUpdateItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653EF158A059900D307E7 /* AQGridViewUpdateItem.h */; };
+		7AB65407158A059900D307E7 /* AQGridViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F0158A059900D307E7 /* AQGridViewUpdateItem.m */; };
+		7AB65408158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653F1158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h */; };
+		7AB65409158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F2158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m */; };
+		7AB6540A158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653F3158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h */; };
+		7AB6540B158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */; };
+		7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */; };
+		7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */; };
 		932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */; };
 		932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDA67153DD96000E9D253 /* SA_OAuthTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */; };
@@ -184,7 +207,6 @@
 		932FDB4F153DDDF900E9D253 /* OAToken_KeychainExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */; };
 		932FDB50153DDDF900E9D253 /* OAuthConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */; };
 		932FDB53153DDE7C00E9D253 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 932FDB51153DDE5100E9D253 /* libxml2.dylib */; };
-		9387980C153ECEBD001FE131 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 9387980B153ECEBD001FE131 /* Classes */; };
 		93879812153ED11A001FE131 /* FT2PageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9387980D153ED11A001FE131 /* FT2PageScrollView.h */; };
 		93879813153ED11A001FE131 /* FT2PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387980E153ED11A001FE131 /* FT2PageScrollView.m */; };
 		93879814153ED11A001FE131 /* FT2PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387980E153ED11A001FE131 /* FT2PageScrollView.m */; };
@@ -284,6 +306,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4CF02070159244C0009A93BF /* FTAutoLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAutoLineView.h; sourceTree = "<group>"; };
+		4CF02071159244C0009A93BF /* FTAutoLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAutoLineView.m; sourceTree = "<group>"; };
 		681C0878157505CB00BB8E2D /* FT2Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Download.h; path = FTLibrary2/Sources/FT2Download.h; sourceTree = "<group>"; };
 		681C0879157505CC00BB8E2D /* FT2Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Download.m; path = FTLibrary2/Sources/FT2Download.m; sourceTree = "<group>"; };
 		6842EC5D1552BFFE00C18C9F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -295,13 +319,11 @@
 		6842EC931553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+NSDate_TimeAgo.m"; path = "FTLibrary2/Sources/Categories/NSDate+NSDate_TimeAgo.m"; sourceTree = "<group>"; };
 		685397091550298300B2D2A4 /* FT2File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2File.h; path = FTLibrary2/Sources/FT2File.h; sourceTree = "<group>"; };
 		6853970A1550298300B2D2A4 /* FT2File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2File.m; path = FTLibrary2/Sources/FT2File.m; sourceTree = "<group>"; };
-
 		68824F6415821B0900A20496 /* CHCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSV.h; sourceTree = "<group>"; };
 		68824F6515821B0900A20496 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		68824F6615821B0900A20496 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		68824F6715821B0900A20496 /* NSArray+CHCSVAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CHCSVAdditions.h"; sourceTree = "<group>"; };
 		68824F6815821B0900A20496 /* NSArray+CHCSVAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CHCSVAdditions.m"; sourceTree = "<group>"; };
-
 		688D7B6E156BE26E00B2156B /* FTShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShare.h; path = FTLibrary2/Sources/FTShare.h; sourceTree = "<group>"; };
 		688D7B6F156BE26E00B2156B /* FTShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShare.m; path = FTLibrary2/Sources/FTShare.m; sourceTree = "<group>"; };
 		688D7B70156BE26E00B2156B /* FTShareEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareEmail.h; path = FTLibrary2/Sources/FTShareEmail.h; sourceTree = "<group>"; };
@@ -312,7 +334,6 @@
 		688D7B75156BE26E00B2156B /* FTShareMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareMessageController.m; path = FTLibrary2/Sources/FTShareMessageController.m; sourceTree = "<group>"; };
 		688D7B76156BE26E00B2156B /* FTShareTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareTwitter.h; path = FTLibrary2/Sources/FTShareTwitter.h; sourceTree = "<group>"; };
 		688D7B77156BE26E00B2156B /* FTShareTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareTwitter.m; path = FTLibrary2/Sources/FTShareTwitter.m; sourceTree = "<group>"; };
-
 		68978E41153F161E008EF4E8 /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Data.h; path = FTLibrary2/Sources/FT2Data.h; sourceTree = "<group>"; };
 		68978E42153F161E008EF4E8 /* FT2Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Data.m; path = FTLibrary2/Sources/FT2Data.m; sourceTree = "<group>"; };
 		68978E4F153F16BD008EF4E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -345,6 +366,29 @@
 		68978F2015418BCC008EF4E8 /* FT2YouTubeFeedsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2YouTubeFeedsTests.m; sourceTree = "<group>"; };
 		68B252DA1545898A00F961B3 /* FT2TaskMakerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2TaskMakerTests.h; sourceTree = "<group>"; };
 		68B252DB1545898A00F961B3 /* FT2TaskMakerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2TaskMakerTests.m; sourceTree = "<group>"; };
+		7AB653E0158A059900D307E7 /* AQGridView+CellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLayout.h"; sourceTree = "<group>"; };
+		7AB653E1158A059900D307E7 /* AQGridView+CellLocationDelegation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLocationDelegation.h"; sourceTree = "<group>"; };
+		7AB653E2158A059900D307E7 /* AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridView.h; sourceTree = "<group>"; };
+		7AB653E3158A059900D307E7 /* AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridView.m; sourceTree = "<group>"; };
+		7AB653E4158A059900D307E7 /* AQGridViewAnimatorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewAnimatorItem.h; sourceTree = "<group>"; };
+		7AB653E5158A059900D307E7 /* AQGridViewAnimatorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewAnimatorItem.m; sourceTree = "<group>"; };
+		7AB653E6158A059900D307E7 /* AQGridViewCell+AQGridViewCellPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridViewCell+AQGridViewCellPrivate.h"; sourceTree = "<group>"; };
+		7AB653E7158A059900D307E7 /* AQGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewCell.h; sourceTree = "<group>"; };
+		7AB653E8158A059900D307E7 /* AQGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewCell.m; sourceTree = "<group>"; };
+		7AB653E9158A059900D307E7 /* AQGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewController.h; sourceTree = "<group>"; };
+		7AB653EA158A059900D307E7 /* AQGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewController.m; sourceTree = "<group>"; };
+		7AB653EB158A059900D307E7 /* AQGridViewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewData.h; sourceTree = "<group>"; };
+		7AB653EC158A059900D307E7 /* AQGridViewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewData.m; sourceTree = "<group>"; };
+		7AB653ED158A059900D307E7 /* AQGridViewUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewUpdateInfo.h; sourceTree = "<group>"; };
+		7AB653EE158A059900D307E7 /* AQGridViewUpdateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewUpdateInfo.m; sourceTree = "<group>"; };
+		7AB653EF158A059900D307E7 /* AQGridViewUpdateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewUpdateItem.h; sourceTree = "<group>"; };
+		7AB653F0158A059900D307E7 /* AQGridViewUpdateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewUpdateItem.m; sourceTree = "<group>"; };
+		7AB653F1158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+AQIndexesOutsideSet.h"; sourceTree = "<group>"; };
+		7AB653F2158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIndexesOutsideSet.m"; sourceTree = "<group>"; };
+		7AB653F3158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+AQIsSetContiguous.h"; sourceTree = "<group>"; };
+		7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIsSetContiguous.m"; sourceTree = "<group>"; };
+		7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AQGridView.h"; sourceTree = "<group>"; };
+		7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AQGridView.m"; sourceTree = "<group>"; };
 		932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterController.h; sourceTree = "<group>"; };
 		932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SA_OAuthTwitterController.m; sourceTree = "<group>"; };
 		932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterEngine.h; sourceTree = "<group>"; };
@@ -441,7 +485,6 @@
 		932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken_KeychainExtensions.h; sourceTree = "<group>"; };
 		932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		932FDB51153DDE5100E9D253 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		9387980B153ECEBD001FE131 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Classes; path = FTLibrary2/ThirdParty/AQGridView/Classes; sourceTree = "<group>"; };
 		9387980D153ED11A001FE131 /* FT2PageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageScrollView.h; path = FTLibrary2/Sources/FT2PageScrollView.h; sourceTree = "<group>"; };
 		9387980E153ED11A001FE131 /* FT2PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageScrollView.m; path = FTLibrary2/Sources/FT2PageScrollView.m; sourceTree = "<group>"; };
 		9387980F153ED11A001FE131 /* FT2PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageView.h; path = FTLibrary2/Sources/FT2PageView.h; sourceTree = "<group>"; };
@@ -621,6 +664,37 @@
 			name = Feeds;
 			sourceTree = "<group>";
 		};
+		7AB653DF158A059900D307E7 /* AQGridView */ = {
+			isa = PBXGroup;
+			children = (
+				7AB653E0158A059900D307E7 /* AQGridView+CellLayout.h */,
+				7AB653E1158A059900D307E7 /* AQGridView+CellLocationDelegation.h */,
+				7AB653E2158A059900D307E7 /* AQGridView.h */,
+				7AB653E3158A059900D307E7 /* AQGridView.m */,
+				7AB653E4158A059900D307E7 /* AQGridViewAnimatorItem.h */,
+				7AB653E5158A059900D307E7 /* AQGridViewAnimatorItem.m */,
+				7AB653E6158A059900D307E7 /* AQGridViewCell+AQGridViewCellPrivate.h */,
+				7AB653E7158A059900D307E7 /* AQGridViewCell.h */,
+				7AB653E8158A059900D307E7 /* AQGridViewCell.m */,
+				7AB653E9158A059900D307E7 /* AQGridViewController.h */,
+				7AB653EA158A059900D307E7 /* AQGridViewController.m */,
+				7AB653EB158A059900D307E7 /* AQGridViewData.h */,
+				7AB653EC158A059900D307E7 /* AQGridViewData.m */,
+				7AB653ED158A059900D307E7 /* AQGridViewUpdateInfo.h */,
+				7AB653EE158A059900D307E7 /* AQGridViewUpdateInfo.m */,
+				7AB653EF158A059900D307E7 /* AQGridViewUpdateItem.h */,
+				7AB653F0158A059900D307E7 /* AQGridViewUpdateItem.m */,
+				7AB653F1158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h */,
+				7AB653F2158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m */,
+				7AB653F3158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h */,
+				7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */,
+				7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */,
+				7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */,
+			);
+			name = AQGridView;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		932FDA3F153DD86800E9D253 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,8 +745,8 @@
 		932FDA5C153DD91B00E9D253 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				7AB653DF158A059900D307E7 /* AQGridView */,
 				68824F6315821B0900A20496 /* CHCSV */,
-				93879809153ECE8D001FE131 /* AQGridView */,
 				93C265D9153EC32E0010A059 /* Reachability */,
 				932FDAE4153DDBAA00E9D253 /* JSONFramework */,
 				932FDAC4153DDB2400E9D253 /* Facebook */,
@@ -830,14 +904,6 @@
 			path = OAuthConsumer;
 			sourceTree = "<group>";
 		};
-		93879809153ECE8D001FE131 /* AQGridView */ = {
-			isa = PBXGroup;
-			children = (
-				9387980B153ECEBD001FE131 /* Classes */,
-			);
-			name = AQGridView;
-			sourceTree = "<group>";
-		};
 		93879819153ED181001FE131 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -959,6 +1025,8 @@
 		938D583D153DCAB30067CEFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CF02070159244C0009A93BF /* FTAutoLineView.h */,
+				4CF02071159244C0009A93BF /* FTAutoLineView.m */,
 				6842EC511552BE2700C18C9F /* CoreText */,
 				93EDD066154705F50074EC20 /* FT2PageControl.h */,
 				93EDD067154705F50074EC20 /* FT2PageControl.m */,
@@ -1136,18 +1204,29 @@
 				6842EC731552D95800C18C9F /* FTCoreTextStyle.h in Headers */,
 				6842EC761552D95800C18C9F /* FTCoreTextView.h in Headers */,
 				6842EC941553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h in Headers */,
-
 				68824F6915821B0900A20496 /* CHCSV.h in Headers */,
 				68824F6A15821B0900A20496 /* CHCSVParser.h in Headers */,
 				68824F6D15821B0900A20496 /* NSArray+CHCSVAdditions.h in Headers */,
-
 				688D7B78156BE26E00B2156B /* FTShare.h in Headers */,
 				688D7B7A156BE26E00B2156B /* FTShareEmail.h in Headers */,
 				688D7B7C156BE26E00B2156B /* FTShareFacebook.h in Headers */,
 				688D7B7E156BE26E00B2156B /* FTShareMessageController.h in Headers */,
 				688D7B80156BE26E00B2156B /* FTShareTwitter.h in Headers */,
 				681C087A157505CC00BB8E2D /* FT2Download.h in Headers */,
-
+				7AB653F7158A059900D307E7 /* AQGridView+CellLayout.h in Headers */,
+				7AB653F8158A059900D307E7 /* AQGridView+CellLocationDelegation.h in Headers */,
+				7AB653F9158A059900D307E7 /* AQGridView.h in Headers */,
+				7AB653FB158A059900D307E7 /* AQGridViewAnimatorItem.h in Headers */,
+				7AB653FD158A059900D307E7 /* AQGridViewCell+AQGridViewCellPrivate.h in Headers */,
+				7AB653FE158A059900D307E7 /* AQGridViewCell.h in Headers */,
+				7AB65400158A059900D307E7 /* AQGridViewController.h in Headers */,
+				7AB65402158A059900D307E7 /* AQGridViewData.h in Headers */,
+				7AB65404158A059900D307E7 /* AQGridViewUpdateInfo.h in Headers */,
+				7AB65406158A059900D307E7 /* AQGridViewUpdateItem.h in Headers */,
+				7AB65408158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h in Headers */,
+				7AB6540A158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h in Headers */,
+				7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */,
+				4CF02072159244C0009A93BF /* FTAutoLineView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,7 +1331,6 @@
 				932FDAD5153DDB2400E9D253 /* FBDialog.bundle in Resources */,
 				932FDB3E153DDDF900E9D253 /* jQueryInject.txt in Resources */,
 				932FDB3F153DDDF900E9D253 /* jQueryInjectLandscape.txt in Resources */,
-				9387980C153ECEBD001FE131 /* Classes in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1364,17 +1442,25 @@
 				6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */,
 				6842EC771552D95800C18C9F /* FTCoreTextView.m in Sources */,
 				6842EC951553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m in Sources */,
-
 				68824F6B15821B0900A20496 /* CHCSVParser.m in Sources */,
 				68824F6E15821B0900A20496 /* NSArray+CHCSVAdditions.m in Sources */,
-
 				688D7B79156BE26E00B2156B /* FTShare.m in Sources */,
 				688D7B7B156BE26E00B2156B /* FTShareEmail.m in Sources */,
 				688D7B7D156BE26E00B2156B /* FTShareFacebook.m in Sources */,
 				688D7B7F156BE26E00B2156B /* FTShareMessageController.m in Sources */,
 				688D7B81156BE26E00B2156B /* FTShareTwitter.m in Sources */,
 				681C087B157505CC00BB8E2D /* FT2Download.m in Sources */,
-
+				7AB653FA158A059900D307E7 /* AQGridView.m in Sources */,
+				7AB653FC158A059900D307E7 /* AQGridViewAnimatorItem.m in Sources */,
+				7AB653FF158A059900D307E7 /* AQGridViewCell.m in Sources */,
+				7AB65401158A059900D307E7 /* AQGridViewController.m in Sources */,
+				7AB65403158A059900D307E7 /* AQGridViewData.m in Sources */,
+				7AB65405158A059900D307E7 /* AQGridViewUpdateInfo.m in Sources */,
+				7AB65407158A059900D307E7 /* AQGridViewUpdateItem.m in Sources */,
+				7AB65409158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
+				7AB6540B158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
+				7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */,
+				4CF02073159244C0009A93BF /* FTAutoLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

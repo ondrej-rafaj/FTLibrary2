@@ -24,6 +24,7 @@
 - (CGFloat)yOrigin;
 - (void)setYOrigin:(CGFloat)yOrigin;
 
+- (CGPoint)origin;
 - (void)setOrigin:(CGPoint)origin;
 - (void)positionAtX:(CGFloat)xOrigin andY:(CGFloat)yOrigin;
 
@@ -48,5 +49,31 @@
 - (void)setBottomMargin:(CGFloat)bottomMargin;
 - (CGFloat)rightMargin;
 - (void)setRightMargin:(CGFloat)rightMargin;
+
+- (void)setAutoresizingNone;
+- (void)setAutoresizingBottomLeft;
+- (void)setAutoresizingBottomRight;
+- (void)setAutoresizingTopLeft;
+- (void)setAutoresizingTopRight;
+- (void)setAutoresizingTopCenter;
+- (void)setAutoresizingCenter;
+- (void)setAutoresizingBottomCenter;
+- (void)setAutoresizingWidthAndHeight;
+
+
+- (CGFloat)baselinePosition;
+
+- (void)positionAtX:(CGFloat)xValue;
+- (void)positionAtY:(CGFloat)yValue;
+- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue;
+
+- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue withWidth:(CGFloat)width;
+- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue withHeight:(CGFloat)height;
+
+- (void)positionAtX:(CGFloat)xValue withHeight:(CGFloat)height;
+
+
+
+
 
 @end

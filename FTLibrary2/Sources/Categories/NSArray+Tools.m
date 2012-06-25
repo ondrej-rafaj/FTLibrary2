@@ -11,13 +11,9 @@
 
 @implementation NSArray (Tools)
 
-- (NSArray *)reversedArray {
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
-    NSEnumerator *enumerator = [self reverseObjectEnumerator];
-    for (id element in enumerator) {
-        [array addObject:element];
-    }
-    return array;
+- (NSArray *)reversedArray
+{
+    return self.reverseObjectEnumerator.allObjects;
 }
 
 + (id)arrayByOrderingSet:(NSSet *)set byKey:(NSString *)key ascending:(BOOL)ascending {
@@ -28,6 +24,35 @@
 															   ascending:ascending];
     [ret sortUsingDescriptors:[NSArray arrayWithObject:descriptor]];
     return ret;
+}
+
+- (NSArray *)safeSubarrayWithRange:(NSRange)range newRange:(NSRange *)returnedRange
+{
+	NSRange newRange = range;
+	NSInteger count = [self count];
+	if (range.location > count) {
+		newRange.location = 0;
+		newRange.length = 0;
+		if (returnedRange) *returnedRange = newRange;
+		return nil;
+	} else {
+		NSInteger remainingItemsNumber = count - range.location;
+		if (remainingItemsNumber > range.length) {
+			if (returnedRange) *returnedRange = newRange;
+			return [self subarrayWithRange:range];
+		}
+		else {
+			NSRange newRange = range;
+			newRange.length = remainingItemsNumber;
+			if (returnedRange) *returnedRange = newRange;
+			return [self subarrayWithRange:newRange];
+		}
+	}
+}
+
+- (NSArray *)safeSubarrayWithRange:(NSRange)range
+{
+	return [self safeSubarrayWithRange:range newRange:NULL];
 }
 
 @end

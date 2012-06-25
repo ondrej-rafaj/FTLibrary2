@@ -11,6 +11,8 @@
 #import "FBConnect.h"
 #import "FTShareMessageController.h"
 
+#define kFTShareFacebookPostNotification    @"FTShareFacebookPostNotification"
+
 #pragma mark --
 #pragma mark Data Type
 

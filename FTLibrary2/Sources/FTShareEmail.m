@@ -31,8 +31,8 @@
     BOOL isValidSubject = (self.subject && ([self.subject length] > 0));
     BOOL isPlain = (self.plainBody && ([self.plainBody length] > 0));
     BOOL isHtml = (self.htmlBody && ([self.htmlBody length] > 0));
-    BOOL valid = (isValidSubject && ((isHtml && isPlain) || isPlain));
-    if (!valid) NSLog(@"Mail requst eams not valid");
+    BOOL valid = (isValidSubject && (isHtml || isPlain));
+    if (!valid) NSLog(@"Mail request seams not valid");
     return valid;
 }
 
@@ -114,6 +114,7 @@
     if (self.mailDelegate && [self.mailDelegate respondsToSelector:@selector(mailSent:)]) {
         [self.mailDelegate mailSent:result];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFTShareEmailPostNotification object:[NSNumber numberWithInt:result]];
     [controller dismissModalViewControllerAnimated:YES];
 }
 

@@ -79,6 +79,7 @@ extern NSString * const FTCoreTextDataAttributes;
 
 - (NSArray *)stylesArray __deprecated;
 - (NSArray *)styles;
+- (FTCoreTextStyle *)styleForName:(NSString *)tagName;
 
 + (NSString *)stripTagsForString:(NSString *)string;
 + (NSArray *)pagesFromText:(NSString *)string;

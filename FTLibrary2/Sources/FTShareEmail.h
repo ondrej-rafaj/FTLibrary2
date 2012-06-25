@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <MessageUI/MessageUI.h>
 
+#define kFTShareEmailPostNotification       @"FTShareEmailPostNotification"
+
 #pragma mark --
 #pragma mark Data Type
 
