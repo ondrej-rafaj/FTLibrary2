@@ -10,8 +10,7 @@
 #import <CoreData/CoreData.h>
 
 @interface FT2Data : NSObject {
-    dispatch_queue_t _queue;
-    dispatch_queue_t _managedContextQueue;
+    
 }
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -33,11 +32,10 @@
 - (NSArray *)entitiesForName:(NSString *)entityName withSortDescriptors:(NSArray *)sortDescriptors;
 - (NSArray *)entitiesForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate andSortDescriptors:(NSArray *)sortDescriptors;
 
-- (id)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
-- (id)entityForName:(NSString *)entityName withUID:(id)uid;
+- (void)entityForName:(NSString *)entityName withUID:(id)uid fetchedEntity:(void (^)(NSManagedObject *object))block;
+- (void)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate fetchedEntity:(void (^)(NSManagedObject *object))block;
 
 - (void)performBlockOnContext:(void (^)(void))block;
-- (void)performBlockOnContextAndWait:(void (^)(void))block;
 
 - (id)storedObjectForKey:(NSString *)key;
 - (void)storeObject:(id)object forKey:(NSString *)key;

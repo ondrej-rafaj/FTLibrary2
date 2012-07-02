@@ -45,31 +45,17 @@ static NSString * __databaseName;
     self = [super init];
     if (self) {
         //init Core Data
-        NSAssert((managedObjectName || managedObjectName.length == 0), @"FT2Data initialized without Manajed Object Name");
+        NSAssert((managedObjectName || managedObjectName.length == 0), @"FT2Data initialized without Managed Object Name");
         __managedObjectModelName = managedObjectName;
         __databaseName = [managedObjectName stringByAppendingString:@".sqlite"];
-
-        
-        //init queues
-        _queue = dispatch_queue_create("com.fuerte.internetQueue",0); 
-		_managedContextQueue = dispatch_queue_create("com.fuerte.managedContext",0); 
 
     }
     return self;
 }
 
-
-- (void)dealloc {
-    dispatch_release(_queue);
-    dispatch_release(_managedContextQueue);
-    
-}
-
-
-
 - (NSArray *)entitiesForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate andSortDescriptors:(NSArray *)sortDescriptors {
     __block NSArray *entities = nil;
-    [self performBlockOnContextAndWait:^{
+    [self performBlockOnContext:^{
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
         NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
         
@@ -113,10 +99,14 @@ static NSString * __databaseName;
 
 
 
-- (id)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate {
-    __block NSManagedObject *entity = nil;
-    [self performBlockOnContextAndWait:^{
+- (void)entityForName:(NSString *)entityName withUID:(id)uid fetchedEntity:(void (^)(NSManagedObject *object))block {
+    [self performBlockOnContext:^{
         
+        static NSString *uidKey = @"uid";
+        NSString *stringUID = ([uid isKindOfClass:[NSNumber class]])? [(NSNumber *)uid stringValue] : uid;
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", uidKey, stringUID];
+        
+        NSManagedObject *entity = nil;
         NSEntityDescription *entityDesc = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
         
         if (!predicate) {
@@ -134,21 +124,39 @@ static NSString * __databaseName;
         NSArray *entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
         if (entities.count > 0) entity = [entities objectAtIndex:0];
         else entity = [[NSManagedObject alloc] initWithEntity:entityDesc insertIntoManagedObjectContext:self.managedObjectContext];
+        
+        if (![[entity valueForKey:uidKey] isEqual:stringUID]) {
+            [entity setValue:stringUID forKey:uidKey];
+        }
+        
+        block(entity);
     }];
-
-    return entity;
 }
 
-- (id)entityForName:(NSString *)entityName withUID:(id)uid {
-    static NSString *uidKey = @"uid";
-    NSString *stringUID = ([uid isKindOfClass:[NSNumber class]])? [(NSNumber *)uid stringValue] : uid;
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", uidKey, stringUID];
-    id entity = [self entityForName:entityName withPredicate:predicate];
-
-    if (![[entity valueForKey:uidKey] isEqual:stringUID]) {
-        [entity setValue:stringUID forKey:uidKey];
-    }
-    return entity;
+- (void)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate fetchedEntity:(void (^)(NSManagedObject *object))block {
+    [self performBlockOnContext:^{
+        
+        NSManagedObject *entity = nil;
+        NSEntityDescription *entityDesc = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
+        
+        if (!predicate) {
+            entity = [[NSManagedObject alloc] initWithEntity:entityDesc insertIntoManagedObjectContext:self.managedObjectContext];
+            return;
+        }
+        
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entityDesc];
+        [request setPredicate:predicate];
+        [request setFetchLimit:1];
+        
+        // Execute the fetch
+        NSError *error = nil;
+        NSArray *entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
+        if (entities.count > 0) entity = [entities objectAtIndex:0];
+        else entity = [[NSManagedObject alloc] initWithEntity:entityDesc insertIntoManagedObjectContext:self.managedObjectContext];
+        
+        block(entity);
+    }];
 }
 
 #pragma mark --
@@ -156,22 +164,11 @@ static NSString * __databaseName;
 
 - (void)performBlockOnContext:(void (^)(void))block
 {
-	if (dispatch_get_current_queue() == _managedContextQueue) {
-		block();
-	}
-	else {
-		dispatch_async(_managedContextQueue, block);
-	}
-}
-
-- (void)performBlockOnContextAndWait:(void (^)(void))block
-{
-	if (dispatch_get_current_queue() == _managedContextQueue) {
-		block();
-	}
-	else {
-		dispatch_sync(_managedContextQueue, block);
-	}
+    if (dispatch_get_current_queue() == dispatch_get_main_queue()) {
+        block();
+    } else {
+        dispatch_sync(dispatch_get_main_queue(), block);
+    }		
 }
 
 /**
@@ -181,7 +178,7 @@ static NSString * __databaseName;
 {
     if (__managedObjectContext != nil) return __managedObjectContext;
     
-    [self performBlockOnContextAndWait:^{
+    [self performBlockOnContext:^{
         NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
         if (coordinator != nil)
         {
@@ -202,7 +199,7 @@ static NSString * __databaseName;
     {
         return __managedObjectModel;
     }
-    [self performBlockOnContextAndWait:^{
+    [self performBlockOnContext:^{
         NSURL *modelURL = [[NSBundle mainBundle] URLForResource:__managedObjectModelName withExtension:@"momd"];
         __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     }];
@@ -220,7 +217,7 @@ static NSString * __databaseName;
         return __persistentStoreCoordinator;
     }
     
-    [self performBlockOnContextAndWait:^{
+    [self performBlockOnContext:^{
         
         //copy database if first time
         NSString *dbBundlePath = [FT2FileSystem pathForFileName:__databaseName checkBundleFirst:YES forDirectoryType:NSDocumentDirectory];        
@@ -266,7 +263,7 @@ static NSString * __databaseName;
 
 - (void)saveContext
 {
-	[self performBlockOnContextAndWait:^{
+	[self performBlockOnContext:^{
 		NSError *error = nil;
 		NSManagedObjectContext *aManagedObjectContext = self.managedObjectContext;
 		if (aManagedObjectContext != nil)
@@ -287,7 +284,7 @@ static NSString * __databaseName;
 {
 	__block NSManagedObject *returnedEntity = nil;
 	
-	[self performBlockOnContextAndWait:^{
+	[self performBlockOnContext:^{
 		returnedEntity = [[NSManagedObject alloc] initWithEntity:[NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext] insertIntoManagedObjectContext:self.managedObjectContext];
 	}];
     return returnedEntity;
@@ -298,7 +295,7 @@ static NSString * __databaseName;
 #pragma mark stored object
 
 /**
- *  wrapper to easely save data to sandboxed NSUserDefaults
+ *  wrapper to easily save data to sandboxed NSUserDefaults
  *  Use storedObjectForKey: and storeObject:forKey: for retrieve and set data
  *  Example:
  *      [self storeObejct:@"sometext" forKey:@"aKey"];

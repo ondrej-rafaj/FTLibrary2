@@ -40,12 +40,4 @@
 
 }
 
-+ (id)collectionFromURL:(NSURL *)url error:(NSError **)error {
-    NSError *_error = nil;
-    NSData *data = [FT2Download dataFromURL:url error:&_error];
-    id result = [self collectionFromData:data error:&_error];
-    *error = _error;
-    return result;
-}
-
 @end
