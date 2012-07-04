@@ -35,6 +35,9 @@
 - (void)entityForName:(NSString *)entityName withUID:(id)uid fetchedEntity:(void (^)(NSManagedObject *object))block;
 - (void)entityForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate fetchedEntity:(void (^)(NSManagedObject *object))block;
 
+- (void)deleteEntitiesForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
+- (void)deleteEntityForName:(NSString *)entityName withUID:(id)uid;
+
 - (void)performBlockOnContext:(void (^)(void))block;
 
 - (id)storedObjectForKey:(NSString *)key;

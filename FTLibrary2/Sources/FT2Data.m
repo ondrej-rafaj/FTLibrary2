@@ -99,6 +99,69 @@ static NSString * __databaseName;
 
 
 
+- (void)deleteEntitiesForName:(NSString *)entityName withPredicate:(NSPredicate *)predicate
+{
+	__block NSArray *entities = nil;
+    [self performBlockOnContext:^{
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
+        
+        if (!entity && entityName.length > 2) {
+            NSString *pathName = [entityName stringByReplacingCharactersInRange:NSMakeRange(0, 2) withString:@""];
+            entity = [NSEntityDescription entityForName:pathName inManagedObjectContext:[self managedObjectContext]];
+        }
+        [request setEntity:entity];
+        
+        //predicate
+        if (predicate) {
+            [request setPredicate:predicate];
+        }
+        
+        // Execute the fetch
+        NSError *error = nil;
+        entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
+		for (NSManagedObject *object in entities)
+			[self.managedObjectContext deleteObject:object];
+		[self saveContext];
+    }];
+
+}
+
+
+- (void)deleteEntityForName:(NSString *)entityName withUID:(id)uid
+{
+	[self performBlockOnContext:^{
+        static NSString *uidKey = @"uid";
+        NSString *stringUID = ([uid isKindOfClass:[NSNumber class]])? [(NSNumber *)uid stringValue] : uid;
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", uidKey, stringUID];
+        
+        NSManagedObject *entity = nil;
+        NSEntityDescription *entityDesc = [NSEntityDescription entityForName:entityName inManagedObjectContext:[self managedObjectContext]];
+        
+
+		
+		if (!predicate) {
+            entity = [[NSManagedObject alloc] initWithEntity:entityDesc insertIntoManagedObjectContext:self.managedObjectContext];
+            return;
+        }
+		
+        
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entityDesc];
+        [request setPredicate:predicate];
+        [request setFetchLimit:1];
+        
+        // Execute the fetch
+        NSError *error = nil;
+        NSArray *entities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
+        if (entities.count > 0) 
+		{
+			entity = [entities objectAtIndex:0];
+			[self.managedObjectContext deleteObject:entity];
+		}
+		[self saveContext];
+	}];
+}
 - (void)entityForName:(NSString *)entityName withUID:(id)uid fetchedEntity:(void (^)(NSManagedObject *object))block {
     [self performBlockOnContext:^{
         
