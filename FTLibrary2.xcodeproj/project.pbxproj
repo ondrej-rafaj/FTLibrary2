@@ -94,6 +94,10 @@
 		7AB6540B158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */; };
 		7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */; };
 		7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */; };
+		932D9E0B15A70CFE0041E999 /* FT2TransparentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 932D9E0915A70CFE0041E999 /* FT2TransparentView.h */; };
+		932D9E0C15A70CFE0041E999 /* FT2TransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 932D9E0A15A70CFE0041E999 /* FT2TransparentView.m */; };
+		932D9E0D15A70CFE0041E999 /* FT2TransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 932D9E0A15A70CFE0041E999 /* FT2TransparentView.m */; };
+		932D9E0E15A70CFE0041E999 /* FT2TransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 932D9E0A15A70CFE0041E999 /* FT2TransparentView.m */; };
 		932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */; };
 		932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDA67153DD96000E9D253 /* SA_OAuthTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */; };
@@ -385,6 +389,8 @@
 		7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIsSetContiguous.m"; sourceTree = "<group>"; };
 		7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AQGridView.h"; sourceTree = "<group>"; };
 		7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AQGridView.m"; sourceTree = "<group>"; };
+		932D9E0915A70CFE0041E999 /* FT2TransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2TransparentView.h; path = FTLibrary2/Sources/FT2TransparentView.h; sourceTree = "<group>"; };
+		932D9E0A15A70CFE0041E999 /* FT2TransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2TransparentView.m; path = FTLibrary2/Sources/FT2TransparentView.m; sourceTree = "<group>"; };
 		932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterController.h; sourceTree = "<group>"; };
 		932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SA_OAuthTwitterController.m; sourceTree = "<group>"; };
 		932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterEngine.h; sourceTree = "<group>"; };
@@ -1030,6 +1036,8 @@
 				938CB4E7153DD4BD0057A19B /* FT2AlertView.m */,
 				938CB4ED153DD4BD0057A19B /* FT2CustomAnimationView.h */,
 				938CB4E8153DD4BD0057A19B /* FT2CustomAnimationView.m */,
+				932D9E0915A70CFE0041E999 /* FT2TransparentView.h */,
+				932D9E0A15A70CFE0041E999 /* FT2TransparentView.m */,
 				93D385E0154FF195009A6895 /* Magnifying Views */,
 				938CB502153DD54F0057A19B /* PageScrollView */,
 			);
@@ -1220,6 +1228,7 @@
 				7AB65408158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h in Headers */,
 				7AB6540A158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h in Headers */,
 				7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */,
+				932D9E0B15A70CFE0041E999 /* FT2TransparentView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1360,6 +1369,7 @@
 				93D385EB154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 				68824F6C15821B0900A20496 /* CHCSVParser.m in Sources */,
 				68824F6F15821B0900A20496 /* NSArray+CHCSVAdditions.m in Sources */,
+				932D9E0E15A70CFE0041E999 /* FT2TransparentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1453,6 +1463,7 @@
 				7AB65409158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
 				7AB6540B158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
 				7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */,
+				932D9E0C15A70CFE0041E999 /* FT2TransparentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1508,6 +1519,7 @@
 				93D385EA154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 				6842EC751552D95800C18C9F /* FTCoreTextStyle.m in Sources */,
 				6842EC781552D95800C18C9F /* FTCoreTextView.m in Sources */,
+				932D9E0D15A70CFE0041E999 /* FT2TransparentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
