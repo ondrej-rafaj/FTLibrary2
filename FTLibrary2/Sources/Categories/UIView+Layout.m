@@ -193,4 +193,82 @@
 	}
 }
 
+- (void)setAutoresizingNone {
+	[self setAutoresizingMask:UIViewAutoresizingNone];
+}
+
+- (void)setAutoresizingBottomLeft {
+	[self setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin];
+}
+
+- (void)setAutoresizingBottomRight {
+	[self setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin];
+}
+
+- (void)setAutoresizingTopLeft {
+	[self setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin];
+}
+
+- (void)setAutoresizingTopRight {
+	[self setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin];
+}
+
+- (void)setAutoresizingTopCenter {
+	[self setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
+}
+
+- (void)setAutoresizingCenter {
+	[self setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
+}
+
+- (void)setAutoresizingBottomCenter {
+	[self setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
+}
+
+- (void)setAutoresizingWidthAndHeight {
+	[self setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+}
+
+
+- (CGFloat)baselinePosition {
+	return CGRectGetMaxX(self.frame);
+}
+
+- (void)positionAtX:(CGFloat)xValue {
+	CGRect frame = [self frame];
+	frame.origin.x = roundf(xValue);
+	[self setFrame:frame];
+}
+
+- (void)positionAtY:(CGFloat)yValue {
+	CGRect frame = [self frame];
+	frame.origin.y = roundf(yValue);
+	[self setFrame:frame];
+}
+
+- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue withWidth:(CGFloat)width {
+	CGRect frame = [self frame];
+	frame.origin.x = roundf(xValue);
+	frame.origin.y = roundf(yValue);
+	frame.size.width = width;
+	[self setFrame:frame];	
+}
+
+- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue withHeight:(CGFloat)height {
+	CGRect frame = [self frame];
+	frame.origin.x = roundf(xValue);
+	frame.origin.y = roundf(yValue);
+	frame.size.height = height;
+	[self setFrame:frame];	
+}
+
+- (void)positionAtX:(CGFloat)xValue withHeight:(CGFloat)height {
+	CGRect frame = [self frame];
+	frame.origin.x = roundf(xValue);
+	frame.size.height = height;
+	[self setFrame:frame];	
+}
+
+
+
 @end
