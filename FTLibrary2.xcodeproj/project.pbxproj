@@ -265,36 +265,6 @@
 		938D5832153DCA840067CEFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 938D5830153DCA840067CEFA /* InfoPlist.strings */; };
 		938D5834153DCA840067CEFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5833153DCA840067CEFA /* main.m */; };
 		938D5838153DCA840067CEFA /* FT2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5837153DCA840067CEFA /* FT2AppDelegate.m */; };
-		93B5B11F15A714130049B3A0 /* CGAffineTransformAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B0FF15A714130049B3A0 /* CGAffineTransformAdditions.h */; };
-		93B5B12015A714130049B3A0 /* CoreGraphicAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B10015A714130049B3A0 /* CoreGraphicAdditions.h */; };
-		93B5B12115A714130049B3A0 /* NSArray+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B10115A714130049B3A0 /* NSArray+Tools.h */; };
-		93B5B12215A714130049B3A0 /* NSArray+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B10215A714130049B3A0 /* NSArray+Tools.m */; };
-		93B5B12315A714130049B3A0 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B10315A714130049B3A0 /* NSData+Base64.h */; };
-		93B5B12415A714130049B3A0 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B10415A714130049B3A0 /* NSData+Base64.m */; };
-		93B5B12515A714130049B3A0 /* NSDate+NSDate_TimeAgo.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B10515A714130049B3A0 /* NSDate+NSDate_TimeAgo.h */; };
-		93B5B12615A714130049B3A0 /* NSDate+NSDate_TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B10615A714130049B3A0 /* NSDate+NSDate_TimeAgo.m */; };
-		93B5B12715A714130049B3A0 /* NSIndexPath+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B10715A714130049B3A0 /* NSIndexPath+Tools.h */; };
-		93B5B12815A714130049B3A0 /* NSIndexPath+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B10815A714130049B3A0 /* NSIndexPath+Tools.m */; };
-		93B5B12915A714130049B3A0 /* NSString+UUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B10915A714130049B3A0 /* NSString+UUID.h */; };
-		93B5B12A15A714130049B3A0 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B10A15A714130049B3A0 /* NSString+UUID.m */; };
-		93B5B12B15A714130049B3A0 /* UIColor+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B10B15A714130049B3A0 /* UIColor+Tools.h */; };
-		93B5B12C15A714130049B3A0 /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B10C15A714130049B3A0 /* UIColor+Tools.m */; };
-		93B5B12D15A714130049B3A0 /* UIImage+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B10D15A714130049B3A0 /* UIImage+Alpha.h */; };
-		93B5B12E15A714130049B3A0 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B10E15A714130049B3A0 /* UIImage+Alpha.m */; };
-		93B5B12F15A714130049B3A0 /* UIImage+ColorPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B10F15A714130049B3A0 /* UIImage+ColorPicker.h */; };
-		93B5B13015A714130049B3A0 /* UIImage+ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11015A714130049B3A0 /* UIImage+ColorPicker.m */; };
-		93B5B13115A714130049B3A0 /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B11115A714130049B3A0 /* UIImage+Resize.h */; };
-		93B5B13215A714130049B3A0 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11215A714130049B3A0 /* UIImage+Resize.m */; };
-		93B5B13315A714130049B3A0 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B11315A714130049B3A0 /* UIImage+RoundedCorner.h */; };
-		93B5B13415A714130049B3A0 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11415A714130049B3A0 /* UIImage+RoundedCorner.m */; };
-		93B5B13515A714130049B3A0 /* UIImage+Tint.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B11515A714130049B3A0 /* UIImage+Tint.h */; };
-		93B5B13615A714130049B3A0 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11615A714130049B3A0 /* UIImage+Tint.m */; };
-		93B5B13715A714130049B3A0 /* UIImage+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B11715A714130049B3A0 /* UIImage+Tools.h */; };
-		93B5B13815A714130049B3A0 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11815A714130049B3A0 /* UIImage+Tools.m */; };
-		93B5B13915A714130049B3A0 /* UILabel+DynamicHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B11915A714130049B3A0 /* UILabel+DynamicHeight.h */; };
-		93B5B13A15A714130049B3A0 /* UILabel+DynamicHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11A15A714130049B3A0 /* UILabel+DynamicHeight.m */; };
-		93B5B13B15A714130049B3A0 /* UIView+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B11B15A714130049B3A0 /* UIView+Layout.h */; };
-		93B5B13C15A714130049B3A0 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11C15A714130049B3A0 /* UIView+Layout.m */; };
 		93B5B13D15A714130049B3A0 /* FT2TransparentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B11D15A714130049B3A0 /* FT2TransparentView.h */; };
 		93B5B13E15A714130049B3A0 /* FT2TransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11E15A714130049B3A0 /* FT2TransparentView.m */; };
 		93C265C4153EBF6A0010A059 /* FT2ReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */; };
@@ -1332,22 +1302,6 @@
 				7AB6540A158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h in Headers */,
 				7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */,
 				4CF02072159244C0009A93BF /* FTAutoLineView.h in Headers */,
-				93B5B11F15A714130049B3A0 /* CGAffineTransformAdditions.h in Headers */,
-				93B5B12015A714130049B3A0 /* CoreGraphicAdditions.h in Headers */,
-				93B5B12115A714130049B3A0 /* NSArray+Tools.h in Headers */,
-				93B5B12315A714130049B3A0 /* NSData+Base64.h in Headers */,
-				93B5B12515A714130049B3A0 /* NSDate+NSDate_TimeAgo.h in Headers */,
-				93B5B12715A714130049B3A0 /* NSIndexPath+Tools.h in Headers */,
-				93B5B12915A714130049B3A0 /* NSString+UUID.h in Headers */,
-				93B5B12B15A714130049B3A0 /* UIColor+Tools.h in Headers */,
-				93B5B12D15A714130049B3A0 /* UIImage+Alpha.h in Headers */,
-				93B5B12F15A714130049B3A0 /* UIImage+ColorPicker.h in Headers */,
-				93B5B13115A714130049B3A0 /* UIImage+Resize.h in Headers */,
-				93B5B13315A714130049B3A0 /* UIImage+RoundedCorner.h in Headers */,
-				93B5B13515A714130049B3A0 /* UIImage+Tint.h in Headers */,
-				93B5B13715A714130049B3A0 /* UIImage+Tools.h in Headers */,
-				93B5B13915A714130049B3A0 /* UILabel+DynamicHeight.h in Headers */,
-				93B5B13B15A714130049B3A0 /* UIView+Layout.h in Headers */,
 				93B5B13D15A714130049B3A0 /* FT2TransparentView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1583,20 +1537,6 @@
 				7AB6540B158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
 				7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */,
 				4CF02073159244C0009A93BF /* FTAutoLineView.m in Sources */,
-				93B5B12215A714130049B3A0 /* NSArray+Tools.m in Sources */,
-				93B5B12415A714130049B3A0 /* NSData+Base64.m in Sources */,
-				93B5B12615A714130049B3A0 /* NSDate+NSDate_TimeAgo.m in Sources */,
-				93B5B12815A714130049B3A0 /* NSIndexPath+Tools.m in Sources */,
-				93B5B12A15A714130049B3A0 /* NSString+UUID.m in Sources */,
-				93B5B12C15A714130049B3A0 /* UIColor+Tools.m in Sources */,
-				93B5B12E15A714130049B3A0 /* UIImage+Alpha.m in Sources */,
-				93B5B13015A714130049B3A0 /* UIImage+ColorPicker.m in Sources */,
-				93B5B13215A714130049B3A0 /* UIImage+Resize.m in Sources */,
-				93B5B13415A714130049B3A0 /* UIImage+RoundedCorner.m in Sources */,
-				93B5B13615A714130049B3A0 /* UIImage+Tint.m in Sources */,
-				93B5B13815A714130049B3A0 /* UIImage+Tools.m in Sources */,
-				93B5B13A15A714130049B3A0 /* UILabel+DynamicHeight.m in Sources */,
-				93B5B13C15A714130049B3A0 /* UIView+Layout.m in Sources */,
 				93B5B13E15A714130049B3A0 /* FT2TransparentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
