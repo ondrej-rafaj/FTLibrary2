@@ -141,6 +141,24 @@
 	}
 }
 
+- (void)centerVertically
+{
+	if (self.superview) {
+		CGRect frame = self.frame;
+		frame.origin.y = roundf((self.superview.height - self.height) / 2.f);
+		self.frame = frame;
+	}	
+}
+
+- (void)centerHorizontally
+{
+	if (self.superview) {
+		CGRect frame = self.frame;
+		frame.origin.x = roundf((self.superview.width - self.width) / 2.f);
+		self.frame = frame;
+	}
+}
+
 - (CGFloat)bottomMargin
 {
 	if (self.superview) {

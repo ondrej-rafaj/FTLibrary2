@@ -44,6 +44,8 @@
 //superview related
 
 - (void)centerInSuperview;
+- (void)centerVertically;
+- (void)centerHorizontally;
 
 - (CGFloat)bottomMargin;
 - (void)setBottomMargin:(CGFloat)bottomMargin;
