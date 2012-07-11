@@ -14,7 +14,7 @@ static dispatch_queue_t _queue;
 
 + (NSData *)dataFromURL:(NSURL *)url error:(NSError **)error {
     NSError *_error = nil;
-    
+
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageAllowed timeoutInterval:10];
     NSURLResponse *response;
     NSData * data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&_error];

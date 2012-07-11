@@ -70,7 +70,9 @@
     
     if ([self isSourceLocal] && self.delegate && [self.delegate respondsToSelector:@selector(relatedURLForFile:)]) {
         NSURL *baseURL = [self.delegate relatedURLForFile:self];
-        _source = [NSURL URLWithString:_source.path relativeToURL:baseURL];
+        if (![baseURL isEqual:source]) {
+            _source = [NSURL URLWithString:_source.path relativeToURL:baseURL];
+        }
     }
 }
 
