@@ -69,6 +69,7 @@ void reachabilityDidChange(SCNetworkReachabilityRef target, SCNetworkReachabilit
 
 - (void) dealloc
 {	
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
     if (_reachabilityRef != NULL) {
         SCNetworkReachabilityUnscheduleFromRunLoop(_reachabilityRef, (__bridge CFRunLoopRef)[NSRunLoop mainRunLoop], (__bridge CFStringRef)[[NSRunLoop mainRunLoop] currentMode]);
         CFRelease(_reachabilityRef);
