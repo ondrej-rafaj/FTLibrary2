@@ -12,6 +12,8 @@
 
 - (id)initWithTitle:(NSString *)title message:(NSString *)message actionBlock:(void (^)(NSInteger clikedButtonIndex))actionBlock cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...;
 
++ (id)showAlertViewWithTitle:(NSString *)title message:(NSString *)message actionBlock:(void (^)(NSInteger clikedButtonIndex))actionBlock cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...;
+
 @property (nonatomic, copy) void (^cancelBlock)(void);
 @property (nonatomic, copy) void (^actionBlock)(NSInteger clikedButtonIndex);
 
