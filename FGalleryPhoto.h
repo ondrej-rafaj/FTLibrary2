@@ -12,7 +12,7 @@
 @protocol FGalleryPhotoDelegate;
 
 @interface FGalleryPhoto : NSObject {
-	
+@public
 	// value which determines if the photo was initialized with local file paths or network paths.
 	BOOL _useNetwork;
 	

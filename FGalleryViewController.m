@@ -7,6 +7,7 @@
 //
 
 #import "FGalleryViewController.h"
+#import "FT2FileSystem.h"
 
 #define kThumbnailSize 75
 #define kThumbnailSpacing 4
@@ -980,7 +981,21 @@
 	{
 		thumbPath = [_photoSource photoGallery:self urlForPhotoSize:FGalleryPhotoSizeThumbnail atIndex:index];
 		fullsizePath = [_photoSource photoGallery:self urlForPhotoSize:FGalleryPhotoSizeFullsize atIndex:index];
-		photo = [[[FGalleryPhoto alloc] initWithThumbnailUrl:thumbPath fullsizeUrl:fullsizePath delegate:self] autorelease];
+        
+        NSString* fileName = [[[[fullsizePath stringByReplacingOccurrencesOfString:@"\\" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@""] stringByReplacingOccurrencesOfString:@":" withString:@""] stringByReplacingOccurrencesOfString:@"." withString:@""];
+        NSString* filePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:fileName];
+        
+        if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
+        {
+            photo = [[[FGalleryPhoto alloc] initWithThumbnailPath:filePath fullsizePath:filePath delegate:self] autorelease];
+        }
+        else
+        {
+            photo = [[[FGalleryPhoto alloc] initWithThumbnailUrl:thumbPath fullsizeUrl:fullsizePath delegate:self] autorelease];
+        }
+                                    
+//       [[NSFileManager defaultManager] createDirectoryAtPath:[filePath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:attr error:nil];
+    
 	}
 	else 
 	{
@@ -1053,6 +1068,11 @@
 
 - (void)galleryPhoto:(FGalleryPhoto*)photo didLoadThumbnail:(UIImage*)image
 {
+    NSString* fileName = [[[[photo->_fullsizeUrl stringByReplacingOccurrencesOfString:@"\\" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@""] stringByReplacingOccurrencesOfString:@":" withString:@""] stringByReplacingOccurrencesOfString:@"." withString:@""];
+    NSString* filePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:fileName];
+
+    [UIImagePNGRepresentation(image) writeToFile:filePath atomically:YES];
+        
 	// grab the associated image view
 	FGalleryPhotoView *photoView = [_photoViews objectAtIndex:photo.tag];
 	

@@ -123,8 +123,8 @@
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
-	NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] bundlePath], _fullsizeUrl];
-	_fullsize = [[UIImage imageWithContentsOfFile:path] retain];
+//	NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] bundlePath], _fullsizeUrl];
+	_fullsize = [[UIImage imageWithContentsOfFile:_fullsizeUrl] retain];
 	
 	_hasFullsizeLoaded = YES;
 	_isFullsizeLoading = NO;
@@ -139,8 +139,8 @@
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
-	NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] bundlePath], _thumbUrl];
-	_thumbnail = [[UIImage imageWithContentsOfFile:path] retain];
+//	NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] bundlePath], _thumbUrl];
+	_thumbnail = [[UIImage imageWithContentsOfFile:_thumbUrl] retain];
 	
 	_hasThumbLoaded = YES;
 	_isThumbLoading = NO;
