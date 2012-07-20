@@ -295,6 +295,15 @@
 		93D385ED154FF1B0009A6895 /* FT2MagnifyingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D385E5154FF1B0009A6895 /* FT2MagnifyingView.h */; };
 		93EDD068154705F50074EC20 /* FT2PageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EDD066154705F50074EC20 /* FT2PageControl.h */; };
 		93EDD069154705F50074EC20 /* FT2PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EDD067154705F50074EC20 /* FT2PageControl.m */; };
+		DEE3646C15B993A900CE958D /* FGalleryPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE3646615B993A900CE958D /* FGalleryPhoto.h */; };
+		DEE3646D15B993A900CE958D /* FGalleryPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646715B993A900CE958D /* FGalleryPhoto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE3646E15B993A900CE958D /* FGalleryPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646715B993A900CE958D /* FGalleryPhoto.m */; };
+		DEE3646F15B993A900CE958D /* FGalleryPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE3646815B993A900CE958D /* FGalleryPhotoView.h */; };
+		DEE3647015B993A900CE958D /* FGalleryPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646915B993A900CE958D /* FGalleryPhotoView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE3647115B993A900CE958D /* FGalleryPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646915B993A900CE958D /* FGalleryPhotoView.m */; };
+		DEE3647215B993A900CE958D /* FGalleryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE3646A15B993A900CE958D /* FGalleryViewController.h */; };
+		DEE3647315B993A900CE958D /* FGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646B15B993A900CE958D /* FGalleryViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DEE3647415B993A900CE958D /* FGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646B15B993A900CE958D /* FGalleryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -585,6 +594,12 @@
 		93D385E5154FF1B0009A6895 /* FT2MagnifyingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2MagnifyingView.h; path = FTLibrary2/Sources/FT2MagnifyingView.h; sourceTree = "<group>"; };
 		93EDD066154705F50074EC20 /* FT2PageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageControl.h; path = FTLibrary2/Sources/FT2PageControl.h; sourceTree = "<group>"; };
 		93EDD067154705F50074EC20 /* FT2PageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageControl.m; path = FTLibrary2/Sources/FT2PageControl.m; sourceTree = "<group>"; };
+		DEE3646615B993A900CE958D /* FGalleryPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryPhoto.h; sourceTree = "<group>"; };
+		DEE3646715B993A900CE958D /* FGalleryPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryPhoto.m; sourceTree = "<group>"; };
+		DEE3646815B993A900CE958D /* FGalleryPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryPhotoView.h; sourceTree = "<group>"; };
+		DEE3646915B993A900CE958D /* FGalleryPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryPhotoView.m; sourceTree = "<group>"; };
+		DEE3646A15B993A900CE958D /* FGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryViewController.h; sourceTree = "<group>"; };
+		DEE3646B15B993A900CE958D /* FGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -779,6 +794,7 @@
 		932FDA5C153DD91B00E9D253 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				DEE3646415B9936900CE958D /* FGallery */,
 				7AB653DF158A059900D307E7 /* AQGridView */,
 				68824F6315821B0900A20496 /* CHCSV */,
 				93C265D9153EC32E0010A059 /* Reachability */,
@@ -1177,6 +1193,19 @@
 			name = "Magnifying Views";
 			sourceTree = "<group>";
 		};
+		DEE3646415B9936900CE958D /* FGallery */ = {
+			isa = PBXGroup;
+			children = (
+				DEE3646615B993A900CE958D /* FGalleryPhoto.h */,
+				DEE3646715B993A900CE958D /* FGalleryPhoto.m */,
+				DEE3646815B993A900CE958D /* FGalleryPhotoView.h */,
+				DEE3646915B993A900CE958D /* FGalleryPhotoView.m */,
+				DEE3646A15B993A900CE958D /* FGalleryViewController.h */,
+				DEE3646B15B993A900CE958D /* FGalleryViewController.m */,
+			);
+			name = FGallery;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1303,6 +1332,9 @@
 				7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */,
 				4CF02072159244C0009A93BF /* FTAutoLineView.h in Headers */,
 				93B5B13D15A714130049B3A0 /* FT2TransparentView.h in Headers */,
+				DEE3646C15B993A900CE958D /* FGalleryPhoto.h in Headers */,
+				DEE3646F15B993A900CE958D /* FGalleryPhotoView.h in Headers */,
+				DEE3647215B993A900CE958D /* FGalleryViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1538,6 +1570,9 @@
 				7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */,
 				4CF02073159244C0009A93BF /* FTAutoLineView.m in Sources */,
 				93B5B13E15A714130049B3A0 /* FT2TransparentView.m in Sources */,
+				DEE3646D15B993A900CE958D /* FGalleryPhoto.m in Sources */,
+				DEE3647015B993A900CE958D /* FGalleryPhotoView.m in Sources */,
+				DEE3647315B993A900CE958D /* FGalleryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1593,6 +1628,9 @@
 				93D385EA154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 				6842EC751552D95800C18C9F /* FTCoreTextStyle.m in Sources */,
 				6842EC781552D95800C18C9F /* FTCoreTextView.m in Sources */,
+				DEE3646E15B993A900CE958D /* FGalleryPhoto.m in Sources */,
+				DEE3647115B993A900CE958D /* FGalleryPhotoView.m in Sources */,
+				DEE3647415B993A900CE958D /* FGalleryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
