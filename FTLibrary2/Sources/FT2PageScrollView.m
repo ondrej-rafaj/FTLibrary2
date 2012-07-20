@@ -498,8 +498,9 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-	if (decelerate) {
-		if (_pageScrollViewFlags.delegateDidSlideToIndex) {
+	if (!decelerate) {
+		if (_pageScrollViewFlags.delegateDidSlideToIndex) 
+        {
 			[_pageScrollViewDelegate pageScrollView:self didSlideToIndex:[self selectedIndex]];
 		}
 	} else if (_pageScrollViewFlags.delegateCanBeRotated && self.canBeRotated) {
