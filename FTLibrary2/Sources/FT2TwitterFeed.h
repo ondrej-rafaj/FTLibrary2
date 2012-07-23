@@ -11,7 +11,7 @@
 
 #define twitter_URL             @"https://api.twitter.com/statuses/user_timeline.json?screen_name=%@&include_rts=%d"
 #define thumbnail_format        @"https://api.twitter.com/1/users/profile_image?screen_name=%@&size=normal"
-#define twitter_date_format     @"eee MMM dd HH:mm:ss zzzz yyyy"
+#define twitter_date_format     @"eee MMM dd HH:mm:ss z yyyy"
 
 @interface FT2TwitterFeed : FT2JSONCollection
 
