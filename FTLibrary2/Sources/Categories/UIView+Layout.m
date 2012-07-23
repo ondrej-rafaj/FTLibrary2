@@ -99,6 +99,11 @@
 	return self.frame.origin;
 }
 
+- (CGSize)size
+{
+	return self.frame.size;
+}
+
 - (void)setBottom:(CGFloat)bottom
 {
 	CGRect frame = self.frame;

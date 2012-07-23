@@ -24,6 +24,13 @@
 	return self;
 }
 
++ (id)showAlertViewWithTitle:(NSString *)title message:(NSString *)message actionBlock:(void (^)(NSInteger clikedButtonIndex))actionBlock cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
+{
+	FT2AlertView *a = [[FT2AlertView alloc] initWithTitle:title message:message actionBlock:actionBlock cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles];
+	[a show];
+	return a;
+}
+
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
 	if (self.cancelButtonIndex == buttonIndex) {
