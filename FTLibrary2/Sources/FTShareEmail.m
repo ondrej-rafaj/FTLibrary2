@@ -74,8 +74,8 @@
 - (void)shareViaMail:(FTShareEmailData *)data {
     if (![data isRequestValid]) {
         if (self.mailDelegate && [self.mailDelegate respondsToSelector:@selector(mailShareData)]) {
-            data = [self.mailDelegate mailShareData];      
-            if (![data isRequestValid]) [NSException raise:@"Mail cannot post empy data" format:nil];
+            data = [self.mailDelegate mailShareData];
+            if (![data isRequestValid]) [NSException raise:@"Mail cannot post empty data" format:nil];
         }
         
     }
@@ -103,7 +103,9 @@
     
     
     
-	if(mc) [_referencedController presentModalViewController:mc animated:YES];
+	if(mc)  {
+        [_referencedController presentModalViewController:mc animated:YES];
+    }
 	[mc release];  
 }
 
