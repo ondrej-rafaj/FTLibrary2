@@ -691,7 +691,8 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 						
                     }
                     else {
-                        NSLog(@"FTCoreTextView :%@ - Couldn't find image '%@' in main bundle", self, elementContentRange);
+						// NOTICE: %@ vs. an NSRange struct won’t work, and calling an image "a range" is weird anyway
+                        // NSLog(@"FTCoreTextView :%@ - Couldn't find image '%@' in main bundle", self, elementContentRange);
                         [processedString replaceCharactersInRange:tagRange withString:@""];
                     }
                 }
