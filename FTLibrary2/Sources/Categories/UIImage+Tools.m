@@ -312,7 +312,7 @@ static inline CGFloat toRadians (CGFloat degrees) { return degrees * M_PI/180.0f
 	int newImageHeight = iheight*scaleFactor;
 	NSAssert(newImageWidth != 0 && newImageHeight != 0, @"Attempt to create 0x0 image");
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
-	uint8_t *pixels = (uint8_t *) malloc(newImageWidth * newImageHeight * sizeof(pixels));
+	uint8_t *pixels = (uint8_t *) malloc(newImageWidth * newImageHeight * sizeof(uint8_t));
 	NSAssert(pixels, @"not enought memory to alloc data for converted image");
 	
 	CGContextRef context = CGBitmapContextCreate(pixels, newImageWidth, newImageHeight, 8, newImageWidth * sizeof(uint8_t), colorSpace, kCGBitmapByteOrderDefault | kCGImageAlphaNone);
@@ -485,7 +485,7 @@ static inline CGFloat toRadians (CGFloat degrees) { return degrees * M_PI/180.0f
 	NSInteger samplesTakenInVertical = height  >> 1;
 	
 	NSInteger w, h; //random
-	h = 0;
+					// h = 0; // dead value
 	unsigned char c;
 	for(NSInteger i = 0; i < samplesTakenInHorizontal; i+=2){
 		//top line border

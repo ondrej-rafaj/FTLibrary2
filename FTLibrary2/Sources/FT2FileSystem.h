@@ -13,10 +13,10 @@
 + (NSString *)documentDirectory;
 + (NSString *)libraryDirectory;
 
-+ (void)writeData:(NSData *)data toDocumentsWithName:(NSString *)fileName error:(NSError **)error;
++ (BOOL)writeData:(NSData *)data toDocumentsWithName:(NSString *)fileName error:(NSError **)error;
 + (NSData *)dataFromDocumentsWithName:(NSString *)fileName checkBundleFirst:(BOOL)chekcBundle;
 
-+ (void)writeData:(NSData *)data withName:(NSString *)fileName forDirectoryType:(NSSearchPathDirectory)directory error:(NSError **)error;
++ (BOOL)writeData:(NSData *)data withName:(NSString *)fileName forDirectoryType:(NSSearchPathDirectory)directory error:(NSError **)error;
 + (NSData *)dataWithName:(NSString *)fileName checkBundleFirst:(BOOL)chekcBundle forDirectoryType:(NSSearchPathDirectory)directory;
 
 + (NSString *)pathForFileName:(NSString *)fileName checkBundleFirst:(BOOL)chekcBundle forDirectoryType:(NSSearchPathDirectory)directory;

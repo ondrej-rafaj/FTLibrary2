@@ -11,7 +11,7 @@
 
 @implementation UIImage (ColorPicker)
 
-- (CGContextRef) createARGBBitmapContextFromImage:(CGImageRef) inImage {
+- (CGContextRef) newARGBBitmapContextFromImage:(CGImageRef) inImage {
     
     CGContextRef    context = NULL;
     CGColorSpaceRef colorSpace;
@@ -61,12 +61,12 @@
                                      kCGImageAlphaPremultipliedFirst);
     if (context == NULL)
     {
-        free (bitmapData);
         fprintf (stderr, "Context not created!");
     }
     
     // Make sure and release colorspace before returning
     CGColorSpaceRelease( colorSpace );
+	free (bitmapData);
     
     return context;
 }
@@ -80,7 +80,7 @@
     // Create off screen bitmap context to draw the image into. Format ARGB is 4 bytes for each pixel: Alpa, Red, Green, Blue
     
     
-    CGContextRef cgctx = [self createARGBBitmapContextFromImage:inImage];
+    CGContextRef cgctx = [self newARGBBitmapContextFromImage:inImage];
     if (cgctx == NULL) { return nil; /* error */ }
     
     size_t w = CGImageGetWidth(inImage);

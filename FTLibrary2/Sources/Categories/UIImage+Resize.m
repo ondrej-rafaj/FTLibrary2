@@ -56,7 +56,7 @@
 // Returns a rescaled copy of the image, taking into account its orientation
 // The image will be scaled disproportionately if necessary to fit the bounds specified by the parameter
 - (UIImage *)resizedImage:(CGSize)newSize interpolationQuality:(CGInterpolationQuality)quality {
-    BOOL drawTransposed;
+    BOOL drawTransposed = NO;
     
     switch (self.imageOrientation) {
         case UIImageOrientationLeft:

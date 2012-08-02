@@ -93,6 +93,8 @@
         FTShareMessageController *messageController = [[FTShareMessageController alloc] initWithMessage:_twitterParams.message type:FTShareMessageControllerTypeTwitter andelegate:self];
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:messageController];
         [_referencedController presentModalViewController:nc animated:YES];
+		[messageController release];
+		[nc release];
         return;
     } 
     
@@ -191,7 +193,8 @@
     FTShareTwitterData *data = [[FTShareTwitterData alloc] init];
     [data setMessage:message];
     [data setHasControllerSupport:NO];
-    [self shareViaTwitter:data];    
+    [self shareViaTwitter:data];
+	[data release];
 }
 
 - (void)shareMessageControllerDidCancel:(FTShareMessageController *)controller {

@@ -19,7 +19,7 @@
     
     NSString *dataString = [[NSString alloc] initWithData:data encoding:encoding];
     if (!dataString) {
-        *error = _error;
+        //*error = _error; // potential null dereference
         return nil;
     }
     id result = [parser objectWithString:dataString error:&_error];
