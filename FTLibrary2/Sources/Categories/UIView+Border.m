@@ -25,7 +25,6 @@
 	}
 	else
 	{
-		CGRect frame = self.bounds;
 		
 		CAShapeLayer *_shapeLayer = [CAShapeLayer layer];
 		
@@ -96,14 +95,13 @@
 			CGPathAddLineToPoint(path2, NULL, self.width, self.height);
 			CGPathAddPath(path, NULL, path2);
 		}
-		CGPathRelease(path);
+		
+		[_shapeLayer setPath:path];
 		if (path2 != NULL)
 			CGPathRelease(path2);
-		_shapeLayer.path = path;
 		CGPathRelease(path);
 		
 		_shapeLayer.backgroundColor = [[UIColor clearColor] CGColor];
-		_shapeLayer.frame = frame;
 		_shapeLayer.masksToBounds = NO;
 		[_shapeLayer setValue:[NSNumber numberWithBool:NO] forKey:@"isCircle"];
 		_shapeLayer.fillColor = [[UIColor clearColor] CGColor];
