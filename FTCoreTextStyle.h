@@ -31,6 +31,9 @@
  Use the natural alignment of the text's script.
  */
 
+
+typedef void (^CallbackBlock)(NSDictionary*);
+
 enum
 {
 	FTCoreTextAlignementLeft = 0,
@@ -57,6 +60,7 @@ typedef uint8_t FTCoreTextAlignement;
 @property (nonatomic, retain) NSString			*bulletCharacter;
 @property (nonatomic, retain) UIFont			*bulletFont;
 @property (nonatomic, retain) UIColor			*bulletColor;
+@property (nonatomic, copy) CallbackBlock       block;
 
 //if NO, the paragraph styling of the enclosing style is used. Default is YES.
 @property (nonatomic, assign) BOOL applyParagraphStyling;

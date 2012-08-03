@@ -29,6 +29,8 @@ extern NSString * const FTCoreTextTagBullet;	//Define styles for bullets. Respon
 extern NSString * const FTCoreTextTagPage;		//Divide the text in pages. Respond to markup <_page/>
 extern NSString * const FTCoreTextTagLink;		//Define style for links. Respond to markup <_link>link URL|link replacement name</_link>
 
+extern NSString * const FTCoreTextTagParagraph;		//Define style for links. Respond to markup <_link>link URL|link replacement name</_link>
+
 /* These constants are used in the dictionary argument of the delegate method -coreTextView:receivedTouchOnData: */
 
 extern NSString * const FTCoreTextDataURL;
@@ -87,12 +89,18 @@ extern NSString * const FTCoreTextDataAttributes;
 - (CGSize)suggestedSizeConstrainedToSize:(CGSize)size;
 - (void)fitToSuggestedHeight;
 
+- (CGRect)getLineRectFromNSRange:(NSRange)range;
+- (NSString*)getNodeIndexYCoordinate:(CGFloat)coord;
+- (NSRange)getLineRangeForYCoordinate:(CGFloat)coord;
+- (NSInteger)getCorrectLocationFromNSRange:(NSRange)range;
+
 @end
 
 @protocol FTCoreTextViewDelegate <NSObject>
 @optional
 - (void)touchedData:(NSDictionary *)data inCoreTextView:(FTCoreTextView *)textView __deprecated;
 - (void)coreTextView:(FTCoreTextView *)coreTextView receivedTouchOnData:(NSDictionary *)data;
+- (void)coreTextViewfinishedRendering:(FTCoreTextView *)coreTextView;
 @end
 
 @interface NSString (FTCoreText)
