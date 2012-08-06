@@ -93,6 +93,7 @@ extern NSString * const FTCoreTextDataAttributes;
 - (NSString*)getNodeIndexYCoordinate:(CGFloat)coord;
 - (NSRange)getLineRangeForYCoordinate:(CGFloat)coord;
 - (NSInteger)getCorrectLocationFromNSRange:(NSRange)range;
+- (NSString*) getTextInLineByRange:(NSRange)range;
 
 @end
 

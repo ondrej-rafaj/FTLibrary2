@@ -578,8 +578,6 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 }
 
 
-
-
 - (void)updateFramesetterIfNeeded
 {
     if (!_coreTextViewFlags.updatedAttrString) {
@@ -804,8 +802,6 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
                 }
                 
                 currentSupernode.isClosed = YES;
-                NSRange textContentRange = NSMakeRange(currentSupernode.startLocation, tagRange.location - currentSupernode.startLocation);
-                NSString *textContent = [processedString substringWithRange:textContentRange];
                 if (currentSupernode.isLink) {
                     //replace active string with url text
                     
@@ -1445,6 +1441,40 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	}
 	CFRelease(ctframe);
     return CGRectMake(-1, -1, -1, -1);
+}
+
+
+- (NSString*) getTextInLineByRange:(NSRange)range
+{
+    CGMutablePathRef mainPath = CGPathCreateMutable();
+    if (!_path) {
+        CGPathAddRect(mainPath, NULL, CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height));  
+    }
+    else {
+        CGPathAddPath(mainPath, NULL, _path);
+    }
+	
+    CTFrameRef ctframe = CTFramesetterCreateFrame(_framesetter, CFRangeMake(0, 0), mainPath, NULL);
+    CGPathRelease(mainPath);
+	
+    NSArray *lines = (NSArray *)CTFrameGetLines(ctframe);
+    NSInteger lineCount = [lines count];
+    if (lineCount != 0) 
+    {
+		for (int i = 0; i < lineCount; i++) 
+        {	
+			CTLineRef line = (CTLineRef)[lines objectAtIndex:i];
+			CFRange lineRange= CTLineGetStringRange(line);
+            if (range.location >= lineRange.location && (range.location + range.length)<= lineRange.location+lineRange.length) 
+            {
+                NSRange lineNSRange= {lineRange.location,lineRange.length};
+                NSString* correctString = [self.processedString substringWithRange:lineNSRange];
+                return correctString;
+            }    
+        }
+	}
+	CFRelease(ctframe);
+    return @"";
 }
 
 @end
