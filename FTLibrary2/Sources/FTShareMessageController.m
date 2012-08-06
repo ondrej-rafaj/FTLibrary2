@@ -90,9 +90,10 @@
     return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidLoad
+{
     
+    [super viewDidLoad];
     CGRect frame = self.view.bounds;
     frame.size.height = 200;
     _textView = [[UITextView alloc] initWithFrame:frame];
@@ -102,8 +103,8 @@
     [self.view addSubview:self.textView];
     [self.textView becomeFirstResponder];
     
-    self.charsLeftLabel = [[UILabel alloc] initWithFrame:CGRectMake(220 - 5, 174, 100, 30)];
-    [self.charsLeftLabel setBackgroundColor:[UIColor clearColor]];
+    self.charsLeftLabel = [[[UILabel alloc] initWithFrame:CGRectMake(220 - 5, 174, 100, 30)] autorelease];
+    self.charsLeftLabel.backgroundColor = [UIColor clearColor];
     [self.charsLeftLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [self.charsLeftLabel setTextAlignment:UITextAlignmentRight]; 
     [self.view addSubview:self.charsLeftLabel];
@@ -111,12 +112,15 @@
     
     UIBarButtonItem *sendBtn = [[UIBarButtonItem alloc] initWithTitle:@"Send" style:UIBarButtonItemStyleBordered target:self action:@selector(tweetAction)];
     [self.navigationItem setRightBarButtonItem:sendBtn];
+	[sendBtn release];
     
     UIBarButtonItem *cancelBtn = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelAction)];
     [self.navigationItem setLeftBarButtonItem:cancelBtn];
+	[cancelBtn release];
     
     [self.navigationItem.rightBarButtonItem setEnabled:(self.message.length > 0)];
     self.message = self.message;
+	
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

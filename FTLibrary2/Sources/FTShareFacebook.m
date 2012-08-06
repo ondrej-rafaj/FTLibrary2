@@ -24,7 +24,7 @@
     if (!image) return nil;
     FTShareFacebookPhoto *photo = [[FTShareFacebookPhoto alloc] init];
     if (photo) [photo setPhoto:image];
-    return photo;
+    return [photo autorelease];
 }
 
 - (void)addTagToUserID:(NSString *)userID atPoint:(CGPoint)point {
@@ -45,6 +45,7 @@
     NSString *serializedString = [jsonWriter stringWithObject:self.tags error:&error];
     if (error) NSLog(@"Error: %@", error.description);
     
+	[jsonWriter release];
     return serializedString;
 }
 
@@ -232,6 +233,8 @@
         // if ipd use 
         if ([FT2System isTabletIdiom]) nc.modalPresentationStyle = UIModalPresentationFormSheet;
         [_referencedController presentModalViewController:nc animated:YES];
+		[messageController release];
+		[nc release];
         return;
     }
 
@@ -337,7 +340,8 @@
     [data setUploadPhoto:_params.uploadPhoto];
     [data setCaption:_params.caption];
     [data setName:_params.name];
-    [self shareViaFacebook:data];    
+    [self shareViaFacebook:data];
+	[data release];
 }
 
 - (void)shareMessageControllerDidCancel:(FTShareMessageController *)controller {

@@ -122,7 +122,7 @@
 		932FDA68153DD96000E9D253 /* SA_OAuthTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA62153DD96000E9D253 /* SA_OAuthTwitterEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDA6A153DD96000E9D253 /* twitter_load.png in Resources */ = {isa = PBXBuildFile; fileRef = 932FDA63153DD96000E9D253 /* twitter_load.png */; };
 		932FDA6D153DD9D300E9D253 /* NSString+UUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA6B153DD9D300E9D253 /* NSString+UUID.h */; };
-		932FDA6E153DD9D300E9D253 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA6C153DD9D300E9D253 /* NSString+UUID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		932FDA6E153DD9D300E9D253 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA6C153DD9D300E9D253 /* NSString+UUID.m */; };
 		932FDA6F153DD9D300E9D253 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA6C153DD9D300E9D253 /* NSString+UUID.m */; };
 		932FDA91153DDA9000E9D253 /* MGTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA71153DDA8F00E9D253 /* MGTwitterEngine.h */; };
 		932FDA92153DDA9000E9D253 /* MGTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA72153DDA8F00E9D253 /* MGTwitterEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
