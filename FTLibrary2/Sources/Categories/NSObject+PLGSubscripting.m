@@ -10,27 +10,4 @@
 
 @implementation NSObject (PLGSubscripting)
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED < 60000
-
-- (id)objectAtIndexedSubscript:(NSUInteger)idx
-{
-	return nil;
-}
-
-- (void)setObject:(id)obj atIndexedSubscript:(NSUInteger)idx
-{
-	
-}
-
-- (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key
-{
-	
-}
-
-- (id)objectForKeyedSubscript:(id)key
-{
-	return nil;
-}
-
-#endif
 @end
