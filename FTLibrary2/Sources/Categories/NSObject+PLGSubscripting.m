@@ -6,8 +6,8 @@
 //
 //
 
-#import "NSObject+PLGSubscripting.h"
-
-@implementation NSObject (PLGSubscripting)
-
-@end
+//#import "NSObject+PLGSubscripting.h"
+//
+//@implementation NSObject (PLGSubscripting)
+//
+//@end
