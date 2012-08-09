@@ -275,6 +275,14 @@ NSInteger rangeSort(NSString *range1, NSString *range2, void *context);
 
 #pragma mark - Tools methods
 
+
+- (NSString*)getNodeIndexThatContainLocationFormNSRange:(NSRange)range
+{
+    FTCoreTextNode* node = [self getNodeThatContainLocationFormNSRange:range];
+    return [self getIndexingForNode:node];
+}
+
+
 - (FTCoreTextNode*)getNodeThatContainLocationFormNSRange:(NSRange)range
 {
     FTCoreTextNode* currentNode = self.rootNode;
@@ -283,6 +291,13 @@ NSInteger rangeSort(NSString *range1, NSString *range2, void *context);
     while (currentNode.subnodes && count>i) 
     {
         FTCoreTextNode* node = [currentNode.subnodes objectAtIndex:i];
+        if (range.length==0 && node.styleRange.location==range.location && node.styleRange.length==0) 
+        {
+            currentNode=node;
+            count = [currentNode.subnodes count];
+            i=0;
+            continue;
+        }
         if (node.styleRange.location<=range.location && (node.styleRange.location + node.styleRange.length)>range.location) 
         {
             currentNode=node;
