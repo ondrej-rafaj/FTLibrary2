@@ -9,7 +9,7 @@
 #import "FTCoreTextView.h"
 #import <QuartzCore/QuartzCore.h>
 #import <CoreText/CoreText.h>
-
+#import "NSData+Base64.h"
 
 #define SYSTEM_VERSION_LESS_THAN(v)			([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
@@ -845,8 +845,17 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 					
                     NSRange elementContentRange = NSMakeRange(currentSupernode.startLocation, tagRange.location - currentSupernode.startLocation);
                     NSString *elementContent = [processedString substringWithRange:elementContentRange];
+                    UIImage *img =nil;
+                    if ([[elementContent substringToIndex:7] isEqualToString:@"base64:"]) 
+                    {
+                        NSData* myImgData = [[NSData alloc] initWithBase64EncodedString:[elementContent substringFromIndex:7]];
+                        img = [UIImage imageWithData:myImgData];
+                    }
+                    else 
+                    {
+                        img = [UIImage imageNamed:elementContent];
+                    }
                     
-                    UIImage *img = [UIImage imageNamed:elementContent];
                     
                     if (img) {
                         NSString *lines = @"\n";
@@ -1363,8 +1372,16 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 			CGRect lineFrame = CGRectMake(baselineOrigin.x, baselineOrigin.y - ascent, lineWidth, ascent + descent);
 			
 			CTTextAlignment alignment = imageNode.style.textAlignment;
-			
-			UIImage *img = [UIImage imageNamed:imageNode.imageName];
+            UIImage *img =nil;
+            if ([[imageNode.imageName substringToIndex:7] isEqualToString:@"base64:"]) 
+            {
+                NSData* myImgData = [[NSData alloc] initWithBase64EncodedString:[imageNode.imageName substringFromIndex:7]];
+                img = [UIImage imageWithData:myImgData];
+            }
+            else 
+            {
+                img = [UIImage imageNamed:imageNode.imageName];
+            }
 			if (img) {
 				int x = 0;
 				if (alignment == kCTRightTextAlignment) x = (self.frame.size.width - img.size.width);
