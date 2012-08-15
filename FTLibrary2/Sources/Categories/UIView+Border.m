@@ -157,8 +157,8 @@ static const NSString *borderLayer = @"UIView+Border-BorderLayer-CAShapeLayer";
 			endPoint = CGPointMake(self.width, 0);
 			break;
 		case UIViewBorderTypeBottom:
-			startPoint = CGPointMake(self.width, self.height);
-			endPoint = CGPointMake(0, self.height);
+			startPoint = CGPointMake(0, self.height);
+			endPoint = CGPointMake(self.width, self.height);
 			break;
 		default:
 			break;
@@ -171,6 +171,16 @@ static const NSString *borderLayer = @"UIView+Border-BorderLayer-CAShapeLayer";
 		{
 			CGPathMoveToPoint(path2, NULL, startPoint.x, startPoint.y);
 			CGPathAddLineToPoint(path2, NULL, endPoint.x, endPoint.y);
+		}
+		break;
+		case UIViewBorderStyleDashed:
+		{
+			float dx =fabsf(startPoint.x - startPoint.y);
+			float dy =fabsf(endPoint.x - endPoint.y);
+			
+			CGMutablePathRef pathToAdd = CGPathCreateMutable();
+			CGPathMoveToPoint(pathToAdd, NULL, startPoint.x, startPoint.y);
+			
 		}
 		break;
 		default:
