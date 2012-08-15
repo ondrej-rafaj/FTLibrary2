@@ -22,6 +22,14 @@ typedef enum
 	UIViewBorderTypeTopBottom,
 	UIViewBorderTypeLeftRight,
 }UIViewBorderType;
+
+typedef enum
+{
+	UIViewBorderStyleDefault,
+	UIViewBorderStyleNone,
+	UIViewBorderStyleDotted,
+	UIViewBorderStyleDashed
+}UIViewBorderStyle;
 @interface UIView (Border)
 - (void)setBorderWidth:(CGFloat)width andColor:(UIColor *)color andRadius:(CGFloat)rad ofType:(UIViewBorderType)type;
 
