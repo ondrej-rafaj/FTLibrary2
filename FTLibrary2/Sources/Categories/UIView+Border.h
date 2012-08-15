@@ -32,5 +32,5 @@ typedef enum
 }UIViewBorderStyle;
 @interface UIView (Border)
 - (void)setBorderWidth:(CGFloat)width andColor:(UIColor *)color andRadius:(CGFloat)rad ofType:(UIViewBorderType)type;
-
+- (void)setBorderWidth:(CGFloat)width andColor:(UIColor *)color andRadius:(CGFloat)rad ofType:(UIViewBorderType)type withStyle:(UIViewBorderStyle)style;
 @end
