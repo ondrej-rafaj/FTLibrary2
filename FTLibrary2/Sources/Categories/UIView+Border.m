@@ -65,13 +65,15 @@ static const NSString *borderLayer = @"UIView+Border-BorderLayer-CAShapeLayer";
 		return;
 	}
 	
-	else if (type == UIViewBorderTypeAll)
-	{
-		[self.layer setBorderColor:color.CGColor];
-		[self.layer setBorderWidth:width];
-		[self.layer setCornerRadius:rad];
-		return;
-	}
+//	else if (type == UIViewBorderTypeAll)
+//	{
+//		
+//		
+//		[self.layer setBorderColor:color.CGColor];
+//		[self.layer setBorderWidth:width];
+//		[self.layer setCornerRadius:rad];
+//		return;
+//	}
 	else
 	{
 		
@@ -81,7 +83,17 @@ static const NSString *borderLayer = @"UIView+Border-BorderLayer-CAShapeLayer";
 		CGMutablePathRef path = CGPathCreateMutable();
 		CGMutablePathRef path2;
 		path2 = NULL;
-		if (type >= UIViewBorderTypeLeft && type <= UIViewBorderTypeBottom)//Left Right Top Bottom
+		if (type == UIViewBorderTypeAll)
+		{
+			[self addBorderOfType:UIViewBorderTypeTop toPath:path withStyle:style];
+			[self addBorderOfType:UIViewBorderTypeLeft toPath:path withStyle:style];
+			[self addBorderOfType:UIViewBorderTypeRight toPath:path withStyle:style];
+			[self addBorderOfType:UIViewBorderTypeBottom toPath:path withStyle:style];
+
+			[self.layer setCornerRadius:rad];
+
+		}
+		else if (type >= UIViewBorderTypeLeft && type <= UIViewBorderTypeBottom)//Left Right Top Bottom
 		{
 			[self addBorderOfType:type toPath:path withStyle:style];
 		}
@@ -205,6 +217,36 @@ static const NSString *borderLayer = @"UIView+Border-BorderLayer-CAShapeLayer";
 			
 		}
 		break;
+		case UIViewBorderStyleDotted:
+		{
+			float dx =fabsf(startPoint.x - endPoint.x);
+			float dy =fabsf(startPoint.y - endPoint.y);
+			CGPoint dp = CGPointMake(dx, dy);
+			float distance = fabsf(dp.x-dp.y);
+			if (startPoint.x == endPoint.x)//vertical line
+			{
+				for (int i = 0;i<distance;i+=5)
+				{
+					CGMutablePathRef pathToAdd = CGPathCreateMutable();
+					CGPathMoveToPoint(pathToAdd, NULL, startPoint.x, startPoint.y+i);
+					CGPathAddLineToPoint(pathToAdd, NULL, startPoint.x, startPoint.y+i+1);
+					CGPathAddPath(path2, NULL, pathToAdd);
+					CGPathRelease(pathToAdd);
+				}
+			}
+			else //horizontal line
+			{
+				for (int i = 0;i<distance;i+=5)
+				{
+					CGMutablePathRef pathToAdd = CGPathCreateMutable();
+					CGPathMoveToPoint(pathToAdd, NULL, startPoint.x+i, startPoint.y);
+					CGPathAddLineToPoint(pathToAdd, NULL, startPoint.x+i+1, startPoint.y);
+					CGPathAddPath(path2, NULL, pathToAdd);
+					CGPathRelease(pathToAdd);
+				}
+			}
+
+		}
 		default:
 			break;
 	}
