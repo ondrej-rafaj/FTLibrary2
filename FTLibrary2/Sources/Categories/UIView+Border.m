@@ -177,7 +177,10 @@ static const NSString *borderLayer = @"UIView+Border-BorderLayer-CAShapeLayer";
 	}
 	
 	CGMutablePathRef path2 = CGPathCreateMutable();
-
+	float dx =fabsf(startPoint.x - endPoint.x);
+	float dy =fabsf(startPoint.y - endPoint.y);
+	CGPoint dp = CGPointMake(dx, dy);
+	float distance = fabsf(dp.x-dp.y);
 	switch (style) {
 		case UIViewBorderStyleDefault:
 		{
@@ -187,11 +190,6 @@ static const NSString *borderLayer = @"UIView+Border-BorderLayer-CAShapeLayer";
 		break;
 		case UIViewBorderStyleDashed:
 		{
-			
-			float dx =fabsf(startPoint.x - endPoint.x);
-			float dy =fabsf(startPoint.y - endPoint.y);
-			CGPoint dp = CGPointMake(dx, dy);
-			float distance = fabsf(dp.x-dp.y);
 			if (startPoint.x == endPoint.x)//vertical line
 			{
 				for (int i = 0;i<distance;i+=10)
@@ -214,15 +212,10 @@ static const NSString *borderLayer = @"UIView+Border-BorderLayer-CAShapeLayer";
 					CGPathRelease(pathToAdd);
 				}
 			}
-			
 		}
 		break;
 		case UIViewBorderStyleDotted:
 		{
-			float dx =fabsf(startPoint.x - endPoint.x);
-			float dy =fabsf(startPoint.y - endPoint.y);
-			CGPoint dp = CGPointMake(dx, dy);
-			float distance = fabsf(dp.x-dp.y);
 			if (startPoint.x == endPoint.x)//vertical line
 			{
 				for (int i = 0;i<distance;i+=5)
@@ -245,8 +238,102 @@ static const NSString *borderLayer = @"UIView+Border-BorderLayer-CAShapeLayer";
 					CGPathRelease(pathToAdd);
 				}
 			}
+		}
+		break;
+		case UIViewBorderStyleZigZag:
+		{
+
+			float h = 1;
+			if (startPoint.x == endPoint.x)//vertical line
+			{
+				BOOL up = YES;
+				CGPoint lastPoint = CGPointMake(startPoint.x, startPoint.y);
+				CGPoint newPoint = CGPointZero;
+				for (float i = 0;i<distance;i+=5)
+				{
+					CGMutablePathRef pathToAdd = CGPathCreateMutable();
+					CGPathMoveToPoint(pathToAdd, NULL, lastPoint.x, lastPoint.y);
+					float hi = h*(up)?1:-1;
+					float newX = startPoint.x+hi;
+					float newY = startPoint.y+i+2.5;
+					newPoint = CGPointMake(newX, newY);
+					CGPathAddLineToPoint(pathToAdd, NULL, newPoint.x, newPoint.y);
+					CGPathAddPath(path2, NULL, pathToAdd);
+					CGPathRelease(pathToAdd);
+					up = !up;
+					lastPoint = newPoint;
+
+				}
+			}
+			else //horizontal line
+			{
+				BOOL up = YES;
+				CGPoint lastPoint = CGPointMake(startPoint.x, startPoint.y);
+				CGPoint newPoint = CGPointZero;
+				for (float i = 0;i<distance;i+=5)
+				{
+					CGMutablePathRef pathToAdd = CGPathCreateMutable();
+					CGPathMoveToPoint(pathToAdd, NULL, lastPoint.x, lastPoint.y);
+					float hi = h*(up)?1:-1;
+					float newX = startPoint.x+i+2.5;
+					float newY = startPoint.y+hi;
+					newPoint = CGPointMake(newX, newY);
+					CGPathAddLineToPoint(pathToAdd, NULL, newPoint.x, newPoint.y);
+					CGPathAddPath(path2, NULL, pathToAdd);
+					CGPathRelease(pathToAdd);
+					up = !up;
+					lastPoint = newPoint;
+
+				}
+			}
 
 		}
+			break;
+		case UIViewBorderStyleWaved:
+		{
+			float inc = 10;
+			BOOL up = YES;
+			float h = 1.5;
+			CGPoint lastPoint = CGPointMake(startPoint.x, startPoint.y);
+			CGPoint newPoint = CGPointZero;
+
+			if (startPoint.x == endPoint.x)//vertical line
+			{
+								
+				for (float i = 0;i<distance;i+=inc)
+				{
+					float newX = startPoint.x;
+					float newY = startPoint.y+i+(inc/2);
+					float hi = h*(up)?1:-1;
+					newPoint = CGPointMake(newX, newY);
+					CGMutablePathRef pathToAdd = CGPathCreateMutable();
+					CGPathMoveToPoint(pathToAdd, NULL, lastPoint.x, lastPoint.y);
+					CGPathAddCurveToPoint(pathToAdd, NULL, lastPoint.x+hi, lastPoint.y, newPoint.x+hi, newPoint.y, newPoint.x,newPoint.y);
+					CGPathAddPath(path2, NULL, pathToAdd);
+					CGPathRelease(pathToAdd);
+					lastPoint = newPoint;
+					up = !up;
+				}
+			}
+			else //horizontal line
+			{
+				for (float i = 0;i<distance;i+=inc)
+				{
+					float newX = startPoint.x+i+(inc/2);
+					float newY = startPoint.y;
+					float hi = h*(up)?1:-1;
+					newPoint = CGPointMake(newX, newY);
+					CGMutablePathRef pathToAdd = CGPathCreateMutable();
+					CGPathMoveToPoint(pathToAdd, NULL, lastPoint.x, lastPoint.y);
+					CGPathAddCurveToPoint(pathToAdd, NULL, lastPoint.x, lastPoint.y+hi, newPoint.x, newPoint.y+hi, newPoint.x,newPoint.y);
+					CGPathAddPath(path2, NULL, pathToAdd);
+					CGPathRelease(pathToAdd);
+					lastPoint = newPoint;
+					up = !up;
+				}
+			}
+		}
+			break;
 		default:
 			break;
 	}
