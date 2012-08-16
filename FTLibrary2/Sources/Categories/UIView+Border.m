@@ -175,11 +175,33 @@ static const NSString *borderLayer = @"UIView+Border-BorderLayer-CAShapeLayer";
 		break;
 		case UIViewBorderStyleDashed:
 		{
-			float dx =fabsf(startPoint.x - startPoint.y);
-			float dy =fabsf(endPoint.x - endPoint.y);
 			
-			CGMutablePathRef pathToAdd = CGPathCreateMutable();
-			CGPathMoveToPoint(pathToAdd, NULL, startPoint.x, startPoint.y);
+			float dx =fabsf(startPoint.x - endPoint.x);
+			float dy =fabsf(startPoint.y - endPoint.y);
+			CGPoint dp = CGPointMake(dx, dy);
+			float distance = fabsf(dp.x-dp.y);
+			if (startPoint.x == endPoint.x)//vertical line
+			{
+				for (int i = 0;i<distance;i+=10)
+				{
+					CGMutablePathRef pathToAdd = CGPathCreateMutable();
+					CGPathMoveToPoint(pathToAdd, NULL, startPoint.x, startPoint.y+i);
+					CGPathAddLineToPoint(pathToAdd, NULL, startPoint.x, startPoint.y+i+5);
+					CGPathAddPath(path2, NULL, pathToAdd);
+					CGPathRelease(pathToAdd);
+				}
+			}
+			else //horizontal line
+			{
+				for (int i = 0;i<distance;i+=10)
+				{
+					CGMutablePathRef pathToAdd = CGPathCreateMutable();
+					CGPathMoveToPoint(pathToAdd, NULL, startPoint.x+i, startPoint.y);
+					CGPathAddLineToPoint(pathToAdd, NULL, startPoint.x+i+5, startPoint.y);
+					CGPathAddPath(path2, NULL, pathToAdd);
+					CGPathRelease(pathToAdd);
+				}
+			}
 			
 		}
 		break;
