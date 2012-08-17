@@ -32,7 +32,7 @@
  */
 
 
-typedef void (^CallbackBlock)(NSDictionary*);
+typedef void (^FTCoreTextCallbackBlock)(NSDictionary*);
 
 enum
 {
@@ -60,7 +60,7 @@ typedef uint8_t FTCoreTextAlignement;
 @property (nonatomic, retain) NSString			*bulletCharacter;
 @property (nonatomic, retain) UIFont			*bulletFont;
 @property (nonatomic, retain) UIColor			*bulletColor;
-@property (nonatomic, copy) CallbackBlock       block;
+@property (nonatomic, copy) FTCoreTextCallbackBlock       block;
 
 //if NO, the paragraph styling of the enclosing style is used. Default is YES.
 @property (nonatomic, assign) BOOL applyParagraphStyling;
