@@ -25,6 +25,7 @@
 @synthesize maxLineHeight = _maxLineHeight;
 @synthesize minLineHeight = _minLineHeight;
 @synthesize spaceBetweenParagraphs = _spaceBetweenParagraphs;
+@synthesize block;
 
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
@@ -44,6 +45,7 @@
 		self.paragraphInset = UIEdgeInsetsZero;
 		self.applyParagraphStyling = YES;
 		self.leading = 0;
+        self.block=nil;
 	}
 	return self;
 }
