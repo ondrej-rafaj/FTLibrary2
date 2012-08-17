@@ -10,8 +10,8 @@
 
 @interface FT2PageControl ()
 
-@property (nonatomic) UIImage *internUnselectedDotImage;
-@property (nonatomic) UIImage *internSelectedDotImage;
+@property (nonatomic,retain) UIImage *internUnselectedDotImage;
+@property (nonatomic,retain) UIImage *internSelectedDotImage;
 
 - (UIImage *)_defaultImageDotWithRadius:(CGFloat)radius andColor:(UIColor *)color;
 - (UIImage *)_customImageDotWithMaskImage:(UIImage *)maskImage andColor:(UIColor *)color;

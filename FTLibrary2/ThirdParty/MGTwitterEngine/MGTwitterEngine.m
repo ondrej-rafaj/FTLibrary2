@@ -403,7 +403,7 @@
 - (NSString *)_encodeString:(NSString *)string
 {
     NSString *result = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, 
-                                                                 __bridge(CFStringRef)string, 
+                                                                 (CFStringRef)string, 
                                                                  NULL, 
                                                                  (CFStringRef)@";/?:@&=$+{}<>,",
                                                                  kCFStringEncodingUTF8);

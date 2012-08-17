@@ -45,7 +45,7 @@
 #endif
 
 @interface AQGridViewCell ()
-@property (nonatomic) UIView * contentView;
+@property (nonatomic,retain) UIView * contentView;
 @property (nonatomic, copy) NSString * reuseIdentifier;
 - (void) flipHighlightTimerFired: (NSTimer *) timer;
 @end

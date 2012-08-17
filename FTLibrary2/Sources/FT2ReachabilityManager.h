@@ -37,8 +37,8 @@ typedef enum  {
 	NSMutableArray				*_queuedTask;
 }
 
-@property (weak, readonly) NSNumber *reachabilityState;
-@property (weak, readonly) NSNumber *networkType;
+@property (readonly) NSNumber *reachabilityState;
+@property (readonly) NSNumber *networkType;
 
 - (id)initWithHost:(NSString *)reachabilityHost;
 

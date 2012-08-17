@@ -30,11 +30,11 @@
 @interface NSArrayCHCSVAggregator : NSObject <CHCSVParserDelegate> {
 	NSMutableArray * lines;
 	NSMutableArray * currentLine;
-	NSError * __weak error;
+	NSError *  error;
 }
 
 @property (readonly) NSArray * lines;
-@property (weak, readonly) NSError * error;
+@property (readonly) NSError * error;
 
 @end
 

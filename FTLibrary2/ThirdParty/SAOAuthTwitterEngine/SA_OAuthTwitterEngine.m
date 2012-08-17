@@ -135,9 +135,8 @@
 }
 
 - (void) setPin: (NSString *) pin {
-	//[_pin autorelease];
-	//_pin = [pin retain];
-	_pin = pin;
+	[_pin autorelease];
+    _pin = [pin retain];
 	_accessToken.pin = pin;
 	_requestToken.pin = pin;
 }

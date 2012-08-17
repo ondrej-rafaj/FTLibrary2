@@ -31,7 +31,7 @@ typedef NSUInteger FT2CustomAnimationOptions;
 }
 
 @property (nonatomic, assign) BOOL isAnimating;
-@property (nonatomic, unsafe_unretained) id <FT2CustomAnimationViewDelegate> delegate;
+@property (nonatomic, assign) id <FT2CustomAnimationViewDelegate> delegate;
 
 //handy method to start an animation
 - (void)startAnimationWithDuration:(NSTimeInterval)duration;
