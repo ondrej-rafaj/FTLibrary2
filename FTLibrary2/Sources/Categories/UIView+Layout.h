@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define UIViewAutoresizingFlexibleAllMargins UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin
+
+#define UIViewAutoresizingFlexibleVerticalMargins UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin
+
+#define UIViewAutoresizingFlexibleHorizontalMargins UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin
 
 @interface UIView (Layout)
 

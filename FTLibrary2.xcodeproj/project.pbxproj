@@ -55,9 +55,9 @@
 		688D7B7F156BE26E00B2156B /* FTShareMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D7B75156BE26E00B2156B /* FTShareMessageController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		688D7B80156BE26E00B2156B /* FTShareTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 688D7B76156BE26E00B2156B /* FTShareTwitter.h */; };
 		688D7B81156BE26E00B2156B /* FTShareTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D7B77156BE26E00B2156B /* FTShareTwitter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		68978E43153F161E008EF4E8 /* FT2Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978E41153F161E008EF4E8 /* FT2Data.h */; };
-		68978E44153F161E008EF4E8 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E42153F161E008EF4E8 /* FT2Data.m */; };
-		68978E45153F161E008EF4E8 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E42153F161E008EF4E8 /* FT2Data.m */; };
+		68978E43153F161E008EF4E8 /* FT2Data_old.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978E41153F161E008EF4E8 /* FT2Data_old.h */; };
+		68978E44153F161E008EF4E8 /* FT2Data_old.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E42153F161E008EF4E8 /* FT2Data_old.m */; };
+		68978E45153F161E008EF4E8 /* FT2Data_old.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E42153F161E008EF4E8 /* FT2Data_old.m */; };
 		68978E50153F16BD008EF4E8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68978E4F153F16BD008EF4E8 /* CoreData.framework */; };
 		68978E58153F1ECD008EF4E8 /* FT2FileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 68978E56153F1ECD008EF4E8 /* FT2FileSystem.h */; };
 		68978E59153F1ECD008EF4E8 /* FT2FileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68978E57153F1ECD008EF4E8 /* FT2FileSystem.m */; };
@@ -227,6 +227,9 @@
 		932FDB4F153DDDF900E9D253 /* OAToken_KeychainExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */; };
 		932FDB50153DDDF900E9D253 /* OAuthConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */; };
 		932FDB53153DDE7C00E9D253 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 932FDB51153DDE5100E9D253 /* libxml2.dylib */; };
+		934E719415D3B8BA000E321B /* FT2Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 934E719215D3B8BA000E321B /* FT2Data.h */; };
+		934E719515D3B8BA000E321B /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E719315D3B8BA000E321B /* FT2Data.m */; };
+		934E719615D3B8BA000E321B /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E719315D3B8BA000E321B /* FT2Data.m */; };
 		93879812153ED11A001FE131 /* FT2PageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9387980D153ED11A001FE131 /* FT2PageScrollView.h */; };
 		93879813153ED11A001FE131 /* FT2PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387980E153ED11A001FE131 /* FT2PageScrollView.m */; };
 		93879814153ED11A001FE131 /* FT2PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387980E153ED11A001FE131 /* FT2PageScrollView.m */; };
@@ -385,8 +388,8 @@
 		688D7B75156BE26E00B2156B /* FTShareMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareMessageController.m; path = FTLibrary2/Sources/FTShareMessageController.m; sourceTree = "<group>"; };
 		688D7B76156BE26E00B2156B /* FTShareTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTShareTwitter.h; path = FTLibrary2/Sources/FTShareTwitter.h; sourceTree = "<group>"; };
 		688D7B77156BE26E00B2156B /* FTShareTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTShareTwitter.m; path = FTLibrary2/Sources/FTShareTwitter.m; sourceTree = "<group>"; };
-		68978E41153F161E008EF4E8 /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Data.h; path = FTLibrary2/Sources/FT2Data.h; sourceTree = "<group>"; };
-		68978E42153F161E008EF4E8 /* FT2Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Data.m; path = FTLibrary2/Sources/FT2Data.m; sourceTree = "<group>"; };
+		68978E41153F161E008EF4E8 /* FT2Data_old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Data_old.h; path = FTLibrary2/Sources/FT2Data_old.h; sourceTree = "<group>"; };
+		68978E42153F161E008EF4E8 /* FT2Data_old.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Data_old.m; path = FTLibrary2/Sources/FT2Data_old.m; sourceTree = "<group>"; };
 		68978E4F153F16BD008EF4E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		68978E56153F1ECD008EF4E8 /* FT2FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2FileSystem.h; path = FTLibrary2/Sources/FT2FileSystem.h; sourceTree = "<group>"; };
 		68978E57153F1ECD008EF4E8 /* FT2FileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2FileSystem.m; path = FTLibrary2/Sources/FT2FileSystem.m; sourceTree = "<group>"; };
@@ -540,6 +543,8 @@
 		932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken_KeychainExtensions.h; sourceTree = "<group>"; };
 		932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		932FDB51153DDE5100E9D253 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		934E719215D3B8BA000E321B /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2Data.h; sourceTree = "<group>"; };
+		934E719315D3B8BA000E321B /* FT2Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2Data.m; sourceTree = "<group>"; };
 		9387980D153ED11A001FE131 /* FT2PageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageScrollView.h; path = FTLibrary2/Sources/FT2PageScrollView.h; sourceTree = "<group>"; };
 		9387980E153ED11A001FE131 /* FT2PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageScrollView.m; path = FTLibrary2/Sources/FT2PageScrollView.m; sourceTree = "<group>"; };
 		9387980F153ED11A001FE131 /* FT2PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageView.h; path = FTLibrary2/Sources/FT2PageView.h; sourceTree = "<group>"; };
@@ -1201,8 +1206,10 @@
 		938D5840153DCBB80067CEFA /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				68978E41153F161E008EF4E8 /* FT2Data.h */,
-				68978E42153F161E008EF4E8 /* FT2Data.m */,
+				934E719215D3B8BA000E321B /* FT2Data.h */,
+				934E719315D3B8BA000E321B /* FT2Data.m */,
+				68978E41153F161E008EF4E8 /* FT2Data_old.h */,
+				68978E42153F161E008EF4E8 /* FT2Data_old.m */,
 				68978EB1154021C6008EF4E8 /* FT2ObjectAttributes.h */,
 				68978EB2154021C6008EF4E8 /* FT2ObjectAttributes.m */,
 				685397091550298300B2D2A4 /* FT2File.h */,
@@ -1371,7 +1378,7 @@
 				93879812153ED11A001FE131 /* FT2PageScrollView.h in Headers */,
 				93879815153ED11A001FE131 /* FT2PageView.h in Headers */,
 				93879818153ED11A001FE131 /* FT2ReusableView.h in Headers */,
-				68978E43153F161E008EF4E8 /* FT2Data.h in Headers */,
+				68978E43153F161E008EF4E8 /* FT2Data_old.h in Headers */,
 				68978E58153F1ECD008EF4E8 /* FT2FileSystem.h in Headers */,
 				68978EB3154021C6008EF4E8 /* FT2ObjectAttributes.h in Headers */,
 				68978EFA15406C05008EF4E8 /* FT2TwitterFeed.h in Headers */,
@@ -1414,6 +1421,7 @@
 				DEE3647215B993A900CE958D /* FGalleryViewController.h in Headers */,
 				7A59E4D915CADEA800BE474E /* UIView+Border.h in Headers */,
 				7AAA4BD015CC35640052F1AA /* NSObject+PLGSubscripting.h in Headers */,
+				934E719415D3B8BA000E321B /* FT2Data.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1624,7 +1632,7 @@
 				93C265DD153EC32E0010A059 /* Reachability.m in Sources */,
 				93879813153ED11A001FE131 /* FT2PageScrollView.m in Sources */,
 				93879816153ED11A001FE131 /* FT2PageView.m in Sources */,
-				68978E44153F161E008EF4E8 /* FT2Data.m in Sources */,
+				68978E44153F161E008EF4E8 /* FT2Data_old.m in Sources */,
 				68978E59153F1ECD008EF4E8 /* FT2FileSystem.m in Sources */,
 				68978EB4154021C6008EF4E8 /* FT2ObjectAttributes.m in Sources */,
 				68978EFB15406C05008EF4E8 /* FT2TwitterFeed.m in Sources */,
@@ -1662,6 +1670,7 @@
 				DEE3647315B993A900CE958D /* FGalleryViewController.m in Sources */,
 				7A59E4DA15CADEA800BE474E /* UIView+Border.m in Sources */,
 				7AAA4BD115CC35640052F1AA /* NSObject+PLGSubscripting.m in Sources */,
+				934E719515D3B8BA000E321B /* FT2Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1707,7 +1716,7 @@
 				93C265DE153EC32E0010A059 /* Reachability.m in Sources */,
 				93879814153ED11A001FE131 /* FT2PageScrollView.m in Sources */,
 				93879817153ED11A001FE131 /* FT2PageView.m in Sources */,
-				68978E45153F161E008EF4E8 /* FT2Data.m in Sources */,
+				68978E45153F161E008EF4E8 /* FT2Data_old.m in Sources */,
 				68978E5A153F1ECD008EF4E8 /* FT2FileSystem.m in Sources */,
 				68978EB5154021C6008EF4E8 /* FT2ObjectAttributes.m in Sources */,
 				68978EFC15406C05008EF4E8 /* FT2TwitterFeed.m in Sources */,
@@ -1728,6 +1737,7 @@
 				148B739015C14DEC0002D5AE /* SDWebImagePrefetcher.m in Sources */,
 				148B739115C14DEC0002D5AE /* UIButton+WebCache.m in Sources */,
 				148B739215C14DEC0002D5AE /* UIImageView+WebCache.m in Sources */,
+				934E719615D3B8BA000E321B /* FT2Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

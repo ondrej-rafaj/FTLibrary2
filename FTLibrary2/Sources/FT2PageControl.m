@@ -117,7 +117,7 @@
 			CGRect buttonFrame = button.frame;
 			
 			buttonFrame.origin.x = xOffset + i * (dotWidth + _dotsSpacing);
-			buttonFrame.origin.y = 0;
+			buttonFrame.origin.y = roundf((self.bounds.size.height - buttonFrame.size.height) / 2);
 			buttonFrame.size.width = _dotsSpacing + dotWidth;
 			
 			button.frame = buttonFrame;			

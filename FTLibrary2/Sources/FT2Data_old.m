@@ -6,12 +6,12 @@
 //  Copyright (c) 2012 Fuerteint.com. All rights reserved.
 //
 
-#import "FT2Data.h"
+#import "FT2Data_old.h"
 #import "FT2Error.h"
 #import "FT2FileSystem.h"
 
 
-@implementation FT2Data
+@implementation FT2Data_old
 
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;

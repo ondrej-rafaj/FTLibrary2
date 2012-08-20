@@ -6,19 +6,6 @@
 //  Copyright (c) 2011 Fuerte International. All rights reserved.
 //
 
-/**
- *  Perform task i nthe background and implements handlers for completed and expired task if app has been terminated during the task
- *
- *      [FT2TaskMaker performBlockInBackground:^{
- *           // the task itself
- *       } completed:^{
- *           // background update finished. Finalise changes
- *       } expired:^{
- *           // app terminated before finishing update. Maybe remove changes
- *       }];
- *
- */
-
 #import <Foundation/Foundation.h>
 
 typedef enum {
@@ -29,13 +16,13 @@ typedef enum {
 
 @interface FT2TaskMaker : NSObject
 
-@property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundTaskIdentifier;
 
-
-+ (void)performBlockInBackground:(void (^)(void))block priority:(FTTaskPriority)priority;
-+ (void)performBlockInBackground:(void (^)(void))block priority:(FTTaskPriority)priority completed:(void (^)(void))completed expired:(void (^)(void))expired;
+/* the completionBlock is called on the caller's queue. The expiredBlock is called if the task in the background has
+ * not finished in time - the "Background Task" mechanism of iOS is automatically handled here. */
 + (void)performBlockInBackground:(void (^)(void))block;
-+ (void)performBlockInBackground:(void (^)(void))block completed:(void (^)(void))completed expired:(void (^)(void))expired;
++ (void)performBlockInBackground:(void (^)(void))block priority:(FTTaskPriority)priority;
++ (void)performBlockInBackground:(void (^)(void))block completed:(void (^)(void))completionBlock expired:(void (^)(void))expiredBlock;
++ (void)performBlockInBackground:(void (^)(void))block priority:(FTTaskPriority)priority completed:(void (^)(void))completionBlock expired:(void (^)(void))expiredBlock;
 
 + (void)performBlockOnMainQueue:(void (^)(void))block;
 + (void)performBlockOnMainQueue:(void (^)(void))block andWait:(BOOL)wait;

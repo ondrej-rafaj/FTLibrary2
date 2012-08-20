@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface FT2Data : NSObject {
+@interface FT2Data_old : NSObject {
     
 }
 
