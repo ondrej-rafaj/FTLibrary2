@@ -32,7 +32,7 @@ typedef void (^fileDownloaded)(NSData *data, NSError *error);
 @property (nonatomic, assign) BOOL exists;
 @property (nonatomic, strong) NSData *data;
 
-@property (nonatomic, assign) __unsafe_unretained id<FT2FileDelegate> delegate;
+@property (nonatomic, assign) id<FT2FileDelegate> delegate;
 
 - (void)initializeDataDownloadWithCompletitionBlock:(fileSaved)block;
 

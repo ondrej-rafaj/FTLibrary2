@@ -27,14 +27,14 @@
 @property (nonatomic) NSInteger numberOfPages;          // default is 0
 @property (nonatomic) NSInteger currentPage;            // default is 0. value pinned to 0..numberOfPages-1
 
-@property (nonatomic, retain) UIColor *selectedDotColor;
-@property (nonatomic, retain) UIColor *unselectedDotColor;
-@property (nonatomic, retain) UIImage *unselectedDotImage;
-@property (nonatomic, retain) UIImage *selectedDotImage;
+@property (nonatomic,retain) UIColor *selectedDotColor;
+@property (nonatomic,retain) UIColor *unselectedDotColor;
+@property (nonatomic,retain) UIImage *unselectedDotImage;
+@property (nonatomic,retain) UIImage *selectedDotImage;
 
 @property (nonatomic) CGFloat dotRadius;
 @property (nonatomic) CGFloat dotsSpacing;
-@property (nonatomic, retain) UIImage *dotMask;
+@property (nonatomic,retain) UIImage *dotMask;
 
 @property (nonatomic) BOOL hidesForSinglePage;          // hide the the indicator if there is only one page. default is NO
 

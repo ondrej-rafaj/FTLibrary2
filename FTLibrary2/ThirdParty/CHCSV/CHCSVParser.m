@@ -68,7 +68,7 @@ enum {
 
 @interface CHCSVParser ()
 
-@property (retain) NSMutableData *currentChunk;
+@property  (retain) NSMutableData *currentChunk;
 
 - (NSStringEncoding) textEncodingForData:(NSData *)chunkToSniff offset:(NSUInteger *)offset;
 
