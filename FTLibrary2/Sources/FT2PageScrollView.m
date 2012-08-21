@@ -14,6 +14,10 @@
 #define scrollViewBoundsWidth self.bounds.size.width
 #define scrollViewBoundsHeight self.bounds.size.height
 
+#define scrollViewRelevantDimension horizontalWorflow(scrollViewBoundsWidth, scrollViewBoundsHeight)
+
+#define horizontalWorflow(x, y) ((_flow == FT2PageSCrollViewFlowHorizontal) ? x : y)
+
 NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 
 @interface FT2PageView ()
@@ -25,8 +29,9 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 @interface FT2PageScrollView () <UIScrollViewDelegate>
 
 @property (nonatomic, assign) CGSize internalPageSize;
+@property (nonatomic) FT2PageSCrollViewFlow flow;
 
-- (void)_updateUIForCurrentHorizontalOffset;
+- (void)_updateUIForCurrentOffset;
 - (FT2PageView *)_viewForIndex:(NSInteger)index;
 - (void)_disposeOfVisibleViewsAndTellDelegate:(BOOL)tellDelegate;
 - (NSInteger)_numberOfViewsPerPage;
@@ -42,14 +47,16 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 
 #pragma mark - Private Methods
 
-- (void)_updateUIForCurrentHorizontalOffset
+- (void)_updateUIForCurrentOffset
 {
-	CGFloat xOffset = self.contentOffset.x;
+	CGFloat offset = horizontalWorflow(self.contentOffset.x, self.contentOffset.y);
 	
-	CGFloat minVisibleXOffset = xOffset - _visibleHorizontalPadding;
-	CGFloat maxVisibleXOffset = minVisibleXOffset + _visibleHorizontalPadding * 2 + scrollViewBoundsWidth - 1;
-	NSInteger minVisibleIndex = minVisibleXOffset / _internalPageSize.width;
-	NSInteger maxVisibleIndex = maxVisibleXOffset / _internalPageSize.width;	
+	CGFloat minVisibleOffset = offset - _visiblePadding;
+	CGFloat maxVisibleOffset = minVisibleOffset + _visiblePadding * 2 + scrollViewRelevantDimension - 1;
+	
+	CGFloat pageDimension = horizontalWorflow(_internalPageSize.width, _internalPageSize.height);
+	NSInteger minVisibleIndex = minVisibleOffset / pageDimension;
+	NSInteger maxVisibleIndex = maxVisibleOffset / pageDimension;
 	
 	if (minVisibleIndex < 0) minVisibleIndex = 0;
 	if (maxVisibleIndex >= _numberOfPages) maxVisibleIndex = _numberOfPages - 1;
@@ -120,16 +127,24 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 		finalPage = pageViewContainer;
 	}
 	
-	finalPage.xOrigin = index * _internalPageSize.width - _visibleHorizontalPadding;
+	if (_flow == FT2PageSCrollViewFlowHorizontal) {
+		finalPage.xOrigin = index * _internalPageSize.width - ((self.clipsToBounds) ? _visiblePadding : 0);
+	} else {
+		finalPage.yOrigin = index * _internalPageSize.height - ((self.clipsToBounds) ? _visiblePadding : 0);
+	}
 	finalPage.index = index;
 	
 	if (self.pagingEnabled) {
 			finalPage.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	} else {
-		finalPage.autoresizingMask = UIViewAutoresizingFlexibleHeight;	
+		if (_flow == FT2PageSCrollViewFlowHorizontal) {
+			finalPage.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+		} else {
+			finalPage.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+		}
 	}
-	finalPage.width = _internalPageSize.width + 2 * _visibleHorizontalPadding;
-	finalPage.height = _internalPageSize.height;
+	finalPage.width = horizontalWorflow(_internalPageSize.width + ((self.clipsToBounds) ? 2 * _visiblePadding : 0), _internalPageSize.width);
+	finalPage.height = horizontalWorflow(_internalPageSize.height, _internalPageSize.height + ((self.clipsToBounds) ? 2 * _visiblePadding : 0));
 	
 	return finalPage;
 }
@@ -175,7 +190,9 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 
 - (NSInteger)_numberOfViewsPerPage
 {
-	NSInteger number = self.bounds.size.width / _internalPageSize.width;
+	CGFloat dimension = scrollViewRelevantDimension;
+	CGFloat pageDimension = horizontalWorflow(_internalPageSize.width, _internalPageSize.height);
+	NSInteger number = dimension / pageDimension;
 	return number + 1;
 }
 
@@ -264,10 +281,14 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 - (void)reloadData
 {
 	_numberOfPages = [_dataSource numberOfPagesInPageScrollView:self];
-	self.contentSize = CGSizeMake(_numberOfPages * _internalPageSize.width, _internalPageSize.height);
+	if (_flow == FT2PageSCrollViewFlowHorizontal) {
+		self.contentSize = CGSizeMake(_numberOfPages * _internalPageSize.width, _internalPageSize.height);
+	} else {
+		self.contentSize = CGSizeMake(_internalPageSize.width, _numberOfPages * _internalPageSize.height);
+	}
 	[self _disposeOfVisibleViewsAndTellDelegate:NO];
 	if (_numberOfPages > 0) {
-		[self _updateUIForCurrentHorizontalOffset];
+		[self _updateUIForCurrentOffset];
 	}
 }
 
@@ -276,18 +297,32 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 	NSInteger numberOfPages = [_dataSource numberOfPagesInPageScrollView:self];
 	if (numberOfPages != _numberOfPages) {
 		_numberOfPages = numberOfPages;
-		self.contentSize = CGSizeMake(_numberOfPages * _internalPageSize.width, _internalPageSize.height);	
+		if (_flow == FT2PageSCrollViewFlowHorizontal) {
+			self.contentSize = CGSizeMake(_numberOfPages * _internalPageSize.width, _internalPageSize.height);
+		} else {
+			self.contentSize = CGSizeMake(_internalPageSize.width, _numberOfPages * _internalPageSize.height);
+		}
 	}
 }
 
 - (void)scrollToPageAtIndex:(NSInteger)index animated:(BOOL)animated
 {
 	if (animated && index != self.selectedIndex) [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-	CGFloat xOffset = index * _internalPageSize.width;
-	if (index != 0 && self.contentSize.width - xOffset < self.bounds.size.width) {
-		xOffset = self.contentSize.width - self.bounds.size.width;
-	}	
-	[self setContentOffset:CGPointMake(xOffset, 0) animated:animated];
+	if (_flow == FT2PageSCrollViewFlowHorizontal) {
+		CGFloat xOffset = index * _internalPageSize.width;
+		
+		if (index != 0 && self.contentSize.width - xOffset < self.bounds.size.width) {
+			xOffset = self.contentSize.width - self.bounds.size.width;
+		}
+		[self setContentOffset:CGPointMake(xOffset, 0) animated:animated];
+	} else {
+		CGFloat yOffset = index * _internalPageSize.height;
+		
+		if (index != 0 && self.contentSize.height - yOffset < self.bounds.size.height) {
+			yOffset = self.contentSize.height - self.bounds.size.height;
+		}
+		[self setContentOffset:CGPointMake(0, yOffset) animated:animated];
+	}
 }
 
 #pragma mark - Touch handling
@@ -334,10 +369,17 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 
 - (id)initWithFrame:(CGRect)frame
 {
+	self = [self initWithFrame:frame contentFlow:FT2PageSCrollViewFlowHorizontal];
+	return self;
+}
+
+- (id)initWithFrame:(CGRect)frame contentFlow:(FT2PageSCrollViewFlow)flow
+{
 	self = [super initWithFrame:frame];
 	if (self) {
 		self.pagingEnabled = YES;
 		self.showsHorizontalScrollIndicator = NO;
+		self.showsVerticalScrollIndicator = NO;
 		self.delaysContentTouches = YES;
 		self.canCancelContentTouches = YES;
 		[super setDelegate:self];
@@ -346,6 +388,7 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 		_numberOfPages = -1;
 		_reusableViews = [NSMutableSet new];
 		_reusablePages = [NSMutableDictionary new];
+		_flow = flow;
 	}
 	return self;
 }
@@ -358,9 +401,13 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 	if (self.pagingEnabled) {
 		_internalPageSize = self.bounds.size;
 	}
-	self.contentSize = CGSizeMake(_numberOfPages * _internalPageSize.width, scrollViewBoundsHeight);
+	if (_flow == FT2PageSCrollViewFlowHorizontal) {
+		self.contentSize = CGSizeMake(_numberOfPages * _internalPageSize.width, scrollViewBoundsHeight);
+	} else {
+		self.contentSize = CGSizeMake(scrollViewBoundsWidth, _numberOfPages * _internalPageSize.height);
+	}
 	[self scrollToPageAtIndex:(selectedIndex < 0) ? 0 : selectedIndex animated:NO];
-	[self _updateUIForCurrentHorizontalOffset];
+	[self _updateUIForCurrentOffset];
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
@@ -384,7 +431,7 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 
 - (NSInteger)selectedIndex
 {
-    NSInteger index = self.contentOffset.x / _internalPageSize.width;
+    NSInteger index = horizontalWorflow(self.contentOffset.x / _internalPageSize.width, self.contentOffset.y / _internalPageSize.height);
     if (index < 0) index = 0;
     if (index > _numberOfPages - 1) index = _numberOfPages - 1;
 	
@@ -418,14 +465,14 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 
 - (void)setVisibleSize:(CGSize)size
 {	
-	if (size.width > self.frame.size.width) {
+	if (horizontalWorflow(size.width > self.frame.size.width, size.height > self.frame.size.height)) {
 		self.clipsToBounds = NO;
 	} else {
 		self.clipsToBounds = YES;
 	}
 
 	_visibleSize = size;
-	_visibleHorizontalPadding = (size.width - self.frame.size.width) / 2;
+	_visiblePadding = horizontalWorflow((size.width - self.frame.size.width) / 2, (size.height - self.frame.size.height) / 2);
 }
 
 - (void)setDataSource:(id <FT2PageScrollViewDataSource>)d
@@ -465,10 +512,14 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 	if (_didUpdateFrame) {
 		_didUpdateFrame = NO;
 		for (FT2PageView *page in _visibleViews) {
-			page.xOrigin = page.index * _pageSize.width - _visibleHorizontalPadding;
+			if (_flow == FT2PageSCrollViewFlowHorizontal) {
+				page.xOrigin = page.index * _internalPageSize.width - ((self.clipsToBounds) ? _visiblePadding : 0);
+			} else {
+				page.yOrigin = page.index * _internalPageSize.height - ((self.clipsToBounds) ? _visiblePadding : 0);
+			}
 		}
 	} else {
-		[self _updateUIForCurrentHorizontalOffset];	
+		[self _updateUIForCurrentOffset];	
 	}
 
 	if ([_pageScrollViewDelegate respondsToSelector:@selector(scrollViewDidScroll:)]) {

@@ -16,6 +16,11 @@
 @class FT2PageScrollView;
 @class FT2PageView;
 
+typedef enum {
+	FT2PageSCrollViewFlowHorizontal,
+	FT2PageSCrollViewFlowVertical
+} FT2PageSCrollViewFlow;
+
 @protocol FT2PageScrollViewDataSource <NSObject>
 @required
 - (NSInteger)numberOfPagesInPageScrollView:(FT2PageScrollView *)scrollView;
@@ -61,8 +66,10 @@
 	NSInteger _numberOfPages;
 	CGRect _varianceRect;
 	
-	CGFloat _visibleHorizontalPadding;
+	CGFloat _visiblePadding;
 	id <FT2PageScrollViewDelegate> _pageScrollViewDelegate;
+	
+	FT2PageSCrollViewFlow _flow;
 	
 	BOOL _didUpdateFrame;
 	
@@ -84,7 +91,10 @@
 @property (nonatomic, assign) id <FT2PageScrollViewDelegate> delegate;
 @property (nonatomic) CGSize visibleSize;
 //use page size to define width of pages when paging is disabled
-@property (nonatomic, assign) CGSize pageSize; 
+@property (nonatomic, assign) CGSize pageSize;
+@property (nonatomic, readonly) FT2PageSCrollViewFlow flow;
+
+- (id)initWithFrame:(CGRect)frame contentFlow:(FT2PageSCrollViewFlow)flow;
 
 - (BOOL)canBeRotated;
 
