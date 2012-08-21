@@ -116,6 +116,8 @@
 		7AB6540B158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */; };
 		7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */; };
 		7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */; };
+		930BE8CF15E3BA5F00EBEEEB /* FT2MessagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 930BE8CD15E3BA5F00EBEEEB /* FT2MessagerView.h */; };
+		930BE8D015E3BA5F00EBEEEB /* FT2MessagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 930BE8CE15E3BA5F00EBEEEB /* FT2MessagerView.m */; };
 		932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */; };
 		932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDA67153DD96000E9D253 /* SA_OAuthTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */; };
@@ -447,6 +449,8 @@
 		7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIsSetContiguous.m"; sourceTree = "<group>"; };
 		7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AQGridView.h"; sourceTree = "<group>"; };
 		7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AQGridView.m"; sourceTree = "<group>"; };
+		930BE8CD15E3BA5F00EBEEEB /* FT2MessagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2MessagerView.h; sourceTree = "<group>"; };
+		930BE8CE15E3BA5F00EBEEEB /* FT2MessagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2MessagerView.m; sourceTree = "<group>"; };
 		932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterController.h; sourceTree = "<group>"; };
 		932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SA_OAuthTwitterController.m; sourceTree = "<group>"; };
 		932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterEngine.h; sourceTree = "<group>"; };
@@ -1156,6 +1160,8 @@
 				93B5B0FE15A714130049B3A0 /* Categories */,
 				93B5B11D15A714130049B3A0 /* FT2TransparentView.h */,
 				93B5B11E15A714130049B3A0 /* FT2TransparentView.m */,
+				930BE8CD15E3BA5F00EBEEEB /* FT2MessagerView.h */,
+				930BE8CE15E3BA5F00EBEEEB /* FT2MessagerView.m */,
 				4CF02070159244C0009A93BF /* FTAutoLineView.h */,
 				4CF02071159244C0009A93BF /* FTAutoLineView.m */,
 				6842EC511552BE2700C18C9F /* CoreText */,
@@ -1422,6 +1428,7 @@
 				7A59E4D915CADEA800BE474E /* UIView+Border.h in Headers */,
 				7AAA4BD015CC35640052F1AA /* NSObject+PLGSubscripting.h in Headers */,
 				934E719415D3B8BA000E321B /* FT2Data.h in Headers */,
+				930BE8CF15E3BA5F00EBEEEB /* FT2MessagerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1488,6 +1495,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Fuerte International";
 			};
 			buildConfigurationList = 938D580C153DC4370067CEFA /* Build configuration list for PBXProject "FTLibrary2" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1671,6 +1679,7 @@
 				7A59E4DA15CADEA800BE474E /* UIView+Border.m in Sources */,
 				7AAA4BD115CC35640052F1AA /* NSObject+PLGSubscripting.m in Sources */,
 				934E719515D3B8BA000E321B /* FT2Data.m in Sources */,
+				930BE8D015E3BA5F00EBEEEB /* FT2MessagerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
