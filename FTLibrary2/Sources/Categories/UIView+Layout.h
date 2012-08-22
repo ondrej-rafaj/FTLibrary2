@@ -43,9 +43,14 @@
 - (CGFloat)right;
 - (void)setRight:(CGFloat)right;
 
+//returns the center of the view in the view's coordinates system
 - (CGPoint)boundsCenter;
 
 - (void)setCenterIntegral:(CGPoint)center;
+
+//set the anchorPoint without moving the view
+- (void)setAnchorPoint:(CGPoint)anchorPoint;
+- (CGPoint)anchorPoint;
 
 //superview related
 
@@ -58,6 +63,8 @@
 - (CGFloat)rightMargin;
 - (void)setRightMargin:(CGFloat)rightMargin;
 
+//autoresizing
+
 - (void)setAutoresizingNone;
 - (void)setAutoresizingBottomLeft;
 - (void)setAutoresizingBottomRight;
@@ -69,19 +76,20 @@
 - (void)setAutoresizingWidthAndHeight;
 
 
-- (CGFloat)baselinePosition;
+// DON'T ANYONE DARE CHANGING THE DEPRECATIONS BELOW
+// CHANGE YOUR CODE INSTEAD
+// THE RIGHT METHODS TO USE ARE ABOVE BECAUSE WE CAN USE THE OBJECTIVE-C 2.0 DOT SYNTAX WITH THEM
+// AND WE DON'T WANT DUPLICATE METHODS THAT DO THE SAME THINGS
 
-- (void)positionAtX:(CGFloat)xValue;
-- (void)positionAtY:(CGFloat)yValue;
-- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue;
+- (CGFloat)baselinePosition __deprecated; //use -bottom method instead
 
-- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue withWidth:(CGFloat)width;
-- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue withHeight:(CGFloat)height;
+- (void)positionAtX:(CGFloat)xValue __deprecated; //use -setXOrigin: instead
+- (void)positionAtY:(CGFloat)yValue __deprecated; //use -setYOrigin: instead
+- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue __deprecated; //use -positionAtX:andY: instead
 
-- (void)positionAtX:(CGFloat)xValue withHeight:(CGFloat)height;
+- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue withWidth:(CGFloat)width __deprecated; //cos it's useless?
+- (void)positionAtX:(CGFloat)xValue andY:(CGFloat)yValue withHeight:(CGFloat)height __deprecated; //same
 
-
-
-
+- (void)positionAtX:(CGFloat)xValue withHeight:(CGFloat)height __deprecated; //same
 
 @end

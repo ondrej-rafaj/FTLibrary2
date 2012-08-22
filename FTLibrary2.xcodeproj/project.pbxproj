@@ -549,6 +549,8 @@
 		932FDB51153DDE5100E9D253 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		934E719215D3B8BA000E321B /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2Data.h; sourceTree = "<group>"; };
 		934E719315D3B8BA000E321B /* FT2Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2Data.m; sourceTree = "<group>"; };
+		9356F54515E53595004E3AD2 /* FT2ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = FT2ShadowView.h; sourceTree = "<group>"; };
+		9356F54615E53595004E3AD2 /* FT2ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = FT2ShadowView.m; sourceTree = "<group>"; };
 		9387980D153ED11A001FE131 /* FT2PageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageScrollView.h; path = FTLibrary2/Sources/FT2PageScrollView.h; sourceTree = "<group>"; };
 		9387980E153ED11A001FE131 /* FT2PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageScrollView.m; path = FTLibrary2/Sources/FT2PageScrollView.m; sourceTree = "<group>"; };
 		9387980F153ED11A001FE131 /* FT2PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageView.h; path = FTLibrary2/Sources/FT2PageView.h; sourceTree = "<group>"; };
@@ -596,36 +598,6 @@
 		938D5835153DCA840067CEFA /* FTLibrary2Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLibrary2Test-Prefix.pch"; sourceTree = "<group>"; };
 		938D5836153DCA840067CEFA /* FT2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FT2AppDelegate.h; sourceTree = "<group>"; };
 		938D5837153DCA840067CEFA /* FT2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FT2AppDelegate.m; sourceTree = "<group>"; };
-		93B5B0FF15A714130049B3A0 /* CGAffineTransformAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGAffineTransformAdditions.h; sourceTree = "<group>"; };
-		93B5B10015A714130049B3A0 /* CoreGraphicAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicAdditions.h; sourceTree = "<group>"; };
-		93B5B10115A714130049B3A0 /* NSArray+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Tools.h"; sourceTree = "<group>"; };
-		93B5B10215A714130049B3A0 /* NSArray+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Tools.m"; sourceTree = "<group>"; };
-		93B5B10315A714130049B3A0 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		93B5B10415A714130049B3A0 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		93B5B10515A714130049B3A0 /* NSDate+NSDate_TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSDate_TimeAgo.h"; sourceTree = "<group>"; };
-		93B5B10615A714130049B3A0 /* NSDate+NSDate_TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSDate_TimeAgo.m"; sourceTree = "<group>"; };
-		93B5B10715A714130049B3A0 /* NSIndexPath+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+Tools.h"; sourceTree = "<group>"; };
-		93B5B10815A714130049B3A0 /* NSIndexPath+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+Tools.m"; sourceTree = "<group>"; };
-		93B5B10915A714130049B3A0 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
-		93B5B10A15A714130049B3A0 /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
-		93B5B10B15A714130049B3A0 /* UIColor+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Tools.h"; sourceTree = "<group>"; };
-		93B5B10C15A714130049B3A0 /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tools.m"; sourceTree = "<group>"; };
-		93B5B10D15A714130049B3A0 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
-		93B5B10E15A714130049B3A0 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
-		93B5B10F15A714130049B3A0 /* UIImage+ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorPicker.h"; sourceTree = "<group>"; };
-		93B5B11015A714130049B3A0 /* UIImage+ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorPicker.m"; sourceTree = "<group>"; };
-		93B5B11115A714130049B3A0 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		93B5B11215A714130049B3A0 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		93B5B11315A714130049B3A0 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
-		93B5B11415A714130049B3A0 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
-		93B5B11515A714130049B3A0 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
-		93B5B11615A714130049B3A0 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
-		93B5B11715A714130049B3A0 /* UIImage+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tools.h"; sourceTree = "<group>"; };
-		93B5B11815A714130049B3A0 /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
-		93B5B11915A714130049B3A0 /* UILabel+DynamicHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DynamicHeight.h"; sourceTree = "<group>"; };
-		93B5B11A15A714130049B3A0 /* UILabel+DynamicHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DynamicHeight.m"; sourceTree = "<group>"; };
-		93B5B11B15A714130049B3A0 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
-		93B5B11C15A714130049B3A0 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		93B5B11D15A714130049B3A0 /* FT2TransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2TransparentView.h; path = FTLibrary2/Sources/FT2TransparentView.h; sourceTree = "<group>"; };
 		93B5B11E15A714130049B3A0 /* FT2TransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2TransparentView.m; path = FTLibrary2/Sources/FT2TransparentView.m; sourceTree = "<group>"; };
 		93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ReachabilityManager.h; path = FTLibrary2/Sources/FT2ReachabilityManager.h; sourceTree = "<group>"; };
@@ -1157,7 +1129,8 @@
 		938D583D153DCAB30067CEFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				93B5B0FE15A714130049B3A0 /* Categories */,
+				9356F54515E53595004E3AD2 /* FT2ShadowView.h */,
+				9356F54615E53595004E3AD2 /* FT2ShadowView.m */,
 				93B5B11D15A714130049B3A0 /* FT2TransparentView.h */,
 				93B5B11E15A714130049B3A0 /* FT2TransparentView.m */,
 				930BE8CD15E3BA5F00EBEEEB /* FT2MessagerView.h */,
@@ -1222,44 +1195,6 @@
 				6853970A1550298300B2D2A4 /* FT2File.m */,
 			);
 			name = Data;
-			sourceTree = "<group>";
-		};
-		93B5B0FE15A714130049B3A0 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				93B5B0FF15A714130049B3A0 /* CGAffineTransformAdditions.h */,
-				93B5B10015A714130049B3A0 /* CoreGraphicAdditions.h */,
-				93B5B10115A714130049B3A0 /* NSArray+Tools.h */,
-				93B5B10215A714130049B3A0 /* NSArray+Tools.m */,
-				93B5B10315A714130049B3A0 /* NSData+Base64.h */,
-				93B5B10415A714130049B3A0 /* NSData+Base64.m */,
-				93B5B10515A714130049B3A0 /* NSDate+NSDate_TimeAgo.h */,
-				93B5B10615A714130049B3A0 /* NSDate+NSDate_TimeAgo.m */,
-				93B5B10715A714130049B3A0 /* NSIndexPath+Tools.h */,
-				93B5B10815A714130049B3A0 /* NSIndexPath+Tools.m */,
-				93B5B10915A714130049B3A0 /* NSString+UUID.h */,
-				93B5B10A15A714130049B3A0 /* NSString+UUID.m */,
-				93B5B10B15A714130049B3A0 /* UIColor+Tools.h */,
-				93B5B10C15A714130049B3A0 /* UIColor+Tools.m */,
-				93B5B10D15A714130049B3A0 /* UIImage+Alpha.h */,
-				93B5B10E15A714130049B3A0 /* UIImage+Alpha.m */,
-				93B5B10F15A714130049B3A0 /* UIImage+ColorPicker.h */,
-				93B5B11015A714130049B3A0 /* UIImage+ColorPicker.m */,
-				93B5B11115A714130049B3A0 /* UIImage+Resize.h */,
-				93B5B11215A714130049B3A0 /* UIImage+Resize.m */,
-				93B5B11315A714130049B3A0 /* UIImage+RoundedCorner.h */,
-				93B5B11415A714130049B3A0 /* UIImage+RoundedCorner.m */,
-				93B5B11515A714130049B3A0 /* UIImage+Tint.h */,
-				93B5B11615A714130049B3A0 /* UIImage+Tint.m */,
-				93B5B11715A714130049B3A0 /* UIImage+Tools.h */,
-				93B5B11815A714130049B3A0 /* UIImage+Tools.m */,
-				93B5B11915A714130049B3A0 /* UILabel+DynamicHeight.h */,
-				93B5B11A15A714130049B3A0 /* UILabel+DynamicHeight.m */,
-				93B5B11B15A714130049B3A0 /* UIView+Layout.h */,
-				93B5B11C15A714130049B3A0 /* UIView+Layout.m */,
-			);
-			name = Categories;
-			path = FTLibrary2/Sources/Categories;
 			sourceTree = "<group>";
 		};
 		93C265D9153EC32E0010A059 /* Reachability */ = {

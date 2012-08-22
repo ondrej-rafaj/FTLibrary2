@@ -48,7 +48,7 @@
 	CGFloat step = (([self width] - elementsWidth) / ([self.subviews count] + add));
 	CGFloat xPos = (enableSideSpace) ? step : 0;
 	for (UIView *v in self.subviews) {
-		[v positionAtX:xPos];
+		v.xOrigin = xPos;
 		xPos += (step + [v width]);
 	}
 }

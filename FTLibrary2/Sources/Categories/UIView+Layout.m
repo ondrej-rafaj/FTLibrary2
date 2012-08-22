@@ -6,8 +6,8 @@
 //  Copyright 2009 Fuerte International. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "UIView+Layout.h"
-
 
 @implementation UIView (Layout)
 
@@ -196,6 +196,31 @@
 		frame.origin.x = self.superview.width - rightMargin - self.width;
 		self.frame = frame;
 	}
+}
+
+- (CGPoint)anchorPoint
+{
+	return self.layer.anchorPoint;
+}
+
+- (void)setAnchorPoint:(CGPoint)anchorPoint
+{
+    CGPoint newPoint = CGPointMake(self.bounds.size.width * anchorPoint.x, self.bounds.size.height * anchorPoint.y);
+    CGPoint oldPoint = CGPointMake(self.bounds.size.width * self.layer.anchorPoint.x, self.bounds.size.height * self.layer.anchorPoint.y);
+	
+    newPoint = CGPointApplyAffineTransform(newPoint, self.transform);
+    oldPoint = CGPointApplyAffineTransform(oldPoint, self.transform);
+	
+    CGPoint position = self.layer.position;
+	
+    position.x -= oldPoint.x;
+    position.x += newPoint.x;
+	
+    position.y -= oldPoint.y;
+    position.y += newPoint.y;
+	
+    self.layer.position = position;
+    self.layer.anchorPoint = anchorPoint;
 }
 
 - (void)setAutoresizingNone {
