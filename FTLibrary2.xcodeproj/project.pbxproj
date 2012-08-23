@@ -116,6 +116,7 @@
 		7AB6540B158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */; };
 		7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */; };
 		7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */; };
+		9305FBF815E536F9002BA589 /* FT2ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9356F54615E53595004E3AD2 /* FT2ShadowView.m */; };
 		930BE8CF15E3BA5F00EBEEEB /* FT2MessagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 930BE8CD15E3BA5F00EBEEEB /* FT2MessagerView.h */; };
 		930BE8D015E3BA5F00EBEEEB /* FT2MessagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 930BE8CE15E3BA5F00EBEEEB /* FT2MessagerView.m */; };
 		932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */; };
@@ -549,8 +550,8 @@
 		932FDB51153DDE5100E9D253 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		934E719215D3B8BA000E321B /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2Data.h; sourceTree = "<group>"; };
 		934E719315D3B8BA000E321B /* FT2Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2Data.m; sourceTree = "<group>"; };
-		9356F54515E53595004E3AD2 /* FT2ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = FT2ShadowView.h; sourceTree = "<group>"; };
-		9356F54615E53595004E3AD2 /* FT2ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = FT2ShadowView.m; sourceTree = "<group>"; };
+		9356F54515E53595004E3AD2 /* FT2ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2ShadowView.h; sourceTree = "<group>"; };
+		9356F54615E53595004E3AD2 /* FT2ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2ShadowView.m; sourceTree = "<group>"; };
 		9387980D153ED11A001FE131 /* FT2PageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageScrollView.h; path = FTLibrary2/Sources/FT2PageScrollView.h; sourceTree = "<group>"; };
 		9387980E153ED11A001FE131 /* FT2PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageScrollView.m; path = FTLibrary2/Sources/FT2PageScrollView.m; sourceTree = "<group>"; };
 		9387980F153ED11A001FE131 /* FT2PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageView.h; path = FTLibrary2/Sources/FT2PageView.h; sourceTree = "<group>"; };
@@ -1512,6 +1513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9305FBF815E536F9002BA589 /* FT2ShadowView.m in Sources */,
 				148B739415C150880002D5AE /* MKAnnotationView+WebCache.m in Sources */,
 				148B739515C150880002D5AE /* SDImageCache.m in Sources */,
 				148B739615C150880002D5AE /* SDWebImageDecoder.m in Sources */,
