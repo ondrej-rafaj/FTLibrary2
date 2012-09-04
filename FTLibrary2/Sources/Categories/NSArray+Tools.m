@@ -55,4 +55,16 @@
 	return [self safeSubarrayWithRange:range newRange:NULL];
 }
 
++ (id)arrayWithCapacityFilledWithNil:(NSUInteger)capacity
+{
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:capacity];
+	for (int i = 0; i < capacity; i++) {
+		[array addObject:[NSNull null]];
+	}
+	if ([self class] == [NSArray class]) {
+		array = array.copy;
+	}
+	return array;
+}
+
 @end

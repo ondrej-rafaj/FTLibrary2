@@ -19,4 +19,6 @@
 
 - (NSArray *)safeSubarrayWithRange:(NSRange)range;
 
++ (id)arrayWithCapacityFilledWithNil:(NSUInteger)capacity;
+
 @end

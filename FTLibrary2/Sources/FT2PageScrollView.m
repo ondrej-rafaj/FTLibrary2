@@ -427,6 +427,11 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 	}
 }
 
+- (BOOL)touchesShouldCancelInContentView:(UIView *)view
+{
+	return self.canCancelContentTouches;
+}
+
 #pragma mark - Getters
 
 - (NSInteger)selectedIndex
