@@ -70,7 +70,7 @@ typedef enum
 
 @property NSInteger currentIndex;
 @property NSInteger startingIndex;
-@property (nonatomic,assign) NSObject<FGalleryViewControllerDelegate> *photoSource;
+@property (nonatomic,assign) NSObject<FGalleryViewControllerDelegate> *photoSource, *delegate;
 @property (nonatomic,readonly) UIToolbar *toolBar;
 @property (nonatomic,readonly) UIView* thumbsView;
 @property (nonatomic,retain) NSString *galleryID;
@@ -94,4 +94,7 @@ typedef enum
 - (NSString*)photoGallery:(FGalleryViewController*)gallery filePathForPhotoSize:(FGalleryPhotoSize)size atIndex:(NSUInteger)index;
 - (NSString*)photoGallery:(FGalleryViewController*)gallery urlForPhotoSize:(FGalleryPhotoSize)size atIndex:(NSUInteger)index;
 
+- (void)photoGalleryViewDidLoad:(FGalleryViewController *)gallery;
+
+- (void)photoGallery:(FGalleryViewController *)gallery viewWillAppearAnimated:(BOOL)animated;
 @end
