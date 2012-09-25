@@ -67,7 +67,7 @@ typedef enum {
 	CGRect _varianceRect;
 	
 	CGFloat _visiblePadding;
-	id <FT2PageScrollViewDelegate> _pageScrollViewDelegate;
+	__weak id <FT2PageScrollViewDelegate> _pageScrollViewDelegate;
 	
 	FT2PageSCrollViewFlow _flow;
 	
@@ -87,11 +87,11 @@ typedef enum {
     } _pageScrollViewFlags;
 }
 
-@property (nonatomic, assign) id <FT2PageScrollViewDataSource> dataSource;
-@property (nonatomic, assign) id <FT2PageScrollViewDelegate> delegate;
+@property (nonatomic, weak) id <FT2PageScrollViewDataSource> dataSource;
+@property (nonatomic, weak) id <FT2PageScrollViewDelegate> delegate;
 @property (nonatomic) CGSize visibleSize;
 //use page size to define width of pages when paging is disabled
-@property (nonatomic, assign) CGSize pageSize;
+@property (nonatomic) CGSize pageSize;
 @property (nonatomic, readonly) FT2PageSCrollViewFlow flow;
 
 - (id)initWithFrame:(CGRect)frame contentFlow:(FT2PageSCrollViewFlow)flow;
