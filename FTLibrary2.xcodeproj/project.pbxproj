@@ -91,6 +91,8 @@
 		68B252DC1545898A00F961B3 /* FT2TaskMakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B252DB1545898A00F961B3 /* FT2TaskMakerTests.m */; };
 		7A59E4D915CADEA800BE474E /* UIView+Border.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A59E4D715CADEA800BE474E /* UIView+Border.h */; };
 		7A59E4DA15CADEA800BE474E /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59E4D815CADEA800BE474E /* UIView+Border.m */; };
+		7A8112C11601F5F4008918E9 /* UIView+Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A8112BF1601F5F4008918E9 /* UIView+Log.h */; };
+		7A8112C21601F5F4008918E9 /* UIView+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8112C01601F5F4008918E9 /* UIView+Log.m */; };
 		7AAA4BD015CC35640052F1AA /* NSObject+PLGSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AAA4BCE15CC35640052F1AA /* NSObject+PLGSubscripting.h */; };
 		7AAA4BD115CC35640052F1AA /* NSObject+PLGSubscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4BCF15CC35640052F1AA /* NSObject+PLGSubscripting.m */; };
 		7AB653F7158A059900D307E7 /* AQGridView+CellLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E0158A059900D307E7 /* AQGridView+CellLayout.h */; };
@@ -425,6 +427,8 @@
 		68B252DB1545898A00F961B3 /* FT2TaskMakerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2TaskMakerTests.m; sourceTree = "<group>"; };
 		7A59E4D715CADEA800BE474E /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Border.h"; path = "FTLibrary2/Sources/Categories/UIView+Border.h"; sourceTree = "<group>"; };
 		7A59E4D815CADEA800BE474E /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Border.m"; path = "FTLibrary2/Sources/Categories/UIView+Border.m"; sourceTree = "<group>"; };
+		7A8112BF1601F5F4008918E9 /* UIView+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Log.h"; path = "FTLibrary2/Sources/Categories/UIView+Log.h"; sourceTree = "<group>"; };
+		7A8112C01601F5F4008918E9 /* UIView+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Log.m"; path = "FTLibrary2/Sources/Categories/UIView+Log.m"; sourceTree = "<group>"; };
 		7AAA4BCE15CC35640052F1AA /* NSObject+PLGSubscripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+PLGSubscripting.h"; path = "FTLibrary2/Sources/Categories/NSObject+PLGSubscripting.h"; sourceTree = "<group>"; };
 		7AAA4BCF15CC35640052F1AA /* NSObject+PLGSubscripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PLGSubscripting.m"; path = "FTLibrary2/Sources/Categories/NSObject+PLGSubscripting.m"; sourceTree = "<group>"; };
 		7AB653E0158A059900D307E7 /* AQGridView+CellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLayout.h"; sourceTree = "<group>"; };
@@ -1179,6 +1183,8 @@
 				7A59E4D815CADEA800BE474E /* UIView+Border.m */,
 				7AAA4BCE15CC35640052F1AA /* NSObject+PLGSubscripting.h */,
 				7AAA4BCF15CC35640052F1AA /* NSObject+PLGSubscripting.m */,
+				7A8112BF1601F5F4008918E9 /* UIView+Log.h */,
+				7A8112C01601F5F4008918E9 /* UIView+Log.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1365,6 +1371,7 @@
 				7AAA4BD015CC35640052F1AA /* NSObject+PLGSubscripting.h in Headers */,
 				934E719415D3B8BA000E321B /* FT2Data.h in Headers */,
 				930BE8CF15E3BA5F00EBEEEB /* FT2MessagerView.h in Headers */,
+				7A8112C11601F5F4008918E9 /* UIView+Log.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1617,6 +1624,7 @@
 				7AAA4BD115CC35640052F1AA /* NSObject+PLGSubscripting.m in Sources */,
 				934E719515D3B8BA000E321B /* FT2Data.m in Sources */,
 				930BE8D015E3BA5F00EBEEEB /* FT2MessagerView.m in Sources */,
+				7A8112C21601F5F4008918E9 /* UIView+Log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

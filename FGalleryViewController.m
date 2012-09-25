@@ -76,6 +76,7 @@
 @synthesize startingIndex = _startingIndex;
 @synthesize beginsInThumbnailView = _beginsInThumbnailView;
 @synthesize hideTitle = _hideTitle;
+@synthesize delegate = _delegate;
 
 #pragma mark - Public Methods
 
@@ -261,6 +262,15 @@
     [super viewDidUnload];
 }
 
+- (void)viewDidLoad
+{
+	[super viewDidLoad];
+	
+	if (_delegate && [_delegate respondsToSelector:@selector(photoGalleryViewDidLoad:)])
+	{
+		[_delegate photoGalleryViewDidLoad:self];
+	}
+}
 
 - (void)destroyViews {
     // remove previous photo views
@@ -342,6 +352,11 @@
 	// init with next on first run.
 	if( _currentIndex == -1 ) [self next];
 	else [self gotoImageByIndex:_currentIndex animated:NO];
+	
+	if (_delegate && [_delegate respondsToSelector:@selector(photoGallery:viewWillAppearAnimated:)])
+	{
+		[_delegate photoGallery:self viewWillAppearAnimated:animated];
+	}
 }
 
 

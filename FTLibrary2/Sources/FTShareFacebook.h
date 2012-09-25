@@ -8,9 +8,9 @@
 //Use http://developers.facebook.com/docs/reference/dialogs/feed/ to see how to use those parameters
 
 #import <Foundation/Foundation.h>
-#import "FBConnect.h"
-#import "FTShareMessageController.h"
 
+#import "FTShareMessageController.h"
+#import "FBConnect.h"
 #define kFTShareFacebookPostNotification    @"FTShareFacebookPostNotification"
 
 #pragma mark --

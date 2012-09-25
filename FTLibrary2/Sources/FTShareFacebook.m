@@ -335,6 +335,7 @@
     FTShareFacebookData *data = [[FTShareFacebookData alloc] init];
     [data setHasControllerSupport:NO];
     [data setMessage:message];
+	[data setPicture:_params.picture];
     [data setLink:_params.link];
     [data setHttpType:_params.httpType];
     [data setUploadPhoto:_params.uploadPhoto];
