@@ -1135,7 +1135,7 @@
 		
 		photoView.imageView.image = nil;
 		
-		[photoView showErrorWithTitle: [error localizedDescription] description: @"Dolore claritas seacula demonstraverunt Investigationes legentis. Consectetuer soluta at nulla quam demonstraverunt. Eorum qui aliquam eleifend est veniam."];
+		[photoView showErrorWithTitle: [error localizedDescription] description: nil];
 	}
 	// otherwise, we don't need to keep this image around
 	else {
