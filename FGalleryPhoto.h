@@ -78,4 +78,7 @@
 - (void)galleryPhoto:(FGalleryPhoto*)photo willLoadThumbnailFromPath:(NSString*)path;
 - (void)galleryPhoto:(FGalleryPhoto*)photo willLoadFullsizeFromPath:(NSString*)path;
 
+- (void) galleryPhoto: (FGalleryPhoto *) photo didFailLoadThumbnailWithError: (NSError *) error;
+- (void) galleryPhoto: (FGalleryPhoto *) photo didFailLoadFullsizeWithError: (NSError *) error;
+
 @end

@@ -22,7 +22,7 @@
 @synthesize imageView;
 @synthesize activity = _activity;
 @synthesize button = _button;
-
+@synthesize errorView = _errorView;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -87,6 +87,33 @@
 	[self setZoomScale:self.minimumZoomScale animated:NO];
 	[self zoomToRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height ) animated:NO];
 	self.contentSize = CGSizeMake(self.frame.size.width * self.zoomScale, self.frame.size.height * self.zoomScale );
+}
+
+- (void) showErrorWithTitle: (NSString *) title description: (NSString *) description {
+	
+	if(!self.errorView) {
+		
+		_errorView = [[FGalleryPhotoErrorView alloc] initWithFrame: self.bounds];
+		_errorView.backgroundColor = self.backgroundColor;
+	}
+	
+	if(title.length > 0) {
+		_errorView.titleLabel.text = title;
+	}
+	
+	if(description.length > 0) {
+		_errorView.descriptionLabel.text = description;
+	}
+	
+	[self addSubview: _errorView];
+}
+
+- (void) hideError {
+	
+	
+	[_errorView removeFromSuperview];
+		
+	_errorView = nil;
 }
 
 - (void)setFrame:(CGRect)theFrame

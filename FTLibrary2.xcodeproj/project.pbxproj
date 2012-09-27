@@ -23,6 +23,8 @@
 		148B739915C150880002D5AE /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B738615C14DEC0002D5AE /* SDWebImagePrefetcher.m */; };
 		148B739A15C150880002D5AE /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B738815C14DEC0002D5AE /* UIButton+WebCache.m */; };
 		148B739B15C150880002D5AE /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B738A15C14DEC0002D5AE /* UIImageView+WebCache.m */; };
+		35B7E4B71614732D001D024F /* FGalleryPhotoErrorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 35B7E4B51614732D001D024F /* FGalleryPhotoErrorView.h */; };
+		35B7E4B81614732D001D024F /* FGalleryPhotoErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B7E4B61614732D001D024F /* FGalleryPhotoErrorView.m */; };
 		4CF02072159244C0009A93BF /* FTAutoLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF02070159244C0009A93BF /* FTAutoLineView.h */; };
 		4CF02073159244C0009A93BF /* FTAutoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF02071159244C0009A93BF /* FTAutoLineView.m */; };
 		681C087A157505CC00BB8E2D /* FT2Download.h in Headers */ = {isa = PBXBuildFile; fileRef = 681C0878157505CB00BB8E2D /* FT2Download.h */; };
@@ -365,6 +367,8 @@
 		148B738815C14DEC0002D5AE /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		148B738915C14DEC0002D5AE /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		148B738A15C14DEC0002D5AE /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		35B7E4B51614732D001D024F /* FGalleryPhotoErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryPhotoErrorView.h; sourceTree = "<group>"; };
+		35B7E4B61614732D001D024F /* FGalleryPhotoErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryPhotoErrorView.m; sourceTree = "<group>"; };
 		4CF02070159244C0009A93BF /* FTAutoLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAutoLineView.h; sourceTree = "<group>"; };
 		4CF02071159244C0009A93BF /* FTAutoLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAutoLineView.m; sourceTree = "<group>"; };
 		681C0878157505CB00BB8E2D /* FT2Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Download.h; path = FTLibrary2/Sources/FT2Download.h; sourceTree = "<group>"; };
@@ -1234,6 +1238,8 @@
 				DEE3646915B993A900CE958D /* FGalleryPhotoView.m */,
 				DEE3646A15B993A900CE958D /* FGalleryViewController.h */,
 				DEE3646B15B993A900CE958D /* FGalleryViewController.m */,
+				35B7E4B51614732D001D024F /* FGalleryPhotoErrorView.h */,
+				35B7E4B61614732D001D024F /* FGalleryPhotoErrorView.m */,
 			);
 			name = FGallery;
 			sourceTree = "<group>";
@@ -1372,6 +1378,7 @@
 				934E719415D3B8BA000E321B /* FT2Data.h in Headers */,
 				930BE8CF15E3BA5F00EBEEEB /* FT2MessagerView.h in Headers */,
 				7A8112C11601F5F4008918E9 /* UIView+Log.h in Headers */,
+				35B7E4B71614732D001D024F /* FGalleryPhotoErrorView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1625,6 +1632,7 @@
 				934E719515D3B8BA000E321B /* FT2Data.m in Sources */,
 				930BE8D015E3BA5F00EBEEEB /* FT2MessagerView.m in Sources */,
 				7A8112C21601F5F4008918E9 /* UIView+Log.m in Sources */,
+				35B7E4B81614732D001D024F /* FGalleryPhotoErrorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

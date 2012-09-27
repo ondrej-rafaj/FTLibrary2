@@ -216,7 +216,7 @@
 		// create new image with data
 		_thumbnail = [[UIImage alloc] initWithData:_thumbData];
 		
-		// cleanup 
+		// cleanup
 		[self killThumbnailLoadObjects];
 		
 		// notify delegate
@@ -231,7 +231,7 @@
 		// create new image with data
 		_fullsize = [[UIImage alloc] initWithData:_fullsizeData];
 		
-		// cleanup 
+		// cleanup
 		[self killFullsizeLoadObjects];
 		
 		// notify delegate
@@ -242,6 +242,33 @@
 	// turn off data indicator
 	if( !_isFullsizeLoading && !_isThumbLoading ) 
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+- (void) connection: (NSURLConnection *) connection didFailWithError: (NSError *) error {
+	
+	if(connection == _thumbConnection) {
+		
+		_isThumbLoading = NO;
+		_hasThumbLoaded = NO;
+		
+		[self killThumbnailLoadObjects];
+		
+		[self didFailLoadThumbnailWithError: error];
+	}
+	else {
+		
+		_isFullsizeLoading = NO;
+		_hasFullsizeLoaded = NO;
+		
+		// cleanup
+		[self killFullsizeLoadObjects];
+		
+		[self didFailLoadFullsizeWithError: error];
+	}
+	
+	if(!_isFullsizeLoading && !_isThumbLoading) {
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
+	}
 }
 
 #pragma mark -
@@ -291,6 +318,19 @@
 		[_delegate galleryPhoto:self didLoadFullsize:_fullsize];
 }
 
+- (void) didFailLoadThumbnailWithError: (NSError *) error {
+	
+	if([_delegate respondsToSelector:@selector(galleryPhoto:didFailLoadThumbnailWithError:)]) {
+		[_delegate galleryPhoto:self didFailLoadThumbnailWithError: error];
+	}
+}
+
+- (void) didFailLoadFullsizeWithError: (NSError *) error {
+	
+	if([_delegate respondsToSelector:@selector(galleryPhoto:didFailLoadFullsizeWithError:)]) {
+		[_delegate galleryPhoto:self didFailLoadFullsizeWithError: error];
+	}
+}
 
 #pragma mark -
 #pragma mark Memory Management
