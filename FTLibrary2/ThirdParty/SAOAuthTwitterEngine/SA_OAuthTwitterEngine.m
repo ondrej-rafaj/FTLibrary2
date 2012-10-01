@@ -62,7 +62,7 @@
 
 - (SA_OAuthTwitterEngine *) initOAuthWithDelegate: (NSObject *) delegate {
     if (self = (id) [super initWithDelegate: delegate]) {
-		self.requestTokenURL = [NSURL URLWithString: @"https://twitter.com/oauth/request_token"]; //@cescofry
+		self.requestTokenURL = [NSURL URLWithString: @"https://twitter.com/oauth/request_token"];
 		self.accessTokenURL = [NSURL URLWithString: @"https://twitter.com/oauth/access_token"];
 		self.authorizeURL = [NSURL URLWithString: @"https://twitter.com/oauth/authorize"];
 	}
@@ -136,7 +136,8 @@
 
 - (void) setPin: (NSString *) pin {
 	[_pin autorelease];
-    _pin = [pin retain];
+	_pin = [pin retain];
+	
 	_accessToken.pin = pin;
 	_requestToken.pin = pin;
 }

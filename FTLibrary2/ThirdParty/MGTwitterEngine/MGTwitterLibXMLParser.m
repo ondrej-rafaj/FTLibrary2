@@ -32,18 +32,18 @@ connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType)re
 }
 
 
-- (id)initWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate 
+- (id)initWithXML:(NSData *)theXML delegate:(NSObject<MGTwitterParserDelegate> *)theDelegate 
 connectionIdentifier:(NSString *)theIdentifier requestType:(MGTwitterRequestType)reqType 
 	 responseType:(MGTwitterResponseType)respType URL:(NSURL *)theURL
 {
-	if (self = [super init])
+	if ((self = [super init]))
 	{
 		xml = [theXML retain];
 		identifier = [theIdentifier retain];
 		requestType = reqType;
 		responseType = respType;
 		URL = [theURL retain];
-		delegate = (NSObject <MGTwitterParserDelegate> *)theDelegate;
+		delegate = (id) theDelegate;
 		parsedObjects = [[NSMutableArray alloc] initWithCapacity:0];
 
 		// setup the xml reader

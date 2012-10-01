@@ -95,10 +95,10 @@
 }
 
 
-- (MGTwitterEngine *)initWithDelegate:(NSObject *)newDelegate
+- (MGTwitterEngine *)initWithDelegate:(NSObject<MGTwitterEngineDelegate>*)newDelegate
 {
-    if (self = [super init]) {
-        _delegate = (NSObject <MGTwitterEngineDelegate> *) newDelegate; // deliberately weak reference
+    if ((self = [super init])) {
+        _delegate = (id) newDelegate; // deliberately weak reference
         _connections = [[NSMutableDictionary alloc] initWithCapacity:0];
         _clientName = [DEFAULT_CLIENT_NAME retain];
         _clientVersion = [DEFAULT_CLIENT_VERSION retain];
@@ -190,7 +190,7 @@
 		NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
 		NSEnumerator *enumerator = [[cookieStorage cookiesForURL:url] objectEnumerator];
 		NSHTTPCookie *cookie = nil;
-		while (cookie = [enumerator nextObject]) {
+		while ((cookie = [enumerator nextObject])) {
 			[cookieStorage deleteCookie:cookie];
 		}
 	}
@@ -1573,7 +1573,7 @@
 		[params setObject:query forKey:@"q"];
 	}
     if (sinceID > 0) {
-        [params setObject:[NSString stringWithFormat:@"%lu", sinceID] forKey:@"since_id"];
+        [params setObject:[NSString stringWithFormat:@"%u", sinceID] forKey:@"since_id"];
     }
 	if (page > 0) {
         [params setObject:[NSString stringWithFormat:@"%d", page] forKey:@"page"];

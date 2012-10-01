@@ -10,8 +10,9 @@
 
 #import "MGTwitterXMLParser.h"
 
-@interface MGTwitterStatusesParser : MGTwitterXMLParser <NSXMLParserDelegate> {
+@interface MGTwitterStatusesParser : MGTwitterXMLParser {
 
 }
-
+- (void)parser:(NSXMLParser *)theParser didEndElement:(NSString *)elementName 
+  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName;
 @end

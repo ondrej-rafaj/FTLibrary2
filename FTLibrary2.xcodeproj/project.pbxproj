@@ -852,6 +852,7 @@
 		932FDA5C153DD91B00E9D253 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				938D583C153DCA9B0067CEFA /* Source */,
 				148B737615C14DEC0002D5AE /* SDWebImage */,
 				DEE3646415B9936900CE958D /* FGallery */,
 				7AB653DF158A059900D307E7 /* AQGridView */,
@@ -1048,7 +1049,6 @@
 			isa = PBXGroup;
 			children = (
 				932FDA5C153DD91B00E9D253 /* ThirdParty */,
-				938D583C153DCA9B0067CEFA /* Source */,
 				938D5817153DC4380067CEFA /* FTLibrary2 */,
 				938D582D153DCA840067CEFA /* FTLibrary2Test */,
 				68978E6C153F2A03008EF4E8 /* FTLibrary2Tests */,
