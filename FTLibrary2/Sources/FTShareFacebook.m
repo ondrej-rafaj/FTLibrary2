@@ -321,6 +321,8 @@
     if (self.facebookDelegate && [self.facebookDelegate respondsToSelector:@selector(facebookDidPost:)]) {
         [self.facebookDelegate facebookDidPost:error];
     }
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName: kFTShareFacebookFailedNotification object: error];
 }
 
 #pragma mark sharemessagcontroller delgate
