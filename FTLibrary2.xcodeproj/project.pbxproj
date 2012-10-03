@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A0A3E091161C213100CB3F29 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A0A3E094161C213200CB3F29 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				A0A3E096161C214600CB3F29 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		148B738B15C14DEC0002D5AE /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B737815C14DEC0002D5AE /* MKAnnotationView+WebCache.m */; };
 		148B738C15C14DEC0002D5AE /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B737A15C14DEC0002D5AE /* SDImageCache.m */; };
@@ -1462,6 +1476,7 @@
 				938D5811153DC4380067CEFA /* FTLibrary2 */,
 				938D5825153DCA840067CEFA /* FTLibrary2Test */,
 				68978E66153F2A03008EF4E8 /* FTLibrary2Tests */,
+				A0A3E091161C213100CB3F29 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -1502,6 +1517,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		A0A3E096161C214600CB3F29 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Documentation output directory\nDOCUMENTATION_DIR=\"Documentation\"\n\n# Ignored folders\n#   ThirdParty - dont document third party libraries\n#   Classes - full of AQGridView junk only\n\n# Settings description\n#   --install-docset .... Install generated docset to Xcode\n#   --exit-threshold 2 .. Specifies max exit code to be considered as \"Build successfull\". Here: Success if no error was logged (only warnings)\n#           Exit code value: 0: Success!\n#                            1: At least one warning was logged.\n#                            2: At least one error was logged.\n#                            3: At least one fatal error was logged.\n#                            250: Unhandled exception (Oops message).\n\nappledoc \\\n--project-name \"FTLibrary2\" \\\n--project-company \"Fuerte International\" \\\n--company-id \"com.fuerteint\" \\\n--output $DOCUMENTATION_DIR \\\n--install-docset \\\n--logformat xcode \\\n--exit-threshold 2 \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore \"*.m\" \\\n--ignore \"Classes\" \\\n--ignore \"ThirdParty\" \\\n\"${PROJECT_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1884,6 +1912,20 @@
 			};
 			name = Release;
 		};
+		A0A3E092161C213200CB3F29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A0A3E093161C213200CB3F29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1919,6 +1961,15 @@
 			buildConfigurations = (
 				938D583A153DCA840067CEFA /* Debug */,
 				938D583B153DCA840067CEFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0A3E094161C213200CB3F29 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0A3E092161C213200CB3F29 /* Debug */,
+				A0A3E093161C213200CB3F29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
