@@ -831,7 +831,8 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
                     }
                     
                     [processedString replaceCharactersInRange:NSMakeRange(elementContentRange.location, elementContentRange.length + tagRange.length) withString:urlDescription];
-                    if (![urlString hasPrefix:@"http://"]) {
+                    if (!([urlString hasPrefix:@"http://"] || [urlString hasPrefix:@"https://"]))
+                    {
                         urlString = [NSString stringWithFormat:@"http://%@", urlString];
                     }
                     NSURL *url = [NSURL URLWithString:urlString];

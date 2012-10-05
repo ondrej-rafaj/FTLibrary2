@@ -293,14 +293,26 @@
     NSDictionary *dict = [NSDictionary dictionaryWithObjects: [NSArray arrayWithObjects:@"Couldn't login with facebook", [NSNumber numberWithBool:cancelled], nil]
                                                      forKeys:[NSArray arrayWithObjects:@"description", @"cancelled", nil]];
     NSError *error= [NSError errorWithDomain:@"com.fuerte.FTShare" code:400 userInfo:dict];
-    if (self.facebookDelegate && [self.facebookDelegate respondsToSelector:@selector(facebookDidLogin:)]) {
-        [self.facebookDelegate facebookDidLogin:error];
-    }
-    
+    id<FTShareFacebookDelegate> auxDelegate = [self.facebookDelegate retain];
     _facebook = nil;
     self.facebookDelegate = nil;
     _params = nil;
+    
+    if (auxDelegate && [auxDelegate respondsToSelector:@selector(facebookDidLogin:)]) {
+        [auxDelegate facebookDidLogin:error];
+    }
+    [auxDelegate release];
+    
 }
+
+- (void)reset
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:@"FBAccessTokenKey"];
+    [defaults removeObjectForKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+}
+
 
 #pragma mark Facebook request delegate
 

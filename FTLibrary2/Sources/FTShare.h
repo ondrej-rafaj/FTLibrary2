@@ -55,6 +55,7 @@ typedef NSUInteger FTShareOptions;
 
 - (void)setUpFacebookWithAppID:(NSString *)appID permissions:(FTShareFacebookPermission)permissions andDelegate:(id<FTShareFacebookDelegate>)delegate;
 - (void)shareViaFacebook:(FTShareFacebookData *)data;
+- (void)ResetFBAuthToken;
 
 - (void)setUpEmailWithDelegate:(id<FTShareEmailDelegate>)delegate;
 - (void)shareViaEmail:(FTShareEmailData *)data;

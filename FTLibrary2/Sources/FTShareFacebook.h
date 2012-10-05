@@ -110,7 +110,7 @@ typedef enum {
 - (void)setUpPermissions:(FTShareFacebookPermission)permission;
 - (void)shareViaFacebook:(FTShareFacebookData *)data;
 - (void)authorize;
-
+- (void)reset;
 
 
 #pragma mark --

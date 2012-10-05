@@ -80,6 +80,14 @@
     [_facebookEngine shareViaFacebook:data];
 }
 
+- (void)ResetFBAuthToken
+{
+    if (_facebookEngine) {
+        [_facebookEngine reset];
+    }
+}
+
+
 #pragma mark Email section
 
 - (void)setUpEmailWithDelegate:(id<FTShareEmailDelegate>)delegate {
