@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A0A3E091161C213100CB3F29 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A0A3E094161C213200CB3F29 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				A0A3E096161C214600CB3F29 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		148B738B15C14DEC0002D5AE /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B737815C14DEC0002D5AE /* MKAnnotationView+WebCache.m */; };
 		148B738C15C14DEC0002D5AE /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B737A15C14DEC0002D5AE /* SDImageCache.m */; };
@@ -23,6 +37,8 @@
 		148B739915C150880002D5AE /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B738615C14DEC0002D5AE /* SDWebImagePrefetcher.m */; };
 		148B739A15C150880002D5AE /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B738815C14DEC0002D5AE /* UIButton+WebCache.m */; };
 		148B739B15C150880002D5AE /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B738A15C14DEC0002D5AE /* UIImageView+WebCache.m */; };
+		35B7E4B71614732D001D024F /* FGalleryPhotoErrorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 35B7E4B51614732D001D024F /* FGalleryPhotoErrorView.h */; };
+		35B7E4B81614732D001D024F /* FGalleryPhotoErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B7E4B61614732D001D024F /* FGalleryPhotoErrorView.m */; };
 		4CF02072159244C0009A93BF /* FTAutoLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF02070159244C0009A93BF /* FTAutoLineView.h */; };
 		4CF02073159244C0009A93BF /* FTAutoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF02071159244C0009A93BF /* FTAutoLineView.m */; };
 		681C087A157505CC00BB8E2D /* FT2Download.h in Headers */ = {isa = PBXBuildFile; fileRef = 681C0878157505CB00BB8E2D /* FT2Download.h */; };
@@ -365,6 +381,8 @@
 		148B738815C14DEC0002D5AE /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		148B738915C14DEC0002D5AE /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		148B738A15C14DEC0002D5AE /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		35B7E4B51614732D001D024F /* FGalleryPhotoErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryPhotoErrorView.h; sourceTree = "<group>"; };
+		35B7E4B61614732D001D024F /* FGalleryPhotoErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryPhotoErrorView.m; sourceTree = "<group>"; };
 		4CF02070159244C0009A93BF /* FTAutoLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAutoLineView.h; sourceTree = "<group>"; };
 		4CF02071159244C0009A93BF /* FTAutoLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAutoLineView.m; sourceTree = "<group>"; };
 		681C0878157505CB00BB8E2D /* FT2Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Download.h; path = FTLibrary2/Sources/FT2Download.h; sourceTree = "<group>"; };
@@ -1234,6 +1252,8 @@
 				DEE3646915B993A900CE958D /* FGalleryPhotoView.m */,
 				DEE3646A15B993A900CE958D /* FGalleryViewController.h */,
 				DEE3646B15B993A900CE958D /* FGalleryViewController.m */,
+				35B7E4B51614732D001D024F /* FGalleryPhotoErrorView.h */,
+				35B7E4B61614732D001D024F /* FGalleryPhotoErrorView.m */,
 			);
 			name = FGallery;
 			sourceTree = "<group>";
@@ -1372,6 +1392,7 @@
 				934E719415D3B8BA000E321B /* FT2Data.h in Headers */,
 				930BE8CF15E3BA5F00EBEEEB /* FT2MessagerView.h in Headers */,
 				7A8112C11601F5F4008918E9 /* UIView+Log.h in Headers */,
+				35B7E4B71614732D001D024F /* FGalleryPhotoErrorView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1455,6 +1476,7 @@
 				938D5811153DC4380067CEFA /* FTLibrary2 */,
 				938D5825153DCA840067CEFA /* FTLibrary2Test */,
 				68978E66153F2A03008EF4E8 /* FTLibrary2Tests */,
+				A0A3E091161C213100CB3F29 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -1495,6 +1517,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		A0A3E096161C214600CB3F29 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Documentation output directory\nDOCUMENTATION_DIR=\"Documentation\"\n\n# Ignored folders\n#   ThirdParty - dont document third party libraries\n#   Classes - full of AQGridView junk only\n\n# Settings description\n#   --install-docset .... Install generated docset to Xcode\n#   --exit-threshold 2 .. Specifies max exit code to be considered as \"Build successfull\". Here: Success if no error was logged (only warnings)\n#           Exit code value: 0: Success!\n#                            1: At least one warning was logged.\n#                            2: At least one error was logged.\n#                            3: At least one fatal error was logged.\n#                            250: Unhandled exception (Oops message).\n\nappledoc \\\n--project-name \"FTLibrary2\" \\\n--project-company \"Fuerte International\" \\\n--company-id \"com.fuerteint\" \\\n--output $DOCUMENTATION_DIR \\\n--install-docset \\\n--logformat xcode \\\n--exit-threshold 2 \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore \"*.m\" \\\n--ignore \"Classes\" \\\n--ignore \"ThirdParty\" \\\n\"${PROJECT_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1625,6 +1660,7 @@
 				934E719515D3B8BA000E321B /* FT2Data.m in Sources */,
 				930BE8D015E3BA5F00EBEEEB /* FT2MessagerView.m in Sources */,
 				7A8112C21601F5F4008918E9 /* UIView+Log.m in Sources */,
+				35B7E4B81614732D001D024F /* FGalleryPhotoErrorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1876,6 +1912,20 @@
 			};
 			name = Release;
 		};
+		A0A3E092161C213200CB3F29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A0A3E093161C213200CB3F29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1911,6 +1961,15 @@
 			buildConfigurations = (
 				938D583A153DCA840067CEFA /* Debug */,
 				938D583B153DCA840067CEFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0A3E094161C213200CB3F29 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0A3E092161C213200CB3F29 /* Debug */,
+				A0A3E093161C213200CB3F29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

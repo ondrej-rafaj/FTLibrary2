@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+#import "FGalleryPhotoErrorView.h"
+
 @protocol FGalleryPhotoViewDelegate;
 
 //@interface FGalleryPhotoView : UIImageView {
 @interface FGalleryPhotoView : UIScrollView <UIScrollViewDelegate> {
 	
 	UIImageView *imageView;
+	FGalleryPhotoErrorView *_errorView;
 	UIActivityIndicatorView *_activity;
 	UIButton *_button;
 	BOOL _isZoomed;
@@ -29,8 +32,13 @@
 
 - (void)resetZoom;
 
+- (void) showErrorWithTitle: (NSString *) title description: (NSString *) description;
+
+- (void) hideError;
+
 @property (nonatomic,assign) NSObject <FGalleryPhotoViewDelegate> *photoDelegate;
 @property (nonatomic,readonly) UIImageView *imageView;
+@property (nonatomic, readonly) UIView *errorView;
 @property (nonatomic,readonly) UIButton *button;
 @property (nonatomic,readonly) UIActivityIndicatorView *activity;
 

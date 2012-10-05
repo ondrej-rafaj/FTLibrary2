@@ -1071,6 +1071,9 @@
 {
 	// show activity indicator for large photo view
 	FGalleryPhotoView *photoView = [_photoViews objectAtIndex:photo.tag];
+	
+	[photoView hideError];
+	
 	[photoView.activity startAnimating];
 	
 	// show activity indicator for thumbail 
@@ -1111,12 +1114,34 @@
 	if( _currentIndex == photo.tag )
 	{
 		FGalleryPhotoView *photoView = [_photoViews objectAtIndex:photo.tag];
+		
+		[photoView.activity stopAnimating];
+		
+		[photoView hideError];
+		
 		photoView.imageView.image = photo.fullsize;
 	}
 	// otherwise, we don't need to keep this image around
 	else [photo unloadFullsize];
 }
 
+- (void) galleryPhoto:(FGalleryPhoto *)photo didFailLoadFullsizeWithError: (NSError *) error {
+	
+	if(_currentIndex == photo.tag) {
+		
+		FGalleryPhotoView *photoView = [_photoViews objectAtIndex:photo.tag];
+		
+		[photoView.activity stopAnimating];
+		
+		photoView.imageView.image = nil;
+		
+		[photoView showErrorWithTitle: [error localizedDescription] description: @"Dolore claritas seacula demonstraverunt Investigationes legentis. Consectetuer soluta at nulla quam demonstraverunt. Eorum qui aliquam eleifend est veniam."];
+	}
+	// otherwise, we don't need to keep this image around
+	else {
+		[photo unloadFullsize];
+	}
+}
 
 #pragma mark - UIScrollView Methods
 
