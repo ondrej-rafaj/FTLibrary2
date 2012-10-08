@@ -28,6 +28,8 @@ connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType)re
 - (id)initWithXML:(NSData *)theXML delegate:(NSObject *)theDelegate 
 connectionIdentifier:(NSString *)identifier requestType:(MGTwitterRequestType)reqType 
      responseType:(MGTwitterResponseType)respType;
+- (void)parser:(NSXMLParser *)theParser didEndElement:(NSString *)elementName 
+  namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName;
 
 - (NSString *)lastOpenedElement;
 - (void)setLastOpenedElement:(NSString *)value;
