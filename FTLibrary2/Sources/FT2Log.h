@@ -6,6 +6,16 @@
 //  Copyright (c) 2012 Fuerte International. All rights reserved.
 //
 
+#ifdef DEBUG
+
+#define FTDLOG(xx, ...) NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+
+#else
+
+#define FTDLOG(xx, ...) ((void)0)
+
+#endif
+
 #if defined(DEBUG)
 
 #if kDebugLogPrintFileLine
