@@ -23,3 +23,5 @@
 [NSString stringWithFormat:(s), ## __VA_ARGS__])
 
 #endif
+
+#endif
