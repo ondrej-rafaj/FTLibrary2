@@ -305,8 +305,6 @@ static NSString * __databaseName;
         {
             
             NSLog(@"Unresolved error %@, %@\n\n", error, [error userInfo]);
-            FT2Error *fterror = [FT2Error errorWithError:error];
-            [fterror sendToFlurry];
             //abort();
         }  
     }];
@@ -335,8 +333,6 @@ static NSString * __databaseName;
 			if (isChanged && ![aManagedObjectContext save:&error])
 			{
 				NSLog(@"Unresolved error %@, %@\n\n", error, [error userInfo]);
-                FT2Error *fterror = [FT2Error errorWithError:error];
-                [fterror sendToFlurry];
 				//abort();
 			} 
 		}		

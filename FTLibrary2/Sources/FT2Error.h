@@ -11,11 +11,12 @@
 
 @interface FT2Error : NSError
 
+@property (nonatomic, getter = isUserVisible) BOOL userVisible; //default is YES;
+
 + (FT2Error *)errorWithError:(NSError *)error;
 + (FT2Error *)errorWithTitle:(NSString *)title andDescription:(NSString *)description;
 
 - (void)showAsAlertViewWithDelegate:(id <UIAlertViewDelegate>)delegate;
 - (void)showInConsole;
-- (void)sendToFlurry;
 
 @end

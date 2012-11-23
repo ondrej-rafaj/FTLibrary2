@@ -17,6 +17,8 @@
 
 @interface UIView (Layout)
 
+- (void)addSubviews:(NSArray *)views;
+
 - (CGFloat)width;
 - (void)setWidth:(CGFloat)width;
 
@@ -31,7 +33,6 @@
 
 - (CGPoint)origin;
 - (void)setOrigin:(CGPoint)origin;
-- (void)positionAtX:(CGFloat)xOrigin andY:(CGFloat)yOrigin;
 
 - (CGSize)size;
 - (void)setSize:(CGSize)size;

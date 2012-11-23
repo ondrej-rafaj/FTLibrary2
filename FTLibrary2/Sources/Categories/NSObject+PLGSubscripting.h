@@ -1,9 +1,9 @@
 //
 //  NSObject+PLGSubscripting.h
-//  FTLibrary2
+//  polligraf
 //
-//  Created by A.Papadakis on 03/08/2012.
-//
+//  Created by Matthew Wilkinson on 31/07/2012.
+//  Copyright (c) 2012 fuerte international. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

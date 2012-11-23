@@ -11,6 +11,11 @@
 
 @implementation UIView (Layout)
 
+- (void)addSubviews:(NSArray *)views
+{
+	[views enumerateObjectsUsingBlock:^(UIView *v, NSUInteger idx, BOOL *stop) { [self addSubview:v]; }];
+}
+
 - (void)setWidth:(CGFloat)width
 {
 	CGRect frame = self.frame;

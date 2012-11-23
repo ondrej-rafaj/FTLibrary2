@@ -328,6 +328,22 @@
 		93C265DC153EC32E0010A059 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265DA153EC32E0010A059 /* Reachability.h */; };
 		93C265DD153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93C265DE153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93C646DE165D46C600E391E5 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646D3165D46C600E391E5 /* crypt.h */; };
+		93C646DF165D46C600E391E5 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D4165D46C600E391E5 /* ioapi.c */; };
+		93C646E0165D46C600E391E5 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D4165D46C600E391E5 /* ioapi.c */; };
+		93C646E1165D46C600E391E5 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646D5165D46C600E391E5 /* ioapi.h */; };
+		93C646E2165D46C600E391E5 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D6165D46C600E391E5 /* mztools.c */; };
+		93C646E3165D46C600E391E5 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D6165D46C600E391E5 /* mztools.c */; };
+		93C646E4165D46C600E391E5 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646D7165D46C600E391E5 /* mztools.h */; };
+		93C646E5165D46C600E391E5 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D8165D46C600E391E5 /* unzip.c */; };
+		93C646E6165D46C600E391E5 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D8165D46C600E391E5 /* unzip.c */; };
+		93C646E7165D46C600E391E5 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646D9165D46C600E391E5 /* unzip.h */; };
+		93C646E8165D46C600E391E5 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646DA165D46C600E391E5 /* zip.c */; };
+		93C646E9165D46C600E391E5 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646DA165D46C600E391E5 /* zip.c */; };
+		93C646EA165D46C600E391E5 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646DB165D46C600E391E5 /* zip.h */; };
+		93C646EB165D46C600E391E5 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646DC165D46C600E391E5 /* ZipArchive.h */; };
+		93C646EC165D46C600E391E5 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93C646DD165D46C600E391E5 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93C646ED165D46C600E391E5 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93C646DD165D46C600E391E5 /* ZipArchive.mm */; };
 		93CF7B0B1546D0EC0047C412 /* CoreGraphicAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */; };
 		93D385E6154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */; };
 		93D385E7154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */; };
@@ -635,6 +651,17 @@
 		93C265D5153EC1DA0010A059 /* FT2System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2System.m; path = FTLibrary2/Sources/FT2System.m; sourceTree = "<group>"; };
 		93C265DA153EC32E0010A059 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		93C265DB153EC32E0010A059 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		93C646D3165D46C600E391E5 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		93C646D4165D46C600E391E5 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		93C646D5165D46C600E391E5 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		93C646D6165D46C600E391E5 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		93C646D7165D46C600E391E5 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		93C646D8165D46C600E391E5 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		93C646D9165D46C600E391E5 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		93C646DA165D46C600E391E5 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		93C646DB165D46C600E391E5 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		93C646DC165D46C600E391E5 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		93C646DD165D46C600E391E5 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreGraphicAdditions.h; path = FTLibrary2/Sources/Categories/CoreGraphicAdditions.h; sourceTree = "<group>"; };
 		93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ImageMagnifyingView.m; path = FTLibrary2/Sources/FT2ImageMagnifyingView.m; sourceTree = "<group>"; };
 		93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2MagnifyingView.m; path = FTLibrary2/Sources/FT2MagnifyingView.m; sourceTree = "<group>"; };
@@ -870,6 +897,7 @@
 		932FDA5C153DD91B00E9D253 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				93C646D1165D46C600E391E5 /* ZipArchive */,
 				148B737615C14DEC0002D5AE /* SDWebImage */,
 				DEE3646415B9936900CE958D /* FGallery */,
 				7AB653DF158A059900D307E7 /* AQGridView */,
@@ -1232,6 +1260,32 @@
 			path = FTLibrary2/ThirdParty/Reachability;
 			sourceTree = "<group>";
 		};
+		93C646D1165D46C600E391E5 /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				93C646D2165D46C600E391E5 /* minizip */,
+				93C646DC165D46C600E391E5 /* ZipArchive.h */,
+				93C646DD165D46C600E391E5 /* ZipArchive.mm */,
+			);
+			path = ZipArchive;
+			sourceTree = "<group>";
+		};
+		93C646D2165D46C600E391E5 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				93C646D3165D46C600E391E5 /* crypt.h */,
+				93C646D4165D46C600E391E5 /* ioapi.c */,
+				93C646D5165D46C600E391E5 /* ioapi.h */,
+				93C646D6165D46C600E391E5 /* mztools.c */,
+				93C646D7165D46C600E391E5 /* mztools.h */,
+				93C646D8165D46C600E391E5 /* unzip.c */,
+				93C646D9165D46C600E391E5 /* unzip.h */,
+				93C646DA165D46C600E391E5 /* zip.c */,
+				93C646DB165D46C600E391E5 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
 		93D385E0154FF195009A6895 /* Magnifying Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1393,6 +1447,12 @@
 				930BE8CF15E3BA5F00EBEEEB /* FT2MessagerView.h in Headers */,
 				7A8112C11601F5F4008918E9 /* UIView+Log.h in Headers */,
 				35B7E4B71614732D001D024F /* FGalleryPhotoErrorView.h in Headers */,
+				93C646DE165D46C600E391E5 /* crypt.h in Headers */,
+				93C646E1165D46C600E391E5 /* ioapi.h in Headers */,
+				93C646E4165D46C600E391E5 /* mztools.h in Headers */,
+				93C646E7165D46C600E391E5 /* unzip.h in Headers */,
+				93C646EA165D46C600E391E5 /* zip.h in Headers */,
+				93C646EB165D46C600E391E5 /* ZipArchive.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1661,6 +1721,11 @@
 				930BE8D015E3BA5F00EBEEEB /* FT2MessagerView.m in Sources */,
 				7A8112C21601F5F4008918E9 /* UIView+Log.m in Sources */,
 				35B7E4B81614732D001D024F /* FGalleryPhotoErrorView.m in Sources */,
+				93C646DF165D46C600E391E5 /* ioapi.c in Sources */,
+				93C646E2165D46C600E391E5 /* mztools.c in Sources */,
+				93C646E5165D46C600E391E5 /* unzip.c in Sources */,
+				93C646E8165D46C600E391E5 /* zip.c in Sources */,
+				93C646EC165D46C600E391E5 /* ZipArchive.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1728,6 +1793,11 @@
 				148B739115C14DEC0002D5AE /* UIButton+WebCache.m in Sources */,
 				148B739215C14DEC0002D5AE /* UIImageView+WebCache.m in Sources */,
 				934E719615D3B8BA000E321B /* FT2Data.m in Sources */,
+				93C646E0165D46C600E391E5 /* ioapi.c in Sources */,
+				93C646E3165D46C600E391E5 /* mztools.c in Sources */,
+				93C646E6165D46C600E391E5 /* unzip.c in Sources */,
+				93C646E9165D46C600E391E5 /* zip.c in Sources */,
+				93C646ED165D46C600E391E5 /* ZipArchive.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
