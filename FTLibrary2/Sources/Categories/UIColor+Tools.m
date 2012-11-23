@@ -91,7 +91,10 @@
 	return [self alphaPatternImageColorWithSguareSide:12];
 }
 
-
++ (UIColor *)colorWithPatternImageNamed:(NSString *)imageName
+{
+    return [[self class] colorWithPatternImage:[UIImage imageNamed:imageName]];
+}
 
 
 @end
