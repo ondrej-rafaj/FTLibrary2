@@ -826,16 +826,16 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
                     NSString *urlString = nil;
                     NSString *urlDescription = nil;
                     if (pipeRange.location != NSNotFound) {
-                        urlString = [elementContent substringToIndex:pipeRange.location];
+                        urlString = [elementContent substringToIndex:pipeRange.location] ;
                         urlDescription = [elementContent substringFromIndex:pipeRange.location + 1];
                     }
                     
                     [processedString replaceCharactersInRange:NSMakeRange(elementContentRange.location, elementContentRange.length + tagRange.length) withString:urlDescription];
-                    if (!([urlString hasPrefix:@"http://"] || [urlString hasPrefix:@"https://"]))
+                    if (!([[urlString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] hasPrefix:@"http://"] || [[urlString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] hasPrefix:@"https://"]))
                     {
                         urlString = [NSString stringWithFormat:@"http://%@", urlString];
                     }
-                    NSURL *url = [NSURL URLWithString:urlString];
+                    NSURL *url = [NSURL URLWithString:[urlString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
                     NSRange urlDescriptionRange = NSMakeRange(elementContentRange.location, [urlDescription length]);
                     [_URLs setObject:url forKey:NSStringFromRange(urlDescriptionRange)];
                     
