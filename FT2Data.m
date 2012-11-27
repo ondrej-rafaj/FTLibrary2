@@ -137,7 +137,7 @@
 - (void)dealloc
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	dispatch_release(_privateQueue);
+	if (_privateQueue) dispatch_release(_privateQueue);
 }
 
 #pragma mark - Core Data business

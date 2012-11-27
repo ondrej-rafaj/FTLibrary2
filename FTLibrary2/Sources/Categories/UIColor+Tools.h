@@ -31,5 +31,11 @@
 
 + (UIColor *)alphaPatternImageColor;
 
+/**
+	Shortcut to + (UIColor *)colorWithPatternImage:[UIImage imageNamed:@"name"]]
+	@param imageName Name of image
+	@returns Pattern color
+ */
++ (UIColor *)colorWithPatternImageNamed:(NSString *)imageName;
 
 @end

@@ -11,10 +11,19 @@
 
 @implementation FT2Error
 
+- (id)init
+{
+	self = [super init];
+	if (self) {
+		_userVisible = YES;
+	}
+	return self;
+}
 
 + (FT2Error *)errorWithError:(NSError *)error
 {
-	FT2Error *newError = [FT2Error errorWithDomain:error.domain code:error.code userInfo:error.userInfo];
+	FT2Error *newError;
+	if (error) newError = [FT2Error errorWithDomain:error.domain code:error.code userInfo:error.userInfo];
 	return newError;
 }
 
@@ -41,10 +50,6 @@
 - (void)showInConsole
 {
 	NSLog(@"%@ - %@", self, self.userInfo);
-}
-
-- (void)sendToFlurry {
-    NSLog(@"Flurry erro log not implemented yet!");
 }
 
 @end
