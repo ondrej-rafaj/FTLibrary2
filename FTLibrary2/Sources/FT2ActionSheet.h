@@ -10,8 +10,6 @@
 
 @interface FT2ActionSheet : UIActionSheet <UIActionSheetDelegate>
 
-- (id)initWithTitle:(NSString *)title delegate:(id<UIActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...;
-
 @property (nonatomic, copy) void (^cancelBlock)(void);
 @property (nonatomic, copy) void (^destructiveBlock)(void);
 @property (nonatomic, copy) void (^actionBlock)(NSInteger clikedButtonIndex);

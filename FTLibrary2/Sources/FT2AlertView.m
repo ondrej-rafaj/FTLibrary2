@@ -31,6 +31,18 @@
 	return a;
 }
 
+- (void)setCancelBlock:(void (^)(void))cancelBlock
+{
+	self.delegate = self;
+	_cancelBlock = [cancelBlock copy];
+}
+
+- (void)setActionBlock:(void (^)(NSInteger))actionBlock
+{
+	self.delegate = self;
+	_actionBlock = [actionBlock copy];
+}
+
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
 	if (self.cancelButtonIndex == buttonIndex) {

@@ -14,37 +14,25 @@
 @synthesize destructiveBlock = _destructiveBlock;
 @synthesize actionBlock = _actionBlock;
 
-- (id)initWithTitle:(NSString *)title delegate:(id<UIActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
+- (void)setDestructiveBlock:(void (^)(void))destructiveBlock
 {
-	self = [super initWithTitle:title delegate:self cancelButtonTitle:nil destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:nil];
-	if (self) {
-		NSInteger currentIndex = 0;
-		if (otherButtonTitles != nil) {
-			[self addButtonWithTitle:otherButtonTitles];
-			va_list args;
-			va_start(args, otherButtonTitles);
-			NSString * title = nil;
-			while((title = va_arg(args,NSString*))) {
-				currentIndex++;
-				[self addButtonWithTitle:title];
-			}
-			va_end(args);
-		}
-		
-		if (destructiveButtonTitle) {
-			currentIndex++;
-			[self addButtonWithTitle:destructiveButtonTitle];
-			self.destructiveButtonIndex = currentIndex;
-		}
-		
-		if (cancelButtonTitle) {
-			currentIndex++;
-			[self addButtonWithTitle:cancelButtonTitle];
-			self.cancelButtonIndex = currentIndex;
-		}
-	}
-	return self;
+	_destructiveBlock = [destructiveBlock copy];
+	self.delegate = self;
 }
+
+- (void)setCancelBlock:(void (^)(void))cancelBlock
+{
+	_cancelBlock = [cancelBlock copy];
+	self.delegate = self;
+}
+
+- (void)setActionBlock:(void (^)(NSInteger))actionBlock
+{
+	_actionBlock = [actionBlock copy];
+	self.delegate = self;
+}
+
+
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {

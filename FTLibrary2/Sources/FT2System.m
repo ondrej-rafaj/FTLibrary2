@@ -37,14 +37,14 @@ static float systemVersion = -1;
 + (BOOL)isInternetAvailable
 {
     Reachability *reachability = [Reachability reachabilityForInternetConnection];
-    BOOL isConnected = ([reachability isReachable]);
+    BOOL isConnected = reachability.currentReachabilityStatus != NotReachable;
     return isConnected;
 }
 
 + (BOOL)isInternetPingAvailable
 {
     Reachability *reachability = [Reachability reachabilityWithHostName:@"http://www.google.com"];
-    BOOL isConnected = ([reachability isReachable]);
+    BOOL isConnected = reachability.currentReachabilityStatus != NotReachable;
     return isConnected;
 }
 
