@@ -26,7 +26,6 @@ NSString * const FTCoreTextDataFrame = @"FTCoreTextDataFrame";
 NSString * const FTCoreTextDataAttributes = @"FTCoreTextDataAttributes";
 
 
-
 typedef enum {
 	FTCoreTextTagTypeOpen,
 	FTCoreTextTagTypeClose,
@@ -599,6 +598,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 		if (_framesetter != NULL) CFRelease(_framesetter);
 		_framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)self.attributedString);
 		_coreTextViewFlags.updatedAttrString = YES;
+		_coreTextViewFlags.updatedFramesetter = YES;
     }
 }
 
@@ -1001,7 +1001,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 
 - (void)addStyle:(FTCoreTextStyle *)style
 {
-    [_styles setValue:style forKey:style.name];
+	[_styles setObject:[style copy] forKey:style.name];
 	[self didMakeChanges];
     if ([self superview]) [self setNeedsDisplay];
 }
@@ -1009,7 +1009,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 - (void)addStyles:(NSArray *)styles
 {
 	for (FTCoreTextStyle *style in styles) {
-		[_styles setValue:style forKey:style.name];
+		[_styles setObject:[style copy] forKey:style.name];
 	}
 	[self didMakeChanges];
     if ([self superview]) [self setNeedsDisplay];
@@ -1155,7 +1155,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	FTCoreTextStyle *linksStyle = [defaultStyle copy];
 	linksStyle.color = [UIColor blueColor];
 	linksStyle.name = FTCoreTextTagLink;
-	[_styles setValue:linksStyle forKey:linksStyle.name];
+	[_styles setObject:[linksStyle copy] forKey:linksStyle.name];
 	[linksStyle release];
 	
 	_defaultsTags = [[NSMutableDictionary dictionaryWithObjectsAndKeys:FTCoreTextTagDefault, FTCoreTextTagDefault,
@@ -1245,7 +1245,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	if (!_coreTextViewFlags.updatedAttrString) {
 		_coreTextViewFlags.updatedAttrString = YES;
 		
-		if (_processedString == nil || _coreTextViewFlags.textChangesMade) {
+		if (_processedString == nil || _coreTextViewFlags.textChangesMade || !_coreTextViewFlags.updatedFramesetter) {
 			_coreTextViewFlags.textChangesMade = NO;
 			[self processText];
 		}
