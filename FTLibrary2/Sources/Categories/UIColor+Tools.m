@@ -49,8 +49,13 @@
 	if ([cString length] < 6) return DEFAULT_VOID_COLOR;
 	
 	// strip 0X if it appears
-	if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
-	
+	if ([cString hasPrefix:@"0X"]){
+        cString = [cString substringFromIndex:2];
+    }
+    else if ([cString hasPrefix:@"#"]){
+        cString = [cString substringFromIndex:1];
+    }
+    
 	if ([cString length] != 6) return DEFAULT_VOID_COLOR;
 	
 	// Separate into r, g, b substrings
