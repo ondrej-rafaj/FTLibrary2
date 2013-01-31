@@ -307,13 +307,16 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 
 - (void)scrollToPageAtIndex:(NSInteger)index animated:(BOOL)animated
 {
-	if (animated && index != self.selectedIndex) [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
 	if (_flow == FT2PageSCrollViewFlowHorizontal) {
 		CGFloat xOffset = index * _internalPageSize.width;
 		
 		if (index != 0 && self.contentSize.width - xOffset < self.bounds.size.width) {
 			xOffset = self.contentSize.width - self.bounds.size.width;
 		}
+		
+		NSInteger actualIndex = xOffset / _internalPageSize.width;
+		if (animated && actualIndex != self.selectedIndex) [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+		
 		[self setContentOffset:CGPointMake(xOffset, 0) animated:animated];
 	} else {
 		CGFloat yOffset = index * _internalPageSize.height;
@@ -321,6 +324,10 @@ NSString * const FT2PageContainerIdentifier = @"PageContainerIdentifier";
 		if (index != 0 && self.contentSize.height - yOffset < self.bounds.size.height) {
 			yOffset = self.contentSize.height - self.bounds.size.height;
 		}
+		
+		NSInteger actualIndex = yOffset / _internalPageSize.height;
+		if (animated && actualIndex != self.selectedIndex) [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+
 		[self setContentOffset:CGPointMake(0, yOffset) animated:animated];
 	}
 }

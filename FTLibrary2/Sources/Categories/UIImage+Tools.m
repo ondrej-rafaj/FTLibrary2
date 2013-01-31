@@ -8,7 +8,7 @@
 
 #import "UIImage+Tools.h"
 #import "UIColor+Tools.h"
-
+#import <ImageIO/ImageIO.h>
 
 static inline CGSize swapWidthAndHeight(CGSize size) {
     CGFloat swap = size.width;
@@ -610,6 +610,34 @@ static inline CGFloat toRadians (CGFloat degrees) { return degrees * M_PI/180.0f
     [src drawAtPoint:CGPointMake(0, 0)];
 	UIGraphicsPopContext();
     return UIGraphicsGetImageFromCurrentImageContext();
+}
+
++ (CGSize)pixelSizeOfImageAtURL:(NSURL *)imageLocalURL
+{
+	CGImageSourceRef imageSource = CGImageSourceCreateWithURL((__bridge CFURLRef)imageLocalURL, NULL);
+	if (imageSource == NULL) {
+		// Error loading image
+		NSLog(@"-pixelSizeOfImageAtURL: error loading image at URL %@", imageLocalURL);
+		return CGSizeZero;
+	}
+	
+	CGFloat width = 0.0f, height = 0.0f;
+	CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, NULL);
+	if (imageProperties != NULL) {
+		CFNumberRef widthNum  = CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelWidth);
+		if (widthNum != NULL) {
+			CFNumberGetValue(widthNum, kCFNumberFloatType, &width);
+		}
+		
+		CFNumberRef heightNum = CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelHeight);
+		if (heightNum != NULL) {
+			CFNumberGetValue(heightNum, kCFNumberFloatType, &height);
+		}
+		
+		CFRelease(imageProperties);
+	}
+	
+	return CGSizeMake(width, height);
 }
 
 

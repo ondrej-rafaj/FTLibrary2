@@ -16,7 +16,7 @@
 + (void)attributes:(NSMutableDictionary **)attributes forClass:(Class)class {    
     NSString *search = @"^T@\"([\\w]*)\"";
     NSError *error;
-    NSRegularExpression *regEx = [NSRegularExpression regularExpressionWithPattern:search options:NSRegularExpressionSearch error:&error];
+    NSRegularExpression *regEx = [NSRegularExpression regularExpressionWithPattern:search options:0 error:&error];
     
     unsigned int count;
     objc_property_t *properties = class_copyPropertyList(class, &count);
@@ -27,7 +27,7 @@
         __block NSString *type;
         // __block NSMutableArray *others;
         
-        [regEx enumerateMatchesInString:types options:NSMatchingHitEnd range:NSMakeRange(0, types.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+        [regEx enumerateMatchesInString:types options:0 range:NSMakeRange(0, types.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
             type = [types substringWithRange:[result rangeAtIndex:1]];
         }];
         

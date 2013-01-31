@@ -35,3 +35,12 @@ CGRectWithSize(CGSize size)
 	rect.size = size;
 	return rect;
 }
+
+CG_INLINE CGPoint
+CGPointIntegral(CGPoint p)
+{
+	CGPoint point;
+	point.x = round(p.x);
+	point.y = round(p.y);
+	return point;
+}
