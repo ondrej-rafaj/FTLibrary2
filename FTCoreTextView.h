@@ -61,6 +61,7 @@ extern NSString * const FTCoreTextDataAttributes;
 //shadow is not yet part of a style. It's applied on the whole view	
 @property (nonatomic, retain) UIColor *shadowColor;
 @property (nonatomic, assign) CGSize shadowOffset;
+@property (nonatomic, assign) BOOL verbose; //default YES
 
 /* Using this method, you then have to set the -text property to get any result */
 - (id)initWithFrame:(CGRect)frame;
