@@ -1144,6 +1144,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	_styles = [[NSMutableDictionary alloc] init];
 	_URLs = [[NSMutableDictionary alloc] init];
     _images = [[NSMutableArray alloc] init];
+	_verbose = YES;
 	self.opaque = NO;
 	self.backgroundColor = [UIColor clearColor];
 	self.contentMode = UIViewContentModeRedraw;
