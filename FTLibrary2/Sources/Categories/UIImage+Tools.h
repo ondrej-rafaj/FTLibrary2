@@ -55,4 +55,6 @@
 
 + (CGSize)pixelSizeOfImageAtURL:(NSURL *)imageLocalURL;
 
++ (CGSize)pointSizeOfImageAtURL:(NSURL *)imageLocalURL;
+
 @end

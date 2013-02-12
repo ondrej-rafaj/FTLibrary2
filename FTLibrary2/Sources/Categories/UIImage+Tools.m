@@ -640,5 +640,14 @@ static inline CGFloat toRadians (CGFloat degrees) { return degrees * M_PI/180.0f
 	return CGSizeMake(width, height);
 }
 
++ (CGSize)pointSizeOfImageAtURL:(NSURL *)imageLocalURL
+{
+	CGFloat scale = [UIScreen mainScreen].scale;
+	
+	CGSize size = [UIImage pixelSizeOfImageAtURL:imageLocalURL];
+	size = CGSizeMake(round(size.width / scale), round(size.height / scale));
+	return size;
+}
+
 
 @end
