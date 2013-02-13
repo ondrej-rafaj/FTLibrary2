@@ -115,10 +115,12 @@
 		for (int i = 0; i < _numberOfPages; i++) {
 			UIButton *button = [_indicators objectAtIndex:i];
 			CGRect buttonFrame = button.frame;
+
+			buttonFrame.size.width = _dotsSpacing + dotWidth;
+			buttonFrame.size.height = self.frame.size.height;
 			
 			buttonFrame.origin.x = xOffset + i * (dotWidth + _dotsSpacing);
 			buttonFrame.origin.y = roundf((self.bounds.size.height - buttonFrame.size.height) / 2);
-			buttonFrame.size.width = _dotsSpacing + dotWidth;
 			
 			button.frame = buttonFrame;			
 		}
@@ -260,6 +262,11 @@
 				if (indicatorButton.selected) [indicatorButton setImage:_internSelectedDotImage forState:UIControlStateHighlighted];
 				else [indicatorButton setImage:_internUnselectedDotImage forState:UIControlStateHighlighted];
 				[indicatorButton sizeToFit];
+				if (self.frame.size.height > 0) {
+					CGRect frame = indicatorButton.frame;
+					frame.size.height = self.frame.size.height;
+					indicatorButton.frame = frame;
+				}
 				[indicatorButton addTarget:self action:@selector(indicatorAction:) forControlEvents:UIControlEventTouchUpInside];
 				[_indicators addObject:indicatorButton];
 				[self addSubview:indicatorButton];
@@ -338,7 +345,8 @@
 	else dotSize = CGSizeMake(2 * _dotRadius, 2 * _dotRadius);
 
 	CGSize returnedSize;
-	returnedSize.height = dotSize.height;
+	if (self.frame.size.height > 0)	returnedSize.height = self.frame.size.height;
+	else returnedSize.height = dotSize.height;
 	returnedSize.width = pageCount * (dotSize.width + _dotsSpacing);
 	
 	return returnedSize;
