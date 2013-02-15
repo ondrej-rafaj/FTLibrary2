@@ -44,6 +44,8 @@
 - (CGFloat)right;
 - (void)setRight:(CGFloat)right;
 
+- (void)setMargins:(UIEdgeInsets)margins;
+
 //returns the center of the view in the view's coordinates system
 - (CGPoint)boundsCenter;
 

@@ -128,6 +128,14 @@
 	self.frame = frame;
 }
 
+- (void)setMargins:(UIEdgeInsets)margins
+{
+	if (self.superview) {
+		CGRect newFrame = CGRectMake(margins.left, margins.top, self.superview.width - margins.left - margins. right, self.superview.height - margins.top - margins.bottom);
+		self.frame = newFrame;
+	}
+}
+
 - (CGPoint)boundsCenter
 {
 	CGRect frame = self.bounds;
