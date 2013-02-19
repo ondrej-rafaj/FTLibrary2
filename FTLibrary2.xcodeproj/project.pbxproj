@@ -309,6 +309,8 @@
 		938D5832153DCA840067CEFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 938D5830153DCA840067CEFA /* InfoPlist.strings */; };
 		938D5834153DCA840067CEFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5833153DCA840067CEFA /* main.m */; };
 		938D5838153DCA840067CEFA /* FT2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5837153DCA840067CEFA /* FT2AppDelegate.m */; };
+		93A801A016D39BC9004C8F2D /* NSString+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93A8019F16D39BC9004C8F2D /* NSString+Tools.h */; };
+		93A801A216D39BED004C8F2D /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A801A116D39BED004C8F2D /* NSString+Tools.m */; };
 		93B5B13D15A714130049B3A0 /* FT2TransparentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B11D15A714130049B3A0 /* FT2TransparentView.h */; };
 		93B5B13E15A714130049B3A0 /* FT2TransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11E15A714130049B3A0 /* FT2TransparentView.m */; };
 		93C265C4153EBF6A0010A059 /* FT2ReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */; };
@@ -637,6 +639,8 @@
 		938D5835153DCA840067CEFA /* FTLibrary2Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLibrary2Test-Prefix.pch"; sourceTree = "<group>"; };
 		938D5836153DCA840067CEFA /* FT2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FT2AppDelegate.h; sourceTree = "<group>"; };
 		938D5837153DCA840067CEFA /* FT2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FT2AppDelegate.m; sourceTree = "<group>"; };
+		93A8019F16D39BC9004C8F2D /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Tools.h"; path = "FTLibrary2/Sources/Categories/NSString+Tools.h"; sourceTree = "<group>"; };
+		93A801A116D39BED004C8F2D /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Tools.m"; path = "FTLibrary2/Sources/Categories/NSString+Tools.m"; sourceTree = "<group>"; };
 		93B5B11D15A714130049B3A0 /* FT2TransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2TransparentView.h; path = FTLibrary2/Sources/FT2TransparentView.h; sourceTree = "<group>"; };
 		93B5B11E15A714130049B3A0 /* FT2TransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2TransparentView.m; path = FTLibrary2/Sources/FT2TransparentView.m; sourceTree = "<group>"; };
 		93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ReachabilityManager.h; path = FTLibrary2/Sources/FT2ReachabilityManager.h; sourceTree = "<group>"; };
@@ -1212,6 +1216,8 @@
 				932FDAC0153DDAC500E9D253 /* NSData+Base64.m */,
 				932FDA6B153DD9D300E9D253 /* NSString+UUID.h */,
 				932FDA6C153DD9D300E9D253 /* NSString+UUID.m */,
+				93A8019F16D39BC9004C8F2D /* NSString+Tools.h */,
+				93A801A116D39BED004C8F2D /* NSString+Tools.m */,
 				938CB4A4153DD1630057A19B /* NSArray+Tools.h */,
 				938CB4A5153DD1630057A19B /* NSArray+Tools.m */,
 				938CB4AA153DD2610057A19B /* NSIndexPath+Tools.h */,
@@ -1453,6 +1459,7 @@
 				93C646E7165D46C600E391E5 /* unzip.h in Headers */,
 				93C646EA165D46C600E391E5 /* zip.h in Headers */,
 				93C646EB165D46C600E391E5 /* ZipArchive.h in Headers */,
+				93A801A016D39BC9004C8F2D /* NSString+Tools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1726,6 +1733,7 @@
 				93C646E5165D46C600E391E5 /* unzip.c in Sources */,
 				93C646E8165D46C600E391E5 /* zip.c in Sources */,
 				93C646EC165D46C600E391E5 /* ZipArchive.mm in Sources */,
+				93A801A216D39BED004C8F2D /* NSString+Tools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
