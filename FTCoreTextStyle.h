@@ -46,27 +46,24 @@ typedef uint8_t FTCoreTextAlignement;
 
 @interface FTCoreTextStyle : NSObject <NSCopying>
 
-@property (nonatomic, retain) NSString			*name;
-@property (nonatomic, retain) NSString			*appendedCharacter;
-@property (nonatomic, retain) UIFont			*font;
-@property (nonatomic, retain) UIColor			*color;
-@property (nonatomic, assign, getter=isUnderLined) BOOL underlined;
-@property (nonatomic, assign) FTCoreTextAlignement textAlignment;
-@property (nonatomic, assign) UIEdgeInsets		paragraphInset;
-@property (nonatomic, assign) CGFloat			leading;
-@property (nonatomic, assign) CGFloat			maxLineHeight;
-@property (nonatomic, assign) CGFloat			minLineHeight;
+@property (nonatomic) NSString			*name;
+@property (nonatomic) NSString			*appendedCharacter;
+@property (nonatomic) UIFont			*font;
+@property (nonatomic) UIColor			*color;
+@property (nonatomic, getter=isUnderLined) BOOL underlined;
+@property (nonatomic) FTCoreTextAlignement textAlignment;
+@property (nonatomic) UIEdgeInsets		paragraphInset;
+@property (nonatomic) CGFloat			leading;
+@property (nonatomic) CGFloat			maxLineHeight;
+@property (nonatomic) CGFloat			minLineHeight;
 //for bullet styles only
-@property (nonatomic, retain) NSString			*bulletCharacter;
-@property (nonatomic, retain) UIFont			*bulletFont;
-@property (nonatomic, retain) UIColor			*bulletColor;
+@property (nonatomic) NSString			*bulletCharacter;
+@property (nonatomic) UIFont			*bulletFont;
+@property (nonatomic) UIColor			*bulletColor;
 @property (nonatomic, copy) FTCoreTextCallbackBlock       block;
 
 //if NO, the paragraph styling of the enclosing style is used. Default is YES.
 @property (nonatomic, assign) BOOL applyParagraphStyling;
-
-//deprecated
-@property (nonatomic, assign) __deprecated CGFloat spaceBetweenParagraphs;
 
 + (id)styleWithName:(NSString *)name;
 

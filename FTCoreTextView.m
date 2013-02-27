@@ -45,7 +45,6 @@ typedef enum {
 @property (nonatomic, assign) BOOL				isBullet;
 @property (nonatomic, retain) NSString			*imageName;
 
-
 - (NSString *)descriptionOfTree;
 - (NSString *)descriptionToRoot;
 - (void)addSubnode:(FTCoreTextNode *)node;
@@ -147,7 +146,7 @@ typedef enum {
 
 - (NSString *)descriptionOfTree
 {
-	NSMutableString *description = [NSMutableString string];
+	NSMutableString *description = [[NSMutableString alloc] init];
 	for (int i = 0; i < [self numberOfParents]; i++) {
 		[description insertString:@"\t" atIndex:0];
 	}
@@ -160,24 +159,23 @@ typedef enum {
 
 - (NSArray *)_allSubnodes
 {
-	NSMutableArray *subnodes = [[NSMutableArray new] autorelease];
+	NSMutableArray *subnodes = [[NSMutableArray alloc] init];
 	for (FTCoreTextNode *node in _subnodes) {
 		[subnodes addObject:node];
 		if (node.subnodes) [subnodes addObjectsFromArray:[node _allSubnodes]];
 	}
-	
 	return subnodes;
 }
 
 //return an array of nodes starting with the current and recursively adding all its child nodes
 - (NSArray *)allSubnodes
 {
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	NSArray *allSubnodes = [[self _allSubnodes] copy];
-	[pool release];
-	NSMutableArray *returnedArray = [NSMutableArray arrayWithObject:self];
-	[returnedArray addObjectsFromArray:allSubnodes];
-	[allSubnodes release];
+	NSMutableArray *returnedArray;
+	@autoreleasepool {
+		NSArray *allSubnodes = [[self _allSubnodes] copy];
+		returnedArray = [[NSMutableArray alloc] initWithObjects:self, nil];
+		[returnedArray addObjectsFromArray:allSubnodes];
+	}
 	return returnedArray;
 }
 
@@ -225,29 +223,21 @@ typedef enum {
 	return nil;	
 }
 
-- (void)dealloc
-{
-	[_subnodes release];
-	[_style release];
-	[_imageName release];
-	[super dealloc];
-}
-
 @end
-
 
 
 @interface FTCoreTextView ()
 
-@property (nonatomic, assign) CTFramesetterRef framesetter;
-@property (nonatomic, retain) FTCoreTextNode *rootNode;
+@property (nonatomic) CTFramesetterRef framesetter;
+@property (nonatomic) FTCoreTextNode *rootNode;
+@property (nonatomic, readwrite) NSAttributedString	*attributedString;
+
+CTFontRef CTFontCreateFromUIFont(UIFont *font);
+UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignment);
+NSInteger rangeSort(NSString *range1, NSString *range2, void *context);
 
 - (void)updateFramesetterIfNeeded;
 - (void)processText;
-CTFontRef CTFontCreateFromUIFont(UIFont *font);
-- (BOOL)isSystemUnder3_2;
-UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignment);
-NSInteger rangeSort(NSString *range1, NSString *range2, void *context);
 - (void)drawImages;
 - (void)doInit;
 - (void)didMakeChanges;
@@ -260,27 +250,13 @@ NSInteger rangeSort(NSString *range1, NSString *range2, void *context);
 
 @implementation FTCoreTextView
 
-@synthesize text = _text;
-@synthesize processedString = _processedString;
-@synthesize path = _path;
-@synthesize URLs = _URLs;
-@synthesize images = _images;
-@synthesize delegate = _delegate;
-@synthesize framesetter = _framesetter;
-@synthesize rootNode = _rootNode;
-@synthesize shadowColor = _shadowColor;
-@synthesize shadowOffset = _shadowOffset;
-@synthesize attributedString = _attributedString;
-
 #pragma mark - Tools methods
-
 
 - (NSString*)getNodeIndexThatContainLocationFormNSRange:(NSRange)range
 {
     FTCoreTextNode* node = [self getNodeThatContainLocationFormNSRange:range];
     return [self getIndexingForNode:node];
 }
-
 
 - (FTCoreTextNode*)getNodeThatContainLocationFormNSRange:(NSRange)range
 {
@@ -330,7 +306,7 @@ NSInteger rangeSort(NSString *range1, NSString *range2, void *context);
 }
 
 
-- (NSString*) getIndexingForNode:(FTCoreTextNode*)node
+- (NSString*)getIndexingForNode:(FTCoreTextNode*)node
 {
     NSString* string = [NSString string];
     FTCoreTextNode* currentNode = node;
@@ -359,7 +335,7 @@ NSInteger rangeSort(NSString *range1, NSString *range2, void *context);
     }   
     CTFrameRef ctframe = CTFramesetterCreateFrame(_framesetter, CFRangeMake(0, 0), mainPath, NULL);
     CGPathRelease(mainPath);
-    NSArray *lines = (NSArray *)CTFrameGetLines(ctframe);
+    NSArray *lines = (__bridge NSArray *)CTFrameGetLines(ctframe);
     NSInteger lineCount = [lines count];
     CGPoint origins[lineCount];
     if (lineCount != 0) 
@@ -372,7 +348,7 @@ NSInteger rangeSort(NSString *range1, NSString *range2, void *context);
             //the view is inverted, the y origin of the baseline is upside down
             baselineOrigin.y = CGRectGetHeight(self.frame) - baselineOrigin.y;
             
-            CTLineRef line = (CTLineRef)[lines objectAtIndex:i];
+            CTLineRef line = (__bridge CTLineRef)[lines objectAtIndex:i];
             CGFloat ascent, descent;
             CGFloat lineWidth = CTLineGetTypographicBounds(line, &ascent, &descent, NULL);
             
@@ -403,7 +379,7 @@ NSInteger rangeSort(NSString *range1, NSString *range2, void *context);
     }   
     CTFrameRef ctframe = CTFramesetterCreateFrame(_framesetter, CFRangeMake(0, 0), mainPath, NULL);
     CGPathRelease(mainPath);
-    NSArray *lines = (NSArray *)CTFrameGetLines(ctframe);
+    NSArray *lines = (__bridge NSArray *)CTFrameGetLines(ctframe);
     NSInteger lineCount = [lines count];
     CGPoint origins[lineCount];
     if (lineCount != 0) 
@@ -416,7 +392,7 @@ NSInteger rangeSort(NSString *range1, NSString *range2, void *context);
             //the view is inverted, the y origin of the baseline is upside down
             baselineOrigin.y = CGRectGetHeight(self.frame) - baselineOrigin.y;
             
-            CTLineRef line = (CTLineRef)[lines objectAtIndex:i];
+            CTLineRef line = (__bridge CTLineRef)[lines objectAtIndex:i];
             CGFloat ascent, descent;
             CGFloat lineWidth = CTLineGetTypographicBounds(line, &ascent, &descent, NULL);
             
@@ -453,7 +429,7 @@ NSInteger rangeSort(NSString *range1, NSString *range2, void *context)
 
 CTFontRef CTFontCreateFromUIFont(UIFont *font)
 {
-    CTFontRef ctFont = CTFontCreateWithName((CFStringRef)font.fontName, 
+    CTFontRef ctFont = CTFontCreateWithName((__bridge CFStringRef)font.fontName, 
                                             font.pointSize, 
                                             NULL);
     return ctFont;
@@ -472,17 +448,6 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 			return UITextAlignmentLeft;
 			break;
 	}
-}
-
-- (BOOL)isSystemUnder3_2
-{
-    static BOOL checked = NO;
-    static BOOL systemUnder3_2;
-    if (!checked) {
-        checked = YES;
-        systemUnder3_2 = SYSTEM_VERSION_LESS_THAN(@"3.2");
-    }
-	return systemUnder3_2;
 }
 
 #pragma mark - FTCoreTextView business
@@ -526,7 +491,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
     CTFrameRef ctframe = CTFramesetterCreateFrame(_framesetter, CFRangeMake(0, 0), mainPath, NULL);
     CGPathRelease(mainPath);
 	
-    NSArray *lines = (NSArray *)CTFrameGetLines(ctframe);
+    NSArray *lines = (__bridge NSArray *)CTFrameGetLines(ctframe);
     NSInteger lineCount = [lines count];
     CGPoint origins[lineCount];
     
@@ -539,7 +504,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 			//the view is inverted, the y origin of the baseline is upside down
 			baselineOrigin.y = CGRectGetHeight(self.frame) - baselineOrigin.y;
 			
-			CTLineRef line = (CTLineRef)[lines objectAtIndex:i];
+			CTLineRef line = (__bridge CTLineRef)[lines objectAtIndex:i];
 			CGFloat ascent, descent;
 			CGFloat lineWidth = CTLineGetTypographicBounds(line, &ascent, &descent, NULL);
 			
@@ -565,7 +530,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
                 CFArrayRef runs = CTLineGetGlyphRuns(line);
                 for(CFIndex j = 0; j < CFArrayGetCount(runs); j++) {
                     CTRunRef run = CFArrayGetValueAtIndex(runs, j);
-                    NSDictionary* attributes = (NSDictionary*)CTRunGetAttributes(run);
+                    NSDictionary* attributes = (__bridge NSDictionary*)CTRunGetAttributes(run);
                     
                     NSString *name = [attributes objectForKey:FTCoreTextDataName];
                     if (![name isEqualToString:@"_link"]) continue;
@@ -596,7 +561,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 {
     if (!_coreTextViewFlags.updatedAttrString) {
 		if (_framesetter != NULL) CFRelease(_framesetter);
-		_framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)self.attributedString);
+		_framesetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)self.attributedString);
 		_coreTextViewFlags.updatedAttrString = YES;
 		_coreTextViewFlags.updatedFramesetter = YES;
     }
@@ -610,21 +575,12 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 - (CGSize)suggestedSizeConstrainedToSize:(CGSize)size
 {
 	CGSize suggestedSize;
-	if ([self isSystemUnder3_2]) {
-		if (_processedString == nil) {
-			[self processText];
-		}
-		FTCoreTextStyle *style = [_styles objectForKey:[self defaultTagNameForKey:FTCoreTextTagDefault]];
-		suggestedSize = [_processedString sizeWithFont:style.font constrainedToSize:CGSizeMake(self.bounds.size.width, MAXFLOAT)];
+	[self updateFramesetterIfNeeded];
+	if (_framesetter == NULL) {
+		return CGSizeZero;
 	}
-	else {
-		[self updateFramesetterIfNeeded];
-		if (_framesetter == NULL) {
-			return CGSizeZero;
-		}
-		suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(_framesetter, CFRangeMake(0, 0), NULL, size, NULL);
-		suggestedSize = CGSizeMake(ceilf(suggestedSize.width), ceilf(suggestedSize.height));
-	}
+	suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(_framesetter, CFRangeMake(0, 0), NULL, size, NULL);
+	suggestedSize = CGSizeMake(ceilf(suggestedSize.width), ceilf(suggestedSize.height));
     return suggestedSize;
 }
 
@@ -655,7 +611,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	[_URLs removeAllObjects];
     [_images removeAllObjects];
 	
-	FTCoreTextNode *rootNode = [[FTCoreTextNode new] autorelease];
+	FTCoreTextNode *rootNode = [FTCoreTextNode new];
 	rootNode.style = [_styles objectForKey:[self defaultTagNameForKey:FTCoreTextTagDefault]];
 	
 	FTCoreTextNode *currentSupernode = rootNode;
@@ -666,57 +622,10 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	NSRange remainingRange = NSMakeRange(0, [processedString length]);
 	
 	NSString *regEx = @"<(/){0,1}.*?( /){0,1}>";	
-	
-	BOOL systemUnder3_2 = ([self isSystemUnder3_2]);
-	
-	NSArray *possibleTags = nil;
-	if (systemUnder3_2) {
-		
-		NSMutableArray *tagsNames = [NSMutableArray new];
-		NSMutableArray *tags = [NSMutableArray new];
-		for (FTCoreTextStyle *style in _styles.allValues) {
-			[tagsNames addObject:style.name];
-		}
-		if (![tagsNames containsObject:FTCoreTextTagBullet]) [tagsNames addObject:FTCoreTextTagBullet];
-		if (![tagsNames containsObject:FTCoreTextTagImage]) [tagsNames addObject:FTCoreTextTagImage];
-		if (![tagsNames containsObject:FTCoreTextTagPage]) [tagsNames addObject:FTCoreTextTagPage];
-		
-		for (NSString *tagName in tagsNames) {
-			[tags addObject:[NSString stringWithFormat:@"<%@>", tagName]];
-			[tags addObject:[NSString stringWithFormat:@"</%@>", tagName]];
-			[tags addObject:[NSString stringWithFormat:@"<%@ />", tagName]];
-		}
-		
-		possibleTags = tags;
-	}
-	
+			
 	while (!finished) {
 		
-		NSRange tagRange;
-		if (systemUnder3_2) {
-			
-			NSMutableArray *ranges = [NSMutableArray new];
-			for (NSString *tag in possibleTags) {
-				NSRange tagRange = [processedString rangeOfString:tag options:0 range:remainingRange];
-				if (tagRange.location != NSNotFound) {
-					[ranges addObject:NSStringFromRange(tagRange)];
-				}
-			}
-			NSArray *sortedRanges = [ranges sortedArrayUsingFunction:rangeSort context:NULL];
-			[ranges release];
-			
-			if (sortedRanges.count == 0) {
-				tagRange.location = NSNotFound;
-			}
-			else 
-            {
-				tagRange = NSRangeFromString([sortedRanges objectAtIndex:0]);
-			}
-		}
-		else 
-        {
-			tagRange = [processedString rangeOfString:regEx options:NSRegularExpressionSearch range:remainingRange];
-		}
+		NSRange tagRange = [processedString rangeOfString:regEx options:NSRegularExpressionSearch range:remainingRange];
 		
 		if (tagRange.location == NSNotFound) {
 			if (currentSupernode != rootNode && !currentSupernode.isClosed) {
@@ -751,9 +660,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
             style = [_styles objectForKey:[self defaultTagNameForKey:FTCoreTextTagDefault]];
             if (_verbose) NSLog(@"FTCoreTextView :%@ - Couldn't find style for tag '%@'", self, tagName);
         }
-        
-        
-        
+                
         switch (tagType) {
             case FTCoreTextTagTypeOpen:
             {
@@ -788,11 +695,9 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
                     
                     FTCoreTextNode *bulletNode = [FTCoreTextNode new];
                     bulletNode.style = bulletStyle;
-                    [bulletStyle release];
                     bulletNode.styleRange = NSMakeRange(tagRange.location, [appendedString length]);
                     
                     [newNode addSubnode:bulletNode];
-                    [bulletNode release];
                 }
                 else if ([tagName isEqualToString:[self defaultTagNameForKey:FTCoreTextTagImage]]) {
                     newNode.isImage = YES;
@@ -801,7 +706,6 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
                 [processedString replaceCharactersInRange:tagRange withString:@""];
                 
                 [currentSupernode addSubnode:newNode];
-                [newNode release];
                 
                 currentSupernode = newNode;
                 
@@ -899,12 +803,10 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
                         topSpacingStyle.maxLineHeight = currentSupernode.style.paragraphInset.top;
                         FTCoreTextNode *topSpacingNode = [[FTCoreTextNode alloc] init];
                         topSpacingNode.style = topSpacingStyle;
-                        [topSpacingStyle release];
                         
                         topSpacingNode.styleRange = topSpacingStyleRange;
                         
                         [currentSupernode.supernode insertSubnode:topSpacingNode beforeNode:currentSupernode];
-                        [topSpacingNode release];
                         
                         [currentSupernode adjustStylesAndSubstylesRangesByRange:topSpacingStyleRange];
                     }
@@ -922,8 +824,8 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
                 newNode.styleRange = NSMakeRange(tagRange.location, [newNode.style.appendedCharacter length]);
                 newNode.startLocation = tagRange.location;
                 [currentSupernode addSubnode:newNode];
-                [newNode release];
-                if (style.block) 
+
+                if (style.block)
                 {
                     NSDictionary* blockDict = [NSDictionary dictionaryWithObjectsAndKeys:tagsComponents,@"components", [NSValue valueWithRange:NSMakeRange(tagRange.location, newNode.style.appendedCharacter.length)],@"range", nil];
                     style.block(blockDict);
@@ -951,8 +853,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
     FTCoreTextView *instance = [[FTCoreTextView alloc] initWithFrame:CGRectZero];
     [instance setText:string];
     [instance processText];
-    NSString *result = [[instance.processedString copy] autorelease];
-    [instance release];
+    NSString *result = [instance.processedString copy];
     return result;
 }
 
@@ -965,7 +866,6 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 {
     FTCoreTextView *instance = [[FTCoreTextView alloc] initWithFrame:CGRectZero];
     NSArray *result = [instance divideTextInPages:string];
-	[instance release];
     return (NSArray *)result;
 }
 
@@ -1042,7 +942,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	CTFontRef ctFont = CTFontCreateFromUIFont(style.font);
 	
 	[*attributedString addAttribute:(id)kCTFontAttributeName
-							  value:(id)ctFont
+							  value:(__bridge id)ctFont
 							  range:styleRange];
 	CFRelease(ctFont);
 	
@@ -1104,7 +1004,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 		
 		CTParagraphStyleRef paragraphStyle = CTParagraphStyleCreate(settings, numberOfSettings);
 		[*attributedString addAttribute:(id)kCTParagraphStyleAttributeName
-								  value:(id)paragraphStyle 
+								  value:(__bridge id)paragraphStyle 
 								  range:styleRange];
 		CFRelease(tabStops);
 		CFRelease(paragraphStyle);
@@ -1122,7 +1022,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 {
 	self = [super initWithFrame:frame];
 	if (self) {
-		_attributedString = [attributedString retain];
+		_attributedString = attributedString;
 		[self doInit];
 	}
 	return self;
@@ -1157,48 +1057,27 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	linksStyle.color = [UIColor blueColor];
 	linksStyle.name = FTCoreTextTagLink;
 	[_styles setObject:[linksStyle copy] forKey:linksStyle.name];
-	[linksStyle release];
 	
-	_defaultsTags = [[NSMutableDictionary dictionaryWithObjectsAndKeys:FTCoreTextTagDefault, FTCoreTextTagDefault,
-					  FTCoreTextTagLink, FTCoreTextTagLink,
-					  FTCoreTextTagImage, FTCoreTextTagImage,
-					  FTCoreTextTagPage, FTCoreTextTagPage,
-					  FTCoreTextTagBullet, FTCoreTextTagBullet,
-					  nil] retain];
+	_defaultsTags = [NSMutableDictionary dictionaryWithObjectsAndKeys:FTCoreTextTagDefault, FTCoreTextTagDefault,
+					 FTCoreTextTagLink, FTCoreTextTagLink,
+					 FTCoreTextTagImage, FTCoreTextTagImage,
+					 FTCoreTextTagPage, FTCoreTextTagPage,
+					 FTCoreTextTagBullet, FTCoreTextTagBullet,
+					 nil];
 }
 
 - (void)dealloc
 {
 	if (_framesetter) CFRelease(_framesetter);
 	if (_path) CGPathRelease(_path);
-	[_rootNode release];
-    [_text release];
-    [_styles release];
-    [_processedString release];
-    [_URLs release];
-    [_images release];
-	[_shadowColor release];
-	[_attributedString release];
-	[_defaultsTags release];
-    [super dealloc];
 }
 
 #pragma mark - Custom Setters
 
 - (void)setText:(NSString *)text
 {
-    [_text release];
-    _text = [text retain];
+    _text = text;
 	_coreTextViewFlags.textChangesMade = YES;
-	[self didMakeChanges];
-    if ([self superview]) [self setNeedsDisplay];
-}
-
-//only here to assure compatibility with previous versions
-- (void)setStyles:(NSDictionary *)styles
-{
-	[_styles release];
-    _styles = [styles mutableCopy];
 	[self didMakeChanges];
     if ([self superview]) [self setNeedsDisplay];
 }
@@ -1212,8 +1091,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 
 - (void)setShadowColor:(UIColor *)shadowColor
 {
-	[_shadowColor release];
-	_shadowColor = [shadowColor retain];
+	_shadowColor = shadowColor;
 	if ([self superview]) [self setNeedsDisplay];
 }
 
@@ -1259,7 +1137,6 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 				[self applyStyle:node.style inRange:node.styleRange onString:&string];
 			}
 			
-			[_attributedString release];
 			_attributedString = string;
 		}
 	}
@@ -1280,66 +1157,46 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	[self.backgroundColor setFill];
 	CGContextFillRect(context, rect);
 	
-	if ([self isSystemUnder3_2]) {
-		
-		if (_processedString == nil || _coreTextViewFlags.textChangesMade) {
-			_coreTextViewFlags.textChangesMade = NO;
-			[self processText];
-		}
+	[self updateFramesetterIfNeeded];
+	
+	CGMutablePathRef mainPath = CGPathCreateMutable();
+	
+	if (!_path) {
+		CGPathAddRect(mainPath, NULL, CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height));
+	}
+	else {
+		CGPathAddPath(mainPath, NULL, _path);
+	}
+	
+	CTFrameRef drawFrame = CTFramesetterCreateFrame(_framesetter, CFRangeMake(0, 0), mainPath, NULL);
+	
+	if (drawFrame == NULL) {
+		if (_verbose) NSLog(@"f: %@", self.processedString);
+	}
+	else {
+		//draw images
+		if ([_images count] > 0) [self drawImages];
 		
 		if (_shadowColor) {
 			CGContextSetShadowWithColor(context, _shadowOffset, 0.f, _shadowColor.CGColor);
 		}
 		
-		FTCoreTextStyle *defaultStyle = [_styles objectForKey:[self defaultTagNameForKey:FTCoreTextTagDefault]];
-		[defaultStyle.color setFill];
-		[_processedString drawInRect:rect
-							withFont:defaultStyle.font
-					   lineBreakMode:UILineBreakModeWordWrap
-						   alignment:UITextAlignmentFromCoreTextAlignment(defaultStyle.textAlignment)];
+		CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+		CGContextTranslateCTM(context, 0, self.bounds.size.height);
+		CGContextScaleCTM(context, 1.0, -1.0);
+		// draw text
+		CTFrameDraw(drawFrame, context);
 	}
-	else {
-		[self updateFramesetterIfNeeded];
-		
-		CGMutablePathRef mainPath = CGPathCreateMutable();
-		
-		if (!_path) {
-			CGPathAddRect(mainPath, NULL, CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height));  
-		}
-		else {
-			CGPathAddPath(mainPath, NULL, _path);
-		}
-		
-		CTFrameRef drawFrame = CTFramesetterCreateFrame(_framesetter, CFRangeMake(0, 0), mainPath, NULL);
-		
-		if (drawFrame == NULL) {
-			if (_verbose) NSLog(@"f: %@", self.processedString);
-		}
-		else {
-			//draw images
-			if ([_images count] > 0) [self drawImages];
-			
-			if (_shadowColor) {
-				CGContextSetShadowWithColor(context, _shadowOffset, 0.f, _shadowColor.CGColor);
-			}
-			
-			CGContextSetTextMatrix(context, CGAffineTransformIdentity);
-			CGContextTranslateCTM(context, 0, self.bounds.size.height);
-			CGContextScaleCTM(context, 1.0, -1.0);
-			// draw text
-			CTFrameDraw(drawFrame, context);
-		}
-		// cleanup
-		if (drawFrame) CFRelease(drawFrame);
-		CGPathRelease(mainPath);
-	}
+	// cleanup
+	if (drawFrame) CFRelease(drawFrame);
+	CGPathRelease(mainPath);
     if ([_delegate respondsToSelector:@selector(coreTextViewfinishedRendering:)]) {
         [_delegate coreTextViewfinishedRendering:self];
     }
 }
 
 - (void)drawImages
-{    
+{
 	CGMutablePathRef mainPath = CGPathCreateMutable();
     if (!_path) {
         CGPathAddRect(mainPath, NULL, CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height));  
@@ -1351,7 +1208,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
     CTFrameRef ctframe = CTFramesetterCreateFrame(_framesetter, CFRangeMake(0, 0), mainPath, NULL);
     CGPathRelease(mainPath);
 	
-    NSArray *lines = (NSArray *)CTFrameGetLines(ctframe);
+    NSArray *lines = (__bridge NSArray *)CTFrameGetLines(ctframe);
     NSInteger lineCount = [lines count];
     CGPoint origins[lineCount];
 	
@@ -1364,7 +1221,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 		//the view is inverted, the y origin of the baseline is upside down
 		baselineOrigin.y = CGRectGetHeight(self.frame) - baselineOrigin.y;
 		
-		CTLineRef line = (CTLineRef)[lines objectAtIndex:i];
+		CTLineRef line = (__bridge CTLineRef)[lines objectAtIndex:i];
 		CFRange cfrange = CTLineGetStringRange(line);        
 		
         if (cfrange.location > imageNode.styleRange.location) {
@@ -1419,24 +1276,16 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 {
 	[super touchesEnded:touches withEvent:event];
 	
-	if (![self isSystemUnder3_2]) {
-		if (self.delegate && ([self.delegate respondsToSelector:@selector(touchedData:inCoreTextView:)] || [self.delegate respondsToSelector:@selector(coreTextView:receivedTouchOnData:)])) {
-			CGPoint point = [(UITouch *)[touches anyObject] locationInView:self];
-			NSDictionary *data = [self dataForPoint:point];
-			if (data) {
-				if ([self.delegate respondsToSelector:@selector(coreTextView:receivedTouchOnData:)]) {
-					[self.delegate coreTextView:self receivedTouchOnData:data];
-				}
-				else {
-					if ([self.delegate respondsToSelector:@selector(touchedData:inCoreTextView:)]) {
-						[self.delegate touchedData:data inCoreTextView:self];
-					}
-				}
+	if (self.delegate) {
+		CGPoint point = [(UITouch *)[touches anyObject] locationInView:self];
+		NSDictionary *data = [self dataForPoint:point];
+		if (data) {
+			if ([self.delegate respondsToSelector:@selector(coreTextView:receivedTouchOnData:)]) {
+				[self.delegate coreTextView:self receivedTouchOnData:data];
 			}
 		}
 	}
 }
-
 
 - (CGRect)getLineRectFromNSRange:(NSRange)range
 {
@@ -1451,14 +1300,14 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
     CTFrameRef ctframe = CTFramesetterCreateFrame(_framesetter, CFRangeMake(0, 0), mainPath, NULL);
     CGPathRelease(mainPath);
 	
-    NSArray *lines = (NSArray *)CTFrameGetLines(ctframe);
+    NSArray *lines = (__bridge NSArray *)CTFrameGetLines(ctframe);
     NSInteger lineCount = [lines count];
     CGPoint origins[lineCount];
     if (lineCount != 0) 
     {
 		for (int i = 0; i < lineCount; i++) 
         {	
-			CTLineRef line = (CTLineRef)[lines objectAtIndex:i];
+			CTLineRef line = (__bridge CTLineRef)[lines objectAtIndex:i];
 			CFRange lineRange= CTLineGetStringRange(line);
             if (range.location >= lineRange.location && (range.location + range.length)<= lineRange.location+lineRange.length) 
             {
@@ -1478,7 +1327,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 }
 
 
-- (NSString*) getTextInLineByRange:(NSRange)range
+- (NSString*)getTextInLineByRange:(NSRange)range
 {
     CGMutablePathRef mainPath = CGPathCreateMutable();
     if (!_path) {
@@ -1491,13 +1340,13 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
     CTFrameRef ctframe = CTFramesetterCreateFrame(_framesetter, CFRangeMake(0, 0), mainPath, NULL);
     CGPathRelease(mainPath);
 	
-    NSArray *lines = (NSArray *)CTFrameGetLines(ctframe);
+    NSArray *lines = (__bridge NSArray *)CTFrameGetLines(ctframe);
     NSInteger lineCount = [lines count];
     if (lineCount != 0) 
     {
 		for (int i = 0; i < lineCount; i++) 
         {	
-			CTLineRef line = (CTLineRef)[lines objectAtIndex:i];
+			CTLineRef line = (__bridge CTLineRef)[lines objectAtIndex:i];
 			CFRange lineRange= CTLineGetStringRange(line);
             if (range.location >= lineRange.location && (range.location + range.length)<= lineRange.location+lineRange.length) 
             {

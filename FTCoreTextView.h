@@ -73,8 +73,6 @@ extern NSString * const FTCoreTextDataAttributes;
  * make the view regonize <li>...</li> tags as bullet points */
 - (void)changeDefaultTag:(NSString *)coreTextTag toTag:(NSString *)newDefaultTag;
 
-- (void)setStyles:(NSDictionary *)styles __deprecated;
-
 - (void)addStyle:(FTCoreTextStyle *)style;
 - (void)addStyles:(NSArray *)styles;
 
@@ -100,7 +98,6 @@ extern NSString * const FTCoreTextDataAttributes;
 
 @protocol FTCoreTextViewDelegate <NSObject>
 @optional
-- (void)touchedData:(NSDictionary *)data inCoreTextView:(FTCoreTextView *)textView __deprecated;
 - (void)coreTextView:(FTCoreTextView *)coreTextView receivedTouchOnData:(NSDictionary *)data;
 - (void)coreTextViewfinishedRendering:(FTCoreTextView *)coreTextView;
 @end

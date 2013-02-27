@@ -45,10 +45,10 @@
 		681C087B157505CC00BB8E2D /* FT2Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C0879157505CC00BB8E2D /* FT2Download.m */; };
 		6842EC5E1552BFFE00C18C9F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6842EC5D1552BFFE00C18C9F /* CoreText.framework */; };
 		6842EC731552D95800C18C9F /* FTCoreTextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */; };
-		6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC701552D95800C18C9F /* FTCoreTextStyle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC701552D95800C18C9F /* FTCoreTextStyle.m */; };
 		6842EC751552D95800C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC701552D95800C18C9F /* FTCoreTextStyle.m */; };
 		6842EC761552D95800C18C9F /* FTCoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC711552D95800C18C9F /* FTCoreTextView.h */; };
-		6842EC771552D95800C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC721552D95800C18C9F /* FTCoreTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6842EC771552D95800C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC721552D95800C18C9F /* FTCoreTextView.m */; };
 		6842EC781552D95800C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC721552D95800C18C9F /* FTCoreTextView.m */; };
 		6842EC941553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC921553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h */; };
 		6842EC951553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC931553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m */; };

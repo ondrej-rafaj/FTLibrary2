@@ -59,7 +59,7 @@
     static NSString *pattern = @"^[http|https|ftp]*://";
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
-    NSArray *matches = [regex matchesInString:_source.absoluteString options:NSMatchingProgress range:NSMakeRange(0, _source.absoluteString.length)];
+    NSArray *matches = [regex matchesInString:_source.absoluteString options:0 range:NSMakeRange(0, _source.absoluteString.length)];
     return (matches.count == 0);
 }
 
