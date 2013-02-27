@@ -231,6 +231,8 @@ typedef enum {
 @property (nonatomic) CTFramesetterRef framesetter;
 @property (nonatomic) FTCoreTextNode *rootNode;
 @property (nonatomic, readwrite) NSAttributedString	*attributedString;
+@property (nonatomic) NSDictionary *touchedData;
+@property (nonatomic) NSArray *selectionsViews;
 
 CTFontRef CTFontCreateFromUIFont(UIFont *font);
 UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignment);
@@ -478,6 +480,11 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 
 - (NSDictionary *)dataForPoint:(CGPoint)point
 {
+	return [self dataForPoint:point activeRects:nil];
+}
+
+- (NSDictionary *)dataForPoint:(CGPoint)point activeRects:(NSArray **)activeRects
+{
 	NSMutableDictionary *returnedDict = [NSMutableDictionary dictionary];
 	
 	CGMutablePathRef mainPath = CGPathCreateMutable();
@@ -522,6 +529,69 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 					if (index >= range.location && index < range.location + range.length) {
 						NSURL *url = [_URLs objectForKey:key];
 						if (url) [returnedDict setObject:url forKey:FTCoreTextDataURL];
+						
+						if (activeRects && _highlightTouch) {
+							//we looks for the rects enclosing the entire active section
+							NSInteger startIndex = range.location;
+							NSInteger endIndex = range.location + range.length;
+							
+							//we look for the line that contains the start index
+							NSInteger startLineIndex = i;
+							for (int iLine = i; iLine >= 0; iLine--) {
+								CTLineRef line = (__bridge CTLineRef)[lines objectAtIndex:iLine];
+								CFRange range = CTLineGetStringRange(line);
+								if (range.location <= startIndex && range.location + range.length >= startIndex) {
+									startLineIndex = iLine;
+									break;
+								}
+							}
+							//we look for the line that contains the end index
+							NSInteger endLineIndex = startLineIndex;
+							for (int iLine = i; iLine < lineCount; iLine++) {
+								CTLineRef line = (__bridge CTLineRef)[lines objectAtIndex:iLine];
+								CFRange range = CTLineGetStringRange(line);
+								if (range.location <= endIndex && range.location + range.length >= endIndex) {
+									endLineIndex = iLine;
+									break;
+								}
+							}
+							//we get enclosing rects
+							NSMutableArray *rectsStrings = [NSMutableArray new];
+							for (int iLine = startLineIndex; iLine <= endLineIndex; iLine++) {
+								CTLineRef line = (__bridge CTLineRef)[lines objectAtIndex:iLine];
+								CGFloat ascent, descent;
+								CGFloat lineWidth = CTLineGetTypographicBounds(line, &ascent, &descent, NULL);
+								
+								CGPoint baselineOrigin = origins[iLine];
+								//the view is inverted, the y origin of the baseline is upside down
+								baselineOrigin.y = CGRectGetHeight(self.frame) - baselineOrigin.y;
+								
+								CGRect lineFrame = CGRectMake(baselineOrigin.x, baselineOrigin.y - ascent, lineWidth, ascent + descent);
+								CGRect actualRect;
+								actualRect.size.height = lineFrame.size.height;
+								actualRect.origin.y = lineFrame.origin.y;
+								
+								CFRange range = CTLineGetStringRange(line);
+								if (range.location >= startIndex) {
+									//the beginning of the line is included
+									actualRect.origin.x = lineFrame.origin.x;
+								} else {
+									actualRect.origin.x = CTLineGetOffsetForStringIndex(line, startIndex, NULL);
+								}
+								NSInteger lineRangEnd = range.length + range.location;
+								if (lineRangEnd <= endIndex) {
+									//the end of the line is included
+									actualRect.size.width = CGRectGetMaxX(lineFrame) - CGRectGetMinX(actualRect);
+								} else {
+									CGFloat position = CTLineGetOffsetForStringIndex(line, endIndex, NULL);
+									actualRect.size.width = position - CGRectGetMinX(actualRect);
+								}
+								actualRect = CGRectInset(actualRect, -1, 0);
+								[rectsStrings addObject:NSStringFromCGRect(actualRect)];
+							}
+							
+							*activeRects = rectsStrings;
+						}
 						break;
 					}
 				}
@@ -1045,6 +1115,7 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 	_URLs = [[NSMutableDictionary alloc] init];
     _images = [[NSMutableArray alloc] init];
 	_verbose = YES;
+	_highlightTouch = YES;
 	self.opaque = NO;
 	self.backgroundColor = [UIColor clearColor];
 	self.contentMode = UIViewContentModeRedraw;
@@ -1272,18 +1343,52 @@ UITextAlignment UITextAlignmentFromCoreTextAlignment(FTCoreTextAlignement alignm
 
 #pragma mark User Interaction
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	[super touchesEnded:touches withEvent:event];
+	
+	if (self.delegate && [self.delegate respondsToSelector:@selector(coreTextView:receivedTouchOnData:)]) {
+		CGPoint point = [(UITouch *)[touches anyObject] locationInView:self];
+		NSMutableArray *activeRects;
+		NSDictionary *data = [self dataForPoint:point activeRects:&activeRects];
+		if (data.count > 0) {
+			NSMutableArray *selectedViews = [NSMutableArray new];
+			for (NSString *rectString in activeRects) {
+				CGRect rect = CGRectFromString(rectString);
+				UIView *view = [[UIView alloc] initWithFrame:rect];
+				view.layer.cornerRadius = 3;
+				view.clipsToBounds = YES;
+				view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.25];
+				[self addSubview:view];
+				[selectedViews addObject:view];
+			}
+			self.touchedData = data;
+			self.selectionsViews = selectedViews;
+		}
+	}
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	[super touchesMoved:touches withEvent:event];
+	_touchedData = nil;
+	[_selectionsViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+	_selectionsViews = nil;
+}
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	[super touchesEnded:touches withEvent:event];
 	
-	if (self.delegate) {
-		CGPoint point = [(UITouch *)[touches anyObject] locationInView:self];
-		NSDictionary *data = [self dataForPoint:point];
-		if (data) {
+	if (_touchedData) {
+		if (self.delegate && [self.delegate respondsToSelector:@selector(coreTextView:receivedTouchOnData:)]) {
 			if ([self.delegate respondsToSelector:@selector(coreTextView:receivedTouchOnData:)]) {
-				[self.delegate coreTextView:self receivedTouchOnData:data];
+				[self.delegate coreTextView:self receivedTouchOnData:_touchedData];
 			}
 		}
+		_touchedData = nil;
+		[_selectionsViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+		_selectionsViews = nil;
 	}
 }
 

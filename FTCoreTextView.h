@@ -62,6 +62,7 @@ extern NSString * const FTCoreTextDataAttributes;
 @property (nonatomic) UIColor *shadowColor;
 @property (nonatomic) CGSize shadowOffset;
 @property (nonatomic) BOOL verbose; //default YES
+@property (nonatomic) BOOL highlightTouch; //defaut YES;
 
 /* Using this method, you then have to set the -text property to get any result */
 - (id)initWithFrame:(CGRect)frame;
