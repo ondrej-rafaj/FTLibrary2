@@ -35,15 +35,15 @@ typedef enum {
 @interface FTCoreTextNode : NSObject
 
 @property (nonatomic, assign) FTCoreTextNode	*supernode;
-@property (nonatomic, retain) NSArray			*subnodes;
+@property (nonatomic) NSArray			*subnodes;
 @property (nonatomic, copy)	  FTCoreTextStyle	*style;
-@property (nonatomic, assign) NSRange			styleRange;
-@property (nonatomic, assign) BOOL				isClosed;
-@property (nonatomic, assign) NSInteger			startLocation;
-@property (nonatomic, assign) BOOL				isLink;
-@property (nonatomic, assign) BOOL				isImage;
-@property (nonatomic, assign) BOOL				isBullet;
-@property (nonatomic, retain) NSString			*imageName;
+@property (nonatomic) NSRange			styleRange;
+@property (nonatomic) BOOL				isClosed;
+@property (nonatomic) NSInteger			startLocation;
+@property (nonatomic) BOOL				isLink;
+@property (nonatomic) BOOL				isImage;
+@property (nonatomic) BOOL				isBullet;
+@property (nonatomic) NSString			*imageName;
 
 - (NSString *)descriptionOfTree;
 - (NSString *)descriptionToRoot;
