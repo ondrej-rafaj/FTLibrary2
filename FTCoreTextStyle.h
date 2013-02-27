@@ -60,6 +60,7 @@ typedef uint8_t FTCoreTextAlignement;
 @property (nonatomic) NSString			*bulletCharacter;
 @property (nonatomic) UIFont			*bulletFont;
 @property (nonatomic) UIColor			*bulletColor;
+//called when the style is parsed for extra actions
 @property (nonatomic, copy) FTCoreTextCallbackBlock       block;
 
 //if NO, the paragraph styling of the enclosing style is used. Default is YES.
