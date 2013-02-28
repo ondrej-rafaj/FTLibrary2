@@ -36,6 +36,14 @@ CGRectWithSize(CGSize size)
 	return rect;
 }
 
+CG_INLINE CGRect
+CGRectMakeByCenteringRectInFrame(CGRect r, CGRect frame)
+{
+	CGPoint center = CGPointCenterOfRect(CGRectWithSize(frame.size));
+	CGRect rect = CGRectMakeWithCenter(center.x, center.y, r.size.width, r.size.height);
+	return rect;
+}
+
 CG_INLINE CGPoint
 CGPointIntegral(CGPoint p)
 {
