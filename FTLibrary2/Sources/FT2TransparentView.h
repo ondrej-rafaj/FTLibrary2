@@ -13,4 +13,7 @@
 
 @interface FT2TransparentView : UIView
 
+@property (nonatomic) NSInvocation *didTouchVoid;
+@property (nonatomic) NSInvocation *didTouchContent;
+
 @end

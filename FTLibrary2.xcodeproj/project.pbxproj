@@ -37,19 +37,9 @@
 		148B739915C150880002D5AE /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B738615C14DEC0002D5AE /* SDWebImagePrefetcher.m */; };
 		148B739A15C150880002D5AE /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B738815C14DEC0002D5AE /* UIButton+WebCache.m */; };
 		148B739B15C150880002D5AE /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B738A15C14DEC0002D5AE /* UIImageView+WebCache.m */; };
-		35B7E4B71614732D001D024F /* FGalleryPhotoErrorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 35B7E4B51614732D001D024F /* FGalleryPhotoErrorView.h */; };
-		35B7E4B81614732D001D024F /* FGalleryPhotoErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B7E4B61614732D001D024F /* FGalleryPhotoErrorView.m */; };
-		4CF02072159244C0009A93BF /* FTAutoLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF02070159244C0009A93BF /* FTAutoLineView.h */; };
-		4CF02073159244C0009A93BF /* FTAutoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF02071159244C0009A93BF /* FTAutoLineView.m */; };
 		681C087A157505CC00BB8E2D /* FT2Download.h in Headers */ = {isa = PBXBuildFile; fileRef = 681C0878157505CB00BB8E2D /* FT2Download.h */; };
 		681C087B157505CC00BB8E2D /* FT2Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 681C0879157505CC00BB8E2D /* FT2Download.m */; };
 		6842EC5E1552BFFE00C18C9F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6842EC5D1552BFFE00C18C9F /* CoreText.framework */; };
-		6842EC731552D95800C18C9F /* FTCoreTextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */; };
-		6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC701552D95800C18C9F /* FTCoreTextStyle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6842EC751552D95800C18C9F /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC701552D95800C18C9F /* FTCoreTextStyle.m */; };
-		6842EC761552D95800C18C9F /* FTCoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC711552D95800C18C9F /* FTCoreTextView.h */; };
-		6842EC771552D95800C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC721552D95800C18C9F /* FTCoreTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6842EC781552D95800C18C9F /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC721552D95800C18C9F /* FTCoreTextView.m */; };
 		6842EC941553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6842EC921553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h */; };
 		6842EC951553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6842EC931553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m */; };
 		6853970B1550298300B2D2A4 /* FT2File.h in Headers */ = {isa = PBXBuildFile; fileRef = 685397091550298300B2D2A4 /* FT2File.h */; };
@@ -111,32 +101,6 @@
 		7A8112C21601F5F4008918E9 /* UIView+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8112C01601F5F4008918E9 /* UIView+Log.m */; };
 		7AAA4BD015CC35640052F1AA /* NSObject+PLGSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AAA4BCE15CC35640052F1AA /* NSObject+PLGSubscripting.h */; };
 		7AAA4BD115CC35640052F1AA /* NSObject+PLGSubscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4BCF15CC35640052F1AA /* NSObject+PLGSubscripting.m */; };
-		7AB653F7158A059900D307E7 /* AQGridView+CellLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E0158A059900D307E7 /* AQGridView+CellLayout.h */; };
-		7AB653F8158A059900D307E7 /* AQGridView+CellLocationDelegation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E1158A059900D307E7 /* AQGridView+CellLocationDelegation.h */; };
-		7AB653F9158A059900D307E7 /* AQGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E2158A059900D307E7 /* AQGridView.h */; };
-		7AB653FA158A059900D307E7 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653E3158A059900D307E7 /* AQGridView.m */; };
-		7AB653FB158A059900D307E7 /* AQGridViewAnimatorItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E4158A059900D307E7 /* AQGridViewAnimatorItem.h */; };
-		7AB653FC158A059900D307E7 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653E5158A059900D307E7 /* AQGridViewAnimatorItem.m */; };
-		7AB653FD158A059900D307E7 /* AQGridViewCell+AQGridViewCellPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E6158A059900D307E7 /* AQGridViewCell+AQGridViewCellPrivate.h */; };
-		7AB653FE158A059900D307E7 /* AQGridViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E7158A059900D307E7 /* AQGridViewCell.h */; };
-		7AB653FF158A059900D307E7 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653E8158A059900D307E7 /* AQGridViewCell.m */; };
-		7AB65400158A059900D307E7 /* AQGridViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653E9158A059900D307E7 /* AQGridViewController.h */; };
-		7AB65401158A059900D307E7 /* AQGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653EA158A059900D307E7 /* AQGridViewController.m */; };
-		7AB65402158A059900D307E7 /* AQGridViewData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653EB158A059900D307E7 /* AQGridViewData.h */; };
-		7AB65403158A059900D307E7 /* AQGridViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653EC158A059900D307E7 /* AQGridViewData.m */; };
-		7AB65404158A059900D307E7 /* AQGridViewUpdateInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653ED158A059900D307E7 /* AQGridViewUpdateInfo.h */; };
-		7AB65405158A059900D307E7 /* AQGridViewUpdateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653EE158A059900D307E7 /* AQGridViewUpdateInfo.m */; };
-		7AB65406158A059900D307E7 /* AQGridViewUpdateItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653EF158A059900D307E7 /* AQGridViewUpdateItem.h */; };
-		7AB65407158A059900D307E7 /* AQGridViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F0158A059900D307E7 /* AQGridViewUpdateItem.m */; };
-		7AB65408158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653F1158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h */; };
-		7AB65409158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F2158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m */; };
-		7AB6540A158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653F3158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h */; };
-		7AB6540B158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */; };
-		7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */; };
-		7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */; };
-		9305FBF815E536F9002BA589 /* FT2ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9356F54615E53595004E3AD2 /* FT2ShadowView.m */; };
-		930BE8CF15E3BA5F00EBEEEB /* FT2MessagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 930BE8CD15E3BA5F00EBEEEB /* FT2MessagerView.h */; };
-		930BE8D015E3BA5F00EBEEEB /* FT2MessagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 930BE8CE15E3BA5F00EBEEEB /* FT2MessagerView.m */; };
 		932FDA64153DD96000E9D253 /* SA_OAuthTwitterController.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */; };
 		932FDA65153DD96000E9D253 /* SA_OAuthTwitterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		932FDA67153DD96000E9D253 /* SA_OAuthTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */; };
@@ -248,9 +212,6 @@
 		932FDB4F153DDDF900E9D253 /* OAToken_KeychainExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */; };
 		932FDB50153DDDF900E9D253 /* OAuthConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */; };
 		932FDB53153DDE7C00E9D253 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 932FDB51153DDE5100E9D253 /* libxml2.dylib */; };
-		934E719415D3B8BA000E321B /* FT2Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 934E719215D3B8BA000E321B /* FT2Data.h */; };
-		934E719515D3B8BA000E321B /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E719315D3B8BA000E321B /* FT2Data.m */; };
-		934E719615D3B8BA000E321B /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E719315D3B8BA000E321B /* FT2Data.m */; };
 		93879812153ED11A001FE131 /* FT2PageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9387980D153ED11A001FE131 /* FT2PageScrollView.h */; };
 		93879813153ED11A001FE131 /* FT2PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387980E153ED11A001FE131 /* FT2PageScrollView.m */; };
 		93879814153ED11A001FE131 /* FT2PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9387980E153ED11A001FE131 /* FT2PageScrollView.m */; };
@@ -309,6 +270,8 @@
 		938D5832153DCA840067CEFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 938D5830153DCA840067CEFA /* InfoPlist.strings */; };
 		938D5834153DCA840067CEFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5833153DCA840067CEFA /* main.m */; };
 		938D5838153DCA840067CEFA /* FT2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5837153DCA840067CEFA /* FT2AppDelegate.m */; };
+		93A801A016D39BC9004C8F2D /* NSString+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93A8019F16D39BC9004C8F2D /* NSString+Tools.h */; };
+		93A801A216D39BED004C8F2D /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A801A116D39BED004C8F2D /* NSString+Tools.m */; };
 		93B5B13D15A714130049B3A0 /* FT2TransparentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B11D15A714130049B3A0 /* FT2TransparentView.h */; };
 		93B5B13E15A714130049B3A0 /* FT2TransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11E15A714130049B3A0 /* FT2TransparentView.m */; };
 		93C265C4153EBF6A0010A059 /* FT2ReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */; };
@@ -328,22 +291,6 @@
 		93C265DC153EC32E0010A059 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265DA153EC32E0010A059 /* Reachability.h */; };
 		93C265DD153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93C265DE153EC32E0010A059 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C265DB153EC32E0010A059 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		93C646DE165D46C600E391E5 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646D3165D46C600E391E5 /* crypt.h */; };
-		93C646DF165D46C600E391E5 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D4165D46C600E391E5 /* ioapi.c */; };
-		93C646E0165D46C600E391E5 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D4165D46C600E391E5 /* ioapi.c */; };
-		93C646E1165D46C600E391E5 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646D5165D46C600E391E5 /* ioapi.h */; };
-		93C646E2165D46C600E391E5 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D6165D46C600E391E5 /* mztools.c */; };
-		93C646E3165D46C600E391E5 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D6165D46C600E391E5 /* mztools.c */; };
-		93C646E4165D46C600E391E5 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646D7165D46C600E391E5 /* mztools.h */; };
-		93C646E5165D46C600E391E5 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D8165D46C600E391E5 /* unzip.c */; };
-		93C646E6165D46C600E391E5 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646D8165D46C600E391E5 /* unzip.c */; };
-		93C646E7165D46C600E391E5 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646D9165D46C600E391E5 /* unzip.h */; };
-		93C646E8165D46C600E391E5 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646DA165D46C600E391E5 /* zip.c */; };
-		93C646E9165D46C600E391E5 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93C646DA165D46C600E391E5 /* zip.c */; };
-		93C646EA165D46C600E391E5 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646DB165D46C600E391E5 /* zip.h */; };
-		93C646EB165D46C600E391E5 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C646DC165D46C600E391E5 /* ZipArchive.h */; };
-		93C646EC165D46C600E391E5 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93C646DD165D46C600E391E5 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		93C646ED165D46C600E391E5 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93C646DD165D46C600E391E5 /* ZipArchive.mm */; };
 		93CF7B0B1546D0EC0047C412 /* CoreGraphicAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */; };
 		93D385E6154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */; };
 		93D385E7154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */; };
@@ -353,17 +300,106 @@
 		93D385EB154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */; };
 		93D385EC154FF1B0009A6895 /* FT2ImageMagnifyingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D385E4154FF1B0009A6895 /* FT2ImageMagnifyingView.h */; };
 		93D385ED154FF1B0009A6895 /* FT2MagnifyingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D385E5154FF1B0009A6895 /* FT2MagnifyingView.h */; };
+		93DA077516E789D2009A0160 /* FT2Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA077316E789D2009A0160 /* FT2Data.h */; };
+		93DA077616E789D2009A0160 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA077416E789D2009A0160 /* FT2Data.m */; };
+		93DA077716E789D2009A0160 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA077416E789D2009A0160 /* FT2Data.m */; };
+		93DA077816E789D2009A0160 /* FT2Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA077416E789D2009A0160 /* FT2Data.m */; };
+		93DA077B16E789E6009A0160 /* FT2ShadowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA077916E789E6009A0160 /* FT2ShadowView.h */; };
+		93DA077C16E789E6009A0160 /* FT2ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA077A16E789E6009A0160 /* FT2ShadowView.m */; };
+		93DA077D16E789E6009A0160 /* FT2ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA077A16E789E6009A0160 /* FT2ShadowView.m */; };
+		93DA077E16E789E6009A0160 /* FT2ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA077A16E789E6009A0160 /* FT2ShadowView.m */; };
+		93DA078316E789FC009A0160 /* FT2MessagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA077F16E789FC009A0160 /* FT2MessagerView.h */; };
+		93DA078416E789FC009A0160 /* FT2MessagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA078016E789FC009A0160 /* FT2MessagerView.m */; };
+		93DA078516E789FC009A0160 /* FT2MessagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA078016E789FC009A0160 /* FT2MessagerView.m */; };
+		93DA078616E789FC009A0160 /* FT2MessagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA078016E789FC009A0160 /* FT2MessagerView.m */; };
+		93DA078716E789FC009A0160 /* FTAutoLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA078116E789FC009A0160 /* FTAutoLineView.h */; };
+		93DA078816E789FC009A0160 /* FTAutoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA078216E789FC009A0160 /* FTAutoLineView.m */; };
+		93DA078916E789FC009A0160 /* FTAutoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA078216E789FC009A0160 /* FTAutoLineView.m */; };
+		93DA078A16E789FC009A0160 /* FTAutoLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA078216E789FC009A0160 /* FTAutoLineView.m */; };
+		93DA079816E78A16009A0160 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA078D16E78A16009A0160 /* crypt.h */; };
+		93DA079916E78A16009A0160 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA078E16E78A16009A0160 /* ioapi.c */; };
+		93DA079A16E78A16009A0160 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA078E16E78A16009A0160 /* ioapi.c */; };
+		93DA079B16E78A16009A0160 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA078E16E78A16009A0160 /* ioapi.c */; };
+		93DA079C16E78A16009A0160 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA078F16E78A16009A0160 /* ioapi.h */; };
+		93DA079D16E78A16009A0160 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079016E78A16009A0160 /* mztools.c */; };
+		93DA079E16E78A16009A0160 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079016E78A16009A0160 /* mztools.c */; };
+		93DA079F16E78A16009A0160 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079016E78A16009A0160 /* mztools.c */; };
+		93DA07A016E78A16009A0160 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA079116E78A16009A0160 /* mztools.h */; };
+		93DA07A116E78A16009A0160 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079216E78A16009A0160 /* unzip.c */; };
+		93DA07A216E78A16009A0160 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079216E78A16009A0160 /* unzip.c */; };
+		93DA07A316E78A16009A0160 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079216E78A16009A0160 /* unzip.c */; };
+		93DA07A416E78A16009A0160 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA079316E78A16009A0160 /* unzip.h */; };
+		93DA07A516E78A16009A0160 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079416E78A16009A0160 /* zip.c */; };
+		93DA07A616E78A16009A0160 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079416E78A16009A0160 /* zip.c */; };
+		93DA07A716E78A16009A0160 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079416E78A16009A0160 /* zip.c */; };
+		93DA07A816E78A16009A0160 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA079516E78A16009A0160 /* zip.h */; };
+		93DA07A916E78A16009A0160 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA079616E78A16009A0160 /* ZipArchive.h */; };
+		93DA07AA16E78A16009A0160 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079716E78A16009A0160 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93DA07AB16E78A16009A0160 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079716E78A16009A0160 /* ZipArchive.mm */; };
+		93DA07AC16E78A16009A0160 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93DA079716E78A16009A0160 /* ZipArchive.mm */; };
+		93DA07B616E78A46009A0160 /* FGalleryPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07AF16E78A46009A0160 /* FGalleryPhoto.m */; };
+		93DA07B716E78A46009A0160 /* FGalleryPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07AF16E78A46009A0160 /* FGalleryPhoto.m */; };
+		93DA07B816E78A46009A0160 /* FGalleryPhotoErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07B116E78A46009A0160 /* FGalleryPhotoErrorView.m */; };
+		93DA07B916E78A46009A0160 /* FGalleryPhotoErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07B116E78A46009A0160 /* FGalleryPhotoErrorView.m */; };
+		93DA07BA16E78A46009A0160 /* FGalleryPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07B316E78A46009A0160 /* FGalleryPhotoView.m */; };
+		93DA07BB16E78A46009A0160 /* FGalleryPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07B316E78A46009A0160 /* FGalleryPhotoView.m */; };
+		93DA07BC16E78A46009A0160 /* FGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07B516E78A46009A0160 /* FGalleryViewController.m */; };
+		93DA07BD16E78A46009A0160 /* FGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07B516E78A46009A0160 /* FGalleryViewController.m */; };
+		93DA07D716E78A53009A0160 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 93DA07BF16E78A53009A0160 /* .gitignore */; };
+		93DA07D816E78A53009A0160 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 93DA07BF16E78A53009A0160 /* .gitignore */; };
+		93DA07D916E78A53009A0160 /* AQGridView+CellLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07C016E78A53009A0160 /* AQGridView+CellLayout.h */; };
+		93DA07DA16E78A53009A0160 /* AQGridView+CellLocationDelegation.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07C116E78A53009A0160 /* AQGridView+CellLocationDelegation.h */; };
+		93DA07DB16E78A53009A0160 /* AQGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07C216E78A53009A0160 /* AQGridView.h */; };
+		93DA07DC16E78A53009A0160 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07C316E78A53009A0160 /* AQGridView.m */; };
+		93DA07DD16E78A53009A0160 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07C316E78A53009A0160 /* AQGridView.m */; };
+		93DA07DE16E78A53009A0160 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07C316E78A53009A0160 /* AQGridView.m */; };
+		93DA07DF16E78A53009A0160 /* AQGridViewAnimatorItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07C416E78A53009A0160 /* AQGridViewAnimatorItem.h */; };
+		93DA07E016E78A53009A0160 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07C516E78A53009A0160 /* AQGridViewAnimatorItem.m */; };
+		93DA07E116E78A53009A0160 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07C516E78A53009A0160 /* AQGridViewAnimatorItem.m */; };
+		93DA07E216E78A53009A0160 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07C516E78A53009A0160 /* AQGridViewAnimatorItem.m */; };
+		93DA07E316E78A53009A0160 /* AQGridViewCell+AQGridViewCellPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07C616E78A53009A0160 /* AQGridViewCell+AQGridViewCellPrivate.h */; };
+		93DA07E416E78A53009A0160 /* AQGridViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07C716E78A53009A0160 /* AQGridViewCell.h */; };
+		93DA07E516E78A53009A0160 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07C816E78A53009A0160 /* AQGridViewCell.m */; };
+		93DA07E616E78A53009A0160 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07C816E78A53009A0160 /* AQGridViewCell.m */; };
+		93DA07E716E78A53009A0160 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07C816E78A53009A0160 /* AQGridViewCell.m */; };
+		93DA07E816E78A53009A0160 /* AQGridViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07C916E78A53009A0160 /* AQGridViewController.h */; };
+		93DA07E916E78A53009A0160 /* AQGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07CA16E78A53009A0160 /* AQGridViewController.m */; };
+		93DA07EA16E78A53009A0160 /* AQGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07CA16E78A53009A0160 /* AQGridViewController.m */; };
+		93DA07EB16E78A53009A0160 /* AQGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07CA16E78A53009A0160 /* AQGridViewController.m */; };
+		93DA07EC16E78A53009A0160 /* AQGridViewData.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07CB16E78A53009A0160 /* AQGridViewData.h */; };
+		93DA07ED16E78A53009A0160 /* AQGridViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07CC16E78A53009A0160 /* AQGridViewData.m */; };
+		93DA07EE16E78A53009A0160 /* AQGridViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07CC16E78A53009A0160 /* AQGridViewData.m */; };
+		93DA07EF16E78A53009A0160 /* AQGridViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07CC16E78A53009A0160 /* AQGridViewData.m */; };
+		93DA07F016E78A53009A0160 /* AQGridViewUpdateInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07CD16E78A53009A0160 /* AQGridViewUpdateInfo.h */; };
+		93DA07F116E78A53009A0160 /* AQGridViewUpdateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07CE16E78A53009A0160 /* AQGridViewUpdateInfo.m */; };
+		93DA07F216E78A53009A0160 /* AQGridViewUpdateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07CE16E78A53009A0160 /* AQGridViewUpdateInfo.m */; };
+		93DA07F316E78A53009A0160 /* AQGridViewUpdateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07CE16E78A53009A0160 /* AQGridViewUpdateInfo.m */; };
+		93DA07F416E78A53009A0160 /* AQGridViewUpdateItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07CF16E78A53009A0160 /* AQGridViewUpdateItem.h */; };
+		93DA07F516E78A53009A0160 /* AQGridViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D016E78A53009A0160 /* AQGridViewUpdateItem.m */; };
+		93DA07F616E78A53009A0160 /* AQGridViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D016E78A53009A0160 /* AQGridViewUpdateItem.m */; };
+		93DA07F716E78A53009A0160 /* AQGridViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D016E78A53009A0160 /* AQGridViewUpdateItem.m */; };
+		93DA07F816E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07D116E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.h */; };
+		93DA07F916E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D216E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m */; };
+		93DA07FA16E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D216E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m */; };
+		93DA07FB16E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D216E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m */; };
+		93DA07FC16E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07D316E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.h */; };
+		93DA07FD16E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D416E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m */; };
+		93DA07FE16E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D416E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m */; };
+		93DA07FF16E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D416E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m */; };
+		93DA080016E78A53009A0160 /* UIColor+AQGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA07D516E78A53009A0160 /* UIColor+AQGridView.h */; };
+		93DA080116E78A53009A0160 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D616E78A53009A0160 /* UIColor+AQGridView.m */; };
+		93DA080216E78A53009A0160 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D616E78A53009A0160 /* UIColor+AQGridView.m */; };
+		93DA080316E78A53009A0160 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA07D616E78A53009A0160 /* UIColor+AQGridView.m */; };
+		93DA080816E78AA9009A0160 /* FTCoreTextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA080416E78AA9009A0160 /* FTCoreTextStyle.h */; };
+		93DA080916E78AA9009A0160 /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA080516E78AA9009A0160 /* FTCoreTextStyle.m */; };
+		93DA080A16E78AA9009A0160 /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA080516E78AA9009A0160 /* FTCoreTextStyle.m */; };
+		93DA080B16E78AA9009A0160 /* FTCoreTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA080516E78AA9009A0160 /* FTCoreTextStyle.m */; };
+		93DA080C16E78AA9009A0160 /* FTCoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93DA080616E78AA9009A0160 /* FTCoreTextView.h */; };
+		93DA080D16E78AA9009A0160 /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA080716E78AA9009A0160 /* FTCoreTextView.m */; };
+		93DA080E16E78AA9009A0160 /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA080716E78AA9009A0160 /* FTCoreTextView.m */; };
+		93DA080F16E78AA9009A0160 /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA080716E78AA9009A0160 /* FTCoreTextView.m */; };
 		93EDD068154705F50074EC20 /* FT2PageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EDD066154705F50074EC20 /* FT2PageControl.h */; };
 		93EDD069154705F50074EC20 /* FT2PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EDD067154705F50074EC20 /* FT2PageControl.m */; };
-		DEE3646C15B993A900CE958D /* FGalleryPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE3646615B993A900CE958D /* FGalleryPhoto.h */; };
-		DEE3646D15B993A900CE958D /* FGalleryPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646715B993A900CE958D /* FGalleryPhoto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE3646E15B993A900CE958D /* FGalleryPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646715B993A900CE958D /* FGalleryPhoto.m */; };
-		DEE3646F15B993A900CE958D /* FGalleryPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE3646815B993A900CE958D /* FGalleryPhotoView.h */; };
-		DEE3647015B993A900CE958D /* FGalleryPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646915B993A900CE958D /* FGalleryPhotoView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE3647115B993A900CE958D /* FGalleryPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646915B993A900CE958D /* FGalleryPhotoView.m */; };
-		DEE3647215B993A900CE958D /* FGalleryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE3646A15B993A900CE958D /* FGalleryViewController.h */; };
-		DEE3647315B993A900CE958D /* FGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646B15B993A900CE958D /* FGalleryViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DEE3647415B993A900CE958D /* FGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE3646B15B993A900CE958D /* FGalleryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -397,17 +433,9 @@
 		148B738815C14DEC0002D5AE /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		148B738915C14DEC0002D5AE /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		148B738A15C14DEC0002D5AE /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		35B7E4B51614732D001D024F /* FGalleryPhotoErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryPhotoErrorView.h; sourceTree = "<group>"; };
-		35B7E4B61614732D001D024F /* FGalleryPhotoErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryPhotoErrorView.m; sourceTree = "<group>"; };
-		4CF02070159244C0009A93BF /* FTAutoLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAutoLineView.h; sourceTree = "<group>"; };
-		4CF02071159244C0009A93BF /* FTAutoLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAutoLineView.m; sourceTree = "<group>"; };
 		681C0878157505CB00BB8E2D /* FT2Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Download.h; path = FTLibrary2/Sources/FT2Download.h; sourceTree = "<group>"; };
 		681C0879157505CC00BB8E2D /* FT2Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Download.m; path = FTLibrary2/Sources/FT2Download.m; sourceTree = "<group>"; };
 		6842EC5D1552BFFE00C18C9F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextStyle.h; sourceTree = "<group>"; };
-		6842EC701552D95800C18C9F /* FTCoreTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextStyle.m; sourceTree = "<group>"; };
-		6842EC711552D95800C18C9F /* FTCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoreTextView.h; sourceTree = "<group>"; };
-		6842EC721552D95800C18C9F /* FTCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoreTextView.m; sourceTree = "<group>"; };
 		6842EC921553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+NSDate_TimeAgo.h"; path = "FTLibrary2/Sources/Categories/NSDate+NSDate_TimeAgo.h"; sourceTree = "<group>"; };
 		6842EC931553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+NSDate_TimeAgo.m"; path = "FTLibrary2/Sources/Categories/NSDate+NSDate_TimeAgo.m"; sourceTree = "<group>"; };
 		685397091550298300B2D2A4 /* FT2File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2File.h; path = FTLibrary2/Sources/FT2File.h; sourceTree = "<group>"; };
@@ -465,31 +493,6 @@
 		7A8112C01601F5F4008918E9 /* UIView+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Log.m"; path = "FTLibrary2/Sources/Categories/UIView+Log.m"; sourceTree = "<group>"; };
 		7AAA4BCE15CC35640052F1AA /* NSObject+PLGSubscripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+PLGSubscripting.h"; path = "FTLibrary2/Sources/Categories/NSObject+PLGSubscripting.h"; sourceTree = "<group>"; };
 		7AAA4BCF15CC35640052F1AA /* NSObject+PLGSubscripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PLGSubscripting.m"; path = "FTLibrary2/Sources/Categories/NSObject+PLGSubscripting.m"; sourceTree = "<group>"; };
-		7AB653E0158A059900D307E7 /* AQGridView+CellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLayout.h"; sourceTree = "<group>"; };
-		7AB653E1158A059900D307E7 /* AQGridView+CellLocationDelegation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLocationDelegation.h"; sourceTree = "<group>"; };
-		7AB653E2158A059900D307E7 /* AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridView.h; sourceTree = "<group>"; };
-		7AB653E3158A059900D307E7 /* AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridView.m; sourceTree = "<group>"; };
-		7AB653E4158A059900D307E7 /* AQGridViewAnimatorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewAnimatorItem.h; sourceTree = "<group>"; };
-		7AB653E5158A059900D307E7 /* AQGridViewAnimatorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewAnimatorItem.m; sourceTree = "<group>"; };
-		7AB653E6158A059900D307E7 /* AQGridViewCell+AQGridViewCellPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridViewCell+AQGridViewCellPrivate.h"; sourceTree = "<group>"; };
-		7AB653E7158A059900D307E7 /* AQGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewCell.h; sourceTree = "<group>"; };
-		7AB653E8158A059900D307E7 /* AQGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewCell.m; sourceTree = "<group>"; };
-		7AB653E9158A059900D307E7 /* AQGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewController.h; sourceTree = "<group>"; };
-		7AB653EA158A059900D307E7 /* AQGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewController.m; sourceTree = "<group>"; };
-		7AB653EB158A059900D307E7 /* AQGridViewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewData.h; sourceTree = "<group>"; };
-		7AB653EC158A059900D307E7 /* AQGridViewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewData.m; sourceTree = "<group>"; };
-		7AB653ED158A059900D307E7 /* AQGridViewUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewUpdateInfo.h; sourceTree = "<group>"; };
-		7AB653EE158A059900D307E7 /* AQGridViewUpdateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewUpdateInfo.m; sourceTree = "<group>"; };
-		7AB653EF158A059900D307E7 /* AQGridViewUpdateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewUpdateItem.h; sourceTree = "<group>"; };
-		7AB653F0158A059900D307E7 /* AQGridViewUpdateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewUpdateItem.m; sourceTree = "<group>"; };
-		7AB653F1158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+AQIndexesOutsideSet.h"; sourceTree = "<group>"; };
-		7AB653F2158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIndexesOutsideSet.m"; sourceTree = "<group>"; };
-		7AB653F3158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+AQIsSetContiguous.h"; sourceTree = "<group>"; };
-		7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIsSetContiguous.m"; sourceTree = "<group>"; };
-		7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AQGridView.h"; sourceTree = "<group>"; };
-		7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AQGridView.m"; sourceTree = "<group>"; };
-		930BE8CD15E3BA5F00EBEEEB /* FT2MessagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2MessagerView.h; sourceTree = "<group>"; };
-		930BE8CE15E3BA5F00EBEEEB /* FT2MessagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2MessagerView.m; sourceTree = "<group>"; };
 		932FDA5F153DD96000E9D253 /* SA_OAuthTwitterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterController.h; sourceTree = "<group>"; };
 		932FDA60153DD96000E9D253 /* SA_OAuthTwitterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SA_OAuthTwitterController.m; sourceTree = "<group>"; };
 		932FDA61153DD96000E9D253 /* SA_OAuthTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SA_OAuthTwitterEngine.h; sourceTree = "<group>"; };
@@ -586,10 +589,6 @@
 		932FDB3C153DDDF900E9D253 /* OAToken_KeychainExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken_KeychainExtensions.h; sourceTree = "<group>"; };
 		932FDB3D153DDDF900E9D253 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		932FDB51153DDE5100E9D253 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		934E719215D3B8BA000E321B /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2Data.h; sourceTree = "<group>"; };
-		934E719315D3B8BA000E321B /* FT2Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2Data.m; sourceTree = "<group>"; };
-		9356F54515E53595004E3AD2 /* FT2ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2ShadowView.h; sourceTree = "<group>"; };
-		9356F54615E53595004E3AD2 /* FT2ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2ShadowView.m; sourceTree = "<group>"; };
 		9387980D153ED11A001FE131 /* FT2PageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageScrollView.h; path = FTLibrary2/Sources/FT2PageScrollView.h; sourceTree = "<group>"; };
 		9387980E153ED11A001FE131 /* FT2PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageScrollView.m; path = FTLibrary2/Sources/FT2PageScrollView.m; sourceTree = "<group>"; };
 		9387980F153ED11A001FE131 /* FT2PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageView.h; path = FTLibrary2/Sources/FT2PageView.h; sourceTree = "<group>"; };
@@ -637,6 +636,8 @@
 		938D5835153DCA840067CEFA /* FTLibrary2Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLibrary2Test-Prefix.pch"; sourceTree = "<group>"; };
 		938D5836153DCA840067CEFA /* FT2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FT2AppDelegate.h; sourceTree = "<group>"; };
 		938D5837153DCA840067CEFA /* FT2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FT2AppDelegate.m; sourceTree = "<group>"; };
+		93A8019F16D39BC9004C8F2D /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Tools.h"; path = "FTLibrary2/Sources/Categories/NSString+Tools.h"; sourceTree = "<group>"; };
+		93A801A116D39BED004C8F2D /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Tools.m"; path = "FTLibrary2/Sources/Categories/NSString+Tools.m"; sourceTree = "<group>"; };
 		93B5B11D15A714130049B3A0 /* FT2TransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2TransparentView.h; path = FTLibrary2/Sources/FT2TransparentView.h; sourceTree = "<group>"; };
 		93B5B11E15A714130049B3A0 /* FT2TransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2TransparentView.m; path = FTLibrary2/Sources/FT2TransparentView.m; sourceTree = "<group>"; };
 		93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ReachabilityManager.h; path = FTLibrary2/Sources/FT2ReachabilityManager.h; sourceTree = "<group>"; };
@@ -651,30 +652,68 @@
 		93C265D5153EC1DA0010A059 /* FT2System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2System.m; path = FTLibrary2/Sources/FT2System.m; sourceTree = "<group>"; };
 		93C265DA153EC32E0010A059 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		93C265DB153EC32E0010A059 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		93C646D3165D46C600E391E5 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
-		93C646D4165D46C600E391E5 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
-		93C646D5165D46C600E391E5 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
-		93C646D6165D46C600E391E5 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
-		93C646D7165D46C600E391E5 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
-		93C646D8165D46C600E391E5 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
-		93C646D9165D46C600E391E5 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
-		93C646DA165D46C600E391E5 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
-		93C646DB165D46C600E391E5 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
-		93C646DC165D46C600E391E5 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
-		93C646DD165D46C600E391E5 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreGraphicAdditions.h; path = FTLibrary2/Sources/Categories/CoreGraphicAdditions.h; sourceTree = "<group>"; };
 		93D385E2154FF1B0009A6895 /* FT2ImageMagnifyingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ImageMagnifyingView.m; path = FTLibrary2/Sources/FT2ImageMagnifyingView.m; sourceTree = "<group>"; };
 		93D385E3154FF1B0009A6895 /* FT2MagnifyingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2MagnifyingView.m; path = FTLibrary2/Sources/FT2MagnifyingView.m; sourceTree = "<group>"; };
 		93D385E4154FF1B0009A6895 /* FT2ImageMagnifyingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ImageMagnifyingView.h; path = FTLibrary2/Sources/FT2ImageMagnifyingView.h; sourceTree = "<group>"; };
 		93D385E5154FF1B0009A6895 /* FT2MagnifyingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2MagnifyingView.h; path = FTLibrary2/Sources/FT2MagnifyingView.h; sourceTree = "<group>"; };
+		93DA077316E789D2009A0160 /* FT2Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2Data.h; path = FTLibrary2/Sources/FT2Data.h; sourceTree = "<group>"; };
+		93DA077416E789D2009A0160 /* FT2Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2Data.m; path = FTLibrary2/Sources/FT2Data.m; sourceTree = "<group>"; };
+		93DA077916E789E6009A0160 /* FT2ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ShadowView.h; path = FTLibrary2/Sources/FT2ShadowView.h; sourceTree = "<group>"; };
+		93DA077A16E789E6009A0160 /* FT2ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2ShadowView.m; path = FTLibrary2/Sources/FT2ShadowView.m; sourceTree = "<group>"; };
+		93DA077F16E789FC009A0160 /* FT2MessagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2MessagerView.h; path = FTLibrary2/Sources/FT2MessagerView.h; sourceTree = "<group>"; };
+		93DA078016E789FC009A0160 /* FT2MessagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2MessagerView.m; path = FTLibrary2/Sources/FT2MessagerView.m; sourceTree = "<group>"; };
+		93DA078116E789FC009A0160 /* FTAutoLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTAutoLineView.h; path = FTLibrary2/Sources/FTAutoLineView.h; sourceTree = "<group>"; };
+		93DA078216E789FC009A0160 /* FTAutoLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTAutoLineView.m; path = FTLibrary2/Sources/FTAutoLineView.m; sourceTree = "<group>"; };
+		93DA078D16E78A16009A0160 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		93DA078E16E78A16009A0160 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		93DA078F16E78A16009A0160 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		93DA079016E78A16009A0160 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		93DA079116E78A16009A0160 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		93DA079216E78A16009A0160 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		93DA079316E78A16009A0160 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		93DA079416E78A16009A0160 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		93DA079516E78A16009A0160 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		93DA079616E78A16009A0160 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		93DA079716E78A16009A0160 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
+		93DA07AE16E78A46009A0160 /* FGalleryPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryPhoto.h; sourceTree = "<group>"; };
+		93DA07AF16E78A46009A0160 /* FGalleryPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryPhoto.m; sourceTree = "<group>"; };
+		93DA07B016E78A46009A0160 /* FGalleryPhotoErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryPhotoErrorView.h; sourceTree = "<group>"; };
+		93DA07B116E78A46009A0160 /* FGalleryPhotoErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryPhotoErrorView.m; sourceTree = "<group>"; };
+		93DA07B216E78A46009A0160 /* FGalleryPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryPhotoView.h; sourceTree = "<group>"; };
+		93DA07B316E78A46009A0160 /* FGalleryPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryPhotoView.m; sourceTree = "<group>"; };
+		93DA07B416E78A46009A0160 /* FGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryViewController.h; sourceTree = "<group>"; };
+		93DA07B516E78A46009A0160 /* FGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryViewController.m; sourceTree = "<group>"; };
+		93DA07BF16E78A53009A0160 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		93DA07C016E78A53009A0160 /* AQGridView+CellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLayout.h"; sourceTree = "<group>"; };
+		93DA07C116E78A53009A0160 /* AQGridView+CellLocationDelegation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLocationDelegation.h"; sourceTree = "<group>"; };
+		93DA07C216E78A53009A0160 /* AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridView.h; sourceTree = "<group>"; };
+		93DA07C316E78A53009A0160 /* AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridView.m; sourceTree = "<group>"; };
+		93DA07C416E78A53009A0160 /* AQGridViewAnimatorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewAnimatorItem.h; sourceTree = "<group>"; };
+		93DA07C516E78A53009A0160 /* AQGridViewAnimatorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewAnimatorItem.m; sourceTree = "<group>"; };
+		93DA07C616E78A53009A0160 /* AQGridViewCell+AQGridViewCellPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridViewCell+AQGridViewCellPrivate.h"; sourceTree = "<group>"; };
+		93DA07C716E78A53009A0160 /* AQGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewCell.h; sourceTree = "<group>"; };
+		93DA07C816E78A53009A0160 /* AQGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewCell.m; sourceTree = "<group>"; };
+		93DA07C916E78A53009A0160 /* AQGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewController.h; sourceTree = "<group>"; };
+		93DA07CA16E78A53009A0160 /* AQGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewController.m; sourceTree = "<group>"; };
+		93DA07CB16E78A53009A0160 /* AQGridViewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewData.h; sourceTree = "<group>"; };
+		93DA07CC16E78A53009A0160 /* AQGridViewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewData.m; sourceTree = "<group>"; };
+		93DA07CD16E78A53009A0160 /* AQGridViewUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewUpdateInfo.h; sourceTree = "<group>"; };
+		93DA07CE16E78A53009A0160 /* AQGridViewUpdateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewUpdateInfo.m; sourceTree = "<group>"; };
+		93DA07CF16E78A53009A0160 /* AQGridViewUpdateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewUpdateItem.h; sourceTree = "<group>"; };
+		93DA07D016E78A53009A0160 /* AQGridViewUpdateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewUpdateItem.m; sourceTree = "<group>"; };
+		93DA07D116E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+AQIndexesOutsideSet.h"; sourceTree = "<group>"; };
+		93DA07D216E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIndexesOutsideSet.m"; sourceTree = "<group>"; };
+		93DA07D316E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+AQIsSetContiguous.h"; sourceTree = "<group>"; };
+		93DA07D416E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIsSetContiguous.m"; sourceTree = "<group>"; };
+		93DA07D516E78A53009A0160 /* UIColor+AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AQGridView.h"; sourceTree = "<group>"; };
+		93DA07D616E78A53009A0160 /* UIColor+AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AQGridView.m"; sourceTree = "<group>"; };
+		93DA080416E78AA9009A0160 /* FTCoreTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCoreTextStyle.h; path = FTLibrary2/Sources/FTCoreTextStyle.h; sourceTree = "<group>"; };
+		93DA080516E78AA9009A0160 /* FTCoreTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCoreTextStyle.m; path = FTLibrary2/Sources/FTCoreTextStyle.m; sourceTree = "<group>"; };
+		93DA080616E78AA9009A0160 /* FTCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCoreTextView.h; path = FTLibrary2/Sources/FTCoreTextView.h; sourceTree = "<group>"; };
+		93DA080716E78AA9009A0160 /* FTCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCoreTextView.m; path = FTLibrary2/Sources/FTCoreTextView.m; sourceTree = "<group>"; };
 		93EDD066154705F50074EC20 /* FT2PageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageControl.h; path = FTLibrary2/Sources/FT2PageControl.h; sourceTree = "<group>"; };
 		93EDD067154705F50074EC20 /* FT2PageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageControl.m; path = FTLibrary2/Sources/FT2PageControl.m; sourceTree = "<group>"; };
-		DEE3646615B993A900CE958D /* FGalleryPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryPhoto.h; sourceTree = "<group>"; };
-		DEE3646715B993A900CE958D /* FGalleryPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryPhoto.m; sourceTree = "<group>"; };
-		DEE3646815B993A900CE958D /* FGalleryPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryPhotoView.h; sourceTree = "<group>"; };
-		DEE3646915B993A900CE958D /* FGalleryPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryPhotoView.m; sourceTree = "<group>"; };
-		DEE3646A15B993A900CE958D /* FGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGalleryViewController.h; sourceTree = "<group>"; };
-		DEE3646B15B993A900CE958D /* FGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGalleryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -750,10 +789,10 @@
 		6842EC511552BE2700C18C9F /* CoreText */ = {
 			isa = PBXGroup;
 			children = (
-				6842EC6F1552D95800C18C9F /* FTCoreTextStyle.h */,
-				6842EC701552D95800C18C9F /* FTCoreTextStyle.m */,
-				6842EC711552D95800C18C9F /* FTCoreTextView.h */,
-				6842EC721552D95800C18C9F /* FTCoreTextView.m */,
+				93DA080416E78AA9009A0160 /* FTCoreTextStyle.h */,
+				93DA080516E78AA9009A0160 /* FTCoreTextStyle.m */,
+				93DA080616E78AA9009A0160 /* FTCoreTextView.h */,
+				93DA080716E78AA9009A0160 /* FTCoreTextView.m */,
 			);
 			name = CoreText;
 			sourceTree = "<group>";
@@ -816,37 +855,6 @@
 			name = Feeds;
 			sourceTree = "<group>";
 		};
-		7AB653DF158A059900D307E7 /* AQGridView */ = {
-			isa = PBXGroup;
-			children = (
-				7AB653E0158A059900D307E7 /* AQGridView+CellLayout.h */,
-				7AB653E1158A059900D307E7 /* AQGridView+CellLocationDelegation.h */,
-				7AB653E2158A059900D307E7 /* AQGridView.h */,
-				7AB653E3158A059900D307E7 /* AQGridView.m */,
-				7AB653E4158A059900D307E7 /* AQGridViewAnimatorItem.h */,
-				7AB653E5158A059900D307E7 /* AQGridViewAnimatorItem.m */,
-				7AB653E6158A059900D307E7 /* AQGridViewCell+AQGridViewCellPrivate.h */,
-				7AB653E7158A059900D307E7 /* AQGridViewCell.h */,
-				7AB653E8158A059900D307E7 /* AQGridViewCell.m */,
-				7AB653E9158A059900D307E7 /* AQGridViewController.h */,
-				7AB653EA158A059900D307E7 /* AQGridViewController.m */,
-				7AB653EB158A059900D307E7 /* AQGridViewData.h */,
-				7AB653EC158A059900D307E7 /* AQGridViewData.m */,
-				7AB653ED158A059900D307E7 /* AQGridViewUpdateInfo.h */,
-				7AB653EE158A059900D307E7 /* AQGridViewUpdateInfo.m */,
-				7AB653EF158A059900D307E7 /* AQGridViewUpdateItem.h */,
-				7AB653F0158A059900D307E7 /* AQGridViewUpdateItem.m */,
-				7AB653F1158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h */,
-				7AB653F2158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m */,
-				7AB653F3158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h */,
-				7AB653F4158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m */,
-				7AB653F5158A059900D307E7 /* UIColor+AQGridView.h */,
-				7AB653F6158A059900D307E7 /* UIColor+AQGridView.m */,
-			);
-			name = AQGridView;
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		932FDA3F153DD86800E9D253 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -897,10 +905,10 @@
 		932FDA5C153DD91B00E9D253 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				93C646D1165D46C600E391E5 /* ZipArchive */,
+				93DA07BE16E78A53009A0160 /* AQGridView */,
+				93DA07AD16E78A46009A0160 /* FGallery */,
+				93DA078B16E78A16009A0160 /* ZipArchive */,
 				148B737615C14DEC0002D5AE /* SDWebImage */,
-				DEE3646415B9936900CE958D /* FGallery */,
-				7AB653DF158A059900D307E7 /* AQGridView */,
 				68824F6315821B0900A20496 /* CHCSV */,
 				93C265D9153EC32E0010A059 /* Reachability */,
 				932FDAE4153DDBAA00E9D253 /* JSONFramework */,
@@ -1180,14 +1188,14 @@
 		938D583D153DCAB30067CEFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9356F54515E53595004E3AD2 /* FT2ShadowView.h */,
-				9356F54615E53595004E3AD2 /* FT2ShadowView.m */,
+				93DA077916E789E6009A0160 /* FT2ShadowView.h */,
+				93DA077A16E789E6009A0160 /* FT2ShadowView.m */,
 				93B5B11D15A714130049B3A0 /* FT2TransparentView.h */,
 				93B5B11E15A714130049B3A0 /* FT2TransparentView.m */,
-				930BE8CD15E3BA5F00EBEEEB /* FT2MessagerView.h */,
-				930BE8CE15E3BA5F00EBEEEB /* FT2MessagerView.m */,
-				4CF02070159244C0009A93BF /* FTAutoLineView.h */,
-				4CF02071159244C0009A93BF /* FTAutoLineView.m */,
+				93DA077F16E789FC009A0160 /* FT2MessagerView.h */,
+				93DA078016E789FC009A0160 /* FT2MessagerView.m */,
+				93DA078116E789FC009A0160 /* FTAutoLineView.h */,
+				93DA078216E789FC009A0160 /* FTAutoLineView.m */,
 				6842EC511552BE2700C18C9F /* CoreText */,
 				93EDD066154705F50074EC20 /* FT2PageControl.h */,
 				93EDD067154705F50074EC20 /* FT2PageControl.m */,
@@ -1212,6 +1220,8 @@
 				932FDAC0153DDAC500E9D253 /* NSData+Base64.m */,
 				932FDA6B153DD9D300E9D253 /* NSString+UUID.h */,
 				932FDA6C153DD9D300E9D253 /* NSString+UUID.m */,
+				93A8019F16D39BC9004C8F2D /* NSString+Tools.h */,
+				93A801A116D39BED004C8F2D /* NSString+Tools.m */,
 				938CB4A4153DD1630057A19B /* NSArray+Tools.h */,
 				938CB4A5153DD1630057A19B /* NSArray+Tools.m */,
 				938CB4AA153DD2610057A19B /* NSIndexPath+Tools.h */,
@@ -1238,8 +1248,8 @@
 		938D5840153DCBB80067CEFA /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				934E719215D3B8BA000E321B /* FT2Data.h */,
-				934E719315D3B8BA000E321B /* FT2Data.m */,
+				93DA077316E789D2009A0160 /* FT2Data.h */,
+				93DA077416E789D2009A0160 /* FT2Data.m */,
 				68978E41153F161E008EF4E8 /* FT2Data_old.h */,
 				68978E42153F161E008EF4E8 /* FT2Data_old.m */,
 				68978EB1154021C6008EF4E8 /* FT2ObjectAttributes.h */,
@@ -1260,32 +1270,6 @@
 			path = FTLibrary2/ThirdParty/Reachability;
 			sourceTree = "<group>";
 		};
-		93C646D1165D46C600E391E5 /* ZipArchive */ = {
-			isa = PBXGroup;
-			children = (
-				93C646D2165D46C600E391E5 /* minizip */,
-				93C646DC165D46C600E391E5 /* ZipArchive.h */,
-				93C646DD165D46C600E391E5 /* ZipArchive.mm */,
-			);
-			path = ZipArchive;
-			sourceTree = "<group>";
-		};
-		93C646D2165D46C600E391E5 /* minizip */ = {
-			isa = PBXGroup;
-			children = (
-				93C646D3165D46C600E391E5 /* crypt.h */,
-				93C646D4165D46C600E391E5 /* ioapi.c */,
-				93C646D5165D46C600E391E5 /* ioapi.h */,
-				93C646D6165D46C600E391E5 /* mztools.c */,
-				93C646D7165D46C600E391E5 /* mztools.h */,
-				93C646D8165D46C600E391E5 /* unzip.c */,
-				93C646D9165D46C600E391E5 /* unzip.h */,
-				93C646DA165D46C600E391E5 /* zip.c */,
-				93C646DB165D46C600E391E5 /* zip.h */,
-			);
-			path = minizip;
-			sourceTree = "<group>";
-		};
 		93D385E0154FF195009A6895 /* Magnifying Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1297,19 +1281,79 @@
 			name = "Magnifying Views";
 			sourceTree = "<group>";
 		};
-		DEE3646415B9936900CE958D /* FGallery */ = {
+		93DA078B16E78A16009A0160 /* ZipArchive */ = {
 			isa = PBXGroup;
 			children = (
-				DEE3646615B993A900CE958D /* FGalleryPhoto.h */,
-				DEE3646715B993A900CE958D /* FGalleryPhoto.m */,
-				DEE3646815B993A900CE958D /* FGalleryPhotoView.h */,
-				DEE3646915B993A900CE958D /* FGalleryPhotoView.m */,
-				DEE3646A15B993A900CE958D /* FGalleryViewController.h */,
-				DEE3646B15B993A900CE958D /* FGalleryViewController.m */,
-				35B7E4B51614732D001D024F /* FGalleryPhotoErrorView.h */,
-				35B7E4B61614732D001D024F /* FGalleryPhotoErrorView.m */,
+				93DA078C16E78A16009A0160 /* minizip */,
+				93DA079616E78A16009A0160 /* ZipArchive.h */,
+				93DA079716E78A16009A0160 /* ZipArchive.mm */,
+			);
+			name = ZipArchive;
+			path = FTLibrary2/ThirdParty/ZipArchive;
+			sourceTree = "<group>";
+		};
+		93DA078C16E78A16009A0160 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				93DA078D16E78A16009A0160 /* crypt.h */,
+				93DA078E16E78A16009A0160 /* ioapi.c */,
+				93DA078F16E78A16009A0160 /* ioapi.h */,
+				93DA079016E78A16009A0160 /* mztools.c */,
+				93DA079116E78A16009A0160 /* mztools.h */,
+				93DA079216E78A16009A0160 /* unzip.c */,
+				93DA079316E78A16009A0160 /* unzip.h */,
+				93DA079416E78A16009A0160 /* zip.c */,
+				93DA079516E78A16009A0160 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		93DA07AD16E78A46009A0160 /* FGallery */ = {
+			isa = PBXGroup;
+			children = (
+				93DA07AE16E78A46009A0160 /* FGalleryPhoto.h */,
+				93DA07AF16E78A46009A0160 /* FGalleryPhoto.m */,
+				93DA07B016E78A46009A0160 /* FGalleryPhotoErrorView.h */,
+				93DA07B116E78A46009A0160 /* FGalleryPhotoErrorView.m */,
+				93DA07B216E78A46009A0160 /* FGalleryPhotoView.h */,
+				93DA07B316E78A46009A0160 /* FGalleryPhotoView.m */,
+				93DA07B416E78A46009A0160 /* FGalleryViewController.h */,
+				93DA07B516E78A46009A0160 /* FGalleryViewController.m */,
 			);
 			name = FGallery;
+			path = FTLibrary2/ThirdParty/FGallery;
+			sourceTree = "<group>";
+		};
+		93DA07BE16E78A53009A0160 /* AQGridView */ = {
+			isa = PBXGroup;
+			children = (
+				93DA07BF16E78A53009A0160 /* .gitignore */,
+				93DA07C016E78A53009A0160 /* AQGridView+CellLayout.h */,
+				93DA07C116E78A53009A0160 /* AQGridView+CellLocationDelegation.h */,
+				93DA07C216E78A53009A0160 /* AQGridView.h */,
+				93DA07C316E78A53009A0160 /* AQGridView.m */,
+				93DA07C416E78A53009A0160 /* AQGridViewAnimatorItem.h */,
+				93DA07C516E78A53009A0160 /* AQGridViewAnimatorItem.m */,
+				93DA07C616E78A53009A0160 /* AQGridViewCell+AQGridViewCellPrivate.h */,
+				93DA07C716E78A53009A0160 /* AQGridViewCell.h */,
+				93DA07C816E78A53009A0160 /* AQGridViewCell.m */,
+				93DA07C916E78A53009A0160 /* AQGridViewController.h */,
+				93DA07CA16E78A53009A0160 /* AQGridViewController.m */,
+				93DA07CB16E78A53009A0160 /* AQGridViewData.h */,
+				93DA07CC16E78A53009A0160 /* AQGridViewData.m */,
+				93DA07CD16E78A53009A0160 /* AQGridViewUpdateInfo.h */,
+				93DA07CE16E78A53009A0160 /* AQGridViewUpdateInfo.m */,
+				93DA07CF16E78A53009A0160 /* AQGridViewUpdateItem.h */,
+				93DA07D016E78A53009A0160 /* AQGridViewUpdateItem.m */,
+				93DA07D116E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.h */,
+				93DA07D216E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m */,
+				93DA07D316E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.h */,
+				93DA07D416E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m */,
+				93DA07D516E78A53009A0160 /* UIColor+AQGridView.h */,
+				93DA07D616E78A53009A0160 /* UIColor+AQGridView.m */,
+			);
+			name = AQGridView;
+			path = FTLibrary2/ThirdParty/AQGridView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1411,8 +1455,6 @@
 				93D385EC154FF1B0009A6895 /* FT2ImageMagnifyingView.h in Headers */,
 				93D385ED154FF1B0009A6895 /* FT2MagnifyingView.h in Headers */,
 				6853970B1550298300B2D2A4 /* FT2File.h in Headers */,
-				6842EC731552D95800C18C9F /* FTCoreTextStyle.h in Headers */,
-				6842EC761552D95800C18C9F /* FTCoreTextView.h in Headers */,
 				6842EC941553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.h in Headers */,
 				68824F6915821B0900A20496 /* CHCSV.h in Headers */,
 				68824F6A15821B0900A20496 /* CHCSVParser.h in Headers */,
@@ -1423,36 +1465,36 @@
 				688D7B7E156BE26E00B2156B /* FTShareMessageController.h in Headers */,
 				688D7B80156BE26E00B2156B /* FTShareTwitter.h in Headers */,
 				681C087A157505CC00BB8E2D /* FT2Download.h in Headers */,
-				7AB653F7158A059900D307E7 /* AQGridView+CellLayout.h in Headers */,
-				7AB653F8158A059900D307E7 /* AQGridView+CellLocationDelegation.h in Headers */,
-				7AB653F9158A059900D307E7 /* AQGridView.h in Headers */,
-				7AB653FB158A059900D307E7 /* AQGridViewAnimatorItem.h in Headers */,
-				7AB653FD158A059900D307E7 /* AQGridViewCell+AQGridViewCellPrivate.h in Headers */,
-				7AB653FE158A059900D307E7 /* AQGridViewCell.h in Headers */,
-				7AB65400158A059900D307E7 /* AQGridViewController.h in Headers */,
-				7AB65402158A059900D307E7 /* AQGridViewData.h in Headers */,
-				7AB65404158A059900D307E7 /* AQGridViewUpdateInfo.h in Headers */,
-				7AB65406158A059900D307E7 /* AQGridViewUpdateItem.h in Headers */,
-				7AB65408158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.h in Headers */,
-				7AB6540A158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.h in Headers */,
-				7AB6540C158A059900D307E7 /* UIColor+AQGridView.h in Headers */,
-				4CF02072159244C0009A93BF /* FTAutoLineView.h in Headers */,
 				93B5B13D15A714130049B3A0 /* FT2TransparentView.h in Headers */,
-				DEE3646C15B993A900CE958D /* FGalleryPhoto.h in Headers */,
-				DEE3646F15B993A900CE958D /* FGalleryPhotoView.h in Headers */,
-				DEE3647215B993A900CE958D /* FGalleryViewController.h in Headers */,
 				7A59E4D915CADEA800BE474E /* UIView+Border.h in Headers */,
 				7AAA4BD015CC35640052F1AA /* NSObject+PLGSubscripting.h in Headers */,
-				934E719415D3B8BA000E321B /* FT2Data.h in Headers */,
-				930BE8CF15E3BA5F00EBEEEB /* FT2MessagerView.h in Headers */,
 				7A8112C11601F5F4008918E9 /* UIView+Log.h in Headers */,
-				35B7E4B71614732D001D024F /* FGalleryPhotoErrorView.h in Headers */,
-				93C646DE165D46C600E391E5 /* crypt.h in Headers */,
-				93C646E1165D46C600E391E5 /* ioapi.h in Headers */,
-				93C646E4165D46C600E391E5 /* mztools.h in Headers */,
-				93C646E7165D46C600E391E5 /* unzip.h in Headers */,
-				93C646EA165D46C600E391E5 /* zip.h in Headers */,
-				93C646EB165D46C600E391E5 /* ZipArchive.h in Headers */,
+				93A801A016D39BC9004C8F2D /* NSString+Tools.h in Headers */,
+				93DA077516E789D2009A0160 /* FT2Data.h in Headers */,
+				93DA077B16E789E6009A0160 /* FT2ShadowView.h in Headers */,
+				93DA078316E789FC009A0160 /* FT2MessagerView.h in Headers */,
+				93DA078716E789FC009A0160 /* FTAutoLineView.h in Headers */,
+				93DA079816E78A16009A0160 /* crypt.h in Headers */,
+				93DA079C16E78A16009A0160 /* ioapi.h in Headers */,
+				93DA07A016E78A16009A0160 /* mztools.h in Headers */,
+				93DA07A416E78A16009A0160 /* unzip.h in Headers */,
+				93DA07A816E78A16009A0160 /* zip.h in Headers */,
+				93DA07A916E78A16009A0160 /* ZipArchive.h in Headers */,
+				93DA07D916E78A53009A0160 /* AQGridView+CellLayout.h in Headers */,
+				93DA07DA16E78A53009A0160 /* AQGridView+CellLocationDelegation.h in Headers */,
+				93DA07DB16E78A53009A0160 /* AQGridView.h in Headers */,
+				93DA07DF16E78A53009A0160 /* AQGridViewAnimatorItem.h in Headers */,
+				93DA07E316E78A53009A0160 /* AQGridViewCell+AQGridViewCellPrivate.h in Headers */,
+				93DA07E416E78A53009A0160 /* AQGridViewCell.h in Headers */,
+				93DA07E816E78A53009A0160 /* AQGridViewController.h in Headers */,
+				93DA07EC16E78A53009A0160 /* AQGridViewData.h in Headers */,
+				93DA07F016E78A53009A0160 /* AQGridViewUpdateInfo.h in Headers */,
+				93DA07F416E78A53009A0160 /* AQGridViewUpdateItem.h in Headers */,
+				93DA07F816E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.h in Headers */,
+				93DA07FC16E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.h in Headers */,
+				93DA080016E78A53009A0160 /* UIColor+AQGridView.h in Headers */,
+				93DA080816E78AA9009A0160 /* FTCoreTextStyle.h in Headers */,
+				93DA080C16E78AA9009A0160 /* FTCoreTextView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1518,7 +1560,7 @@
 		938D5809153DC4370067CEFA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Fuerte International";
 			};
 			buildConfigurationList = 938D580C153DC4370067CEFA /* Build configuration list for PBXProject "FTLibrary2" */;
@@ -1547,6 +1589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68978E71153F2A03008EF4E8 /* InfoPlist.strings in Resources */,
+				93DA07D816E78A53009A0160 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1559,6 +1602,7 @@
 				932FDAD5153DDB2400E9D253 /* FBDialog.bundle in Resources */,
 				932FDB3E153DDDF900E9D253 /* jQueryInject.txt in Resources */,
 				932FDB3F153DDDF900E9D253 /* jQueryInjectLandscape.txt in Resources */,
+				93DA07D716E78A53009A0160 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1608,6 +1652,31 @@
 				93D385EB154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 				68824F6C15821B0900A20496 /* CHCSVParser.m in Sources */,
 				68824F6F15821B0900A20496 /* NSArray+CHCSVAdditions.m in Sources */,
+				93DA077816E789D2009A0160 /* FT2Data.m in Sources */,
+				93DA077E16E789E6009A0160 /* FT2ShadowView.m in Sources */,
+				93DA078616E789FC009A0160 /* FT2MessagerView.m in Sources */,
+				93DA078A16E789FC009A0160 /* FTAutoLineView.m in Sources */,
+				93DA079B16E78A16009A0160 /* ioapi.c in Sources */,
+				93DA079F16E78A16009A0160 /* mztools.c in Sources */,
+				93DA07A316E78A16009A0160 /* unzip.c in Sources */,
+				93DA07A716E78A16009A0160 /* zip.c in Sources */,
+				93DA07AC16E78A16009A0160 /* ZipArchive.mm in Sources */,
+				93DA07B716E78A46009A0160 /* FGalleryPhoto.m in Sources */,
+				93DA07B916E78A46009A0160 /* FGalleryPhotoErrorView.m in Sources */,
+				93DA07BB16E78A46009A0160 /* FGalleryPhotoView.m in Sources */,
+				93DA07BD16E78A46009A0160 /* FGalleryViewController.m in Sources */,
+				93DA07DE16E78A53009A0160 /* AQGridView.m in Sources */,
+				93DA07E216E78A53009A0160 /* AQGridViewAnimatorItem.m in Sources */,
+				93DA07E716E78A53009A0160 /* AQGridViewCell.m in Sources */,
+				93DA07EB16E78A53009A0160 /* AQGridViewController.m in Sources */,
+				93DA07EF16E78A53009A0160 /* AQGridViewData.m in Sources */,
+				93DA07F316E78A53009A0160 /* AQGridViewUpdateInfo.m in Sources */,
+				93DA07F716E78A53009A0160 /* AQGridViewUpdateItem.m in Sources */,
+				93DA07FB16E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
+				93DA07FF16E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
+				93DA080316E78A53009A0160 /* UIColor+AQGridView.m in Sources */,
+				93DA080B16E78AA9009A0160 /* FTCoreTextStyle.m in Sources */,
+				93DA080F16E78AA9009A0160 /* FTCoreTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1615,7 +1684,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9305FBF815E536F9002BA589 /* FT2ShadowView.m in Sources */,
 				148B739415C150880002D5AE /* MKAnnotationView+WebCache.m in Sources */,
 				148B739515C150880002D5AE /* SDImageCache.m in Sources */,
 				148B739615C150880002D5AE /* SDWebImageDecoder.m in Sources */,
@@ -1689,8 +1757,6 @@
 				93D385E6154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
 				93D385E9154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
 				6853970C1550298300B2D2A4 /* FT2File.m in Sources */,
-				6842EC741552D95800C18C9F /* FTCoreTextStyle.m in Sources */,
-				6842EC771552D95800C18C9F /* FTCoreTextView.m in Sources */,
 				6842EC951553EFCB00C18C9F /* NSDate+NSDate_TimeAgo.m in Sources */,
 				68824F6B15821B0900A20496 /* CHCSVParser.m in Sources */,
 				68824F6E15821B0900A20496 /* NSArray+CHCSVAdditions.m in Sources */,
@@ -1700,32 +1766,32 @@
 				688D7B7F156BE26E00B2156B /* FTShareMessageController.m in Sources */,
 				688D7B81156BE26E00B2156B /* FTShareTwitter.m in Sources */,
 				681C087B157505CC00BB8E2D /* FT2Download.m in Sources */,
-				7AB653FA158A059900D307E7 /* AQGridView.m in Sources */,
-				7AB653FC158A059900D307E7 /* AQGridViewAnimatorItem.m in Sources */,
-				7AB653FF158A059900D307E7 /* AQGridViewCell.m in Sources */,
-				7AB65401158A059900D307E7 /* AQGridViewController.m in Sources */,
-				7AB65403158A059900D307E7 /* AQGridViewData.m in Sources */,
-				7AB65405158A059900D307E7 /* AQGridViewUpdateInfo.m in Sources */,
-				7AB65407158A059900D307E7 /* AQGridViewUpdateItem.m in Sources */,
-				7AB65409158A059900D307E7 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
-				7AB6540B158A059900D307E7 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
-				7AB6540D158A059900D307E7 /* UIColor+AQGridView.m in Sources */,
-				4CF02073159244C0009A93BF /* FTAutoLineView.m in Sources */,
 				93B5B13E15A714130049B3A0 /* FT2TransparentView.m in Sources */,
-				DEE3646D15B993A900CE958D /* FGalleryPhoto.m in Sources */,
-				DEE3647015B993A900CE958D /* FGalleryPhotoView.m in Sources */,
-				DEE3647315B993A900CE958D /* FGalleryViewController.m in Sources */,
 				7A59E4DA15CADEA800BE474E /* UIView+Border.m in Sources */,
 				7AAA4BD115CC35640052F1AA /* NSObject+PLGSubscripting.m in Sources */,
-				934E719515D3B8BA000E321B /* FT2Data.m in Sources */,
-				930BE8D015E3BA5F00EBEEEB /* FT2MessagerView.m in Sources */,
 				7A8112C21601F5F4008918E9 /* UIView+Log.m in Sources */,
-				35B7E4B81614732D001D024F /* FGalleryPhotoErrorView.m in Sources */,
-				93C646DF165D46C600E391E5 /* ioapi.c in Sources */,
-				93C646E2165D46C600E391E5 /* mztools.c in Sources */,
-				93C646E5165D46C600E391E5 /* unzip.c in Sources */,
-				93C646E8165D46C600E391E5 /* zip.c in Sources */,
-				93C646EC165D46C600E391E5 /* ZipArchive.mm in Sources */,
+				93A801A216D39BED004C8F2D /* NSString+Tools.m in Sources */,
+				93DA077616E789D2009A0160 /* FT2Data.m in Sources */,
+				93DA077C16E789E6009A0160 /* FT2ShadowView.m in Sources */,
+				93DA078416E789FC009A0160 /* FT2MessagerView.m in Sources */,
+				93DA078816E789FC009A0160 /* FTAutoLineView.m in Sources */,
+				93DA079916E78A16009A0160 /* ioapi.c in Sources */,
+				93DA079D16E78A16009A0160 /* mztools.c in Sources */,
+				93DA07A116E78A16009A0160 /* unzip.c in Sources */,
+				93DA07A516E78A16009A0160 /* zip.c in Sources */,
+				93DA07AA16E78A16009A0160 /* ZipArchive.mm in Sources */,
+				93DA07DC16E78A53009A0160 /* AQGridView.m in Sources */,
+				93DA07E016E78A53009A0160 /* AQGridViewAnimatorItem.m in Sources */,
+				93DA07E516E78A53009A0160 /* AQGridViewCell.m in Sources */,
+				93DA07E916E78A53009A0160 /* AQGridViewController.m in Sources */,
+				93DA07ED16E78A53009A0160 /* AQGridViewData.m in Sources */,
+				93DA07F116E78A53009A0160 /* AQGridViewUpdateInfo.m in Sources */,
+				93DA07F516E78A53009A0160 /* AQGridViewUpdateItem.m in Sources */,
+				93DA07F916E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
+				93DA07FD16E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
+				93DA080116E78A53009A0160 /* UIColor+AQGridView.m in Sources */,
+				93DA080916E78AA9009A0160 /* FTCoreTextStyle.m in Sources */,
+				93DA080D16E78AA9009A0160 /* FTCoreTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1779,11 +1845,6 @@
 				68978F0615406DAD008EF4E8 /* FT2JSONCollection.m in Sources */,
 				93D385E7154FF1B0009A6895 /* FT2ImageMagnifyingView.m in Sources */,
 				93D385EA154FF1B0009A6895 /* FT2MagnifyingView.m in Sources */,
-				6842EC751552D95800C18C9F /* FTCoreTextStyle.m in Sources */,
-				6842EC781552D95800C18C9F /* FTCoreTextView.m in Sources */,
-				DEE3646E15B993A900CE958D /* FGalleryPhoto.m in Sources */,
-				DEE3647115B993A900CE958D /* FGalleryPhotoView.m in Sources */,
-				DEE3647415B993A900CE958D /* FGalleryViewController.m in Sources */,
 				148B738B15C14DEC0002D5AE /* MKAnnotationView+WebCache.m in Sources */,
 				148B738C15C14DEC0002D5AE /* SDImageCache.m in Sources */,
 				148B738D15C14DEC0002D5AE /* SDWebImageDecoder.m in Sources */,
@@ -1792,12 +1853,31 @@
 				148B739015C14DEC0002D5AE /* SDWebImagePrefetcher.m in Sources */,
 				148B739115C14DEC0002D5AE /* UIButton+WebCache.m in Sources */,
 				148B739215C14DEC0002D5AE /* UIImageView+WebCache.m in Sources */,
-				934E719615D3B8BA000E321B /* FT2Data.m in Sources */,
-				93C646E0165D46C600E391E5 /* ioapi.c in Sources */,
-				93C646E3165D46C600E391E5 /* mztools.c in Sources */,
-				93C646E6165D46C600E391E5 /* unzip.c in Sources */,
-				93C646E9165D46C600E391E5 /* zip.c in Sources */,
-				93C646ED165D46C600E391E5 /* ZipArchive.mm in Sources */,
+				93DA077716E789D2009A0160 /* FT2Data.m in Sources */,
+				93DA077D16E789E6009A0160 /* FT2ShadowView.m in Sources */,
+				93DA078516E789FC009A0160 /* FT2MessagerView.m in Sources */,
+				93DA078916E789FC009A0160 /* FTAutoLineView.m in Sources */,
+				93DA079A16E78A16009A0160 /* ioapi.c in Sources */,
+				93DA079E16E78A16009A0160 /* mztools.c in Sources */,
+				93DA07A216E78A16009A0160 /* unzip.c in Sources */,
+				93DA07A616E78A16009A0160 /* zip.c in Sources */,
+				93DA07AB16E78A16009A0160 /* ZipArchive.mm in Sources */,
+				93DA07B616E78A46009A0160 /* FGalleryPhoto.m in Sources */,
+				93DA07B816E78A46009A0160 /* FGalleryPhotoErrorView.m in Sources */,
+				93DA07BA16E78A46009A0160 /* FGalleryPhotoView.m in Sources */,
+				93DA07BC16E78A46009A0160 /* FGalleryViewController.m in Sources */,
+				93DA07DD16E78A53009A0160 /* AQGridView.m in Sources */,
+				93DA07E116E78A53009A0160 /* AQGridViewAnimatorItem.m in Sources */,
+				93DA07E616E78A53009A0160 /* AQGridViewCell.m in Sources */,
+				93DA07EA16E78A53009A0160 /* AQGridViewController.m in Sources */,
+				93DA07EE16E78A53009A0160 /* AQGridViewData.m in Sources */,
+				93DA07F216E78A53009A0160 /* AQGridViewUpdateInfo.m in Sources */,
+				93DA07F616E78A53009A0160 /* AQGridViewUpdateItem.m in Sources */,
+				93DA07FA16E78A53009A0160 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
+				93DA07FE16E78A53009A0160 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
+				93DA080216E78A53009A0160 /* UIColor+AQGridView.m in Sources */,
+				93DA080A16E78AA9009A0160 /* FTCoreTextStyle.m in Sources */,
+				93DA080E16E78AA9009A0160 /* FTCoreTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1873,6 +1953,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1900,6 +1984,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;

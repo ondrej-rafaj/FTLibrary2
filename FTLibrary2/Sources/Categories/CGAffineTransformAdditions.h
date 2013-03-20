@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Fuerte International. All rights reserved.
 //
 
+//code author: JEFF LAMARCHE - http://iphonedevelopment.blogspot.co.uk
+
 #ifndef __MCP_AFFINE_TRANSFORM_ADDITIONS__
 #define __MCP_AFFINE_TRANSFORM_ADDITIONS__
 

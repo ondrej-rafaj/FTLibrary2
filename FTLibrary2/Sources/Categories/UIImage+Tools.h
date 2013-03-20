@@ -53,5 +53,8 @@
 // returns the size of the space that will use the new rotated image so that it will fit correctly in it
 + (CGSize)imageSizeForRect:(CGRect)rect rotatedByDegreees:(CGFloat)degrees;
 
++ (CGSize)pixelSizeOfImageAtURL:(NSURL *)imageLocalURL;
+
++ (CGSize)pointSizeOfImageAtURL:(NSURL *)imageLocalURL;
 
 @end

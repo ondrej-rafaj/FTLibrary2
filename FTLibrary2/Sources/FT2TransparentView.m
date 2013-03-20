@@ -12,8 +12,14 @@
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
+	UITouch *touch = event.allTouches.anyObject;
 	UIView *v = [super hitTest:point withEvent:event];
-	if (v == self) return nil;
+	if (v == self || v == nil) {
+		if (touch.phase == UITouchPhaseBegan) [_didTouchVoid invoke];
+		return nil;
+	} else {
+		if (touch.phase == UITouchPhaseBegan) [_didTouchContent invoke];
+	}
 	return v;
 }
 
