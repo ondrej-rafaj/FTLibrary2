@@ -250,12 +250,37 @@
 	// create buttons for toolbar
 	UIImage *leftIcon = [UIImage imageNamed:@"photo-gallery-left.png"];
 	UIImage *rightIcon = [UIImage imageNamed:@"photo-gallery-right.png"];
-	_nextButton = [[UIBarButtonItem alloc] initWithImage:rightIcon style:UIBarButtonItemStylePlain target:self action:@selector(next)];
-	_prevButton = [[UIBarButtonItem alloc] initWithImage:leftIcon style:UIBarButtonItemStylePlain target:self action:@selector(previous)];
+
+	//UIImageView *leftImageView = [[UIImageView alloc] initWithImage:leftIcon];
+	//UIImageView *rightImageView = [[UIImageView alloc] initWithImage:rightIcon];
+
+	UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	[nextButton addTarget:self action:@selector(next) forControlEvents:UIControlEventTouchUpInside];
+	[nextButton setImage:rightIcon forState:UIControlStateNormal];
+	[nextButton sizeToFit];
+
+	UIButton *previousButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	[previousButton addTarget:self action:@selector(previous) forControlEvents:UIControlEventTouchUpInside];
+	[previousButton setImage:leftIcon forState:UIControlStateNormal];
+	[previousButton sizeToFit];
+
+	/*_nextButton = [[UIBarButtonItem alloc] initWithImage:rightIcon style:UIBarButtonItemStylePlain target:self action:@selector(next)];
+	_prevButton = [[UIBarButtonItem alloc] initWithImage:leftIcon style:UIBarButtonItemStylePlain target:self action:@selector(previous)];*/
+
+	_nextButton = [[UIBarButtonItem alloc] initWithCustomView:nextButton];
+	_prevButton = [[UIBarButtonItem alloc] initWithCustomView:previousButton];
+
+	/*[leftImageView release];
+	[rightImageView release];*/
 
 	// add prev next to front of the array
+	UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:NULL];
+
+	[_barItems insertObject:spaceItem atIndex:0];
 	[_barItems insertObject:_nextButton atIndex:0];
+	[_barItems insertObject:spaceItem atIndex:0];
 	[_barItems insertObject:_prevButton atIndex:0];
+	[_barItems insertObject:spaceItem atIndex:0];
 
 	_prevNextButtonSize = leftIcon.size.width;
 
@@ -374,7 +399,7 @@
 	// init with next on first run.
 	if(_currentIndex == -1) {
 		[self next];
-		}
+	}
 	else {[self gotoImageByIndex:_currentIndex animated:NO];}
 
 	if(_delegate && [_delegate respondsToSelector:@selector(photoGallery:viewWillAppearAnimated:)]) {
@@ -722,7 +747,7 @@
 
 - (void)layoutButtons {
 
-	NSUInteger buttonWidth = roundf(_toolbar.frame.size.width / [_barItems count] - _prevNextButtonSize * .5);
+	/*NSUInteger buttonWidth = roundf(_toolbar.frame.size.width / [_barItems count] - _prevNextButtonSize * .5);
 
 	// loop through all the button items and give them the same width
 	NSUInteger i, count = [_barItems count];
@@ -730,7 +755,7 @@
 		UIBarButtonItem *btn = [_barItems objectAtIndex:i];
 		btn.width = buttonWidth;
 	}
-	[_toolbar setNeedsLayout];
+	[_toolbar setNeedsLayout];*/
 }
 
 
@@ -949,7 +974,7 @@
 	FGalleryPhoto *photo = [_photoLoaders objectForKey:[NSString stringWithFormat:@"%i", index]];
 
 	if(photo == nil) {
-			photo = [self createGalleryPhotoForIndex:index];
+		photo = [self createGalleryPhotoForIndex:index];
 	}
 
 	[photo loadThumbnail];
@@ -961,7 +986,7 @@
 	FGalleryPhoto *photo = [_photoLoaders objectForKey:[NSString stringWithFormat:@"%i", index]];
 
 	if(photo == nil) {
-			photo = [self createGalleryPhotoForIndex:index];
+		photo = [self createGalleryPhotoForIndex:index];
 	}
 
 	[photo loadFullsize];
@@ -1032,7 +1057,7 @@
 
 	// don't proceed if the user has been scrolling, but didn't really go anywhere.
 	if(newIndex == _currentIndex) {
-			return;
+		return;
 	}
 
 	// clear previous
@@ -1091,7 +1116,7 @@
 
 	// if the gallery photo hasn't loaded the fullsize yet, set the thumbnail as its image.
 	if(!photo.hasFullsizeLoaded) {
-			photoView.imageView.image = photo.thumbnail;
+		photoView.imageView.image = photo.thumbnail;
 	}
 
 	[photoView.activity stopAnimating];
@@ -1284,7 +1309,7 @@
 		}
 	}
 	if(supported) {
-			return YES;
+		return YES;
 	}
 
 	// we need to support at least one type of auto-rotation we'll get warnings.
