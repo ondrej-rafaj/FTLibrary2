@@ -272,6 +272,30 @@
 		938D5838153DCA840067CEFA /* FT2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5837153DCA840067CEFA /* FT2AppDelegate.m */; };
 		93A801A016D39BC9004C8F2D /* NSString+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93A8019F16D39BC9004C8F2D /* NSString+Tools.h */; };
 		93A801A216D39BED004C8F2D /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A801A116D39BED004C8F2D /* NSString+Tools.m */; };
+		93B286CB1716D9350083887E /* FT2GMapsHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286BF1716D9350083887E /* FT2GMapsHelper.h */; };
+		93B286CC1716D9350083887E /* FT2GMapsLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286C01716D9350083887E /* FT2GMapsLocation.h */; };
+		93B286CD1716D9350083887E /* FT2GMapsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286C11716D9350083887E /* FT2GMapsRequest.h */; };
+		93B286CE1716D9350083887E /* FT2GMapsServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286C21716D9350083887E /* FT2GMapsServices.h */; };
+		93B286CF1716D9350083887E /* FT2Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286C31716D9350083887E /* FT2Operation.h */; };
+		93B286D01716D9350083887E /* GMSMapView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286C41716D9350083887E /* GMSMapView+Additions.h */; };
+		93B286D11716D9350083887E /* FT2GMapsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286C51716D9350083887E /* FT2GMapsHelper.m */; };
+		93B286D21716D9350083887E /* FT2GMapsLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286C61716D9350083887E /* FT2GMapsLocation.m */; };
+		93B286D31716D9350083887E /* FT2GMapsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286C71716D9350083887E /* FT2GMapsRequest.m */; };
+		93B286D41716D9350083887E /* FT2GMapsServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286C81716D9350083887E /* FT2GMapsServices.m */; };
+		93B286D51716D9350083887E /* FT2Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286C91716D9350083887E /* FT2Operation.m */; };
+		93B286D61716D9350083887E /* GMSMapView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286CA1716D9350083887E /* GMSMapView+Additions.m */; };
+		93B286E31716D9510083887E /* FT2GMapsDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286D81716D9510083887E /* FT2GMapsDirection.h */; };
+		93B286E41716D9510083887E /* FT2GMapsDirectionOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286D91716D9510083887E /* FT2GMapsDirectionOutput.h */; };
+		93B286E51716D9510083887E /* FT2GMapsDirectionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286DA1716D9510083887E /* FT2GMapsDirectionRequest.h */; };
+		93B286E61716D9510083887E /* FT2GMapsLeg.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286DB1716D9510083887E /* FT2GMapsLeg.h */; };
+		93B286E71716D9510083887E /* FT2GMapsRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286DC1716D9510083887E /* FT2GMapsRoute.h */; };
+		93B286E81716D9510083887E /* FT2GMapsStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286DD1716D9510083887E /* FT2GMapsStep.h */; };
+		93B286E91716D9510083887E /* FT2GMapsDirectionOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286DE1716D9510083887E /* FT2GMapsDirectionOutput.m */; };
+		93B286EA1716D9510083887E /* FT2GMapsDirectionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286DF1716D9510083887E /* FT2GMapsDirectionRequest.m */; };
+		93B286EB1716D9510083887E /* FT2GMapsLeg.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286E01716D9510083887E /* FT2GMapsLeg.m */; };
+		93B286EC1716D9510083887E /* FT2GMapsRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286E11716D9510083887E /* FT2GMapsRoute.m */; };
+		93B286ED1716D9510083887E /* FT2GMapsStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B286E21716D9510083887E /* FT2GMapsStep.m */; };
+		93B286F31716DA500083887E /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B286F21716DA500083887E /* GoogleMaps.framework */; };
 		93B5B13D15A714130049B3A0 /* FT2TransparentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B5B11D15A714130049B3A0 /* FT2TransparentView.h */; };
 		93B5B13E15A714130049B3A0 /* FT2TransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5B11E15A714130049B3A0 /* FT2TransparentView.m */; };
 		93C265C4153EBF6A0010A059 /* FT2ReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */; };
@@ -638,6 +662,31 @@
 		938D5837153DCA840067CEFA /* FT2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FT2AppDelegate.m; sourceTree = "<group>"; };
 		93A8019F16D39BC9004C8F2D /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Tools.h"; path = "FTLibrary2/Sources/Categories/NSString+Tools.h"; sourceTree = "<group>"; };
 		93A801A116D39BED004C8F2D /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Tools.m"; path = "FTLibrary2/Sources/Categories/NSString+Tools.m"; sourceTree = "<group>"; };
+		93B286BF1716D9350083887E /* FT2GMapsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsHelper.h; sourceTree = "<group>"; };
+		93B286C01716D9350083887E /* FT2GMapsLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsLocation.h; sourceTree = "<group>"; };
+		93B286C11716D9350083887E /* FT2GMapsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsRequest.h; sourceTree = "<group>"; };
+		93B286C21716D9350083887E /* FT2GMapsServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsServices.h; sourceTree = "<group>"; };
+		93B286C31716D9350083887E /* FT2Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2Operation.h; sourceTree = "<group>"; };
+		93B286C41716D9350083887E /* GMSMapView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMSMapView+Additions.h"; sourceTree = "<group>"; };
+		93B286C51716D9350083887E /* FT2GMapsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsHelper.m; sourceTree = "<group>"; };
+		93B286C61716D9350083887E /* FT2GMapsLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsLocation.m; sourceTree = "<group>"; };
+		93B286C71716D9350083887E /* FT2GMapsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsRequest.m; sourceTree = "<group>"; };
+		93B286C81716D9350083887E /* FT2GMapsServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsServices.m; sourceTree = "<group>"; };
+		93B286C91716D9350083887E /* FT2Operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2Operation.m; sourceTree = "<group>"; };
+		93B286CA1716D9350083887E /* GMSMapView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMSMapView+Additions.m"; sourceTree = "<group>"; };
+		93B286D81716D9510083887E /* FT2GMapsDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsDirection.h; sourceTree = "<group>"; };
+		93B286D91716D9510083887E /* FT2GMapsDirectionOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsDirectionOutput.h; sourceTree = "<group>"; };
+		93B286DA1716D9510083887E /* FT2GMapsDirectionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsDirectionRequest.h; sourceTree = "<group>"; };
+		93B286DB1716D9510083887E /* FT2GMapsLeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsLeg.h; sourceTree = "<group>"; };
+		93B286DC1716D9510083887E /* FT2GMapsRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsRoute.h; sourceTree = "<group>"; };
+		93B286DD1716D9510083887E /* FT2GMapsStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsStep.h; sourceTree = "<group>"; };
+		93B286DE1716D9510083887E /* FT2GMapsDirectionOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsDirectionOutput.m; sourceTree = "<group>"; };
+		93B286DF1716D9510083887E /* FT2GMapsDirectionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsDirectionRequest.m; sourceTree = "<group>"; };
+		93B286E01716D9510083887E /* FT2GMapsLeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsLeg.m; sourceTree = "<group>"; };
+		93B286E11716D9510083887E /* FT2GMapsRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsRoute.m; sourceTree = "<group>"; };
+		93B286E21716D9510083887E /* FT2GMapsStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsStep.m; sourceTree = "<group>"; };
+		93B286F11716DA500083887E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		93B286F21716DA500083887E /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		93B5B11D15A714130049B3A0 /* FT2TransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2TransparentView.h; path = FTLibrary2/Sources/FT2TransparentView.h; sourceTree = "<group>"; };
 		93B5B11E15A714130049B3A0 /* FT2TransparentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2TransparentView.m; path = FTLibrary2/Sources/FT2TransparentView.m; sourceTree = "<group>"; };
 		93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2ReachabilityManager.h; path = FTLibrary2/Sources/FT2ReachabilityManager.h; sourceTree = "<group>"; };
@@ -737,6 +786,7 @@
 				938CB503153DD7A70057A19B /* UIKit.framework in Frameworks */,
 				938D5816153DC4380067CEFA /* Foundation.framework in Frameworks */,
 				932FDB40153DDDF900E9D253 /* libOAuth.a in Frameworks */,
+				93B286F31716DA500083887E /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,6 +908,7 @@
 		932FDA3F153DD86800E9D253 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				93B286BE1716D92A0083887E /* FT2GoogleServices */,
 				68978EF715406BE8008EF4E8 /* Feeds */,
 				932FDA42153DD88100E9D253 /* System */,
 				938D5840153DCBB80067CEFA /* Data */,
@@ -886,6 +937,8 @@
 		932FDA42153DD88100E9D253 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				93B286C31716D9350083887E /* FT2Operation.h */,
+				93B286C91716D9350083887E /* FT2Operation.m */,
 				93C265C0153EBF6A0010A059 /* FT2ReachabilityManager.h */,
 				93C265C1153EBF6A0010A059 /* FT2ReachabilityManager.m */,
 				93C265C2153EBF6A0010A059 /* FT2TaskMaker.h */,
@@ -1124,6 +1177,8 @@
 		938D5814153DC4380067CEFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93B286F11716DA500083887E /* GoogleMaps.bundle */,
+				93B286F21716DA500083887E /* GoogleMaps.framework */,
 				6842EC5D1552BFFE00C18C9F /* CoreText.framework */,
 				68978E60153F29CB008EF4E8 /* SystemConfiguration.framework */,
 				68978E5E153F298D008EF4E8 /* CFNetwork.framework */,
@@ -1258,6 +1313,42 @@
 				6853970A1550298300B2D2A4 /* FT2File.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		93B286BE1716D92A0083887E /* FT2GoogleServices */ = {
+			isa = PBXGroup;
+			children = (
+				93B286BF1716D9350083887E /* FT2GMapsHelper.h */,
+				93B286C51716D9350083887E /* FT2GMapsHelper.m */,
+				93B286C21716D9350083887E /* FT2GMapsServices.h */,
+				93B286C81716D9350083887E /* FT2GMapsServices.m */,
+				93B286C11716D9350083887E /* FT2GMapsRequest.h */,
+				93B286C71716D9350083887E /* FT2GMapsRequest.m */,
+				93B286C01716D9350083887E /* FT2GMapsLocation.h */,
+				93B286C61716D9350083887E /* FT2GMapsLocation.m */,
+				93B286C41716D9350083887E /* GMSMapView+Additions.h */,
+				93B286CA1716D9350083887E /* GMSMapView+Additions.m */,
+				93B286D71716D9420083887E /* Direction */,
+			);
+			name = FT2GoogleServices;
+			sourceTree = "<group>";
+		};
+		93B286D71716D9420083887E /* Direction */ = {
+			isa = PBXGroup;
+			children = (
+				93B286D81716D9510083887E /* FT2GMapsDirection.h */,
+				93B286D91716D9510083887E /* FT2GMapsDirectionOutput.h */,
+				93B286DE1716D9510083887E /* FT2GMapsDirectionOutput.m */,
+				93B286DA1716D9510083887E /* FT2GMapsDirectionRequest.h */,
+				93B286DF1716D9510083887E /* FT2GMapsDirectionRequest.m */,
+				93B286DB1716D9510083887E /* FT2GMapsLeg.h */,
+				93B286E01716D9510083887E /* FT2GMapsLeg.m */,
+				93B286DC1716D9510083887E /* FT2GMapsRoute.h */,
+				93B286E11716D9510083887E /* FT2GMapsRoute.m */,
+				93B286DD1716D9510083887E /* FT2GMapsStep.h */,
+				93B286E21716D9510083887E /* FT2GMapsStep.m */,
+			);
+			name = Direction;
 			sourceTree = "<group>";
 		};
 		93C265D9153EC32E0010A059 /* Reachability */ = {
@@ -1495,6 +1586,18 @@
 				93DA080016E78A53009A0160 /* UIColor+AQGridView.h in Headers */,
 				93DA080816E78AA9009A0160 /* FTCoreTextStyle.h in Headers */,
 				93DA080C16E78AA9009A0160 /* FTCoreTextView.h in Headers */,
+				93B286CB1716D9350083887E /* FT2GMapsHelper.h in Headers */,
+				93B286CC1716D9350083887E /* FT2GMapsLocation.h in Headers */,
+				93B286CD1716D9350083887E /* FT2GMapsRequest.h in Headers */,
+				93B286CE1716D9350083887E /* FT2GMapsServices.h in Headers */,
+				93B286CF1716D9350083887E /* FT2Operation.h in Headers */,
+				93B286D01716D9350083887E /* GMSMapView+Additions.h in Headers */,
+				93B286E31716D9510083887E /* FT2GMapsDirection.h in Headers */,
+				93B286E41716D9510083887E /* FT2GMapsDirectionOutput.h in Headers */,
+				93B286E51716D9510083887E /* FT2GMapsDirectionRequest.h in Headers */,
+				93B286E61716D9510083887E /* FT2GMapsLeg.h in Headers */,
+				93B286E71716D9510083887E /* FT2GMapsRoute.h in Headers */,
+				93B286E81716D9510083887E /* FT2GMapsStep.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1792,6 +1895,17 @@
 				93DA080116E78A53009A0160 /* UIColor+AQGridView.m in Sources */,
 				93DA080916E78AA9009A0160 /* FTCoreTextStyle.m in Sources */,
 				93DA080D16E78AA9009A0160 /* FTCoreTextView.m in Sources */,
+				93B286D11716D9350083887E /* FT2GMapsHelper.m in Sources */,
+				93B286D21716D9350083887E /* FT2GMapsLocation.m in Sources */,
+				93B286D31716D9350083887E /* FT2GMapsRequest.m in Sources */,
+				93B286D41716D9350083887E /* FT2GMapsServices.m in Sources */,
+				93B286D51716D9350083887E /* FT2Operation.m in Sources */,
+				93B286D61716D9350083887E /* GMSMapView+Additions.m in Sources */,
+				93B286E91716D9510083887E /* FT2GMapsDirectionOutput.m in Sources */,
+				93B286EA1716D9510083887E /* FT2GMapsDirectionRequest.m in Sources */,
+				93B286EB1716D9510083887E /* FT2GMapsLeg.m in Sources */,
+				93B286EC1716D9510083887E /* FT2GMapsRoute.m in Sources */,
+				93B286ED1716D9510083887E /* FT2GMapsStep.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2008,6 +2122,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/FTLibrary2.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FTLibrary2/FTLibrary2-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (
@@ -2025,6 +2143,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/FTLibrary2.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FTLibrary2/FTLibrary2-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = (

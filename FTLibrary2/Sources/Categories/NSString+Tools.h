@@ -10,6 +10,9 @@
 
 @interface NSString (Tools)
 
--(NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding;
+- (NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding;
+
++ (NSString *)randomString;
++ (NSString *)randomStringOfLength:(int)length;
 
 @end
