@@ -1,15 +1,20 @@
 //
 //  FT2MagnifyingView.m
-//  FTLibrary2
+//  FT2Library2
 //
 //  Created by Baldoph Pourprix on 12/02/2012.
-//  Copyright (c) 2012 Fuerte International. All rights reserved.
+//  Copyright (c) 2012 Fuerte International All rights reserved.
 //
 
 #import "FT2MagnifyingView.h"
 
 @interface FT2MagnifyingView ()
 - (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center;
+
+@property (nonatomic) CGFloat lastZoomValue;
+@property (nonatomic) BOOL didSendZoomDelegate;
+@property (nonatomic) CGFloat zoomThreshold;
+
 @end
 
 @implementation FT2MagnifyingView
@@ -87,11 +92,23 @@
     return _magnifiedView;
 }
 
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
+	if (_magnifiedView && scrollView.zoomScale > _zoomThreshold && _didSendZoomDelegate == NO) {
+		_didSendZoomDelegate = YES;
+		if ([_magnifyingViewDelegate respondsToSelector:@selector(magnifyingViewDidZoomIn:)])
+			[_magnifyingViewDelegate magnifyingViewDidZoomIn:self];
+	} else if (scrollView.zoomScale <= _zoomThreshold && _didSendZoomDelegate) {
+		_didSendZoomDelegate = NO;
+	}
+	_lastZoomValue = scrollView.zoomScale;
+}
+
 #pragma mark -
 #pragma mark Configure scrollView to display new image (tiled or not)
 
 - (void)setMagnifiedView:(UIView *)magnifiedView
-{
+{	
     // clear the previous imageView
     [_magnifiedView removeFromSuperview];
     
@@ -126,6 +143,25 @@
     
     self.maximumZoomScale = maxScale;
     self.minimumZoomScale = minScale;
+	
+	_zoomThreshold = minScale +  (maxScale - minScale) / 2;
+}
+
+- (void)setFrame:(CGRect)frame
+{
+	CGPoint restorePoint;
+	CGFloat restoreScale;
+	if (self.magnifiedView.superview) {
+		restorePoint = [self pointToCenterAfterRotation];
+		restoreScale = [self scaleToRestoreAfterRotation];
+	}
+	
+	[super setFrame:frame];
+	
+	if (self.magnifiedView.superview) {
+		[self setMaxMinZoomScalesForCurrentBounds];
+		[self restoreCenterPoint:restorePoint scale:restoreScale];
+	}
 }
 
 #pragma mark -
