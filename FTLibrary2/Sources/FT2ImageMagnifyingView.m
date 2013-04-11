@@ -3,92 +3,66 @@
 //  FTLibrary2
 //
 //  Created by Baldoph Pourprix on 12/02/2012.
-//  Copyright (c) 2012 Fuerte International All rights reserved.
+//  Copyright (c) 2012 Fuerte International. All rights reserved.
 //
 
 #import "FT2ImageMagnifyingView.h"
 
 @interface FT2ImageMagnifyingView ()
 
-@property (nonatomic, readwrite) UIImageView *imageView;
+- (UIImageView *)imageView;
 
 @end
 
 @implementation FT2ImageMagnifyingView
 
-- (id)initWithFrame:(CGRect)frame
-{
-	self = [super initWithFrame:frame];
-	if (self) {
-		_maxScale = 1.5;
-	}
-	return self;
-}
-
 #pragma mark - Setters
 
 - (void)setImage:(UIImage *)image
-{
-	[self setImage:image adjustZoom:YES];
-}
-
-- (void)setImage:(UIImage *)image adjustZoom:(BOOL)adjust
-{
-	// make a new UIImageView for the new image
+{    
+    // make a new UIImageView for the new image
+	UIImageView *imageView = nil;
 	if (image) {
 		
-		self.imageView.image = image;
+		imageView = [[UIImageView alloc] initWithImage:image];
 		
-		if (adjust) {
-			//next 2 lines to prevent reused views to set incorrect frame due to current transformation
-			[self.imageView removeFromSuperview];
-			self.imageView.transform = CGAffineTransformIdentity;
-			
-			[self.imageView sizeToFit];
-			
-			CGSize imageSize = image.size;
-			CGSize maxZoomSize;
-			
-			CGFloat ratio = imageSize.width / imageSize.height;
-			
-			CGRect screenBounds = [UIScreen mainScreen].bounds;
-			CGFloat minScreenSide = MIN(screenBounds.size.width, screenBounds.size.height);
-			if (ratio > 1) {
-				//width > height
-				maxZoomSize = CGSizeMake( minScreenSide * _maxScale * ratio, minScreenSide * _maxScale);
-			}
-			else {
-				//width <= height
-				maxZoomSize = CGSizeMake(minScreenSide * _maxScale, minScreenSide * _maxScale / ratio);
-			}
-			
-			self.imageView.frame = CGRectMake(0, 0, round(maxZoomSize.width), round(maxZoomSize.height));
-			self.magnifiedView = self.imageView;
+		CGSize imageSize = image.size;
+		CGSize maxZoomSize;
+		
+		CGFloat ratio = imageSize.width / imageSize.height;
+		if (ratio > 1) {
+			//width > height
+			maxZoomSize = CGSizeMake(480 * 1.5 * ratio, 480 * 1.5);
 		}
-	} else {
-		_imageView.image = nil;
+		else {
+			//width <= height
+			maxZoomSize = CGSizeMake(480 * 1.5, 480 * 1.5 / ratio);
+		}
+		
+		imageView.frame = CGRectMake(0, 0, maxZoomSize.width, maxZoomSize.height);
 	}
-	
-	if (!adjust && self.magnifiedView == nil) self.magnifiedView = self.imageView;
+    self.magnifiedView = imageView;
 	
 	self.imageView.autoresizingMask = self.autoresizingMask;
+}
+
+- (void)setFrame:(CGRect)frame
+{
+	[super setFrame:frame];
+	[self setImage:self.image];
 }
 
 #pragma mark - Getters
 
 - (UIImageView *)imageView
 {
-	if (_imageView == nil) {
-		_imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-	}
-	return _imageView;
+	return (UIImageView *)self.magnifiedView;
 }
 
 - (UIImage *)image
 {
 	return self.imageView.image;
 }
-
 
 
 //
