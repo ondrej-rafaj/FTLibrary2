@@ -22,6 +22,12 @@
  */
 @property (nonatomic) NSString *address;
 
-- (NSString *)locationString;
+@property (nonatomic) NSString *streetNumber;
+@property (nonatomic) NSString *streetName;
+@property (nonatomic) NSString *city;
+@property (nonatomic) NSString *postalCode;
+@property (nonatomic) NSString *country;
+
+- (NSString *)locationArgumentString;
 
 @end

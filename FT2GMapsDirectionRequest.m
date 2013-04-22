@@ -60,10 +60,10 @@
 - (NSString *)argumentsString
 {
 	NSMutableString *arguments = [NSMutableString new];
-	NSAssert(_startLocation.locationString && _endLocation.locationString, @"Required parameter are missing");
+	NSAssert(_startLocation.locationArgumentString && _endLocation.locationArgumentString, @"Required parameter are missing");
 	NSAssert(_directionMode != FT2GMapDirectionModePublicTransport || (_departureDate != nil || _arrivalDate != nil), @"You must set a departure or arrival date when requesting public transport directions");
 
-	[arguments appendFormat:@"origin=%@&destination=%@&sensor=true", _startLocation.locationString, _endLocation.locationString];
+	[arguments appendFormat:@"origin=%@&destination=%@&sensor=true", _startLocation.locationArgumentString, _endLocation.locationArgumentString];
 	
 	switch (_directionMode) {
 		case FT2GMapDirectionModeWalking:

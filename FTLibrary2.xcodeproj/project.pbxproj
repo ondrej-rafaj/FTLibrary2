@@ -270,6 +270,8 @@
 		938D5832153DCA840067CEFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 938D5830153DCA840067CEFA /* InfoPlist.strings */; };
 		938D5834153DCA840067CEFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5833153DCA840067CEFA /* main.m */; };
 		938D5838153DCA840067CEFA /* FT2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D5837153DCA840067CEFA /* FT2AppDelegate.m */; };
+		939A2C7A171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 939A2C78171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.h */; };
+		939A2C7B171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 939A2C79171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.m */; };
 		93A801A016D39BC9004C8F2D /* NSString+Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 93A8019F16D39BC9004C8F2D /* NSString+Tools.h */; };
 		93A801A216D39BED004C8F2D /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A801A116D39BED004C8F2D /* NSString+Tools.m */; };
 		93B286CB1716D9350083887E /* FT2GMapsHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B286BF1716D9350083887E /* FT2GMapsHelper.h */; };
@@ -421,6 +423,8 @@
 		93DA080F16E78AA9009A0160 /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA080716E78AA9009A0160 /* FTCoreTextView.m */; };
 		93EDD068154705F50074EC20 /* FT2PageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EDD066154705F50074EC20 /* FT2PageControl.h */; };
 		93EDD069154705F50074EC20 /* FT2PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EDD067154705F50074EC20 /* FT2PageControl.m */; };
+		93FBFB9A171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 93FBFB98171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.h */; };
+		93FBFB9B171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FBFB99171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -657,6 +661,8 @@
 		938D5835153DCA840067CEFA /* FTLibrary2Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTLibrary2Test-Prefix.pch"; sourceTree = "<group>"; };
 		938D5836153DCA840067CEFA /* FT2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FT2AppDelegate.h; sourceTree = "<group>"; };
 		938D5837153DCA840067CEFA /* FT2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FT2AppDelegate.m; sourceTree = "<group>"; };
+		939A2C78171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsReverseGeocodingRequest.h; sourceTree = "<group>"; };
+		939A2C79171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsReverseGeocodingRequest.m; sourceTree = "<group>"; };
 		93A8019F16D39BC9004C8F2D /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Tools.h"; path = "FTLibrary2/Sources/Categories/NSString+Tools.h"; sourceTree = "<group>"; };
 		93A801A116D39BED004C8F2D /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Tools.m"; path = "FTLibrary2/Sources/Categories/NSString+Tools.m"; sourceTree = "<group>"; };
 		93B286BF1716D9350083887E /* FT2GMapsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsHelper.h; sourceTree = "<group>"; };
@@ -756,6 +762,9 @@
 		93DA080716E78AA9009A0160 /* FTCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCoreTextView.m; path = FTLibrary2/Sources/FTCoreTextView.m; sourceTree = "<group>"; };
 		93EDD066154705F50074EC20 /* FT2PageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageControl.h; path = FTLibrary2/Sources/FT2PageControl.h; sourceTree = "<group>"; };
 		93EDD067154705F50074EC20 /* FT2PageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageControl.m; path = FTLibrary2/Sources/FT2PageControl.m; sourceTree = "<group>"; };
+		93FBFB98171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsReverseGeocodingOutput.h; sourceTree = "<group>"; };
+		93FBFB99171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FT2GMapsReverseGeocodingOutput.m; sourceTree = "<group>"; };
+		93FBFB9C171D6A9B0092F462 /* FT2GMapsReverseGeocoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FT2GMapsReverseGeocoding.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1305,6 +1314,18 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		939A2C77171C510600A51202 /* Reverse Geocoding */ = {
+			isa = PBXGroup;
+			children = (
+				93FBFB9C171D6A9B0092F462 /* FT2GMapsReverseGeocoding.h */,
+				939A2C78171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.h */,
+				939A2C79171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.m */,
+				93FBFB98171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.h */,
+				93FBFB99171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.m */,
+			);
+			name = "Reverse Geocoding";
+			sourceTree = "<group>";
+		};
 		93B286BE1716D92A0083887E /* FT2GoogleServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -1316,6 +1337,7 @@
 				93B286C71716D9350083887E /* FT2GMapsRequest.m */,
 				93B286C01716D9350083887E /* FT2GMapsLocation.h */,
 				93B286C61716D9350083887E /* FT2GMapsLocation.m */,
+				939A2C77171C510600A51202 /* Reverse Geocoding */,
 				93B286D71716D9420083887E /* Direction */,
 			);
 			name = FT2GoogleServices;
@@ -1585,6 +1607,8 @@
 				93B286E61716D9510083887E /* FT2GMapsLeg.h in Headers */,
 				93B286E71716D9510083887E /* FT2GMapsRoute.h in Headers */,
 				93B286E81716D9510083887E /* FT2GMapsStep.h in Headers */,
+				939A2C7A171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.h in Headers */,
+				93FBFB9A171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1892,6 +1916,8 @@
 				93B286EB1716D9510083887E /* FT2GMapsLeg.m in Sources */,
 				93B286EC1716D9510083887E /* FT2GMapsRoute.m in Sources */,
 				93B286ED1716D9510083887E /* FT2GMapsStep.m in Sources */,
+				939A2C7B171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.m in Sources */,
+				93FBFB9B171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

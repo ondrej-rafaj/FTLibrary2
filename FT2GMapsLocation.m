@@ -19,7 +19,7 @@
 	return self;
 }
 
-- (NSString *)locationString
+- (NSString *)locationArgumentString
 {
 	if (CLLocationCoordinate2DIsValid(_coordinates)) {
 		return [NSString stringWithFormat:@"%f,%f", _coordinates.latitude, _coordinates.longitude];
