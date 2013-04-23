@@ -64,7 +64,7 @@
 - (GMSCoordinateBounds *)bounds
 {
 	if (_bounds == nil) {
-		_bounds = [[GMSCoordinateBounds alloc] initWithCoordinate:self.northEastBound andCoordinate:self.southWestBound];
+		_bounds = [[GMSCoordinateBounds alloc] initWithCoordinate:self.northEastBound coordinate:self.southWestBound];
 	}
 	return _bounds;
 }
