@@ -51,4 +51,6 @@
 /** An array of CLLocation objects that form a smooth polyline of the route */
 @property (nonatomic, readonly) NSArray *polylineLocations;
 
+@property (nonatomic) NSString *overviewPolylineEncoded;
+
 @end

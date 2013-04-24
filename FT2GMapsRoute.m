@@ -15,7 +15,6 @@
 
 @interface FT2GMapsRoute ()
 
-@property (nonatomic) NSString *overviewPolylineEncoded;
 @property (nonatomic, readwrite) NSArray *polylineLocations;
 
 @end
