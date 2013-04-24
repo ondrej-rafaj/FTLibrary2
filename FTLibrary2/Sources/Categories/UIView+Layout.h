@@ -17,6 +17,11 @@
 
 @interface UIView (Layout)
 
+/* Call to postpone the actual call to [super setFrame]. Only works with the methods defined in this category.  */
+- (void)beginEditingFrame;
+/* Call to balance your call to -beginEditingFrame. Set super.frame to the edited frame */
+- (void)endEditingFrame;
+
 - (void)addSubviews:(NSArray *)views;
 
 - (CGFloat)width;
