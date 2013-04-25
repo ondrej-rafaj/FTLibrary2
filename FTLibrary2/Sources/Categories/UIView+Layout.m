@@ -199,7 +199,8 @@ static char EDITED_FRAME;
 - (void)setCenterIntegral:(CGPoint)center
 {
 	self.center = center;
-	self.actualFrame = CGRectIntegral(self.actualFrame);
+	CGRect frame = self.frame;
+	self.frame = (CGRect) { CGPointMake(round(frame.origin.x), round(frame.origin.y)), frame.size };
 }
 
 //superview related
