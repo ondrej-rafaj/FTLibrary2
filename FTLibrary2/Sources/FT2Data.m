@@ -118,6 +118,7 @@
 		if (_privateQueue == NULL) _privateQueue = dispatch_queue_create("com.fuerteint.FTData.private", 0);
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(managedObjectContextDidSaveNotification:) name:NSManagedObjectContextDidSaveNotification object:nil];
 	}
+	self.managedObjectContext = nil;
 }
 
 - (void)managedObjectContextDidSaveNotification:(NSNotification *)n
