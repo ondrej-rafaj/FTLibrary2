@@ -421,6 +421,10 @@
 		93DA080D16E78AA9009A0160 /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA080716E78AA9009A0160 /* FTCoreTextView.m */; };
 		93DA080E16E78AA9009A0160 /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA080716E78AA9009A0160 /* FTCoreTextView.m */; };
 		93DA080F16E78AA9009A0160 /* FTCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DA080716E78AA9009A0160 /* FTCoreTextView.m */; };
+		93E3829117301D13003B058F /* NSData+Coordinates.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E3828F17301D13003B058F /* NSData+Coordinates.h */; };
+		93E3829217301D13003B058F /* NSData+Coordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E3829017301D13003B058F /* NSData+Coordinates.m */; };
+		93E3829317301D13003B058F /* NSData+Coordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E3829017301D13003B058F /* NSData+Coordinates.m */; };
+		93E3829417301D13003B058F /* NSData+Coordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E3829017301D13003B058F /* NSData+Coordinates.m */; };
 		93EDD068154705F50074EC20 /* FT2PageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EDD066154705F50074EC20 /* FT2PageControl.h */; };
 		93EDD069154705F50074EC20 /* FT2PageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EDD067154705F50074EC20 /* FT2PageControl.m */; };
 		93FBFB9A171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = 93FBFB98171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.h */; };
@@ -760,6 +764,8 @@
 		93DA080516E78AA9009A0160 /* FTCoreTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCoreTextStyle.m; path = FTLibrary2/Sources/FTCoreTextStyle.m; sourceTree = "<group>"; };
 		93DA080616E78AA9009A0160 /* FTCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTCoreTextView.h; path = FTLibrary2/Sources/FTCoreTextView.h; sourceTree = "<group>"; };
 		93DA080716E78AA9009A0160 /* FTCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCoreTextView.m; path = FTLibrary2/Sources/FTCoreTextView.m; sourceTree = "<group>"; };
+		93E3828F17301D13003B058F /* NSData+Coordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Coordinates.h"; sourceTree = "<group>"; };
+		93E3829017301D13003B058F /* NSData+Coordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Coordinates.m"; sourceTree = "<group>"; };
 		93EDD066154705F50074EC20 /* FT2PageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FT2PageControl.h; path = FTLibrary2/Sources/FT2PageControl.h; sourceTree = "<group>"; };
 		93EDD067154705F50074EC20 /* FT2PageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FT2PageControl.m; path = FTLibrary2/Sources/FT2PageControl.m; sourceTree = "<group>"; };
 		93FBFB98171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FT2GMapsReverseGeocodingOutput.h; sourceTree = "<group>"; };
@@ -1270,6 +1276,8 @@
 			children = (
 				93CF7B0A1546D0EC0047C412 /* CoreGraphicAdditions.h */,
 				938CB4A9153DD2610057A19B /* CGAffineTransformAdditions.h */,
+				93E3828F17301D13003B058F /* NSData+Coordinates.h */,
+				93E3829017301D13003B058F /* NSData+Coordinates.m */,
 				932FDABF153DDAC500E9D253 /* NSData+Base64.h */,
 				932FDAC0153DDAC500E9D253 /* NSData+Base64.m */,
 				932FDA6B153DD9D300E9D253 /* NSString+UUID.h */,
@@ -1609,6 +1617,7 @@
 				93B286E81716D9510083887E /* FT2GMapsStep.h in Headers */,
 				939A2C7A171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.h in Headers */,
 				93FBFB9A171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.h in Headers */,
+				93E3829117301D13003B058F /* NSData+Coordinates.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1791,6 +1800,7 @@
 				93DA080316E78A53009A0160 /* UIColor+AQGridView.m in Sources */,
 				93DA080B16E78AA9009A0160 /* FTCoreTextStyle.m in Sources */,
 				93DA080F16E78AA9009A0160 /* FTCoreTextView.m in Sources */,
+				93E3829417301D13003B058F /* NSData+Coordinates.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1918,6 +1928,7 @@
 				93B286ED1716D9510083887E /* FT2GMapsStep.m in Sources */,
 				939A2C7B171C52A000A51202 /* FT2GMapsReverseGeocodingRequest.m in Sources */,
 				93FBFB9B171D62D70092F462 /* FT2GMapsReverseGeocodingOutput.m in Sources */,
+				93E3829217301D13003B058F /* NSData+Coordinates.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2004,6 +2015,7 @@
 				93DA080216E78A53009A0160 /* UIColor+AQGridView.m in Sources */,
 				93DA080A16E78AA9009A0160 /* FTCoreTextStyle.m in Sources */,
 				93DA080E16E78AA9009A0160 /* FTCoreTextView.m in Sources */,
+				93E3829317301D13003B058F /* NSData+Coordinates.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

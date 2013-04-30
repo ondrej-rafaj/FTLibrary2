@@ -9,7 +9,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <MapKit/MapKit.h>
 #import "FT2GMapsRoute.h"
-#import "NSValue+Coordinates.h"
+#import "NSData+Coordinates.h"
 
 @implementation GMSMapView (Additions)
 
@@ -79,8 +79,8 @@
 {
 	GMSMutablePath *path = [[GMSMutablePath alloc] init];
 	
-	[self enumerateObjectsUsingBlock:^(NSValue *locationValue, NSUInteger idx, BOOL *stop) {
-		CLLocationCoordinate2D coordinates = [locationValue coordinatesValue];
+	[self enumerateObjectsUsingBlock:^(NSData *locationData, NSUInteger idx, BOOL *stop) {
+		CLLocationCoordinate2D coordinates = [locationData coordinatesFromData];
 		[path addCoordinate:coordinates];
 	}];
 	return path;
