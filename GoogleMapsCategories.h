@@ -10,15 +10,16 @@
 @class GMSMapView;
 @class GMSCoordinateBounds;
 
-@interface GMSMapView (Additions)
-
-- (void)zoomToCoordinateBounds:(GMSCoordinateBounds *)coordinateBounds animated:(BOOL)animated;
-
-@end
-
 @interface FT2GMapsRoute (GoogleMap)
 
 - (GMSPath *)path;
 - (GMSCoordinateBounds *)bounds;
+
+@end
+
+@interface NSArray (GoogleMap)
+
+/* return a path for the array if all the objects are NSValues of CLLocationCoordinate2D */
+- (GMSPath *)path;
 
 @end

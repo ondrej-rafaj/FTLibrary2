@@ -9,6 +9,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <MapKit/MapKit.h>
 #import "FT2GMapsRoute.h"
+#import "NSValue+Coordinates.h"
 
 @implementation GMSMapView (Additions)
 
@@ -70,3 +71,20 @@
 }
 
 @end
+
+@implementation NSArray (GoogleMap)
+
+/* return a path for the array if all the objects are NSValues of CLLocationCoordinate2D */
+- (GMSPath *)path
+{
+	GMSMutablePath *path = [[GMSMutablePath alloc] init];
+	
+	[self enumerateObjectsUsingBlock:^(NSValue *locationValue, NSUInteger idx, BOOL *stop) {
+		CLLocationCoordinate2D coordinates = [locationValue coordinatesValue];
+		[path addCoordinate:coordinates];
+	}];
+	return path;
+}
+
+@end
+
