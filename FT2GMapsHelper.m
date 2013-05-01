@@ -7,6 +7,7 @@
 //
 
 #import "FT2GMapsHelper.h"
+#import "NSData+Coordinates.h"
 
 @implementation FT2GMapsHelper
 
@@ -53,8 +54,8 @@ CLLocationCoordinate2D coordinatesForDictionary(NSDictionary *dict)
         NSNumber *longitude = [[NSNumber alloc] initWithFloat:lng * 1e-5];
         //          printf("[%f,", [latitude doubleValue]);
         //          printf("%f]", [longitude doubleValue]);
-        CLLocation *loc = [[CLLocation alloc] initWithLatitude:[latitude floatValue] longitude:[longitude floatValue]];
-        [array addObject:loc];
+		CLLocationCoordinate2D coordinates = CLLocationCoordinate2DMake(latitude.doubleValue, longitude.doubleValue);
+        [array addObject:[NSData dataWithCoordinates:coordinates]];
     }
     return array;
 }
