@@ -58,7 +58,7 @@ static char EDITED_FRAME;
 - (void)endEditingFrame
 {
 	if (self.isEditingFrame) {
-		self.frame = self.editedFrame;
+		if (!CGRectEqualToRect(self.frame, self.editedFrame)) self.frame = self.editedFrame;
 		objc_setAssociatedObject(self, &EDITED_FRAME, nil, OBJC_ASSOCIATION_RETAIN);
 	} else {
 		NSLog(@"Wasn't editing frame for view: %@", self);
